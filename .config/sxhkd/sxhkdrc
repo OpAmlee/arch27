@@ -1,0 +1,95 @@
+#   ╔╦╗╦═╗╔═╗  ╔═╗═╗ ╦╦ ╦╦╔═╔╦╗  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗
+#    ║ ╠╦╝║ ╦  ╚═╗╔╩╦╝╠═╣╠╩╗ ║║  ║  ║ ║║║║╠╣ ║║ ╦
+#    ╩ ╩╚═╚═╝  ╚═╝╩ ╚═╩ ╩╩ ╩═╩╝  ╚═╝╚═╝╝╚╝╚  ╩╚═╝
+
+#===============|※
+#    SUPER      |⇉
+#===============|
+
+
+super + Escape; {s,d,p}
+    {pkill -USR1 -x sxhkd; notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'SXHKD' 'reloaded config', /bin/bash -c $HOME/.scripts/restart/dusk.sh, /bin/bash -c ~/.scripts/restart-powerline} 
+
+super + Delete; {s,d}
+    {pkill -USR1 -x sxhkd; notify-send -i /home/trg/Downloads/web/Webp.net-resizeimage.png 'SXHKD' 'reloaded config', $HOME/.scripts/restart/dusk.sh}
+
+super + x
+    $HOME/.scripts/logout.sh
+
+super + s; {a,n,s,f}
+    {alacritty -e htop, cherrytree, flameshot gui, featherpad}
+    
+	
+super + grave
+	$HOME/.scripts/conky-toggle-new.sh
+
+super + shift + grave
+    $HOME/.scripts/conky-toggle2.sh
+	
+
+#super + Print
+#    ~/.scripts/sshot-select.sh
+
+
+
+
+
+super + Next
+    ~/.scripts/xdo-page-up.sh
+
+super + Insert
+    $HOME/.scripts/xdo-type-nvim-start-fold.sh
+
+super + Delete
+    $HOME/.scripts/xdo-type-nvim-end-fold.sh
+#===============|
+#    CONTROL    |
+#===============|
+
+control + r
+    ~/.scripts/dusk.keys.sh
+
+control + F11
+    ~/.scripts/xdo-hide-window.sh
+
+#control + F12
+# this is used in cherry tree to toggle toolbar
+
+#===============|
+#     ALT       |
+#===============|
+alt + Return
+    kitty -c ~/.config/kitty/kitty3-ranger.conf --single-instance -1
+
+alt + f
+    $HOME/.scripts/firefox-fix.sh
+
+
+#===============|
+# CONTROL + ALT |
+#===============|
+
+control + alt + Delete
+    ~/.scripts/reboot
+
+control + alt + d
+    $HOME/.scripts/autorandr-docked.sh
+control + alt + m
+    $HOME/.scripts/autorandr-mobile.sh
+
+
+#===============|
+#  SPECIALITY   |
+#===============|
+
+Print
+    ~/.scripts/sshot-generic.sh
+
+
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume 0 +5%
+XF86AudioLowerVolume
+    pactl set-sink-volume 0 -5%
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
