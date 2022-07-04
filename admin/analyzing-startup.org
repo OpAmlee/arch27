@@ -1,0 +1,53 @@
+#+title: Analyzing Startup
+
+
+
+
+systemd-analyze
+
+3.760s pacman-init.service
+2.605s systemd-random-seed.service
+1.224s dev-nvme0n1p8.device
+1.067s dev-nvme0n1p11.device
+ 325ms boot-efi.mount
+ 193ms user@1000.service
+ 169ms lvm2-monitor.service
+ 154ms udisks2.service
+ 149ms polkit.service
+ 126ms systemd-logind.service
+  96ms systemd-udev-trigger.service
+  82ms systemd-fsck@dev-disk-by\x2duuid-DCE7\x2d8C01.service
+  79ms systemd-tmpfiles-setup.service
+  60ms systemd-journald.service
+  52ms systemd-udevd.service
+  45ms systemd-journal-flush.service
+  43ms systemd-fsck@dev-disk-by\x2duuid-f896b843\x2dc16a\x2d4976\x2d81b9\x2d66aa08010cc2.service
+  41ms dbus.service
+  35ms NetworkManager.service
+  32ms systemd-tmpfiles-setup-dev.service
+  32ms systemd-modules-load.service
+  27ms systemd-backlight@backlight:intel_backlight.service
+  24ms systemd-user-sessions.service
+  24ms modprobe@configfs.service
+  23ms modprobe@drm.service
+  23ms modprobe@fuse.service
+  22ms systemd-rfkill.service
+  22ms home.mount
+  19ms systemd-remount-fs.service
+  16ms var.mount
+  15ms dev-hugepages.mount
+  14ms systemd-fsck@dev-disk-by\x2duuid-ab5a1d33\x2d8c2f\x2d4e71\x2db033\x2d48e167a600fd.service
+  14ms dev-mqueue.mount
+  13ms sys-kernel-debug.mount
+  12ms sys-kernel-tracing.mount
+  11ms kmod-static-nodes.service
+  10ms user-runtime-dir@1000.service
+  10ms systemd-update-utmp.service
+   9ms sys-kernel-config.mount
+   7ms wpa_supplicant.service
+   7ms systemd-sysctl.service
+   6ms systemd-fsck@dev-disk-by\x2duuid-4906853b\x2d5819\x2d433f\x2d9521\x2d0e6f00cf7624.service
+   5ms sys-fs-fuse-connections.mount
+   4ms rtkit-daemon.service
+   1ms tmp.mount
+   1ms alsa-restore.service

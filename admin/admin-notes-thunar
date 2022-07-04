@@ -1,0 +1,13 @@
+Thunar
+
+    Hidden Settings-
+
+        xfconf-query --channel thunar --property /property-name --create --type value-type --set new-value
+
+        xfconf-query --channel thunar --property /misc-image-size-in-statusbar --create --type bool --set true
+
+        I added this-
+        xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true
+        xfconf-query --channel thunar --property /misc-single-click --create --type bool --set true
+         22
+

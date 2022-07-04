@@ -1,0 +1,348 @@
+#+title: Nqq Commands
+#+description: master commands notes converted and continued in org mode
+
+
+#    \│/  ╔═╗╔╦╗╔╦╗╦╔╗╔  ╔╗╔╔═╗╔╦╗╔═╗╔═╗  \│/
+#    ─ ─  ╠═╣ ║║║║║║║║║  ║║║║ ║ ║ ║╣ ╚═╗  ─ ─
+#    /│\  ╩ ╩═╩╝╩ ╩╩╝╚╝  ╝╚╝╚═╝ ╩ ╚═╝╚═╝  /│\
+# ╔═╗╔═╗╔╦╗╔╦╗╔═╗╔╗╔╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗  ╦═╗╔═╗╔═╗╔═╗╦═╗╔═╗╔╗╔╔═╗╔═╗  ╦  ╦╔═╗╔╦╗  \│/
+# ║  ║ ║║║║║║║╠═╣║║║ ║║╚═╗  ╠═╣║║║ ║║  ╠╦╝║╣ ╠╣ ║╣ ╠╦╝║╣ ║║║║  ║╣   ║  ║╚═╗ ║   ─ ─
+# ╚═╝╚═╝╩ ╩╩ ╩╩ ╩╝╚╝═╩╝╚═╝  ╩ ╩╝╚╝═╩╝  ╩╚═╚═╝╚  ╚═╝╩╚═╚═╝╝╚╝╚═╝╚═╝  ╩═╝╩╚═╝ ╩   /│\
+
+* GIT Commands-
+Using Bash alias-
+
+config add /home/trg/kitty/kitty.conf
+config status
+config commit -m "add my kitty config"
+config add -u
+config push
+
+
+* DD command burn iso and clone
+sudo mkfs.vfat /dev/sdb
+cd ~/Downloads
+sudo dd if=name-of-iso.iso of=/dev/sdb status=progress
+
+sudo dd if=/home/trg/Downloads/kali-linux-2022.1-raspberry-pi-armhf.img.xz of=/dev/sde1 status=progressress
+kali-linux-2022.1-raspberry-pi-armhf.img.xz
+x
+Use DD to clone partiton to another drive-
+
+sudo dd if=source-disk of=destination-disk [option]
+lsblk
+fdisk -l
+sudo dd if=/dev/sdb of=/dev/sdc status=progress
+
+Copy using DD command-
+partition- $ dd if=/dev/sda1 of=/dev/sdb1 bs=64K conv=noerror,sync status=progress
+drive- $ dd if=/dev/sda of=/dev/sdb bs=64K conv=noerror,sync status=progress
+
+Backup using rsync
+example is moving usr to attached ssd
+sudo rsync -av /usr /run/media/trg/23f69f0a-2bbb-4dcc-95e4-5b5fe96c354a/
+
+* CHOWN-
+chown [OPTIONS] USER[:GROUP] FILE(s)
+chown -R trg:trg /home/trg/admin
+chown USER:GROUP FILE
+
+
+
+* Pacman - “unable to lock database”
+sudo rm /var/lib/pacman/db.lck
+
+-remove a single package               $ pacman -R gnome
+-remove a package and its dependencies $ pacman -Rs gnome
+-remove a package and its dependencies $ pacman -Qs gnome vim lxappearance
+-display extensive information about a given package $ pacman -Si package_name
+-locally installed packages $ pacman -Qi package_name
+-view the dependency tree of a package $ pactree package_name
+
+Neofetch
+verbose mode
+neofetch -vv --w3m --source ~/Desktop/hereisapic.png
+System
+systemctl status --no-p
+
+System Diag
+
+output
+[trg@trg-dustX ~]$ systemd-analyze
+Startup finished in 18.879s (firmware) + 14.669s (loader) + 5.450s (kernel) + 5.016s (userspace) = 44.014s
+graphical.target reached after 4.887s in userspace
+
+
+If you want to know gtk or qt
+grep -Poi '\b(lib)?\K(gtk|qt|tk)([^a-z/]*\d)*(?=[^/]*\.so\b)' /proc/"$(xprop _NET_WM_PID | cut -d' ' -f3)"/maps | sort -u
+
+Alacritty
+size
+alacritty -o "window.position: {0,35}" -o "window.dimensions: {198,53}"
+
+notes from forum
+# Terminal Scratch
+    for_window [title="scratchterm"] {
+        floating enable
+        resize set 3000 1800
+        move position center
+    }
+    bindsym f12 exec sway-run-or-raise.sh "alacritty -t=scratchterm -d 0 0 -e ~/bin/tmuxp.sh" scratchterm 3000 1800 "center"
+xdotool cmd args...
+
+xdotool selectwindow
+
+44040198 - found scratchpad window id
+
+Working on Yad
+sed -n '/start_keys/,/stop_keys/p' /home/trg/.config/arco-dusk/config.def.h | \
+yad --text-info --back=#14161a --fore=#46d9fe --geometry=1200x800
+
+
+
+
+
+
+
+Bash
+history
+cat ~/.bash_history
+less ~/.bash_history
+
+export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
+export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
+
+Emacs
+kill daemon
+emacsclient -e '(kill-emacs)'
+
+SPC wv = window vertical split
+SPC wc = close window
+
+
+Fonts
+after installing to /usr/share/fonts
+refresh
+sudo fc-cache -f -v
+
+add hack font to your website
+<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+
+
+Find duplicate files
+fdupes -r /home/trg
+
+
+
+Emacs
+C-x C-q to change read only buffer
+
+Screen
+xrandr --output eDP1 --scale 1.25x1.25
+            xrandr --output eDP1 --panning 3840x2160
+
+qt5ct enviroment varible
+#QT_QPA_PLATFORMTHEME=qt5ct
+
+
+
+* Firefox
+about:config
+devp
+(3) The layout.css.devPixelsPerPx normally has -1.0 which follows the Windows Text Size setting.
+
+
+* Enviroment
+
+    /etc/environment - is used by the pam_env module and is shell agnostic so scripting or glob expansion cannot be used. The file only accepts variable=value pairs
+    /etc/profile - initializes variables for login shells only.
+
+
+	Change Bash Prompt
+		oldps1="$PS1"
+		export PS1="[\\u@\\H \\W \\@]\\$ "
+			\H: Display FQDN (fully qualified domain name) hostname
+			\@: Display current time in 12-hour am/pm format.
+				Adding colors to the prompt
+				'\e[x;ym $PS1 \e[m'
+					\e[ : Start color scheme.
+					x;y : Color pair to use (x;y)
+					$PS1 : Your shell prompt variable.
+					\e[m : Stop color scheme.
+					Color 	Code
+
+					to get purple i did export PS1="\e[0;35m[\u@\h \W]\$ \e[m "
+
+				export PS1="\e[0;35m[\u\e[m@\h \W]\$  "
+				export PS1="\e[0;35m[\u\e[m @ \e[0;36m[\h \W]\\e[m$  "
+
+Black 	0;30
+Blue 	0;34
+Green 	0;32
+Cyan 	0;36
+Red 	0;31
+Purple 	0;35
+Brown 	0;33
+Blue 	0;34
+Green 	0;32
+Cyan 	0;36
+Red 	0;31
+Purple 	0;35
+Brown 	0;33
+
+	Final export PS1="\[\e[32m\][\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[31;47m\]\\$\[\e[m\] "exit
+
+
+#  ╔═╗╦  ╔═╗╔╦╗╔═╗╔═╗╦ ╦╔═╗╔╦╗
+#  ╠╣ ║  ╠═╣║║║║╣ ╚═╗╠═╣║ ║ ║
+#  ╚  ╩═╝╩ ╩╩ ╩╚═╝╚═╝╩ ╩╚═╝ ╩
+
+	flameshot gui
+	flameshot gui -p ~/myStuff/captures
+
+	#!/bin/bash
+	TMP=$(mktemp /tmp/XXXXXXX.png)
+	flameshot gui --clipboard --raw > $TMP
+	filename=$(dmenu -fn "Terminus (TTF):pixelsize=28" -p "Screenshot filename" < /dev/null)
+	if test "$filename"
+	then
+	output="/tmp/$filename.png"
+	mv -v "$TMP" $output
+	upload "$output"
+	fi
+
+
+    How can I call b.sh from within the shell script a.sh?
+
+    	Make the other script executable, add the #!/bin/bash line at the top, and the path where the file is to the $PATH environment variable. Then you can call it as a normal command;
+
+    	Or call it with the source command (alias is .), like this:	source /path/to/script
+
+    	Or use the bash command to execute it, like:	/bin/bash /path/to/script
+
+
+		#!/bin/bash
+		SCRIPT_PATH="/path/to/script.sh"
+
+		# Here you execute your script
+		"$SCRIPT_PATH"
+
+		# or
+		. "$SCRIPT_PATH"
+
+		# or
+		source "$SCRIPT_PATH"
+
+		# or
+		bash "$SCRIPT_PATH"
+
+		# or
+		eval '"$SCRIPT_PATH"'
+
+		# or
+		OUTPUT=$("$SCRIPT_PATH")
+		echo $OUTPUT
+
+		# or
+		OUTPUT=`"$SCRIPT_PATH"`
+		echo $OUTPUT
+
+		# or
+		("$SCRIPT_PATH")
+
+		# or
+		(exec "$SCRIPT_PATH")
+
+			The answer which I was looking for: exec "path/to/script"
+
+		Messages-
+
+		# wait prompt
+		read -p "Press enter to continue"
+
+			read -p "Pause Time 5 seconds" -t 5
+			read -p "Continuing in 5 Seconds...." -t 5
+			echo "Continuing ...."
+
+
+		#sleep
+			sleep 5 && cd /var/www/html && git pull && sleep 3 && cd ..
+
+
+			sleep 10 &
+			echo $!		$! parameter stores the background process PID
+			echo $?		$? stores the exit status
+
+		learning-
+					   Input, Output and Error Redirections
+
+
+					   to redirect each output separately. The > notation is 
+					   used to redirect stdout to a file whereas 2> notation 
+					   is used to redirect stderr and &> is used to redirect 
+					   both stdout and stderr. The cat command is used to
+					   display a content of any given file. Consider a
+					   following example:
+
+
+	https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Meslo.zip/
+
+	New Search command
+	find / 2> /dev/null | grep powerline-daemon
+
+	Installing powerline for vim
+
+	/home/trg/.local/bin/powerline-daemon
+	/home/trg/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+
+	file:///home/trg/.local/lib/python3.10/site-packages/powerline/config_files/colorschemes/default.json
+
+	ps -ef | grep powerline-daemon - to get pid for powerline daemon
+
+	trg        10499       1  0 13:10 ?        00:00:00 /usr/bin/python /home/trg/.local/bin/powerline-daemon -q
+	trg        14485   13618  0 13:48 pts/2    00:00:00 grep --color=auto powerline-daemon
+
+	kill -9 10499
+
+					   cp -r ~/Library/Python/3.8/lib/python/site-packages/powerline/config_files/* ~/.config/powerline
+
+	removing
+	"shell": {
+			"colorscheme": "default",
+			"theme": "default",
+			"local_themes": {
+				"continuation": "continuation",
+				"select": "select"
+			}
+		},
+
+
+	SWHKD-
+
+	swhks &
+		pkexec swhkd
+
+		#The default configuration directory is /etc/swhkd/swhkdrc
+
+		sudo pkill -USR1 swhkd - Pause key checking
+
+		sudo pkill -USR2 swhkd - Resume key checking
+
+		sudo pkill -HUP swhkd - Reload config file
+
+		super + Escape
+			pkill -USR1 -x swhkd
+
+
+	Find tree of all running processes
+		pstree
+
+	Xmodmap Keys
+		xmodmap -e 'keycode 135 = Caps_Lock'
+		xmodmap -e 'keycode 66 = Escape'
+		xmodmap -e 'keycode 9 = BackSpace'
+
+
+		Find system font path
+		Font Path:
+  /usr/share/fonts/misc,/usr/share/fonts/TTF,/usr/share/fonts/OTF,built-ins

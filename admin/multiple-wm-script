@@ -1,0 +1,13 @@
+session=${1}
+
+case $session in
+	dusk)		exec dusk ;;
+	
+	dwm)		xrandr --output eDP1 --mode 1366x768
+				picom -b &
+				dunst &
+				exec /usr/local/bin/dwm ;;
+				
+	i3gaps)		exec i3gaps ;;
+	
+esac

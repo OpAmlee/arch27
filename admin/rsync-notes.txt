@@ -1,0 +1,42 @@
+rsync
+
+	example $ rsync options source destination
+
+	real example $ rsync -avxHAX --progress / /new-disk/
+	
+	flags $
+		-a  : all files, with permissions, etc..
+		-v  : verbose, mention files
+		-x  : stay on one file system
+		-H  : preserve hard links (not included with -a)
+		-A  : preserve ACLs/permissions (not included with -a)
+		-X  : preserve extended attributes (not included with -a)
+		-W  : avoid calculating deltas/diffs
+	
+	Backup $ rsync -zvh backup.tar.gz /tmp/backups/
+
+	To improve the copy speed, add -W (--whole-file), to avoid calculating deltas/diffs of the files
+
+	Also consider adding --numeric-ids to avoid mapping uid/gid values by user/group name
+	
+	I ended up using rsync -avxHAWX --numeric-ids --progress / mnt/ but I should have done rsync -avxHAWX --numeric-ids --progress / mnt/ > ~/rsync.out. 
+	I suspect pouring the output to the terminal slowed the process
+	
+	--info=progress2 instead of --progress is useful for large transfers, as it gives overall progress
+	
+	If you're copying from some other folder than /, note that having a trailing slash (or not) on the source directory makes a difference: 
+	rsync source/ dest/ copies everything inside source/ to dest/, while rsync source dest/ copies the folder source and everything inside into dest/
+	
+	Exclude certain directories when you transfer
+	rsync -WavxHAX --delete-excluded --progress \
+  /mnt/from/ /mnt/to/
+  --exclude='/home/*/.gvfs' \
+  --exclude='/home/*/.local/share/Trash' \
+  --exclude='/var/run/*' \
+  --exclude='/var/lock/*' \
+  --exclude='/lib/modules/*/volatile/.mounted' \
+  --exclude='/var/cache/apt/archives/*' \
+  --exclude='/home/*/.mozilla/firefox/*/Cache' \
+  --exclude='/home/*/.cache/chromium'
+  --exclude='home/*/.thumbnails' \
+  --exclude=.cache --exclude Cache --exclude cache

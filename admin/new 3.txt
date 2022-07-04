@@ -1,0 +1,22 @@
+getty@.service                             enabled         enabled
+NetworkManager-dispatcher.service          enabled         disabled
+NetworkManager-wait-online.service         enabled         disabled
+NetworkManager.service                     enabled         disabled
+pacman-init.service                        enabled         disabled
+sddm.service                               enabled         disabled
+systemd-boot-update.service                disabled        enabled
+systemd-fsck-root.service                  enabled-runtime disabled
+systemd-homed.service                      disabled        enabled
+systemd-network-generator.service          disabled        enabled
+systemd-networkd.service                   disabled        enabled
+systemd-pstore.service                     disabled        enabled
+systemd-remount-fs.service                 enabled-runtime disabled
+systemd-resolved.service                   disabled        enabled
+systemd-timesyncd.service                  disabled        enabled
+systemd-userdbd.socket                     disabled        enabled
+machines.target                            disabled        enabled
+reboot.target                              disabled        enabled
+remote-cryptsetup.target                   disabled        enabled
+remote-fs.target                           enabled         enabled
+
+		

@@ -1,0 +1,27 @@
+kitty resize 
+
+	# window settings
+	remember_window_size no
+	initial_window_width 82c
+	initial_window_height 24c
+	for_window [class=kitty] floating enable
+	
+	
+	Trying to get scratchpad to work with another terminal
+	
+		for_window [instance="scratchpad"] floating enable move position 800px 28px resize set 1000px 600px
+
+bindsym $mod+Shift+d exec --no-startup-id alacritty --class scratchpad
+
+
+Trial
+		xdotool cmd args...
+		
+		xdotool selectwindow
+
+		44040198 - found scratchpad window id
+		
+		
+sed -n '/start_keys/,/stop_keys/p' /home/trg/.config/arco-dusk/config.def.h | yad --text-info --back=#14161a --fore=#46d9fe --geometry=1200x800
+	
+	

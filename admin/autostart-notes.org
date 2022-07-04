@@ -1,0 +1,24 @@
+
+#+title: Autostart Notes
+#+Author: trg
+#+DESCRIPTION: detailed notes on auto start scripts
+
+
+
+
+* Perform an autostart/execute all programs in the autostart folders
+** dex -a
+* Perform an autostart/execute all programs in the specified folders
+** dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+* Preview the programs would be executed in a regular autostart
+** dex -ad
+* Preview the value of DesktopEntry property Name
+** dex -p Name htop.desktop
+* Create a DesktopEntry for a programs in autostart directroy
+** dex -t ~/.config/autostart -c /usr/bin/skype /usr/bin/nm-applet
+* Execute a single program from command line and enable verbose output
+** dex -v skype.desktop
+* Execute a single program (with Terminal=true in the desktop file) in gnome-terminal
+** dex --term gnome-terminal nvim.desktop
+* Execute a single program and block until it exits
+** dex --wait nvim.desktop

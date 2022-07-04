@@ -1,0 +1,20 @@
+#+title: Test Org Config
+#+PROPERTY: header-args :tangle .bashrc-personal
+
+#!/bin/sh
+
+#+BEGIN_SRC sh
+
+alias pw='pwd'
+
+#+END_SRC sh
+
+
+#+begin_src emacs-lisp
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((emacs-list , t)
+    (sh , t)))
+
+
+#+end_src

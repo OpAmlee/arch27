@@ -1,0 +1,1734 @@
+.icon-delete {
+  background-image: var(--icon-delete);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-folder {
+  background-image: var(--icon-folder);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-move-menu-inverse {
+  background-image: var(--icon-move-menu-inverse);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-new-empty-group {
+  background-image: var(--icon-new-empty-group);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-restore-del {
+  background-image: var(--icon-restore-del);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-restore {
+  background-image: var(--icon-restore);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-tab-selected-inverse {
+  background-image: var(--icon-tab-selected-inverse);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-tab-selected {
+  background-image: var(--icon-tab-selected);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-tab {
+  background-image: var(--icon-tab);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-warning {
+  background-image: var(--icon-warning);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+html.theme-system {
+  --modal-bg: rgba(0, 0, 0, 0.3);
+  --page-bg: #ffffff;
+  --page-fg: #222426;
+  --disabled-fg: #889099;
+  --link-fg: #44484c;
+  --userlink-fg: #287acc;
+  --userlink-hover-fg: #448fda;
+  --userlink-hover-bg: var(--button-bg);
+  --userlink-active-fg: #66a3e1;
+  --userlink-active-bg: var(--button-bg);
+  --selected-bg: #cce5ff;
+  --scroll-bar: #efefef;
+  --scroll-handle: #d8d8d8;
+  --ctrl-bg: #ffffff;
+  --ctrl-border-clr: rgba(0, 0, 0, 0.21);
+  --button-bg: rgba(0, 0, 0, 0.07);
+  --button-hover-bg: rgba(0, 0, 0, 0.14);
+  --button-active-bg: rgba(0, 0, 0, 0.21);
+  --ephemeral-hover-shadow-clr: rgba(0, 0, 0, 0.14);
+  --group-bg: #ffffff;
+  --group-border-clr: #c0c0c0;
+  --group-disabled-bg: #f4f4f4;
+  --group-disabled-border-clr: #d8d8d8;
+  /* CRUD colors */
+  --create-bg: #cce5ff;
+  --create-hover-bg: #b7cee5;
+  --create-active-bg: #a3b7cc;
+  --read-bg: #b0ffc0;
+  --read-hover-bg: #9ee5ac;
+  --read-active-bg: #8ccc99;
+  --update-bg: #f0f090;
+  --update-hover-bg: #d6d680;
+  --update-active-bg: #bcbc71;
+  --delete-bg: #ffe0e0;
+  --delete-hover-bg: #e5c9c9;
+  --delete-active-bg: #ccb3b3;
+  --spinner-gradient: conic-gradient(hsl(0, 90%, 70%), hsl(60, 90%, 70%), hsl(132, 90%, 70%), hsl(200, 90%, 70%), hsl(0, 90%, 70%));
+  --advanced-bg: rgba(255, 224, 224, 0.5);
+  --icon-back: url("icons/light/back.svg");
+  --icon-back-inverse: url("icons/dark/back.svg");
+  --icon-cancel: url("icons/light/cancel.svg");
+  --icon-cancel-inverse: url("icons/dark/cancel.svg");
+  --icon-collapse-closed: url("icons/light/collapse-closed.svg");
+  --icon-collapse-closed-inverse: url("icons/dark/collapse-closed.svg");
+  --icon-collapse-open: url("icons/light/collapse-open.svg");
+  --icon-collapse-open-inverse: url("icons/dark/collapse-open.svg");
+  --icon-delete-opened: url("icons/light/delete-opened.svg");
+  --icon-delete-opened-inverse: url("icons/dark/delete-opened.svg");
+  --icon-delete-stashed: url("icons/light/delete-stashed.svg");
+  --icon-delete-stashed-inverse: url("icons/dark/delete-stashed.svg");
+  --icon-delete: url("icons/light/delete.svg");
+  --icon-delete-inverse: url("icons/dark/delete.svg");
+  --icon-folder: url("icons/light/folder.svg");
+  --icon-folder-inverse: url("icons/dark/folder.svg");
+  --icon-mainmenu: url("icons/light/mainmenu.svg");
+  --icon-mainmenu-inverse: url("icons/dark/mainmenu.svg");
+  --icon-move-menu: url("icons/light/move-menu.svg");
+  --icon-move-menu-inverse: url("icons/dark/move-menu.svg");
+  --icon-new-empty-group: url("icons/light/new-empty-group.svg");
+  --icon-new-empty-group-inverse: url("icons/dark/new-empty-group.svg");
+  --icon-restore-del: url("icons/light/restore-del.svg");
+  --icon-restore-del-inverse: url("icons/dark/restore-del.svg");
+  --icon-restore: url("icons/light/restore.svg");
+  --icon-restore-inverse: url("icons/dark/restore.svg");
+  --icon-stash-one: url("icons/light/stash-one.svg");
+  --icon-stash-one-inverse: url("icons/dark/stash-one.svg");
+  --icon-stash: url("icons/light/stash.svg");
+  --icon-stash-inverse: url("icons/dark/stash.svg");
+  --icon-tab: url("icons/light/tab.svg");
+  --icon-tab-inverse: url("icons/dark/tab.svg");
+  --icon-tab-selected: url("icons/light/tab-selected.svg");
+  --icon-tab-selected-inverse: url("icons/dark/tab-selected.svg");
+  --icon-warning: url("icons/light/warning.svg");
+  --icon-warning-inverse: url("icons/dark/warning.svg");
+}
+html.theme-system.popup-view {
+  --page-bg: var(--group-bg);
+}
+html.theme-system.view-tab {
+  --page-bg: #efefef;
+}
+@media (prefers-color-scheme: dark) {
+  html.theme-system {
+    /* This is basically a set of modifications to the light theme, so best to start
+there first. */
+    --modal-bg: rgba(0, 0, 0, 0.5);
+    --page-bg: #2a2a2e;
+    --page-fg: #f9f9fa;
+    --disabled-fg: #a0a4ac;
+    --link-fg: #e0e0e2;
+    --userlink-fg: #80bfff;
+    --userlink-hover-fg: #57abff;
+    --userlink-hover-bg: var(--button-bg);
+    --userlink-active-fg: #2e96ff;
+    --userlink-active-bg: var(--button-bg);
+    --selected-bg: #3d6899;
+    --scroll-bar: #242426;
+    --scroll-handle: #48484e;
+    --ctrl-bg: #2a2a2e;
+    --ctrl-border-clr: rgba(255, 255, 255, 0.34);
+    --button-bg: rgba(255, 255, 255, 0.2);
+    --button-hover-bg: rgba(255, 255, 255, 0.27);
+    --button-active-bg: rgba(255, 255, 255, 0.34);
+    --ephemeral-hover-shadow-clr: rgba(255, 255, 255, 0.27);
+    --group-bg: #48484e;
+    --group-border-clr: #3a3a3e;
+    --group-disabled-bg: #3a3a3e;
+    --group-disabled-border: 1px solid #3a3a3e;
+    /* CRUD colors */
+    --create-bg: #3d6899;
+    --create-hover-bg: #4779b2;
+    --create-active-bg: #518acc;
+    --read-bg: #337f42;
+    --read-hover-bg: #3d994f;
+    --read-active-bg: #47b25c;
+    --update-bg: #727216;
+    --update-hover-bg: #8c8c1c;
+    --update-active-bg: #a5a521;
+    --delete-bg: #7f5151;
+    --delete-hover-bg: #996161;
+    --delete-active-bg: #b27272;
+    --spinner-gradient: conic-gradient(hsl(0, 60%, 50%), hsl(60, 60%, 50%), hsl(132, 60%, 50%), hsl(200, 60%, 50%), hsl(0, 60%, 50%));
+    --advanced-bg: rgba(127, 81, 81, 0.5);
+    --icon-back: url("icons/dark/back.svg");
+    --icon-back-inverse: url("icons/light/back.svg");
+    --icon-cancel: url("icons/dark/cancel.svg");
+    --icon-cancel-inverse: url("icons/light/cancel.svg");
+    --icon-collapse-closed: url("icons/dark/collapse-closed.svg");
+    --icon-collapse-closed-inverse: url("icons/light/collapse-closed.svg");
+    --icon-collapse-open: url("icons/dark/collapse-open.svg");
+    --icon-collapse-open-inverse: url("icons/light/collapse-open.svg");
+    --icon-delete-opened: url("icons/dark/delete-opened.svg");
+    --icon-delete-opened-inverse: url("icons/light/delete-opened.svg");
+    --icon-delete-stashed: url("icons/dark/delete-stashed.svg");
+    --icon-delete-stashed-inverse: url("icons/light/delete-stashed.svg");
+    --icon-delete: url("icons/dark/delete.svg");
+    --icon-delete-inverse: url("icons/light/delete.svg");
+    --icon-folder: url("icons/dark/folder.svg");
+    --icon-folder-inverse: url("icons/light/folder.svg");
+    --icon-mainmenu: url("icons/dark/mainmenu.svg");
+    --icon-mainmenu-inverse: url("icons/light/mainmenu.svg");
+    --icon-move-menu: url("icons/dark/move-menu.svg");
+    --icon-move-menu-inverse: url("icons/light/move-menu.svg");
+    --icon-new-empty-group: url("icons/dark/new-empty-group.svg");
+    --icon-new-empty-group-inverse: url("icons/light/new-empty-group.svg");
+    --icon-restore-del: url("icons/dark/restore-del.svg");
+    --icon-restore-del-inverse: url("icons/light/restore-del.svg");
+    --icon-restore: url("icons/dark/restore.svg");
+    --icon-restore-inverse: url("icons/light/restore.svg");
+    --icon-stash-one: url("icons/dark/stash-one.svg");
+    --icon-stash-one-inverse: url("icons/light/stash-one.svg");
+    --icon-stash: url("icons/dark/stash.svg");
+    --icon-stash-inverse: url("icons/light/stash.svg");
+    --icon-tab: url("icons/dark/tab.svg");
+    --icon-tab-inverse: url("icons/light/tab.svg");
+    --icon-tab-selected: url("icons/dark/tab-selected.svg");
+    --icon-tab-selected-inverse: url("icons/light/tab-selected.svg");
+    --icon-warning: url("icons/dark/warning.svg");
+    --icon-warning-inverse: url("icons/light/warning.svg");
+  }
+  html.theme-system.view-tab {
+    --page-bg: #2a2a2e;
+    --scroll-bar: #2a2a2e;
+  }
+}
+html.theme-light {
+  --modal-bg: rgba(0, 0, 0, 0.3);
+  --page-bg: #ffffff;
+  --page-fg: #222426;
+  --disabled-fg: #889099;
+  --link-fg: #44484c;
+  --userlink-fg: #287acc;
+  --userlink-hover-fg: #448fda;
+  --userlink-hover-bg: var(--button-bg);
+  --userlink-active-fg: #66a3e1;
+  --userlink-active-bg: var(--button-bg);
+  --selected-bg: #cce5ff;
+  --scroll-bar: #efefef;
+  --scroll-handle: #d8d8d8;
+  --ctrl-bg: #ffffff;
+  --ctrl-border-clr: rgba(0, 0, 0, 0.21);
+  --button-bg: rgba(0, 0, 0, 0.07);
+  --button-hover-bg: rgba(0, 0, 0, 0.14);
+  --button-active-bg: rgba(0, 0, 0, 0.21);
+  --ephemeral-hover-shadow-clr: rgba(0, 0, 0, 0.14);
+  --group-bg: #ffffff;
+  --group-border-clr: #c0c0c0;
+  --group-disabled-bg: #f4f4f4;
+  --group-disabled-border-clr: #d8d8d8;
+  /* CRUD colors */
+  --create-bg: #cce5ff;
+  --create-hover-bg: #b7cee5;
+  --create-active-bg: #a3b7cc;
+  --read-bg: #b0ffc0;
+  --read-hover-bg: #9ee5ac;
+  --read-active-bg: #8ccc99;
+  --update-bg: #f0f090;
+  --update-hover-bg: #d6d680;
+  --update-active-bg: #bcbc71;
+  --delete-bg: #ffe0e0;
+  --delete-hover-bg: #e5c9c9;
+  --delete-active-bg: #ccb3b3;
+  --spinner-gradient: conic-gradient(hsl(0, 90%, 70%), hsl(60, 90%, 70%), hsl(132, 90%, 70%), hsl(200, 90%, 70%), hsl(0, 90%, 70%));
+  --advanced-bg: rgba(255, 224, 224, 0.5);
+  --icon-back: url("icons/light/back.svg");
+  --icon-back-inverse: url("icons/dark/back.svg");
+  --icon-cancel: url("icons/light/cancel.svg");
+  --icon-cancel-inverse: url("icons/dark/cancel.svg");
+  --icon-collapse-closed: url("icons/light/collapse-closed.svg");
+  --icon-collapse-closed-inverse: url("icons/dark/collapse-closed.svg");
+  --icon-collapse-open: url("icons/light/collapse-open.svg");
+  --icon-collapse-open-inverse: url("icons/dark/collapse-open.svg");
+  --icon-delete-opened: url("icons/light/delete-opened.svg");
+  --icon-delete-opened-inverse: url("icons/dark/delete-opened.svg");
+  --icon-delete-stashed: url("icons/light/delete-stashed.svg");
+  --icon-delete-stashed-inverse: url("icons/dark/delete-stashed.svg");
+  --icon-delete: url("icons/light/delete.svg");
+  --icon-delete-inverse: url("icons/dark/delete.svg");
+  --icon-folder: url("icons/light/folder.svg");
+  --icon-folder-inverse: url("icons/dark/folder.svg");
+  --icon-mainmenu: url("icons/light/mainmenu.svg");
+  --icon-mainmenu-inverse: url("icons/dark/mainmenu.svg");
+  --icon-move-menu: url("icons/light/move-menu.svg");
+  --icon-move-menu-inverse: url("icons/dark/move-menu.svg");
+  --icon-new-empty-group: url("icons/light/new-empty-group.svg");
+  --icon-new-empty-group-inverse: url("icons/dark/new-empty-group.svg");
+  --icon-restore-del: url("icons/light/restore-del.svg");
+  --icon-restore-del-inverse: url("icons/dark/restore-del.svg");
+  --icon-restore: url("icons/light/restore.svg");
+  --icon-restore-inverse: url("icons/dark/restore.svg");
+  --icon-stash-one: url("icons/light/stash-one.svg");
+  --icon-stash-one-inverse: url("icons/dark/stash-one.svg");
+  --icon-stash: url("icons/light/stash.svg");
+  --icon-stash-inverse: url("icons/dark/stash.svg");
+  --icon-tab: url("icons/light/tab.svg");
+  --icon-tab-inverse: url("icons/dark/tab.svg");
+  --icon-tab-selected: url("icons/light/tab-selected.svg");
+  --icon-tab-selected-inverse: url("icons/dark/tab-selected.svg");
+  --icon-warning: url("icons/light/warning.svg");
+  --icon-warning-inverse: url("icons/dark/warning.svg");
+}
+html.theme-light.popup-view {
+  --page-bg: var(--group-bg);
+}
+html.theme-light.view-tab {
+  --page-bg: #efefef;
+}
+html.theme-dark {
+  /* This is basically a set of modifications to the light theme, so best to start
+there first. */
+  --modal-bg: rgba(0, 0, 0, 0.5);
+  --page-bg: #2a2a2e;
+  --page-fg: #f9f9fa;
+  --disabled-fg: #a0a4ac;
+  --link-fg: #e0e0e2;
+  --userlink-fg: #80bfff;
+  --userlink-hover-fg: #57abff;
+  --userlink-hover-bg: var(--button-bg);
+  --userlink-active-fg: #2e96ff;
+  --userlink-active-bg: var(--button-bg);
+  --selected-bg: #3d6899;
+  --scroll-bar: #242426;
+  --scroll-handle: #48484e;
+  --ctrl-bg: #2a2a2e;
+  --ctrl-border-clr: rgba(255, 255, 255, 0.34);
+  --button-bg: rgba(255, 255, 255, 0.2);
+  --button-hover-bg: rgba(255, 255, 255, 0.27);
+  --button-active-bg: rgba(255, 255, 255, 0.34);
+  --ephemeral-hover-shadow-clr: rgba(255, 255, 255, 0.27);
+  --group-bg: #48484e;
+  --group-border-clr: #3a3a3e;
+  --group-disabled-bg: #3a3a3e;
+  --group-disabled-border: 1px solid #3a3a3e;
+  /* CRUD colors */
+  --create-bg: #3d6899;
+  --create-hover-bg: #4779b2;
+  --create-active-bg: #518acc;
+  --read-bg: #337f42;
+  --read-hover-bg: #3d994f;
+  --read-active-bg: #47b25c;
+  --update-bg: #727216;
+  --update-hover-bg: #8c8c1c;
+  --update-active-bg: #a5a521;
+  --delete-bg: #7f5151;
+  --delete-hover-bg: #996161;
+  --delete-active-bg: #b27272;
+  --spinner-gradient: conic-gradient(hsl(0, 60%, 50%), hsl(60, 60%, 50%), hsl(132, 60%, 50%), hsl(200, 60%, 50%), hsl(0, 60%, 50%));
+  --advanced-bg: rgba(127, 81, 81, 0.5);
+  --icon-back: url("icons/dark/back.svg");
+  --icon-back-inverse: url("icons/light/back.svg");
+  --icon-cancel: url("icons/dark/cancel.svg");
+  --icon-cancel-inverse: url("icons/light/cancel.svg");
+  --icon-collapse-closed: url("icons/dark/collapse-closed.svg");
+  --icon-collapse-closed-inverse: url("icons/light/collapse-closed.svg");
+  --icon-collapse-open: url("icons/dark/collapse-open.svg");
+  --icon-collapse-open-inverse: url("icons/light/collapse-open.svg");
+  --icon-delete-opened: url("icons/dark/delete-opened.svg");
+  --icon-delete-opened-inverse: url("icons/light/delete-opened.svg");
+  --icon-delete-stashed: url("icons/dark/delete-stashed.svg");
+  --icon-delete-stashed-inverse: url("icons/light/delete-stashed.svg");
+  --icon-delete: url("icons/dark/delete.svg");
+  --icon-delete-inverse: url("icons/light/delete.svg");
+  --icon-folder: url("icons/dark/folder.svg");
+  --icon-folder-inverse: url("icons/light/folder.svg");
+  --icon-mainmenu: url("icons/dark/mainmenu.svg");
+  --icon-mainmenu-inverse: url("icons/light/mainmenu.svg");
+  --icon-move-menu: url("icons/dark/move-menu.svg");
+  --icon-move-menu-inverse: url("icons/light/move-menu.svg");
+  --icon-new-empty-group: url("icons/dark/new-empty-group.svg");
+  --icon-new-empty-group-inverse: url("icons/light/new-empty-group.svg");
+  --icon-restore-del: url("icons/dark/restore-del.svg");
+  --icon-restore-del-inverse: url("icons/light/restore-del.svg");
+  --icon-restore: url("icons/dark/restore.svg");
+  --icon-restore-inverse: url("icons/light/restore.svg");
+  --icon-stash-one: url("icons/dark/stash-one.svg");
+  --icon-stash-one-inverse: url("icons/light/stash-one.svg");
+  --icon-stash: url("icons/dark/stash.svg");
+  --icon-stash-inverse: url("icons/light/stash.svg");
+  --icon-tab: url("icons/dark/tab.svg");
+  --icon-tab-inverse: url("icons/light/tab.svg");
+  --icon-tab-selected: url("icons/dark/tab-selected.svg");
+  --icon-tab-selected-inverse: url("icons/light/tab-selected.svg");
+  --icon-warning: url("icons/dark/warning.svg");
+  --icon-warning-inverse: url("icons/light/warning.svg");
+}
+html.theme-dark.view-tab {
+  --page-bg: #2a2a2e;
+  --scroll-bar: #2a2a2e;
+}
+html {
+  --divider-border: 1px solid var(--ctrl-border-clr);
+  --item-hover-bg: var(--button-bg);
+  --item-active-bg: var(--button-active-bg);
+  --shadow: 2px 2px 4px rgba(0, 0, 0, 0.23);
+  --shadow-heavy: 4px 4px 8px rgba(0, 0, 0, 0.29);
+  --shadow-faint: 2px 2px 4px rgba(0, 0, 0, 0.19);
+  --icon-select-disclosure: var(--icon-collapse-open);
+}
+html {
+  --page-pw: 16px;
+  --page-ph: 12px;
+  --icon-size: 16px;
+  --icon-p: 4px;
+  --icon-btn-size: calc(var(--icon-size) + 2 * var(--icon-p));
+  --focus-shadow: 0 0 2px 2px highlight;
+  --ephemeral-hover-shadow: 0 0 1px 1px var(--ephemeral-hover-shadow-clr);
+  --notification-mw: var(--page-ph);
+  --notification-mh: var(--page-ph);
+  --notification-fade-time: 200ms;
+  --modal-fade-time: 100ms;
+  --group-border: 1px solid var(--group-border-clr);
+  --group-headerhr-mh: var(--ctrl-mh);
+  --ctrl-border: 1px solid var(--ctrl-border-clr);
+  --ctrl-border-radius: 5px;
+  --ctrl-pw: 6px;
+  --ctrl-ph: 3px;
+  --ctrl-mw: 8px;
+  --ctrl-mh: 6px;
+  --dialog-pw: var(--page-pw);
+  --dialog-ph: var(--page-ph);
+  --menu-mw: 12px;
+  --menu-mh: var(--ctrl-mh);
+  --input-text-pw: 3px;
+  --input-text-ph: 2px;
+  --input-text-border-radius: 3px;
+  --active-marker-bw: 4px;
+  --text-list-indent-w: var(--icon-btn-size);
+  --group-disabled-border: 1px solid var(--group-disabled-border-clr);
+  --item-h: var(--icon-btn-size);
+  /* must match because items have favicons */
+}
+@media (max-width: 30rem) {
+  html {
+    --dialog-pw: calc(var(--page-pw) / 2);
+  }
+}
+html.metrics-compact {
+  --page-pw: 12px;
+  --page-ph: 8px;
+  --group-headerhr-mh: 4px;
+  --icon-p: 3px;
+  --icon-btn-size: calc(var(--icon-size) + 2 * var(--icon-p));
+  --item-h: var(--icon-btn-size);
+  /* must match because items have favicons */
+}
+html.metrics-compact,
+html.metrics-compact > body {
+  font: small-caption;
+  font-weight: normal;
+}
+html.metrics-compact.browser-chrome,
+html.metrics-compact.browser-chrome > body {
+  font-size: 8.5pt;
+}
+html.metrics-compact .folder-name,
+html.metrics-compact .group-title {
+  font-size: var(--icon-size);
+  font-weight: 600;
+  height: calc(var(--icon-btn-size) - 2 * var(--input-text-ph));
+  line-height: calc(var(--icon-btn-size) - 2 * var(--input-text-ph));
+}
+html.metrics-compact.view-sidebar .folder > header > nav.folder-actions,
+html.metrics-compact.view-popup .folder > header > nav.folder-actions {
+  grid-row: 1;
+  grid-column: 3;
+  display: none;
+}
+html.metrics-compact.view-sidebar .folder > header > input.folder-name,
+html.metrics-compact.view-popup .folder > header > input.folder-name {
+  grid-column: 1 / 4;
+}
+html.metrics-compact.view-sidebar .folder:hover > header > nav.folder-actions,
+html.metrics-compact.view-popup .folder:hover > header > nav.folder-actions,
+html.metrics-compact.view-sidebar .folder:focus-within > header > nav.folder-actions,
+html.metrics-compact.view-popup .folder:focus-within > header > nav.folder-actions {
+  display: flex;
+}
+body {
+  font: caption;
+  user-select: none;
+  -moz-user-select: none;
+  background-color: var(--page-bg);
+  color: var(--page-fg);
+  scrollbar-color: var(--scroll-handle) var(--scroll-bar);
+  overscroll-behavior: contain;
+}
+html.view-popup > body {
+  min-width: 200px;
+  max-width: 600px;
+  width: 376px;
+  height: 600px;
+}
+html.view-popup.os-mac > body {
+  width: 378px;
+}
+html.view-popup.os-win > body {
+  width: 348px;
+}
+html.browser-chrome > body {
+  font: initial;
+  font-family: system-ui, sans-serif;
+  font-size: 9.5pt;
+}
+html.browser-chrome.os-win > body {
+  font-size: 9pt;
+}
+:focus {
+  box-shadow: var(--focus-shadow);
+  outline: none;
+}
+em {
+  font-style: italic;
+}
+a,
+a:visited {
+  color: var(--userlink-fg);
+  text-decoration: underline;
+}
+a:hover,
+a:focus-within {
+  background-color: var(--userlink-hover-bg);
+  color: var(--userlink-hover-fg);
+}
+a:active,
+a:focus-within {
+  box-shadow: none;
+}
+a:active {
+  background-color: var(--userlink-active-bg);
+  color: var(--userlink-active-fg);
+}
+summary:active,
+summary:focus-within {
+  box-shadow: none;
+}
+form {
+  row-gap: var(--ctrl-mh);
+  column-gap: var(--ctrl-mw);
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: var(--ctrl-ph) var(--ctrl-pw);
+}
+button,
+input,
+select {
+  display: inline-block;
+  font: inherit;
+  color: var(--page-fg);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+output {
+  cursor: auto;
+}
+.input {
+  cursor: text;
+}
+output,
+.input {
+  display: block;
+  user-select: text;
+  -moz-user-select: text;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+input,
+textarea,
+.input,
+output {
+  background-color: var(--ctrl-bg);
+  color: var(--page-fg);
+  padding: var(--input-text-ph) var(--input-text-pw);
+  border: var(--ctrl-border);
+  border-radius: var(--input-text-border-radius);
+}
+button,
+input[type=button],
+input[type=submit],
+input[type=reset],
+select {
+  padding: var(--ctrl-ph) var(--ctrl-pw);
+  border: none;
+  border-radius: var(--ctrl-border-radius);
+  background-color: var(--button-bg);
+}
+button:not([disabled]):hover,
+input[type=button]:not([disabled]):hover,
+input[type=submit]:not([disabled]):hover,
+input[type=reset]:not([disabled]):hover,
+select:not([disabled]):hover {
+  background-color: var(--button-hover-bg);
+}
+button:not([disabled]):active,
+input[type=button]:not([disabled]):active,
+input[type=submit]:not([disabled]):active,
+input[type=reset]:not([disabled]):active,
+select:not([disabled]):active {
+  background-color: var(--button-active-bg);
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: var(--icon-select-disclosure);
+  background-position: right var(--ctrl-pw) top 50%;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  padding-right: calc(2 * var(--ctrl-pw) + 12px);
+}
+option {
+  font: inherit;
+  color: var(--ctrl-fg);
+  background-color: var(--ctrl-bg);
+}
+.disabled,
+[disabled] {
+  color: var(--disabled-fg);
+}
+.selected {
+  background-color: var(--selected-bg);
+  font-weight: bold;
+}
+[data-dnd-ghost] {
+  box-sizing: border-box;
+  border: dashed var(--disabled-fg);
+  min-height: var(--item-h);
+  min-width: var(--icon-btn-size);
+}
+.modal-backdrop {
+  background-color: var(--modal-bg);
+}
+.modal-backdrop > * {
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+.dialog-enter-active {
+  transition: all var(--modal-fade-time) ease-out;
+}
+.dialog-leave-active {
+  transition: all var(--modal-fade-time) ease-in;
+}
+.dialog-enter-from,
+.dialog-leave-to {
+  opacity: 0;
+}
+.dialog {
+  background-color: var(--group-bg);
+  border: var(--group-border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.dialog > .dialog-title {
+  flex: none;
+  padding: var(--dialog-ph) var(--dialog-pw);
+  border-bottom: var(--group-border);
+  display: grid;
+  grid-template-columns: 1fr 0fr;
+  align-items: center;
+}
+.dialog > .dialog-title > .dialog-close {
+  grid-row: 1;
+  grid-column: 2;
+  display: inline-block;
+  box-sizing: border-box;
+  width: var(--icon-btn-size);
+  height: var(--icon-btn-size);
+  padding: var(--icon-p);
+  text-align: center;
+  vertical-align: middle;
+  background-size: var(--icon-size) var(--icon-size);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--ctrl-border-radius);
+  color: var(--page-fg);
+  cursor: default;
+  background-image: var(--icon-cancel);
+}
+.dialog > .dialog-title > .dialog-close:hover,
+.dialog > .dialog-title > .dialog-close:focus-within {
+  background-color: var(--button-hover-bg);
+  box-shadow: none;
+}
+.dialog > .dialog-title > .dialog-close:active {
+  background-color: var(--button-active-bg);
+}
+.dialog > .dialog-title > .dialog-close.mainmenu {
+  background-image: var(--icon-mainmenu);
+}
+.dialog > .dialog-title > .dialog-close.menu {
+  background-image: var(--icon-menu);
+}
+.dialog > .dialog-title > .dialog-close.collapse {
+  background-image: var(--icon-collapse-open);
+}
+.dialog > .dialog-title > .dialog-close.expand {
+  background-image: var(--icon-collapse-closed);
+}
+.dialog > .dialog-title > .dialog-close.cancel {
+  background-image: var(--icon-cancel);
+}
+.dialog > .dialog-title > .dialog-close.stash {
+  background-image: var(--icon-stash);
+}
+.dialog > .dialog-title > .dialog-close.stash.one {
+  background-image: var(--icon-stash-one);
+}
+.dialog > .dialog-title > .dialog-close.stash.newgroup {
+  background-image: var(--icon-new-empty-group);
+}
+.dialog > .dialog-title > .dialog-close.restore {
+  background-image: var(--icon-restore);
+}
+.dialog > .dialog-title > .dialog-close.restore-remove {
+  background-image: var(--icon-restore-del);
+}
+.dialog > .dialog-title > .dialog-close.remove {
+  background-image: var(--icon-delete);
+}
+.dialog > .dialog-title > .dialog-close.remove.stashed {
+  background-image: var(--icon-delete-stashed);
+}
+.dialog > .dialog-title > .dialog-close.remove.opened {
+  background-image: var(--icon-delete-opened);
+}
+.dialog > .dialog-title > .dialog-close.back {
+  background-image: var(--icon-back);
+}
+.dialog > .dialog-content {
+  flex: 1 1 auto;
+  padding: var(--dialog-ph) var(--dialog-pw);
+  display: grid;
+  overflow: auto;
+}
+.dialog > .dialog-buttons {
+  flex: none;
+  padding: var(--dialog-ph) var(--dialog-pw);
+  border-top: var(--group-border);
+  display: grid;
+  align-items: center;
+}
+.dialog * {
+  row-gap: var(--ctrl-mh);
+  column-gap: var(--ctrl-mw);
+}
+details.menu > summary {
+  list-style: none;
+}
+details.menu > summary::-webkit-details-marker {
+  display: none;
+}
+details.menu[open] > summary {
+  box-shadow: var(--shadow);
+}
+details.menu[open] > summary.action {
+  background-color: var(--button-hover-bg);
+}
+.menu-bounds {
+  padding: var(--menu-mh) var(--menu-mw);
+}
+.menu-bounds > nav {
+  padding: var(--menu-mh) 0;
+  background-color: var(--group-bg);
+  box-shadow: var(--shadow);
+  border: var(--group-border);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.menu-bounds > nav input {
+  margin: var(--ctrl-mh) var(--ctrl-mw);
+}
+.menu-bounds > nav a,
+.menu-bounds > nav button,
+.menu-bounds > nav .menu-item {
+  cursor: default;
+  margin: 0;
+  padding: 0 calc(var(--menu-mw) + 16px) 0 var(--menu-mw);
+  display: flex;
+  align-items: center;
+  gap: var(--ctrl-mw);
+  min-height: var(--item-h);
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: inherit;
+}
+.menu-bounds > nav a.selected,
+.menu-bounds > nav button.selected,
+.menu-bounds > nav .menu-item.selected {
+  background-color: var(--selected-bg);
+}
+.menu-bounds > nav a:not(.disabled),
+.menu-bounds > nav button:not(.disabled),
+.menu-bounds > nav .menu-item:not(.disabled) {
+  color: var(--link-fg);
+}
+.menu-bounds > nav a:not(.disabled):hover,
+.menu-bounds > nav button:not(.disabled):hover,
+.menu-bounds > nav .menu-item:not(.disabled):hover,
+.menu-bounds > nav a:not(.disabled):focus-within,
+.menu-bounds > nav button:not(.disabled):focus-within,
+.menu-bounds > nav .menu-item:not(.disabled):focus-within {
+  background-color: var(--item-hover-bg);
+  box-shadow: none;
+}
+.menu-bounds > nav a:not(.disabled):active,
+.menu-bounds > nav button:not(.disabled):active,
+.menu-bounds > nav .menu-item:not(.disabled):active {
+  background-color: var(--item-active-bg);
+}
+.menu-bounds > nav hr {
+  margin: var(--menu-mh) 0;
+  padding: 0;
+  border: none;
+  border-top: var(--divider-border);
+}
+.hidden {
+  display: none !important;
+}
+.clickme {
+  box-shadow: 0 0 4px 0px var(--userlink-fg);
+  background-color: var(--userlink-fg);
+  color: var(--page-bg);
+  /* XXX dup of :focus */
+}
+.clickme:hover {
+  background-color: var(--userlink-hover-fg);
+}
+.clickme:active {
+  background-color: var(--userlink-active-fg);
+}
+.clickme:focus-within {
+  box-shadow: var(--focus-shadow);
+}
+.status-text {
+  color: var(--disabled-fg);
+  font-style: italic;
+}
+.status-text a {
+  color: var(--disabled-fg);
+  text-decoration: dotted underline;
+}
+.status-text a:hover {
+  color: var(--userlink-fg);
+  text-decoration: solid underline;
+}
+.ephemeral {
+  border: none;
+  background: transparent;
+  border-radius: var(--ctrl-border-radius);
+}
+.ephemeral:focus {
+  background-color: var(--ctrl-bg);
+}
+.ephemeral:hover {
+  box-shadow: var(--ephemeral-hover-shadow);
+}
+.ephemeral:hover:focus {
+  box-shadow: var(--focus-shadow);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+main {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+header.page {
+  position: sticky;
+  z-index: 1;
+  top: 0px;
+  padding: calc(var(--ctrl-mh) / 2) var(--page-pw) var(--ctrl-mh) var(--page-pw);
+  margin-bottom: var(--page-ph);
+  display: grid;
+  grid-template-columns: 0fr 1fr 0fr;
+  column-gap: 4px;
+  align-items: center;
+  background-color: var(--page-bg);
+  border-bottom: var(--divider-border);
+}
+header.page > .main-menu {
+  grid-row: 1;
+  grid-column: 1;
+}
+.selection-active header.page > .main-menu {
+  display: none;
+}
+header.page > .selection-menu {
+  grid-row: 1;
+  grid-column: 1;
+}
+header.page > input[type="search"] {
+  grid-row: 1;
+  grid-column: 2;
+}
+header.page > .action.collapse {
+  grid-row: 1;
+  grid-column: 4;
+}
+header.page > .title {
+  margin: 0 0 0 8px;
+}
+input[type="search"] {
+  min-width: 16px;
+}
+.selection-menu > summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--icon-p) var(--ctrl-pw);
+  gap: var(--ctrl-mw);
+  background-color: var(--userlink-fg);
+  color: var(--page-bg);
+  border-radius: var(--ctrl-border-radius);
+}
+.selection-menu > summary:hover {
+  background-color: var(--userlink-hover-fg);
+}
+.selection-menu > summary:active,
+.selection-menu > summary:focus-within {
+  background-color: var(--userlink-active-fg);
+}
+.notification-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 max(0px, calc(50% - 20rem));
+  max-width: 40rem;
+  max-height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: var(--notification-mh) var(--notification-mw);
+  gap: var(--notification-mh);
+}
+.notification-overlay:empty {
+  display: none;
+}
+.notification {
+  display: grid;
+  grid-template-columns: 1fr 0fr;
+  align-items: center;
+  background-color: var(--userlink-fg);
+  color: var(--page-bg);
+  border-radius: var(--ctrl-border-radius);
+  box-shadow: var(--shadow-heavy);
+}
+.notification.has-action:hover {
+  background-color: var(--userlink-hover-fg);
+}
+.notification.has-action:active {
+  background-color: var(--userlink-active-fg);
+}
+.notification > .contents {
+  margin: var(--ctrl-mh) var(--ctrl-mw);
+}
+.notification button {
+  background-color: var(--userlink-hover-fg);
+  color: var(--page-bg);
+}
+.notification button:hover {
+  background-color: var(--userlink-active-fg);
+}
+.notification button:active {
+  background-color: var(--userlink-fg);
+}
+.notification-enter-active {
+  transition: all var(--notification-fade-time) ease-out;
+}
+.notification-leave-active {
+  transition: all var(--notification-fade-time) ease-in;
+}
+.notification-enter-from,
+.notification-leave-to {
+  opacity: 0;
+  scale: 1 0.5;
+}
+footer.page {
+  padding: var(--page-ph) var(--page-pw);
+  text-align: center;
+}
+.action {
+  display: inline-block;
+  box-sizing: border-box;
+  width: var(--icon-btn-size);
+  height: var(--icon-btn-size);
+  padding: var(--icon-p);
+  text-align: center;
+  vertical-align: middle;
+  background-size: var(--icon-size) var(--icon-size);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--ctrl-border-radius);
+  color: var(--page-fg);
+  cursor: default;
+}
+.action:hover,
+.action:focus-within {
+  background-color: var(--button-hover-bg);
+  box-shadow: none;
+}
+.action:active {
+  background-color: var(--button-active-bg);
+}
+nav.action-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+nav.action-group .action {
+  border-radius: 0;
+}
+nav.action-group > .action:first-child,
+nav.action-group > :first-child .action {
+  border-top-left-radius: var(--ctrl-border-radius);
+  border-bottom-left-radius: var(--ctrl-border-radius);
+}
+nav.action-group > .action:last-child,
+nav.action-group > :last-child .action {
+  border-top-right-radius: var(--ctrl-border-radius);
+  border-bottom-right-radius: var(--ctrl-border-radius);
+}
+.action.first {
+  border-top-left-radius: var(--ctrl-border-radius);
+  border-bottom-left-radius: var(--ctrl-border-radius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.action.middle {
+  border-radius: 0;
+}
+.action.last {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--ctrl-border-radius);
+  border-bottom-right-radius: var(--ctrl-border-radius);
+}
+.action-container:hover .action.stash {
+  background-color: var(--create-bg);
+}
+.action-container:hover .action.stash:hover {
+  background-color: var(--create-hover-bg);
+}
+.action-container:hover .action.stash:active {
+  background-color: var(--create-active-bg);
+}
+.action-container:hover .action.restore {
+  background-color: var(--read-bg);
+}
+.action-container:hover .action.restore:hover {
+  background-color: var(--read-hover-bg);
+}
+.action-container:hover .action.restore:active {
+  background-color: var(--read-active-bg);
+}
+.action-container:hover .action.restore-remove {
+  background-color: var(--update-bg);
+}
+.action-container:hover .action.restore-remove:hover {
+  background-color: var(--update-hover-bg);
+}
+.action-container:hover .action.restore-remove:active {
+  background-color: var(--update-active-bg);
+}
+.action-container:hover .action.remove {
+  background-color: var(--delete-bg);
+}
+.action-container:hover .action.remove:hover {
+  background-color: var(--delete-hover-bg);
+}
+.action-container:hover .action.remove:active {
+  background-color: var(--delete-active-bg);
+}
+.action.mainmenu {
+  background-image: var(--icon-mainmenu);
+}
+.action.menu {
+  background-image: var(--icon-menu);
+}
+.action.collapse {
+  background-image: var(--icon-collapse-open);
+}
+.action.expand {
+  background-image: var(--icon-collapse-closed);
+}
+.action.cancel {
+  background-image: var(--icon-cancel);
+}
+.action.stash {
+  background-image: var(--icon-stash);
+}
+.action.stash.one {
+  background-image: var(--icon-stash-one);
+}
+.action.stash.newgroup {
+  background-image: var(--icon-new-empty-group);
+}
+.action.restore {
+  background-image: var(--icon-restore);
+}
+.action.restore-remove {
+  background-image: var(--icon-restore-del);
+}
+.action.remove {
+  background-image: var(--icon-delete);
+}
+.action.remove.stashed {
+  background-image: var(--icon-delete-stashed);
+}
+.action.remove.opened {
+  background-image: var(--icon-delete-opened);
+}
+.action.back {
+  background-image: var(--icon-back);
+}
+.notification .action.cancel {
+  background-image: var(--icon-cancel-inverse);
+}
+.folder-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.folder-list > li {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  list-style: none;
+}
+.folder-list > li:empty:not([data-dnd-ghost]) {
+  display: none;
+}
+.folder {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+}
+.folder > header {
+  margin-top: calc(var(--ctrl-mh) / 2);
+  margin-bottom: var(--group-headerhr-mh);
+  padding: var(--group-headerhr-mh) var(--page-pw);
+  border-bottom: var(--divider-border);
+  display: grid;
+  grid-template-columns: 0fr 1fr 0fr 0fr;
+  row-gap: var(--input-text-ph);
+  column-gap: var(--input-text-pw);
+  align-items: center;
+}
+.folder > header > .folder-name {
+  grid-row: 1;
+  grid-column: 1 / 3;
+  padding: var(--input-text-ph) var(--input-text-pw);
+  margin-left: calc(0px - var(--input-text-pw));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.folder > header > .action.collapse,
+.folder > header > .action.expand {
+  grid-row: 1;
+  grid-column: 4;
+}
+.folder > header > .action.collapse {
+  display: none;
+}
+.folder > header > .action.expand {
+  display: block;
+}
+.folder > header > .folder-actions {
+  grid-row: 2;
+  grid-column: 1;
+}
+.folder:hover > header > .action.collapse,
+.folder:focus-within > header > .action.collapse {
+  display: block;
+}
+.folder > .contents {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--page-ph) 0;
+}
+.folder > .contents > .tabs {
+  display: flex;
+  flex-direction: column;
+  min-height: 12px;
+  margin: 0;
+  padding: 0;
+}
+.folder > .contents > .tabs > li {
+  list-style: none;
+}
+.folder > .contents > .tabs > li:empty:not([data-dnd-ghost]) {
+  display: none;
+}
+.folder.collapsed > header {
+  margin-bottom: 0px;
+  grid-template-columns: 1fr 0fr 0fr;
+}
+.folder.collapsed > header > .folder-actions {
+  display: none;
+  grid-row: 1;
+  grid-column: 3;
+}
+.folder.collapsed:hover > header > .folder-actions,
+.folder.collapsed:focus-within > header > .folder-actions {
+  display: flex;
+}
+.folder.collapsed > .contents {
+  display: none !important;
+}
+.folder-name,
+.group-title {
+  display: block;
+  font-weight: bold;
+  font-size: 13pt;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: var(--input-text-ph) var(--input-text-pw);
+}
+.folder-name.disabled,
+.group-title.disabled {
+  color: var(--disabled-fg);
+}
+.folder-item {
+  display: grid;
+  grid-template-columns: 0fr 0fr 1fr 0fr;
+  align-items: center;
+  padding: 0 var(--page-pw);
+  height: var(--item-h);
+}
+.selection-active .folder-item:not(.disabled) .action.select {
+  background-color: var(--button-bg);
+}
+.folder-item:not(.disabled).selected .action.select {
+  background-color: var(--userlink-fg);
+}
+.folder-item:not(.disabled).selected .action.select:hover {
+  background-color: var(--userlink-hover-fg);
+}
+.folder-item:not(.disabled).selected .action.select:active,
+.folder-item:not(.disabled).selected .action.select:focus-within {
+  background-color: var(--userlink-active-fg);
+}
+.folder-item:not(.disabled):hover,
+.folder-item:not(.disabled):focus-within {
+  background-color: var(--item-hover-bg);
+}
+.folder-item:not(.disabled):hover:not(.selected) .action.select,
+.folder-item:not(.disabled):focus-within:not(.selected) .action.select {
+  background-color: var(--button-bg);
+}
+.folder-item:not(.disabled):hover:not(.selected) .action.select:hover,
+.folder-item:not(.disabled):focus-within:not(.selected) .action.select:hover {
+  background-color: var(--button-hover-bg);
+}
+.folder-item:not(.disabled):hover:not(.selected) .action.select:active,
+.folder-item:not(.disabled):focus-within:not(.selected) .action.select:active {
+  background-color: var(--button-active-bg);
+}
+.folder-item > .indent {
+  display: inline-block;
+  width: calc(var(--icon-size) + var(--ctrl-mw));
+  grid-row: 1;
+  grid-column: 1;
+}
+.folder-item > .item-icon {
+  grid-row: 1;
+  grid-column: 2;
+}
+.folder-item > .text {
+  grid-row: 1;
+  grid-column: 3;
+  height: var(--item-h);
+  /* to vertically center text while text-overflow: ellipsis; */
+  line-height: var(--item-h);
+  margin-left: var(--ctrl-mw);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.folder-item > nav {
+  display: none;
+  grid-row: 1;
+  grid-column: 4;
+}
+.folder-item:hover > nav,
+.folder-item:focus-within > nav {
+  display: flex;
+}
+.folder-item a:hover,
+.folder-item a:focus-within,
+.folder-item a:active {
+  background-color: transparent;
+}
+.folder-item-nesting {
+  margin: 0;
+  padding: 0 0 0 0;
+  list-style: none;
+}
+.export-dialog output h3 {
+  margin-top: 12pt;
+  font-size: 12pt;
+}
+.modal-backdrop.progress {
+  cursor: wait;
+}
+.dialog.progress {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+.dialog.progress.cancellable {
+  cursor: progress;
+}
+.dialog.progress:not(.cancellable) {
+  cursor: wait;
+}
+.dialog.progress .progress-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.dialog.progress .progress-item > progress {
+  grid-row: 1;
+  grid-column: 1;
+  min-width: 32px;
+  height: auto;
+  width: auto;
+}
+.dialog.progress .progress-item > label {
+  grid-row: 1;
+  grid-column: 2;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: inherit;
+}
+.dialog.progress .progress-item > ul {
+  grid-row: 2;
+  grid-column: 1 / 3;
+  margin: 0;
+  padding-left: var(--text-list-indent-w);
+  display: flex;
+  flex-direction: column;
+}
+.dialog.progress .progress-item > ul > li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.selection-active .tab > a {
+  cursor: default;
+}
+.tab > a,
+.tab > a:visited {
+  color: var(--link-fg);
+  text-decoration: none;
+}
+.tab.open > a {
+  color: var(--userlink-fg);
+}
+.tab.no-match > a,
+.tab.no-match > a:visited,
+.tab.no-match.open > a {
+  color: var(--disabled-fg);
+  font-style: italic;
+  text-decoration: line-through;
+}
+.tab.no-match > a a,
+.tab.no-match > a:visited a,
+.tab.no-match.open > a a {
+  color: var(--disabled-fg);
+  text-decoration: dotted underline;
+}
+.tab.no-match > a a:hover,
+.tab.no-match > a:visited a:hover,
+.tab.no-match.open > a a:hover {
+  color: var(--userlink-fg);
+  text-decoration: solid underline;
+}
+.tab.no-match > .action.select {
+  opacity: 60%;
+}
+.tab.active {
+  font-weight: bold;
+  background: linear-gradient(to right, var(--userlink-fg) var(--active-marker-bw), transparent var(--active-marker-bw));
+}
+.tab.active.selected {
+  background: linear-gradient(to right, var(--userlink-fg) var(--active-marker-bw), var(--selected-bg) var(--active-marker-bw));
+}
+.tab.active:hover {
+  background: linear-gradient(to right, var(--userlink-fg) var(--active-marker-bw), var(--item-hover-bg) var(--active-marker-bw));
+}
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background-position: 50% 50%;
+  background-size: var(--icon-size) var(--icon-size);
+  background-repeat: no-repeat;
+}
+.spinner {
+  display: inline-block;
+  animation-name: spinner;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 50%;
+  background-image: var(--spinner-gradient);
+  mask-position: 50% 50%;
+  mask-size: cover;
+  mask-type: alpha;
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-size: cover;
+  -webkit-mask-type: alpha;
+}
+.spinner.size-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  mask-image: radial-gradient(closest-side, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(100% - var(--icon-p)), #000000 calc(100% - var(--icon-p)), #000000 100%);
+  -webkit-mask-image: radial-gradient(closest-side, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(100% - var(--icon-p)), #000000 calc(100% - var(--icon-p)), #000000 100%);
+}
+.spinner.size-2x-icon {
+  width: calc(var(--icon-size) * 2);
+  height: calc(var(--icon-size) * 2);
+  mask-image: radial-gradient(closest-side, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(100% - calc(var(--icon-p) * 2)), #000000 calc(100% - calc(var(--icon-p) * 2)), #000000 100%);
+  -webkit-mask-image: radial-gradient(closest-side, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(100% - calc(var(--icon-p) * 2)), #000000 calc(100% - calc(var(--icon-p) * 2)), #000000 100%);
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.folder-item.deleted > .item-icon {
+  opacity: 60%;
+}
+html.view-tab .folder-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: var(--page-pw) var(--page-pw);
+  row-gap: var(--page-pw);
+  column-gap: var(--page-pw);
+}
+html.view-tab .folder-list > li {
+  flex: 1 1 25rem;
+}
+html.view-tab .one-column .folder {
+  flex: 1 1 auto;
+  width: 100%;
+}
+html.view-tab .folder {
+  flex: 1 1 auto;
+  background-color: var(--group-bg);
+  border: var(--group-border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+html.view-tab .folder.collapsed {
+  background: var(--group-disabled-bg);
+  border: var(--group-disabled-border);
+  box-shadow: var(--shadow-faint);
+}
+html.view-tab .folder > header > nav.folder-actions {
+  grid-row: 1;
+  grid-column: 3;
+  display: none;
+}
+html.view-tab .folder:hover > header > nav.folder-actions,
+html.view-tab .folder:focus-within > header > nav.folder-actions {
+  display: flex;
+}
+html.view-tab .folder > .contents {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+html.view-tab .folder > .contents > .tabs:last-child {
+  flex: 1 1 auto;
+}
+html.view-tab .action.stash.one.here {
+  display: none;
+}
+html.page-whats-new main {
+  -moz-user-select: text;
+  user-select: text;
+}
+html.page-whats-new .folder > ul.contents {
+  padding: 0;
+  margin-left: calc(2 * var(--page-pw));
+  margin-right: var(--page-pw);
+  margin-top: 0;
+  list-style: disc;
+}
+html.page-whats-new li {
+  margin: var(--ctrl-mh) 0;
+}
+html.page-whats-new span.new,
+html.page-whats-new span.added,
+html.page-whats-new span.improved,
+html.page-whats-new span.fixed,
+html.page-whats-new span.removed {
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: var(--input-text-border-radius);
+  padding: 0 var(--icon-p);
+}
+html.page-whats-new span.new {
+  background-color: var(--read-bg);
+}
+html.page-whats-new span.added {
+  background-color: var(--read-bg);
+}
+html.page-whats-new span.improved {
+  background-color: var(--create-bg);
+}
+html.page-whats-new span.fixed {
+  background-color: var(--update-bg);
+}
+html.page-whats-new span.removed {
+  background-color: var(--delete-bg);
+}
+html.page-whats-new img.inl {
+  height: var(--icon-size);
+  vertical-align: bottom;
+}
+html.page-whats-new .issue {
+  color: var(--disabled-fg);
+  font-style: italic;
+}
+html.page-whats-new .issue a {
+  color: var(--disabled-fg);
+  text-decoration: dotted underline;
+}
+html.page-whats-new .issue a:hover {
+  color: var(--userlink-fg);
+  text-decoration: solid underline;
+}
+html.page-restore main {
+  box-sizing: border-box;
+  padding: calc(2 * var(--page-ph)) calc(2 * var(--page-pw));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  -moz-user-select: text;
+  user-select: text;
+}
+html.page-restore main > *:not(.notification-overlay) {
+  max-width: 50rem;
+}
+html.page-restore h2 {
+  margin: var(--page-ph) 0;
+  font-size: 18pt;
+}
+html.page-restore p {
+  margin: 0;
+  font-size: 11pt;
+}
+html.page-restore .icon-warning {
+  width: 192px;
+  height: 192px;
+  opacity: 50%;
+}
+html.page-restore a.unsafe-url {
+  display: block;
+  padding: var(--ctrl-mh) var(--ctrl-mw);
+  background-color: var(--group-bg);
+  border: var(--group-border);
+  font-family: monospace;
+  font-size: 11pt;
+  text-decoration: dotted underline;
+}
+html.page-options {
+  overflow: auto;
+}
+html.page-options.theme-system,
+html.page-options.theme-light {
+  --page-bg: #ffffff;
+}
+html.page-options.theme-dark {
+  --page-bg: #202023;
+  --page-fg: #f9f9fa;
+  --scroll-bar: #48484e;
+  --scroll-handle: #202023;
+}
+@media (prefers-color-scheme: dark) {
+  html.page-options.theme-system {
+    --page-bg: #202023;
+    --page-fg: #f9f9fa;
+    --scroll-bar: #48484e;
+    --scroll-handle: #202023;
+  }
+}
+html.page-options body,
+html.page-options main {
+  overflow: unset;
+}
+html.page-options main {
+  box-sizing: border-box;
+  padding: var(--ctrl-border-radius) var(--ctrl-border-radius);
+}
+html.page-options section {
+  margin: calc(3 * var(--ctrl-mh)) 0;
+}
+html.page-options hr {
+  margin-top: calc(3 * var(--ctrl-mh)) 0;
+  margin-bottom: var(--ctrl-mh);
+  border: var(--divider-border);
+}
+html.page-options h4 {
+  font-weight: bold;
+  font-size: calc(var(--font-size) + 2pt);
+  margin-top: var(--ctrl-mh);
+  margin-bottom: calc(3 * var(--ctrl-mh));
+}
+html.page-options h5 {
+  font-weight: bold;
+  font-size: var(--font-size);
+  margin: 0 0;
+}
+html.page-options ul {
+  list-style: none;
+  margin: 0 0 0 var(--text-list-indent-w);
+  padding: 0;
+}
+html.page-options li {
+  margin: var(--ctrl-mh) 0;
+}
+html.page-options label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--ctrl-pw);
+}
+html.page-options input[type=number] {
+  max-width: 5em;
+}
+html.page-options main:not(.show-advanced) .advanced {
+  display: none;
+}
+html.page-options .advanced.show-advanced {
+  display: block !important;
+  margin-top: var(--ctrl-mh);
+}
+html.page-options .advanced {
+  background-color: var(--advanced-bg);
+  border-radius: calc(var(--ctrl-border-radius) / 2);
+  box-shadow: 0 0 0 var(--ctrl-border-radius) var(--advanced-bg);
+  margin-top: calc(var(--ctrl-mh) + var(--ctrl-border-radius));
+  margin-bottom: calc(var(--ctrl-mh) + var(--ctrl-border-radius));
+}
+html.page-options section.advanced {
+  margin-top: calc(3 * var(--ctrl-mh) + var(--ctrl-border-radius));
+  margin-bottom: calc(3 * var(--ctrl-mh) + var(--ctrl-border-radius));
+}
+html.page-options .two-col {
+  display: grid;
+  width: max-content;
+  grid-template-columns: 0fr 1fr;
+  row-gap: var(--ctrl-mh);
+  column-gap: var(--ctrl-mw);
+}
+html.page-options .two-col > label {
+  white-space: nowrap;
+}
+html.page-options .feature-flag {
+  display: grid;
+  grid-template-columns: 1fr 0fr 0fr;
+  align-items: center;
+  column-gap: var(--ctrl-mw);
+}
+html.page-options .feature-flag > label {
+  grid-row: 1;
+  grid-column: 1;
+}
+html.page-options .feature-flag > input {
+  grid-row: 1;
+  grid-column: 2;
+}
+html.page-options .feature-flag > button {
+  grid-row: 1;
+  grid-column: 3;
+}
+html.page-options .feature-flag > div {
+  grid-row: 2;
+  grid-column: 1;
+}
+html.page-options .issue {
+  color: var(--disabled-fg);
+  font-style: italic;
+}
+html.page-options .issue a {
+  color: var(--disabled-fg);
+  text-decoration: dotted underline;
+}
+html.page-options .issue a:hover {
+  color: var(--userlink-fg);
+  text-decoration: solid underline;
+}
+/*# sourceMappingURL=tab-stash.css.map */

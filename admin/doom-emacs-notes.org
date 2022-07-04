@@ -1,0 +1,6 @@
+#+title: Doom Emacs Notes
+#+description: Master Notes while learning Doom Emacs
+
+* COMMANDS
+** create a new file C-x, C-f
+** C-x b switch between buffers
