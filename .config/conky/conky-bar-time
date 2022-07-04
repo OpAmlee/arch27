@@ -1,0 +1,51 @@
+conky.config = {
+
+background=true,
+update_interval=1,
+double_buffer=true,
+no_buffers=true,
+imlib_cache_size=10,
+
+draw_shades=false,
+draw_outline=false,
+draw_borders=false,
+
+gap_x=500,
+gap_y=-12,
+
+alignment="top_left",
+
+minimum_height=100,
+minimum_width=0,
+
+own_window=true,
+own_window_type="dock",
+own_window_transparent=true,
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+
+own_window_argb_visual=true,
+own_window_argb_value=0,
+
+use_xft=true,
+xftalpha=1,
+font="Input Mono Nerd Font:size=10",
+text_buffer_size=256,
+override_utf8_locale=true,
+
+default_color='FFFFFF',
+
+color0='121212',
+color1='8D7F71',
+color2='E8D9B1',
+
+
+}
+
+
+
+conky.text = [[
+
+${font Input Mono:Italic:size=12}${color2}\
+${time %I:%M%P}${color1} %${battery_percent BAT0}
+#${blink "Warning: ${battery_percent BAT0} depleted!"}
+]]
