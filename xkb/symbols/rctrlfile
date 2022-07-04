@@ -1,0 +1,18 @@
+
+// Make the Scroll Lock key a left Super.
+// xkb_symbols "sclk_super" {
+//    replace key <SCLK> { [ Super_L ] };
+//    modifier_map  Mod4 { <SCLK> };
+//};
+
+
+
+//file rctrlfile
+
+// Make the Right Control key an Escape.
+xkb_symbols "rctrl_esc" {
+    replace key <RCTL> { [ Escape ] };
+    modifier_map  Mod4 { <RCTL> };
+};
+
+

@@ -1,0 +1,5 @@
+
+xkb_symbols "sclk_super" {
+    replace key <SCLK> { [ Super_L ] };
+    modifier_map  Mod4 { <SCLK> };
+};
