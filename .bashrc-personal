@@ -1,0 +1,384 @@
+export SUDO_ASKPASS='/usr/lib/ssh/x11-ssh-askpass'
+
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+alias att="arcolinux-tweak-tool"
+alias adt="arcolinux-desktop-trasher"
+alias abl="arcolinux-betterlockscreen"
+alias agm="arcolinux-get-mirrors"
+alias amr="arcolinux-mirrorlist-rank-info"
+alias aom="arcolinux-osbeck-as-mirror"
+alias ars="arcolinux-reflector-simple"
+alias atm="arcolinux-tellme"
+alias avs="arcolinux-vbox-share"
+alias awa="arcolinux-welcome-app"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+#ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
+alias setbg="feh --no-fehbg --bg-fill '/usr/share/backgrounds/trg-wallpapers/black-bg.jpg'"
+
+### BASH INSULTER ###
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
+
+alias showbat="$HOME/.scripts/show-bat.sh"
+
+case ${TERM} in
+  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|kitty|konsole*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+        ;;
+  screen*)
+    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+    ;;
+esac
+
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+alias doas="doas --"
+alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
+
+alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-$(date +%Y.%m.%d-%H.%M.%S)'
+
+alias edunst='nvim ~/.config/dunst/dunstrc'
+
+#Neovim
+alias senv='sudoedit nvim'
+alias snv='sudo nvim'
+alias nv='nvim'
+alias vim='nvim'
+alias em='/usr/bin/emacs -nw'
+alias emacs="emacsclient -c -a 'emacs'"
+alias doomsync="~/.emacs.d/bin/doom sync"
+alias doomdoctor="~/.emacs.d/bin/doom doctor"
+alias doomupgrade="~/.emacs.d/bin/doom upgrade"
+alias doompurge="~/.emacs.d/bin/doom purge"
+
+alias show='exa --color=always --icons --group-directories-first'
+alias ls='exa -al --color=always --icons --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --icons --group-directories-first'  # long format
+alias lt='exa -aT --color=always --icons --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
+
+alias figletc='figlet -f Calvin\ S'
+
+#[ -x /bin/fish ] && SHELL=/bin/fish exec fish
+
+findit ()
+{
+    find / 2> /dev/null | grep "$1"  | grep -v /mnt
+}
+
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
+alias vifm='./.config/vifm/scripts/vifmrun'
+alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
+alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
+
+getoctal()
+{
+    stat -c '%a' "$1"
+}
+
+alias viewfont='fontpreview-ueberzug'
+# logout
+
+# sudo vim
+function sim()
+{
+    sudo vim "$*"
+}
+
+mkexe ()
+{
+    touch "$1" && chmod +x "$1" && nvim "$1"
+}
+
+mkcd ()
+{
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+
+# see last modification date of file
+function lm()
+{
+    ls -l "$*" | awk '{print $6, $7, $8}'
+}
+
+alias fznv='nvim $(fzf --height 40% --reverse)'
+alias fzsenv='sudoedit nvim $(fzf --height 40% --reverse)'
+alias nvfull="fzf --height 40% --layout reverse --info inline --border --preview 'file {}' --preview-window up,1,border-horizontal --color 'fg:#928374,fg+:#18E406,bg:#121212,preview-bg:#1F2022,border:#6D6259'"
+
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias tag='git tag'
+alias newtag='git tag -a'
+alias rmgitcache="rm -r ~/.cache/git"
+
+alias bare='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
+alias barep='bare push arch28'
+ function barea()
+{
+    bare add "$*"
+}
+function barec()
+{
+    bare commit -m "$1"
+}
+# get error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+# termbin
+alias tb="nc termbin.com 9999"
+
+#moving your personal files and folders from /personal to ~
+alias personal='cp -Rf /personal/* ~'
+
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# verify signature for isos
+alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+# receive the key of a developer
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+export GDK_SCALE=2
+
+#keyboard
+alias kbreset='setxkbmap'
+alias kbset='/bin/bash -c "sleep 1; /usr/bin/xmodmap /home/$USER/.Xmodmap"'
+alias xevsimple='/bin/bash -c "sleep 5; /home/$USER/.scripts/xev-simple.sh"'
+
+# use nvim for editor in visudo
+alias nvim-visudo="sudo EDITOR=nvim visudo"
+
+### Uncomment only one of these!
+
+### "bat" as manpager
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+### "vim" as manpager
+#export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+
+## "nvim" as manpager
+export MANPAGER="nvim -c 'set ft=man' -"
+
+# Comment this line out to enable default emacs-like bindings
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
+alias merge='xrdb -merge ~/.Xresources'
+
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+#update betterlockscreen images
+alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
+
+alias m1='xrandr --output eDP1 --mode 1366x768 --output DP-1-1 --off --output DP-1-2 --off'
+alias m1kill='xrandr --output eDP1 --off'
+alias m2='/bin/bash -c ~/.scripts/xrandr.sh'
+alias m3='xrandr --output eDP-1 --off \
+    --output DP-1-1 --primary --mode 1920x1080 --pos 1920x0 \
+    --output DP-1-2 --right-of DP-1-1 --mode 1920x1080 --left-of DP-1-1 --pos 0x0'
+alias m4='xrandr --output eDP-1 --off --output DP-1-2 --off \
+    --output DP-1-1 --primary --mode 1920x1080 --pos 1920x0'
+
+alias pacview="$bash -c pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+
+alias ipac='sudo pacman -S'
+alias ipar='paru -S'
+
+alias findpac='sudo pacman -sS'
+alias findpar='paru -sS'
+
+alias uppac='sudo pacman -Syyu --noconfirm'                 # update only standard pkgs
+alias uppar='paru -Syyu --noconfirm'                        # update AUR packages
+
+alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
+alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
+
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
+alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
+
+#alias pip=pip3
+
+export PATH="$PATH:/home/trg/.local/bin/"
+export LC_ALL=en_US.UTF-8
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. $HOME/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+
+#alias pip="/usr/bin/pip"
+
+# Bash Prompt
+#---------
+#export PS1="\e[0;35m[\u\e[m @ \e[0;36m[\h \W]\\e[m$  "
+#--------
+#export PS1="\\e[32m\]\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]\[\e[m\\$ "
+#--------
+#export PS1="\@ \w \$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\n\u@\W \\$\[$(tput sgr0)\]"
+
+alias psa="ps auxf"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+
+#alias python=python3
+
+alias godmenu='cd $HOME/.config/dmenu'
+alias godusk='cd $HOME/.config/dusk'
+
+alias goscripts='cd $HOME/.scripts'
+
+alias gost='cd $HOME/.config/dusk/st'
+
+alias rmc='rm -f config.h'
+alias smi='sudo make install'
+
+
+# Quick Edit Configs
+
+alias ealacritty='nvim ~/.config/alacritty/alacritty.yml'
+
+alias ebinds='nvim ~/.config/sxhkd/sxhkdrc'
+
+alias ebash='nvim ~/.bashrc-personal'
+
+alias edmenu='cd ~/.config/dmenu && nvim ~/.config/dmenu/config.def.h'
+
+alias edusk='cd ~/.config/dusk && nvim ~/.config/dusk/config.def.h'
+alias edunst='nvim ~/.config/dunst/dunstrc'
+
+alias ekitty='nvim ~/.config/kitty/kitty.conf'
+alias ekitty1='nvim ~/.config/kitty/kitty1-scratch.conf'
+alias ekitty2='nvim ~/.config/kitty/kitty2-standard.conf'
+alias ekitty3='nvim ~/.config/kitty/kitty3-ranger.conf'
+alias ekitty4='nvim ~/.config/kitty/kitty4-fallback.conf'
+
+alias efeatherpad='nvim ~/.config/featherpad/fp.conf'
+
+alias eleafpad='nvim ~/.config/leafpad/leafpadrc'
+
+alias envim='nvim ~/.config/nvim/init.vim'
+
+alias erifle='nvim ~/.config/ranger/rifle.conf'
+alias eranger='nvim ~/.config/ranger/rc.conf'
+
+alias est='nvim ~/.config/dusk/st/config.def.h'
+
+alias estart='sudo nvim /usr/local/bin/autostart-dusk'
+alias estarship='nvim ~/.config/starship/starship.toml'
+
+#neofetch
+#screenfetch
+#alsi
+#paleofetch
+#fetch
+#hfetch
+#sfetch
+#ufetch
+#ufetch-arco
+#pfetch
+#sysinfo
+#sysinfo-retro
+#cpufetch
+#colorscript random
+
+alias runrofi='rofi -combi-modi window,drun,ssh -theme trg_custom -font "hack 10" -show combi -icon-theme "Papirus" -show-icons'
+
+shopt -s autocd # change to named directory
+shopt -s cdspell # autocorrects cd misspellings
+shopt -s cmdhist # save multi-line commands in history as single line
+shopt -s dotglob
+shopt -s histappend # do not overwrite history
+shopt -s expand_aliases # expand aliases
+shopt -s checkwinsize # checks term size when bash regains control
+
+alias showrangerkeys='$HOME/.scripts/yad-ranger-keys.sh'
+alias showduskkeys='$HOME/.scripts/dusk.keys.sh'
+
+alias se='sudoedit'
+
+alias smi='sudo make install'
+
+alias logout='pkill -Kill -u $USER'
+#alias shutdown='sudo shutdown -n now'
+alias shutdown='systemctl shutdown'
+alias reboot='systemctl reboot'
+alias ssn="sudo shutdown now"
+alias sr="sudo reboot"
+
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
+# youtube-dl
+alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+alias yta-best="youtube-dl --extract-audio --audio-format best "
+alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+
+alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
+
+alias xdgninja="$HOME/xdg-ninja/xdg-ninja.sh"
+
+#eval "$(starship init bash)"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
