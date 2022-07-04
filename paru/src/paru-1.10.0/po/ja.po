@@ -1,0 +1,1020 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE paru'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the paru package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: paru VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/Morganamilo/paru\n"
+"POT-Creation-Date: 2021-08-14 12:23+0000\n"
+"PO-Revision-Date: 2021-08-15 13:09+0900\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: livewing.net <dev@livewing.net>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja\n"
+
+#: src/clean.rs:31
+msgid "Do you want to remove ALL AUR packages from cache?"
+msgstr "キャッシュから全ての AUR パッケージを削除しますか？"
+
+#: src/clean.rs:33
+msgid "Do you want to remove all other AUR packages from cache?"
+msgstr "キャッシュから他の全ての AUR パッケージを削除しますか？"
+
+#: src/clean.rs:40
+msgid "Clone Directory: {}"
+msgstr "複製ディレクトリ: {}"
+
+#: src/clean.rs:46
+msgid ""
+"\n"
+"Diff Directory: {}"
+msgstr ""
+"\n"
+"差分ディレクトリ: {}"
+
+#: src/clean.rs:48
+msgid "Do you want to remove all saved diffs?"
+msgstr "保存された全ての差分を削除しますか？"
+
+#: src/clean.rs:64
+msgid "can't open diff dir: {}"
+msgstr "差分ディレクトリを開けません: {}"
+
+#: src/clean.rs:75 src/clean.rs:133
+msgid "could not remove '{}'"
+msgstr "'{}' を削除できませんでした"
+
+#: src/clean.rs:93
+msgid "can't open clone dir: {}"
+msgstr "複製ディレクトリを開けません: {}"
+
+#: src/command_line.rs:132
+msgid "option {} expects a value"
+msgstr "オプション {} は値が必要です"
+
+#: src/command_line.rs:163 src/command_line.rs:332
+msgid "option {} does not allow a value"
+msgstr "オプション {} は値を許可しません"
+
+#: src/command_line.rs:323
+msgid "unknown option --{}"
+msgstr "不明なオプション --{}"
+
+#: src/command_line.rs:326
+msgid "unknown option -{}"
+msgstr "不明なオプション -{}"
+
+#: src/completion.rs:27
+msgid "failed to open cache file '{}'"
+msgstr "キャッシュファイル '{}' のオープンに失敗しました"
+
+#: src/completion.rs:65
+msgid "could not update aur cache"
+msgstr "AUR キャッシュを更新できませんでした"
+
+#: src/config.rs:174
+msgid "invalid value '{val}' for key '{key}', expected: {exp}"
+msgstr "キー '{key}' に対して値 '{val}' は不正です、期待される値: {exp}"
+
+#: src/config.rs:462
+msgid "error: unknown section '{}'"
+msgstr "エラー: 不明なセクション '{}'"
+
+#: src/config.rs:477
+msgid "failed to find cache directory"
+msgstr "キャッシュディレクトリが見つかりません"
+
+#: src/config.rs:480
+msgid "failed to find config directory"
+msgstr "設定ディレクトリが見つかりません"
+
+#: src/config.rs:504
+msgid "config file '{}' does not exist"
+msgstr "設定ファイル '{}' は存在しません"
+
+#: src/config.rs:553
+msgid "only one operation may be used at a time"
+msgstr "一度にできる操作はひとつだけです"
+
+#: src/config.rs:641
+msgid "can not find local repo '{}' in pacman.conf"
+msgstr "pacman.conf でローカルリポジトリ '{}' を見つけられません"
+
+#: src/config.rs:677
+msgid "failed to initialize alpm: root={} dbpath={}"
+msgstr "alpm を初期化できません: root={} dbpath={}"
+
+#: src/config.rs:747 src/config.rs:895
+msgid "value can not be empty for key '{}'"
+msgstr "キー '{}' の値は空にできません"
+
+#: src/config.rs:763
+msgid "key '{}' does not belong to a section"
+msgstr "キー '{}' はセクションに属しません"
+
+#: src/config.rs:775 src/config.rs:777 src/config.rs:791 src/config.rs:846
+#: src/config.rs:851
+msgid "key can not be empty"
+msgstr "キーは空にできません"
+
+#: src/config.rs:778
+msgid "key can not contain null bytes"
+msgstr "キーに null バイトを含めることはできません"
+
+#: src/config.rs:781
+msgid "value can not contain null bytes"
+msgstr "値に null バイトを含めることはできません"
+
+#: src/config.rs:813
+msgid "error: unknown option '{}' in section [bin]"
+msgstr "エラー: セクション [bin] の不明なオプション '{}'"
+
+#: src/config.rs:913
+msgid "error: unknown option '{}' in section [options]"
+msgstr "エラー: セクション [options] の不明なオプション '{}'"
+
+#: src/config.rs:918
+msgid "option '{}' does not take a value"
+msgstr "オプション '{}' は値をとりません"
+
+#: src/config.rs:964 src/install.rs:1812
+msgid "There are {n} providers available for {pkg}:"
+msgstr "{n} 個の選択肢が {pkg} にはあります:"
+
+#: src/config.rs:978 src/info.rs:57 src/info.rs:96 src/install.rs:1771
+#: src/install.rs:1820
+msgid "Repository"
+msgstr "リポジトリ"
+
+#: src/config.rs:1000
+msgid "  failed to sync {}"
+msgstr "  {} の同期に失敗しました"
+
+#: src/devel.rs:130 src/download.rs:179
+msgid "Querying AUR..."
+msgstr "AUR を検索しています..."
+
+#: src/devel.rs:143 src/devel.rs:167 src/install.rs:710
+msgid "failed to parse srcinfo for '{}'"
+msgstr "'{}' の SRCINFO の解析に失敗しました"
+
+#: src/devel.rs:185
+msgid "Looking for devel repos..."
+msgstr "開発リポジトリを検索しています..."
+
+#: src/devel.rs:194
+msgid "failed to save devel info"
+msgstr "開発情報の保存に失敗しました"
+
+#: src/devel.rs:384
+msgid "package does not have an update"
+msgstr "パッケージに更新はありません"
+
+#: src/devel.rs:419
+msgid "failed to lookup: {}"
+msgstr "検索に失敗: {}"
+
+#: src/devel.rs:447
+msgid "invalid json: {}"
+msgstr "不正な JSON: {}"
+
+#: src/download.rs:83
+msgid "packages not in the AUR: "
+msgstr "AUR にないパッケージ: "
+
+#: src/download.rs:94
+msgid "marked out of date: "
+msgstr "古いバージョンとしてマーク: "
+
+#: src/download.rs:105
+msgid "orphans: "
+msgstr "孤児: "
+
+#: src/download.rs:206
+msgid "could not get current directory"
+msgstr "現在のディレクトリを取得できませんでした"
+
+#: src/download.rs:210
+msgid "can not get repo packages: asp is not installed"
+msgstr "リポジトリのパッケージを取得できません: asp がインストールされていません"
+
+#: src/download.rs:231
+msgid "Missing ABS packages "
+msgstr "存在しない ABS パッケージ "
+
+#: src/download.rs:250 src/download.rs:276 src/download.rs:530
+#: src/download.rs:543 src/download.rs:557 src/exec.rs:72 src/exec.rs:113
+#: src/exec.rs:122 src/exec.rs:148 src/exec.rs:161 src/exec.rs:186
+#: src/exec.rs:200 src/exec.rs:221 src/exec.rs:234 src/install.rs:760
+#: src/install.rs:823 src/install.rs:861
+msgid "failed to run:"
+msgstr "実行に失敗しました:"
+
+#: src/download.rs:263
+msgid "does not contain PKGBUILD: skipping"
+msgstr "PKGBUILD が含まれていません: スキップ"
+
+#: src/download.rs:294
+msgid "downloading: {pkg}"
+msgstr "{pkg} をダウンロードしています"
+
+#: src/download.rs:317
+msgid "Downloading PKGBUILDs..."
+msgstr "PKGBUILD をダウンロードしています..."
+
+#: src/download.rs:321
+msgid " PKGBUILDs up to date"
+msgstr " PKGBUILD は最新です"
+
+#: src/download.rs:520
+msgid "{} is not installed: can not get repo packages"
+msgstr "{} はインストールされていません: リポジトリのパッケージを取得できません"
+
+#: src/download.rs:561
+msgid "asp returned {}"
+msgstr "asp が終了コード {} を返しました"
+
+#: src/exec.rs:86
+msgid "Pacman is currently in use, please wait..."
+msgstr "現在 Pacman は使用中です、しばらくお待ちください..."
+
+#: src/fmt.rs:6 src/info.rs:147 src/search.rs:176
+msgid "None"
+msgstr "なし"
+
+#: src/help.rs:4
+msgid "Usage:"
+msgstr "使用法:"
+
+#: src/help.rs:5
+msgid "    paru"
+msgstr "    paru"
+
+#: src/help.rs:6
+msgid "    paru <operation> [...]"
+msgstr "    paru <オペレーション> [...]"
+
+#: src/help.rs:7
+msgid "    paru <package(s)>"
+msgstr "    paru <パッケージ>"
+
+#: src/help.rs:9
+msgid "Pacman operations:"
+msgstr "Pacman オペレーション:"
+
+#: src/help.rs:10
+msgid "    paru {-h --help}"
+msgstr "    paru {-h --help}"
+
+#: src/help.rs:11
+msgid "    paru {-V --version}"
+msgstr "    paru {-V --version}"
+
+#: src/help.rs:12
+msgid "    paru {-D --database}    <options> <package(s)>"
+msgstr "    paru {-D --database}    <オプション> <パッケージ>"
+
+#: src/help.rs:13
+msgid "    paru {-F --files}       [options] [package(s)]"
+msgstr "    paru {-F --files}       [オプション] [パッケージ]"
+
+#: src/help.rs:14
+msgid "    paru {-Q --query}       [options] [package(s)]"
+msgstr "    paru {-Q --query}       [オプション] [パッケージ]"
+
+#: src/help.rs:15
+msgid "    paru {-R --remove}      [options] <package(s)>"
+msgstr "    paru {-R --remove}      [オプション] <パッケージ>"
+
+#: src/help.rs:16
+msgid "    paru {-S --sync}        [options] [package(s)]"
+msgstr "    paru {-S --sync}        [オプション] [パッケージ]"
+
+#: src/help.rs:17
+msgid "    paru {-T --deptest}     [options] [package(s)]"
+msgstr "    paru {-T --deptest}     [オプション] [パッケージ]"
+
+#: src/help.rs:18
+msgid "    paru {-U --upgrade}     [options] [file(s)]"
+msgstr "    paru {-U --upgrade}     [オプション] [ファイル]"
+
+#: src/help.rs:20
+msgid "New operations:"
+msgstr "新しいオペレーション:"
+
+#: src/help.rs:21
+msgid "    paru {-P --show}        [options]"
+msgstr "    paru {-P --show}        [オプション]"
+
+#: src/help.rs:22
+msgid "    paru {-G --getpkgbuild} [package(s)]"
+msgstr "    paru {-G --getpkgbuild} [パッケージ]"
+
+#: src/help.rs:24
+msgid "If no arguments are provided 'paru -Syu' will be performed"
+msgstr "引数を指定しなかった場合 'paru -Syu' が実行されます"
+
+#: src/help.rs:26
+msgid "Options without operation:"
+msgstr "オペレーションなしでのオプション:"
+
+#: src/help.rs:27
+msgid "    -c --clean            Remove unneeded dependencies"
+msgstr "    -c --clean            どのパッケージからも必要とされないパッケージを削除"
+
+#: src/help.rs:28
+msgid "       --gendb            Generates development package DB used for updating"
+msgstr "       --gendb            アップデートのために開発パッケージデータベースを生成"
+
+#: src/help.rs:30
+msgid "New options:"
+msgstr "新しいオプション:"
+
+#: src/help.rs:31
+msgid "       --repo              Assume targets are from the repositories"
+msgstr "       --repo              対象がリポジトリのものであると仮定"
+
+#: src/help.rs:32
+msgid "    -a --aur               Assume targets are from the AUR"
+msgstr "    -a --aur               対象が AUR のものであると仮定"
+
+#: src/help.rs:33
+msgid "    --aururl    <url>      Set an alternative AUR URL"
+msgstr "    --aururl    <url>      AUR の URL を指定"
+
+#: src/help.rs:34
+msgid "    --clonedir  <dir>      Directory used to download and run PKGBUILDs"
+msgstr "    --clonedir  <dir>      PKGBUILD をダウンロードし実行するディレクトリを指定"
+
+#: src/help.rs:36
+msgid "    --makepkg   <file>     makepkg command to use"
+msgstr "    --makepkg   <file>     makepkg コマンドを指定"
+
+#: src/help.rs:37
+msgid "    --mflags    <flags>    Pass arguments to makepkg"
+msgstr "    --mflags    <flags>    makepkg に渡す引数を指定"
+
+#: src/help.rs:38
+msgid "    --pacman    <file>     pacman command to use"
+msgstr "    --pacman    <file>     pacman コマンドを指定"
+
+#: src/help.rs:39
+msgid "    --git       <file>     git command to use"
+msgstr "    --git       <file>     git コマンドを指定"
+
+#: src/help.rs:40
+msgid "    --gitflags  <flags>    Pass arguments to git"
+msgstr "    --gitflags  <flags>    git に渡す引数を指定"
+
+#: src/help.rs:41
+msgid "    --sudo      <file>     sudo command to use"
+msgstr "    --sudo      <file>     sudo コマンドを指定"
+
+#: src/help.rs:42
+msgid "    --sudoflags <flags>    Pass arguments to sudo"
+msgstr "    --sudoflags <flags>    sudo に渡す引数を指定"
+
+#: src/help.rs:43
+msgid "    --asp       <file>     asp command to use"
+msgstr "    --asp       <file>     asp コマンドを指定"
+
+#: src/help.rs:44
+msgid "    --bat       <file>     bat command to use"
+msgstr "    --bat       <file>     bat コマンドを指定"
+
+#: src/help.rs:45
+msgid "    --batflags  <flags>    Pass arguments to bat"
+msgstr "    --batflags  <flags>    bat に渡す引数を指定"
+
+#: src/help.rs:46
+msgid "    --gpg       <file>     gpg command to use"
+msgstr "    --gpg       <file>     gpg コマンドを指定"
+
+#: src/help.rs:47
+msgid "    --gpgflags  <flags>    Pass arguments to gpg"
+msgstr "    --gpgflags  <flags>    gpg に渡す引数を指定"
+
+#: src/help.rs:48
+msgid "    --fm        <file>     File manager to use for PKGBUILD review"
+msgstr "    --fm        <file>     PKGBUILD のレビューに使うファイルマネージャを指定"
+
+#: src/help.rs:49
+msgid "    --fmflags   <flags>    Pass arguments to file manager"
+msgstr "    --fmflags   <flags>    ファイルマネージャに渡す引数を指定"
+
+#: src/help.rs:51
+msgid "    --completioninterval   <n> Time in days to refresh completion cache"
+msgstr "    --completioninterval   <n> 補完キャッシュを更新する日数を指定"
+
+#: src/help.rs:52
+msgid "    --sortby    <field>    Sort AUR results by a specific field during search"
+msgstr "    --sortby    <field>    AUR 検索で並び替えるフィールドを指定"
+
+#: src/help.rs:53
+msgid "    --searchby  <field>    Search for packages using a specified field"
+msgstr "    --searchby  <field>    検索するフィールドを指定"
+
+#: src/help.rs:55
+msgid "    --skipreview           Skip the review process"
+msgstr "    --skipreview           レビューをスキップ"
+
+#: src/help.rs:56
+msgid "    --review               Don't skip the review process"
+msgstr "    --review               レビューをスキップしない"
+
+#: src/help.rs:57
+msgid "    --[no]upgrademenu      Show interactive menu to skip upgrades"
+msgstr "    --[no]upgrademenu      アップグレードをスキップするための対話メニューを表示"
+
+#: src/help.rs:58
+msgid "    --[no]removemake       Remove makedepends after install"
+msgstr "    --[no]removemake       ビルド時の依存パッケージをインストール後に削除"
+
+#: src/help.rs:59
+msgid "    --[no]cleanafter       Remove package sources after install"
+msgstr "    --[no]cleanafter       パッケージのソースをインストール後に削除"
+
+#: src/help.rs:60
+msgid "    --[no]rebuild          Always build target packages"
+msgstr "    --[no]rebuild          対象を再ビルド"
+
+#: src/help.rs:61
+msgid "    --[no]redownload       Always download PKGBUILDs of targets"
+msgstr "    --[no]redownload       対象の PKGBUILD を再ダウンロード"
+
+#: src/help.rs:63
+msgid "    --[no]pgpfetch         Prompt to import PGP keys from PKGBUILDs"
+msgstr "    --[no]pgpfetch         PKGBUILD の PGP 鍵をインポートするかどうかを表示"
+
+#: src/help.rs:64
+msgid "    --[no]useask           Automatically resolve conflicts using pacman's ask flag"
+msgstr "    --[no]useask           pacman の ask フラグを使用して自動的に衝突を解決"
+
+#: src/help.rs:65
+msgid "    --[no]newsonupgrade    Print new news during sysupgrade"
+msgstr "    --[no]newsonupgrade    アップグレード時にニュースを表示"
+
+#: src/help.rs:66
+msgid "    --[no]combinedupgrade  Refresh then perform the repo and AUR upgrade together"
+msgstr "    --[no]combinedupgrade  リポジトリパッケージと AUR パッケージを同時にアップグレード"
+
+#: src/help.rs:67
+msgid "    --[no]batchinstall     Build multiple AUR packages then install them together"
+msgstr "    --[no]batchinstall     複数の AUR パッケージをビルドしてからインストールする"
+
+#: src/help.rs:68
+msgid "    --[no]provides         Look for matching providers when searching for packages"
+msgstr "    --[no]provides         検索時にマッチする提供パッケージを探す"
+
+#: src/help.rs:69
+msgid "    --[no]devel            Check development packages during sysupgrade"
+msgstr "    --[no]devel            アップグレード時に開発パッケージのアップデートを確認"
+
+#: src/help.rs:70
+msgid "    --[no]installdebug     Also install debug packages when a package provides them"
+msgstr "    --[no]installdebug     パッケージが提供するデバッグパッケージもインストールする"
+
+#: src/help.rs:71
+msgid "    --[no]sudoloop         Loop sudo calls in the background to avoid timeout"
+msgstr "    --[no]sudoloop         sudo のタイムアウトを防止"
+
+#: src/help.rs:72
+msgid "    --[no]chroot           Build packages in a chroot"
+msgstr "    --[no]chroot           chroot してパッケージをビルド"
+
+#: src/help.rs:73
+msgid "    --[no]sign             Sign packages with gpg"
+msgstr "    --[no]sign             gpg でパッケージに署名"
+
+#: src/help.rs:74
+msgid "    --[no]signdb           Sign databases with gpg"
+msgstr "    --[no]signdb           gpg でデータベースに署名"
+
+#: src/help.rs:75
+msgid "    --localrepo            Build packages into a local repo"
+msgstr "    --localrepo            ローカルリポジトリにパッケージをビルド"
+
+#: src/help.rs:76
+msgid "    --nocheck              Don't resolve checkdepends or run the check function"
+msgstr "    --nocheck              チェック時の依存関係の解決とチェックを行わない"
+
+#: src/help.rs:77
+msgid "    --develsuffixes        Suffixes used to decide if a package is a devel package"
+msgstr "    --develsuffixes        パッケージが開発パッケージであることを示す接尾辞を指定"
+
+#: src/help.rs:78
+msgid "    --bottomup             Shows AUR's packages first and then repository's"
+msgstr "    --bottomup             AUR パッケージを表示後リポジトリパッケージを表示"
+
+#: src/help.rs:79
+msgid "    --topdown              Shows repository's packages first and then AUR's"
+msgstr "    --topdown              リポジトリパッケージを表示後 AUR パッケージを表示"
+
+#: src/help.rs:81
+msgid "show specific options:"
+msgstr "show 特有のオプション:"
+
+#: src/help.rs:82
+msgid "    -c --complete         Used for completions"
+msgstr "    -c --complete         補完で使用"
+
+#: src/help.rs:83
+msgid "    -s --stats            Display system package statistics"
+msgstr "    -s --stats            システムパッケージの統計を表示"
+
+#: src/help.rs:84
+msgid "    -w --news             Print arch news"
+msgstr "    -w --news             Arch Linux ニュースを表示"
+
+#: src/help.rs:86
+msgid "getpkgbuild specific options:"
+msgstr "getpkgbuild 特有のオプション:"
+
+#: src/help.rs:87
+msgid "    -p --print            Print pkgbuild to stdout"
+msgstr "    -p --print            PKGBUILD を標準出力に表示"
+
+#: src/help.rs:88
+msgid "    -c --comments         Print AUR comments for pkgbuild"
+msgstr "    -c --comments         AUR コメントを表示"
+
+#: src/help.rs:90
+msgid "upgrade specific options:"
+msgstr "upgrade 特有のオプション:"
+
+#: src/help.rs:91
+msgid "    -i --install          Install package as well as building"
+msgstr "    -i --install          ビルドと同時にパッケージをインストール"
+
+#: src/info.rs:31 src/query.rs:51
+msgid "package '{}' was not found"
+msgstr "パッケージ '{}' は見つかりませんでした"
+
+#: src/info.rs:58 src/info.rs:97
+msgid "Name"
+msgstr "名前"
+
+#: src/info.rs:59 src/info.rs:98
+msgid "Version"
+msgstr "バージョン"
+
+#: src/info.rs:60 src/info.rs:99
+msgid "Description"
+msgstr "説明"
+
+#: src/info.rs:61 src/info.rs:107
+msgid "Groups"
+msgstr "グループ"
+
+#: src/info.rs:62 src/info.rs:108
+msgid "Licenses"
+msgstr "ライセンス"
+
+#: src/info.rs:63 src/info.rs:109
+msgid "Provides"
+msgstr "提供"
+
+#: src/info.rs:64 src/info.rs:110
+msgid "Depends On"
+msgstr "依存パッケージ"
+
+#: src/info.rs:65 src/info.rs:111
+msgid "Make Deps"
+msgstr "ビルド時の依存パッケージ"
+
+#: src/info.rs:66 src/info.rs:112
+msgid "Check Deps"
+msgstr "チェック時の依存パッケージ"
+
+#: src/info.rs:67 src/info.rs:114
+msgid "Conflicts With"
+msgstr "衝突パッケージ"
+
+#: src/info.rs:68 src/info.rs:115
+msgid "Maintainer"
+msgstr "メンテナ"
+
+#: src/info.rs:69 src/info.rs:116
+msgid "Votes"
+msgstr "投票"
+
+#: src/info.rs:70 src/info.rs:117
+msgid "Popularity"
+msgstr "人気度"
+
+#: src/info.rs:71 src/info.rs:118
+msgid "First Submitted"
+msgstr "最初の投稿"
+
+#: src/info.rs:72 src/info.rs:119
+msgid "Last Modified"
+msgstr "最終更新"
+
+#: src/info.rs:73 src/info.rs:121
+msgid "Out Of Date"
+msgstr "古いバージョンとしてマーク"
+
+#: src/info.rs:74 src/info.rs:126
+msgid "ID"
+msgstr "ID"
+
+#: src/info.rs:75 src/info.rs:127
+msgid "Package Base ID"
+msgstr "パッケージベース ID"
+
+#: src/info.rs:76 src/info.rs:128
+msgid "Keywords"
+msgstr "キーワード"
+
+#: src/info.rs:77 src/info.rs:130
+msgid "Snapshot URL"
+msgstr "スナップショット URL"
+
+#: src/info.rs:93
+msgid "No"
+msgstr "いいえ"
+
+#: src/info.rs:113
+msgid "Optional Deps"
+msgstr "提案パッケージ"
+
+#: src/install.rs:131 src/install.rs:561 src/install.rs:960
+msgid "no architecture"
+msgstr "アーキテクチャなし"
+
+#: src/install.rs:138
+msgid "can't build package as root"
+msgstr "root でパッケージをビルドできません"
+
+#: src/install.rs:142
+msgid "failed to parse srcinfo generated by makepkg"
+msgstr "makepkg で作られた SRCINFO の解析に失敗しました"
+
+#: src/install.rs:171 src/install.rs:450
+msgid "Resolving dependencies..."
+msgstr "依存関係を解決しています..."
+
+#: src/install.rs:220 src/install.rs:225
+msgid "failed to download sources"
+msgstr "ソースのダウンロードに失敗しました"
+
+#: src/install.rs:230 src/install.rs:246 src/install.rs:254
+msgid "failed to build"
+msgstr "ビルドに失敗しました"
+
+#: src/install.rs:233
+msgid "parsing pkg list..."
+msgstr "パッケージリストを解析しています..."
+
+#: src/install.rs:261 src/install.rs:1478
+msgid "{}-{} is up to date -- skipping build"
+msgstr "{}-{} は最新です -- ビルドをスキップ"
+
+#: src/install.rs:333 src/query.rs:50 src/lib.rs:90
+msgid "error:"
+msgstr "エラー:"
+
+#: src/install.rs:334
+msgid "could not get news"
+msgstr "ニュースを取得できませんでした"
+
+#: src/install.rs:339 src/install.rs:529 src/install.rs:732 src/install.rs:864
+msgid "Proceed with installation?"
+msgstr "インストールを行いますか？"
+
+#: src/install.rs:357
+msgid "no targets specified (use -h for help)"
+msgstr "対象が指定されていません (-h を使ってヘルプを見て下さい)"
+
+#: src/install.rs:442 src/install.rs:469 src/search.rs:324 src/search.rs:360
+#: src/lib.rs:233
+msgid " there is nothing to do"
+msgstr " 何も行うことがありません"
+
+#: src/install.rs:496
+msgid "can't install AUR package as root"
+msgstr "root で AUR パッケージをインストールできません"
+
+#: src/install.rs:515
+msgid "Remove make dependencies after install?"
+msgstr "ビルド時の依存パッケージをインストール後に削除しますか？"
+
+#: src/install.rs:526
+msgid "Proceed to review?"
+msgstr "レビューを続行しますか？"
+
+#: src/install.rs:575
+msgid "The following packages are not compatible with your architecture:"
+msgstr "次のパッケージはアーキテクチャの互換性がありません:"
+
+#: src/install.rs:589
+msgid "Would you like to try build them anyway?"
+msgstr "それでもビルドしますか？"
+
+#: src/install.rs:678
+msgid "packages failed to build: {}"
+msgstr "パッケージのビルドに失敗しました: {}"
+
+#: src/install.rs:714
+msgid "could not find .SRINFO for '{}'"
+msgstr "'{}' の .SRCINFO を見つけられませんでした"
+
+#: src/install.rs:778
+msgid "failed to read dir: {}"
+msgstr "ディレクトリの読み込みに失敗しました: {}"
+
+#: src/install.rs:794
+msgid ""
+"{} is a directory\n"
+"\n"
+msgstr ""
+"{} はディレクトリです\n"
+"\n"
+
+#: src/install.rs:834
+msgid "failed to open: {}"
+msgstr "オープンに失敗しました: {}"
+
+#: src/install.rs:846
+msgid "binary file: {}"
+msgstr "バイナリファイル: {}"
+
+#: src/install.rs:868
+msgid " nothing new to review"
+msgstr " 新しくレビューするものはありません"
+
+#: src/install.rs:887
+msgid "failed to execute file manager: {}"
+msgstr "ファイルマネージャの実行に失敗しました"
+
+#: src/install.rs:890
+msgid "file manager did not execute successfully"
+msgstr "ファイルマネージャを正しく実行できません"
+
+#: src/install.rs:952
+msgid "duplicate packages: {}"
+msgstr "重複したパッケージ: {}"
+
+#: src/install.rs:991
+msgid "could not find all required packages:"
+msgstr "必要なパッケージを全て見つけることができません:"
+
+#: src/install.rs:998
+msgid ""
+"\n"
+"    {missing} (wanted by: {stack})"
+msgstr ""
+"\n"
+"    {missing} (必要としているパッケージ: {stack})"
+
+#: src/install.rs:1012 src/install.rs:1957
+msgid "{}-{} is up to date -- skipping"
+msgstr "{}-{} は最新です -- スキップ"
+
+#: src/install.rs:1027
+msgid "Calculating conflicts..."
+msgstr "衝突を確認しています..."
+
+#: src/install.rs:1033
+msgid "Calculating inner conflicts..."
+msgstr "内部衝突を確認しています..."
+
+#: src/install.rs:1045
+msgid "Inner conflicts found:"
+msgstr "内部衝突が見つかりました:"
+
+#: src/install.rs:1067
+msgid "Conflicts found:"
+msgstr "衝突が見つかりました:"
+
+#: src/install.rs:1090
+msgid "Conflicting packages will have to be confirmed manually"
+msgstr "衝突しているパッケージを手動で確認する必要があります"
+
+#: src/install.rs:1094
+msgid "can not install conflicting packages with --noconfirm"
+msgstr "--noconfirm で衝突するパッケージをインストールできません"
+
+#: src/install.rs:1133
+msgid "Repo"
+msgstr "リポジトリ"
+
+#: src/install.rs:1140
+msgid "Repo Make"
+msgstr "リポジトリ ビルド"
+
+#: src/install.rs:1154
+msgid "Aur Make"
+msgstr "AUR ビルド"
+
+#: src/install.rs:1256
+msgid "fetching devel info..."
+msgstr "開発情報を取得しています..."
+
+#: src/install.rs:1336
+msgid "Signing packages..."
+msgstr "パッケージへ署名をしています..."
+
+#: src/install.rs:1414 src/install.rs:1419
+msgid "failed to download sources for '{}'"
+msgstr "'{}' のソースのダウンロードに失敗しました"
+
+#: src/install.rs:1424 src/install.rs:1463 src/install.rs:1471
+msgid "failed to build '{}'"
+msgstr "'{}' のビルドに失敗しました"
+
+#: src/install.rs:1427
+msgid "{}: parsing pkg list..."
+msgstr "{}: パッケージリストを解析しています..."
+
+#: src/install.rs:1489
+msgid "adding {} to the install list"
+msgstr "インストールリストに {} を追加しています"
+
+#: src/install.rs:1548
+msgid "could not find package '{pkg}' in package list for '{base}'"
+msgstr "'{base}' のパッケージリストにパッケージ '{pkg}' が見つかりませんでした"
+
+#: src/install.rs:1686
+msgid "can't find package name in packagelist: {}"
+msgstr "パッケージリストにパッケージの名前を見つけることができません: {}"
+
+#: src/install.rs:1759
+msgid "There are {} members in group"
+msgstr "{} 個のパッケージがグループに存在します"
+
+#: src/install.rs:1784
+msgid ""
+"\n"
+"\n"
+"Enter a selection (default=all): "
+msgstr ""
+"\n"
+"\n"
+"選択して下さい (デフォルト=all): "
+
+#: src/install.rs:1981
+msgid "{}-{} is up to date -- skipping install"
+msgstr "{}-{} は最新です -- インストールをスキップ"
+
+#: src/keys.rs:48
+msgid "keys need to be imported:)"
+msgstr "鍵をインポートする必要があります:)"
+
+#: src/keys.rs:53
+msgid "     {key} wanted by: {base}"
+msgstr "     {key} は {base} に必要とされています"
+
+#: src/news.rs:57
+msgid "No Date "
+msgstr "日付なし "
+
+#: src/news.rs:60
+msgid "No Title"
+msgstr "タイトルなし"
+
+#: src/news.rs:69
+msgid "no new news"
+msgstr "新しいニュースはありません"
+
+#: src/query.rs:105
+msgid " [ignored]"
+msgstr " [無視]"
+
+#: src/repo.rs:164
+msgid "failed to get current exe"
+msgstr "現在の実行ファイルの取得に失敗しました"
+
+#: src/repo.rs:195
+msgid "syncing local databases..."
+msgstr "ローカルデータベースの同期中..."
+
+#: src/repo.rs:201
+msgid "  nothing to do"
+msgstr "  何も行うことがありません"
+
+#: src/search.rs:32
+msgid "aur search failed"
+msgstr "AUR の検索に失敗しました"
+
+#: src/search.rs:158
+msgid "[Out-of-date: {}]"
+msgstr "[古いバージョン: {}]"
+
+#: src/search.rs:164 src/search.rs:218
+msgid "[Installed: {}]"
+msgstr "[インストール済み: {}]"
+
+#: src/search.rs:166 src/search.rs:220
+msgid "[Installed]"
+msgstr "[インストール済み]"
+
+#: src/search.rs:173
+msgid "[Orphaned]"
+msgstr "[孤児]"
+
+#: src/search.rs:263
+msgid "no packages match search"
+msgstr "検索に一致するパッケージがありません"
+
+#: src/search.rs:321
+msgid "Packages to install (eg: 1 2 3, 1-3):"
+msgstr "インストールするパッケージ (例: 1 2 3, 1-3):"
+
+#: src/stats.rs:83
+msgid "Total installed packages: {}"
+msgstr "全てのインストールされたパッケージ: {}"
+
+#: src/stats.rs:87
+msgid "Aur packages: {}"
+msgstr "AUR パッケージ: {}"
+
+#: src/stats.rs:91
+msgid "Repo packages: {}"
+msgstr "リポジトリのパッケージ: {}"
+
+#: src/stats.rs:95
+msgid "Explicitly installed packages: {}"
+msgstr "明示的にインストールされたパッケージ: {}"
+
+#: src/stats.rs:99
+msgid "Total Size occupied by packages: {}"
+msgstr "合計パッケージ容量: {}"
+
+#: src/stats.rs:106
+msgid "Ten biggest packages:"
+msgstr "最も大きい 10 個のパッケージ:"
+
+#: src/sync.rs:89 src/lib.rs:410
+msgid " [installed]"
+msgstr " [インストール済み]"
+
+#: src/upgrade.rs:122
+msgid "Looking for AUR upgrades"
+msgstr "AUR の更新を確認しています"
+
+#: src/upgrade.rs:148
+msgid "Looking for devel upgrades"
+msgstr "開発の更新を確認しています"
+
+#: src/upgrade.rs:179
+msgid "warning:"
+msgstr "警告:"
+
+#: src/upgrade.rs:181
+msgid "{pkg}: ignoring package upgrade ({old} => {new})"
+msgstr "{pkg}: パッケージのアップグレードを無視 ({old} => {new})"
+
+#: src/upgrade.rs:334
+msgid "Packages to exclude (eg: 1 2 3, 1-3):"
+msgstr "除外するパッケージ (例: 1 2 3, 1-3):"
+
+#: src/util.rs:80
+msgid "[Y/n]:"
+msgstr "[Y/n]:"
+
+#: src/util.rs:82
+msgid "[y/N]:"
+msgstr "[y/N]:"
+
+#: src/util.rs:101
+msgid "y"
+msgstr "y"
+
+#: src/util.rs:101
+msgid "yes"
+msgstr "yes"
+
+#: src/util.rs:103
+msgid "n"
+msgstr "n"
+
+#: src/util.rs:103
+msgid "no"
+msgstr "no"
+
+#: src/util.rs:299
+msgid "Enter a number (default=1): "
+msgstr "数字を入力してください (デフォルト=1): "
+
+#: src/util.rs:316
+msgid "invalid number: {}"
+msgstr "不正な数字: {}"
+
+#: src/util.rs:326
+msgid "invalid value: {n} is not between 1 and {max}"
+msgstr "不正な値です: {n} が 1 と {max} の間に収まっていません"
+
+#: src/lib.rs:159
+msgid "can not use chroot builds: devtools is not installed"
+msgstr "chroot してビルドできません: devtools がインストールされていません"
+
+#: src/lib.rs:408
+msgid " [installed: {}]"
+msgstr " [インストール済み: {}]"
