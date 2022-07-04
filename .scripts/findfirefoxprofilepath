@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# script to find the path of specified firefox profile
+# if no profile specfied, path of default profile is returned.
+# returns nothing if the name of a non-existant profile is specified
+# of the user has no firefox profile
+#
+# usage:
+# to find default profile path
+#
+# $ ./findfirefoxprofilepath
+#
+# to find path of profile called 'Default User' use
+#
+# $ ./findfirefoxprofilepath "Default User'
+
+# written for Linux and assumes GNU version of csplit
+# might work on other *nix systems with minor modification
+
+
+workingdir=/tmp/$(basename $0)_${USER};
+mkdir -p $workingdir
+
+firefoxprofiledir=$HOME/.mozilla/firefox;
+profileinfo=${firefoxprofiledir}/profiles.ini;
+
+if [ ! -d $firefoxprofiledir ];then
+   exit 0;
+fi
+
+cd $workingdir;
+
+# copy the profiles.ini file over to the current working dir and
+# reset the value of profileinfo so that the split files get created 
+# in the current working directory where they can be easily
+# cleaned up, not $firefoxprofiledir
+cp $profileinfo .
+profileinfo=$(basename $profileinfo);
+
+prefix=${profileinfo}.part
+
+
+csplit -s --prefix=$prefix $profileinfo  /^\\[Profile[0-9]/ {*}
+
+defaultpattern=^Default=
+lookfor=$defaultpattern;
+if [ -n "$1" ];then
+   lookfor=^Name=${1}$;
+fi
+
+profilefile=$(grep "$lookfor" ${prefix}* | cut -d : -f 1);
+
+# if there is only one profile, then ^Default= won't appear anywhere in
+# profiles.ini so profilefile will be a zero length string
+# if the name of the profile given to look for doesn't exist, then 
+# profilefile will also be a zero length string
+if [ -z "$profilefile" ];then
+# so if we're searching for the default set it's value to the profiles.ini
+# file so that is then searched and a value returned
+    if [ "$lookfor" = "$defaultpattern"  ];then
+       profilefile=$profileinfo;
+   else
+# otherwise just exit and output nothing because the profile name specified
+# doesn't exist
+      exit 0;
+   fi
+fi
+
+path=$(grep ^Path= $profilefile | cut -d = -f 2);
+# presumably profile paths can be non-relative, though I've only ever
+# seen the value of IsRelative set to 1
+if [ "$(grep ^IsRelative= $profilefile | cut -d = -f 2)" = "1" ];then
+   echo ${firefoxprofiledir}/$path;
+else
+   echo $path;
+fi
+
+cd /tmp
+rm -rf $workingdir

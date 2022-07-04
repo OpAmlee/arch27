@@ -1,0 +1,8 @@
+#!/bin/bash
+
+/bin/bash -c ~/.scripts/notify-powerline-restart && powerline-daemon -k | sleep 2 | powerline-daemon -q
+
+exit 0
+
+
+

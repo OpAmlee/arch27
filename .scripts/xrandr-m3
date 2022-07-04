@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+function run {
+if ! pgrep $1 ;
+then
+    $@&
+fi
+}
+
+run xrandr --output eDP-1 --off \
+    --output DP-1-1 --primary --mode 2560x1440 --pos 1920x0 \
+    --output DP-1-2 --right-of DP-1-1 --mode 1920x1080 --left-of DP-1-1 --pos 0x0 |
+    feh --bg-fill ~/.config/dusk/wallpaper/wallpaper.jpg

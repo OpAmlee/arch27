@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+
+# he used gnome screenshot tool
+
+date=$(date +%Y-%m-%d-%H:%M:%S)
+filename="screenshot_$date.png"
+file_orig="/tmp/${filename}"
+
+gnome-screenshot --area --file="$file_orig"
+# or install & use maim, it's better as the pointer and delay options
+# are not exclusive, so you can have the cursor in the screenshot
+# maim --delay=1 --select "$file_orig"
+if [ ! -f "$file_orig" ]; then exit 1; fi
+
+title="$(zenity --entry --title='Screenshot' --text='Optionally name the screenshot (start with "i " to edit in Inkscape):' --ok-label='Save screenshot')"
+if [ $? -ne 0 ]; then exit 1; fi
+
+if [ "${title#i }" != "${title}" ]; then
+  inkscape "$file_orig"
+  title="${title#i }"
+fi
+
+folder="$(xdg-user-dir 'PICTURES')/Screenshots"
+if [ ! -d "folder" ]; then
+  mkdir -p "$folder"
+fi
+
+if command -v pngquant > /dev/null; then
+  if [ -n "$title" ]; then
+    middle="_${title}_"
+  else
+    middle="_"
+  fi
+
+  file="${folder}/screenshot${middle}${date}.png"
+  pngquant --strip --force --output "$file" "$file_orig"
+  # zopfli too slow, disabled but enable it if you want to shave even more bits from your PNGs
+  # if command -v zopflipng > /dev/null; then zopflipng -y "$file" "$file"; fi
+else
+  zenity --warning --text='Please install pngquant'
+fi
+rm "$file_orig"
+
+nautilus "$folder"
