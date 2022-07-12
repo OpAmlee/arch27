@@ -39,6 +39,11 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
+export GDK_DPI_SCALE=0
+export GDK_BACKEND=x11
+export GDK_SCALE=1
+
+complete -c man which
 #export PATH=$PATH':~/.gem/ruby/3.0.0/bin'
 #export GEM_HOME=$HOME/.gem
 #export GEM_PATH=$HOME/.gem
@@ -54,7 +59,7 @@ source /usr/bin/virtualenvwrapper.sh
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ### "vim" as manpager
-export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+#export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 ### "nvim" as manpager
 #export MANPAGER="nvim -c 'set ft=man' -"
@@ -62,6 +67,107 @@ export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft
 #if [ -f ~/.bash_aliases ]; then
 #    . ~/.bash_aliases
 #fi
+
+################################################################################
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# path
+if [ -d "$HOME/.local/bin" ] ;
+  then PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Enable bash programmable completion features in interactive shells
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+# Git completion
+if [ -f /usr/share/bash-completion/git-completion.bash ]; then
+  . /usr/share/bash-completion/git-completion.bash
+fi
+
+HISTFILE=$HOME/.local/share/history/bash_history
+
+# Prompt
+# define the color of the simple-bash-prompt
+simple_bash_prompt_bracket_color="\033[1;32m"
+simple_bash_prompt_command_color="\033[0;97m"
+simple_bash_prompt_device_color="\033[1;34m"
+simple_bash_prompt_dir_color="\033[1;37m"
+simple_bash_prompt_git_branch_color="\033[1;33m"
+simple_bash_prompt_git_color="\033[0;33m"
+simple_bash_prompt_user_color="\033[1;36m"
+simple_bash_prompt_separator_color="\033[1;37m"
+simple_bash_prompt_symbol_color="\033[1;31m"
+simple_bash_prompt_reset="\033[m"
+
+# define the prompt terminator character
+simple_bash_prompt_symbol="\\$"
+
+# set the color with the exit status of the last command
+simple_bash_prompt_exit_status_color () {
+    if [ $1 -eq 0 ]; then
+        echo -e "\033[0;32m"
+    else
+        echo -e "\033[0;31m"
+    fi
+}
+
+# check if current directory is a git repo
+simple_bash_prompt_is_git_repo () {
+    git rev-parse 2> /dev/null
+}
+
+# print the git branch
+simple_bash_prompt_get_git_branch () {
+    simple_bash_prompt_git_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+    if [ "$simple_bash_prompt_git_branch" = "HEAD" ]; then
+        echo "no branch"
+    else
+        echo $simple_bash_prompt_git_branch
+    fi
+}
+
+# define the simple-bash-prompt
+simple_bash_prompt_build_prompt () {
+simple_bash_prompt_exit_status=$?
+simple_bash_prompt="\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]┬─\
+\[$simple_bash_prompt_bracket_color\][\
+\[$simple_bash_prompt_user_color\]\u\
+\[$simple_bash_prompt_separator_color\]@\
+\[$simple_bash_prompt_device_color\]\h\
+\[$simple_bash_prompt_separator_color\]:\
+\[$simple_bash_prompt_dir_color\]\w\
+\[$simple_bash_prompt_bracket_color\]]\
+\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]─\
+\[$simple_bash_prompt_bracket_color\][\
+\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]\t\
+\[$simple_bash_prompt_bracket_color\]]"
+if $(simple_bash_prompt_is_git_repo); then
+    simple_bash_prompt+="\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]─"
+    simple_bash_prompt+="\[$simple_bash_prompt_git_color\]["
+    simple_bash_prompt+="\[$simple_bash_prompt_git_branch_color\]\$(simple_bash_prompt_get_git_branch)"
+    simple_bash_prompt+="\[$simple_bash_prompt_git_color\]]"
+fi
+if [ "$TERM" = "linux" ]; then
+    simple_bash_prompt+="\n\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]└─>"
+    simple_bash_prompt+="\[$simple_bash_prompt_symbol_color\]$simple_bash_prompt_symbol \[$simple_bash_prompt_reset\]"
+else
+    simple_bash_prompt+="\n\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]╰─>"
+    simple_bash_prompt+="\[$simple_bash_prompt_symbol_color\]$simple_bash_prompt_symbol \[$simple_bash_prompt_reset\]"
+fi
+PS1=$simple_bash_prompt
+}
+export PROMPT_COMMAND=simple_bash_prompt_build_prompt
+
+#PS1='${arch_chroot:+($arch_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[33m\] ▸▹ \[\033[00m\]'
+alias zathura='devour zathura'
+alias sxiv='devour sxiv'
+
+################################################################################
 
 alias setbg="feh --no-fehbg --bg-fill '/usr/share/backgrounds/trg-wallpapers/black-bg.jpg'"
 
@@ -79,7 +185,7 @@ bind -m vi-insert 'Control-l: clear-screen'
 #  ╩ ╩╚═╝ ╩ ╚═╝  ╚═╝╚═╝╩ ╩╩  ╩═╝╚═╝ ╩ ╚═╝  ╩ ╩╝╚╝═╩╝  ╩ ╩╩╚═╝╩ ╩╩═╝╩╚═╝╩ ╩ ╩   ╚═╝╚═╝╩═╝╚═╝╩╚═╚═╝
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+#[[ $- != *i* ]] && return
 
 #  ╔═╗╦═╗╔═╗╔╦╗╔═╗╔╦╗
 #  ╠═╝╠╦╝║ ║║║║╠═╝ ║
@@ -94,9 +200,9 @@ bind -m vi-insert 'Control-l: clear-screen'
 #  ╠═╝╠═╣ ║ ╠═╣
 #  ╩  ╩ ╩ ╩ ╩ ╩
 
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
-fi
+#if [ -d "$HOME/.bin" ] ;
+#  then PATH="$HOME/.bin:$PATH"
+#fi
 
 #if [ -d "$HOME/.local/bin" ] ;
 #  then PATH="$HOME/.local/bin:$PATH"
@@ -295,59 +401,6 @@ alias pscpu='ps auxf | sort -nr -k 3'
 # Merge Xresources
 alias merge='xrdb -merge ~/.Xresources'
 
-#  ╔═╗╦╔╦╗  ╔╗ ╔═╗╦═╗╔═╗  ╦═╗╔═╗╔═╗╔═╗
-#  ║ ╦║ ║   ╠╩╗╠═╣╠╦╝║╣   ╠╦╝║╣ ╠═╝║ ║
-#  ╚═╝╩ ╩   ╚═╝╩ ╩╩╚═╚═╝  ╩╚═╚═╝╩  ╚═╝
-
-alias config="/usr/bin/git --git-dir=$HOME/arch27 --work-tree=$HOME"
-alias ca='config add'
-alias cs='config status'
-alias cu='config add -u'
-alias cp='config push'
-
-cc() { config commit -m "$@"; }
-
-# get error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
-
-# termbin
-alias tb="nc termbin.com 9999"
-
-#moving your personal files and folders from /personal to ~
-alias personal='cp -Rf /personal/* ~'
-
-#  ╦═╗╔═╗╔═╗╔═╗╦═╗╔╦╗╦╔╗╔╔═╗
-#  ╠╦╝║╣ ╠═╝║ ║╠╦╝ ║ ║║║║║ ╦
-#  ╩╚═╚═╝╩  ╚═╝╩╚═ ╩ ╩╝╚╝╚═╝
-
-# reporting tools - install when not installed
-#neofetch
-#screenfetch
-#alsi
-#paleofetch
-#fetch
-#hfetch
-#sfetch
-#ufetch
-#ufetch-arco
-#pfetch
-#sysinfo
-#sysinfo-retro
-#cpufetch
-#colorscript random
-
-# gpg encryption
-# verify signature for isos
-alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-# receive the key of a developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
-
-# the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-# Unlock LBRY tips
-alias tips='lbrynet txo spend --type=support --is_not_my_input --blocking'
-
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
 alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
@@ -363,20 +416,14 @@ fi
 
 cd ~
 
-#[[ -f ~/.bash_aliases ]] && . ~/.bashrc-personal
 
-[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 #####################################################3
-export PYTHONPATH=/usr/bin/python
+export PYTHONPATH=/usr/bin/python3
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+#[ -f "/home/trg/.ghcup/env" ] && source "/home/trg/.ghcup/env" # ghcup-env
+[ -f "/home/trg/.ghcup/env" ] && source "/home/trg/.ghcup/env" # ghcup-env

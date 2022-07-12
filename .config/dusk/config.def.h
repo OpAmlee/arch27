@@ -55,7 +55,7 @@ static const char slopresizestyle[]      = "-t 0 -c 0.92,0.85,0.69,0.3"; /* do N
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const char *toggle_float_pos       = "50% 50% 80% 80%"; // default floating position when triggering togglefloating
 static const double defaultopacity       = 0;   /* client default opacity, e.g. 0.75. 0 means don't apply opacity */
-static const double moveopacity          = 1;   /* client opacity when being moved, 0 means don't apply opacity */
+static const double moveopacity          = 0.50;   /* client opacity when being moved, 0 means don't apply opacity */
 static const double resizeopacity        = 0.50;   /* client opacity when being resized, 0 means don't apply opacity */
 static const double placeopacity         = 0;   /* client opacity when being placed, 0 means don't apply opacity */
 
@@ -138,15 +138,15 @@ static int flexwintitle_separator        = 0;  // width of client separator
 /*  }}} */
 
 /*{{{ Fonts */
-static const char *fonts[]               = { "BlexMono Nerd Font:size=16" };
+static const char *fonts[]               = { "BlexMono Nerd Font:size=14" };
 static const char dmenufont[]            = "Go Mono For Powerline:size=16";
 /*}}} */
 
 /* {{{ Dmenu colorscheme */
-static char dmenunormfgcolor[] = "#C6BDBD";
-static char dmenunormbgcolor[] = "#171717";
-static char dmenuselfgcolor[] = "#F3082E";
-static char dmenuselbgcolor[] = "#590086";
+//static char dmenunormfgcolor[] = "#C6BDBD";
+//static char dmenunormbgcolor[] = "#171717";
+//static char dmenuselfgcolor[] = "#F3082E";
+//static char dmenuselbgcolor[] = "#590086";
 /*}}} */
 
 /*{{{ DWM colorscheme */
@@ -160,7 +160,7 @@ static char *colors[SchemeLast][ColCount] = {
 	[SchemeNorm]         = { "#E8D9B1", "#121212", "#444444", "norm" },// main title bar color
 	[SchemeSel]          = { "#E8D9B1", "#121212", "#121212", "sel" },
 	[SchemeTitleNorm]    = { "#E8D9B1", "#000000", "#1a1a1a", "titlenorm" },//surrounds the border of bar when empty workspace
-    [SchemeTitleSel]     = { "#E8D9B1", "#55ffff", "#ff0000", "titlesel" },
+    [SchemeTitleSel]     = { "#E8D9B1", "#121212", "#ff0000", "titlesel" },
 	[SchemeWsNorm]       = { "#787878", "#0b0b0b", "#0b0b0b", "wsnorm" },// workspace empty
 	[SchemeWsVisible]    = { "#afd700", "#121212", "#ffffff", "wsvis" },// layout indicator
 	[SchemeWsSel]        = { "#000000", "#AFD700", "#000000", "wssel" },// active workspace selection indication
@@ -202,7 +202,7 @@ static char *colors[SchemeLast][ColCount] = {
 	[SchemeFlexInaSPRLC] = { "#E8D9B1", "#333300", "#333300", "normSPRLC" },
 	[SchemeFlexInaTTMI]  = { "#E8D9B1", "#B32727", "#B32727", "normTTMI" },
 	[SchemeFlexInaTTMIC] = { "#E8D9B1", "#B32727", "#B32727", "normTTMIC" },
-	[SchemeFlexInaFloat] = { "#440044", "#0da28c", "#0da28c", "normfloat" },
+	[SchemeFlexInaFloat] = { "#440044", "#121212", "#0da28c", "normfloat" },
 	[SchemeFlexSelTTB]   = { "#AFD700", "#121212", "#121212", "selTTB" },// active workspace - letter color- top bar - surrounding border of active work space
 	[SchemeFlexSelLTR]   = { "#E8D9B1", "#550055", "#550055", "selLTR" },
 	[SchemeFlexSelMONO]  = { "#E8D9B1", "#212171", "#212171", "selMONO" },
@@ -218,7 +218,7 @@ static char *colors[SchemeLast][ColCount] = {
 	[SchemeFlexSelSPRLC] = { "#E8D9B1", "#555500", "#555500", "selSPRLC" },
 	[SchemeFlexSelTTMI]  = { "#E8D9B1", "#C91717", "#C91717", "selTTMI" },
 	[SchemeFlexSelTTMIC] = { "#E8D9B1", "#C91717", "#C91717", "selTTMIC" },
-	[SchemeFlexSelFloat] = { "#333300", "#720A42", "#0da28c", "selfloat" },
+	[SchemeFlexSelFloat] = { "#333300", "#720A42", "#121212", "selfloat" },
 };
 
 /*}}} */
@@ -295,7 +295,7 @@ static const Rule clientrules[] = {
 	{ .class = "Diffuse"       , .workspace = "4", .flags = NoSwallow|SwitchWorkspace|RevertWorkspace },
 	{ .class = "File-roller"   , .workspace = "9", .flags = Centered|Floating|SwitchWorkspace|RevertWorkspace },
 	{ .class = "Alacritty"     , .flags = Terminal|NoSwallow },
-	{ .class = "Kitty"         , .flags = Terminal },
+	{ .class = "kitty"         , .flags = Terminal },
 //	{ .class = "st"            , .flags = NoSwallow},
 	{ .class = "st-256color"   , .flags = Terminal|AttachBottom },
 	{ .class = "XTerm"         , .flags = Terminal },
@@ -558,11 +558,11 @@ static const Layout layouts[] = {
 
 /* Scratch/Spawn commands:        NULL (scratchkey), command, argument, argument, ..., NULL */
 
-static const char *termcmd[]  = { NULL, "st", NULL };
+static const char *termcmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty/kitty.conf", NULL };
 
 
 //static const char *termcmd[]  = { NULL, "st", NULL };
-static const char *term2cmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty/kitty2-standard.conf", NULL };
+static const char *term2cmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty/kitty.conf", NULL };
 static const char *browsercmd[]  = { NULL, "firefox", NULL };
 static const char *fmcmd[]  = { NULL, "spacefm", NULL };
 static const char *emacscmd[]  = { NULL, "emacs", NULL };
@@ -575,17 +575,17 @@ static const char *screenshotcmd[] = { NULL, "./scripts/sshot-generic.sh", NULL 
 static const char *dmenucmd[] = {
 	NULL,
 	"dmenu_run",
-	"-fn", dmenufont,
-	"-nb", dmenunormbgcolor,
-	"-nf", dmenunormfgcolor,
-	"-sb", dmenuselbgcolor,
-	"-sf", dmenuselfgcolor,
+//	"-fn", dmenufont,
+//	"-nb", dmenunormbgcolor,
+//	"-nf", dmenunormfgcolor,
+//	"-sb", dmenuselbgcolor,
+//	"-sf", dmenuselfgcolor,
 	NULL
 };
 
 
-static const char *spcmd_w[] = {"w", "kitty"     , "--name", "spterm (w)", NULL };
-static const char *spcmd_e[] = {"e", "st", "-n"  , "spterm (e)", "-g", "120x34", NULL };
+static const char *spcmd_w[] = {"w", "kitty", "--name", "spterm (w)", NULL };
+static const char *spcmd_e[] = {"e", "kitty", "--name", "spterm (e)", "--config", "/home/trg/.config/kitty/kitty1-scratch.conf", NULL };
 static const char *spcmd_r[] = {"r", "cherrytree", "--name", "spterm (r)" ,NULL };
 
 //static const char *spcmd_a[] = {"a", "st"    , "-n",     "spfm (a)" , "-g", "144x41", "-e", "ranger", NULL };
@@ -782,7 +782,7 @@ static Key keys[] = {
 /*}}}*/
 
 /*  Extras  *//*{{{*/
-    { KeyPress,   MODKEY,                       XK_F5,           setlayout,              {.v = &layouts[6]} }, // sets a specific layout, see the layouts array for indices
+    { KeyPress,   MODKEY,                       XK_F5,           setlayout,              {.v = &layouts[0]} }, // sets a specific layout, see the layouts array for indices
     { KeyPress,   MODKEY,                       XK_F6,           setlayout,              {.v = &layouts[9]} }, // sets a specific layout, see the layouts array for indices 
     { KeyPress,   MODKEY,                       XK_F7,           setlayout,              {.v = &layouts[2]} }, // sets a specific layout, see the layouts array for indices
 /*}}}*/

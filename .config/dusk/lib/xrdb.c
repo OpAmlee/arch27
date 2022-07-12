@@ -36,7 +36,7 @@ loadxrdb()
 	char bg[] = "#000000";
 	char bd[] = "#000000";
 	char *clrnames[3] = { fg, bg, bd };
-	char *dmenunames[4] = { dmenunormfgcolor, dmenunormbgcolor, dmenuselfgcolor, dmenuselbgcolor };
+//	char *dmenunames[4] = { dmenunormfgcolor, dmenunormbgcolor, dmenuselfgcolor, dmenuselbgcolor };
 
 	if (disabled(Xresources))
 		return;
@@ -77,15 +77,15 @@ loadxrdb()
 				}
 
 				/* dmenu colours */
-				sprintf(resource, pattern, "dmenunorm", "fg");
-				loadxrdbcolor(xrdb, &dmenunames[0], resource);
-				sprintf(resource, pattern, "dmenunorm", "bg");
-				loadxrdbcolor(xrdb, &dmenunames[1], resource);
+		//		sprintf(resource, pattern, "dmenunorm", "fg");
+		//		loadxrdbcolor(xrdb, &dmenunames[0], resource);
+		//		sprintf(resource, pattern, "dmenunorm", "bg");
+		//		loadxrdbcolor(xrdb, &dmenunames[1], resource);
 
-				sprintf(resource, pattern, "dmenusel", "fg");
-				loadxrdbcolor(xrdb, &dmenunames[2], resource);
-				sprintf(resource, pattern, "dmenusel", "bg");
-				loadxrdbcolor(xrdb, &dmenunames[3], resource);
+		//		sprintf(resource, pattern, "dmenusel", "fg");
+		//		loadxrdbcolor(xrdb, &dmenunames[2], resource);
+		//		sprintf(resource, pattern, "dmenusel", "bg");
+		//		loadxrdbcolor(xrdb, &dmenunames[3], resource);
 
 			}
 		}

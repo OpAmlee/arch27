@@ -18,3 +18,9 @@ downloads : /home/trg/Downloads
 backgrounds : /usr/share/backgrounds
 pictures : /home/trg/Pictures
 etc/issue : /etc
+lightdm : /etc/lightdm
+xsessions : /usr/share/xsessions
+xmonad : /home/trg/.config/xmonad
+xmobar : /home/trg/.config/xmonad/xmobar
+firefox : /home/trg/.mozilla/firefox
+desktop-apps : /home/trg/.local/share/applications

@@ -16859,3 +16859,1675 @@
 [2022-07-03 22:16:43.815] [   ] [debug] autosave: no needs to save file
 [2022-07-03 22:17:43.824] [   ] [debug] autosave: no needs to save file
 [2022-07-03 22:18:43.815] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:19:43.815] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:20:43.835] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:21:43.815] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:22:43.814] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:23:43.845] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:24:43.872] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:25:43.874] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:26:43.842] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:27:43.874] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:28:43.872] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:29:43.818] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:30:43.818] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:31:43.818] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:32:43.815] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:33:43.814] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:34:43.825] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:35:43.822] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:36:43.827] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:37:43.822] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:38:43.827] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:39:43.833] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:40:43.845] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:41:43.814] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:42:43.865] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:43:43.874] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:44:43.832] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:45:43.872] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:46:43.818] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:47:43.816] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:48:43.818] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:49:43.815] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:50:43.828] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:51:43.815] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:52:43.822] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:53:43.815] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:54:43.822] [   ] [debug] autosave: no needs to save file
+[2022-07-03 22:55:41.244] [   ] [debug] kill_callback_handler 15
+[2022-07-03 22:55:41.260] [   ] [debug] kill_callback_handler 1
+[2022-07-03 23:01:47.570] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-03 23:01:47.709] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-03 23:01:47.709] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-03 23:01:47.709] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-03 23:01:47.716] [   ] [debug] autosave is started
+[2022-07-03 23:01:47.862] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-03 23:01:47.865] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-03 23:01:47.917] [   ] [debug] Node name: Git
+[2022-07-03 23:01:53.097] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-03 23:02:00.280] [   ] [debug] Node name: Search
+[2022-07-03 23:02:06.402] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-03 23:02:47.832] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:03:47.845] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:04:47.891] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:05:47.832] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:06:47.881] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:07:47.831] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:08:47.851] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:09:47.841] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:10:47.833] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:11:47.834] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:12:47.836] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:13:47.834] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:14:47.866] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:15:47.851] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:16:47.857] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:17:47.838] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:18:47.834] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:19:47.881] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:20:47.854] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:21:47.844] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:22:47.832] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:23:47.847] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:24:47.874] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:25:47.891] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:26:47.887] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:27:47.867] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:28:47.874] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:29:47.848] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:30:47.891] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:31:47.847] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:32:47.834] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:33:47.842] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:34:47.834] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:35:47.833] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:36:47.833] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:37:47.834] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:38:47.834] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:39:47.832] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:40:47.836] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:41:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:42:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:43:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:44:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:45:47.882] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:46:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:47:47.854] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:48:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:49:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:50:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:51:47.837] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:52:47.837] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:53:47.864] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:54:47.890] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:55:47.837] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:56:47.832] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:57:47.854] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:58:47.850] [   ] [debug] autosave: no needs to save file
+[2022-07-03 23:59:47.835] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:00:47.892] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:01:47.861] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:02:47.840] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:03:47.837] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:04:47.837] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:05:47.850] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:06:47.835] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:07:47.846] [   ] [debug] autosave: no needs to save file
+[2022-07-04 00:08:47.477] [   ] [debug] kill_callback_handler 15
+[2022-07-04 00:08:47.495] [   ] [debug] kill_callback_handler 1
+[2022-07-04 12:29:15.954] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-04 12:29:16.100] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-04 12:29:16.100] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-04 12:29:16.100] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-04 12:29:16.107] [   ] [debug] autosave is started
+[2022-07-04 12:29:16.253] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-04 12:29:16.257] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-04 12:29:16.314] [   ] [debug] Node name: Search
+[2022-07-04 12:29:26.107] [   ] [debug] Node name: system
+[2022-07-04 12:29:30.469] [   ] [debug] Node name: dignostic
+[2022-07-04 12:29:34.945] [   ] [debug] Node name: systemctl
+[2022-07-04 12:29:49.540] [   ] [debug] Node name: systemctl
+[2022-07-04 12:29:57.297] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-04 12:30:16.835] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:31:16.835] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:32:16.875] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:33:16.842] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:34:16.892] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:35:16.835] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:36:16.865] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:37:16.835] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:38:16.863] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:39:16.878] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:40:16.831] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:41:16.871] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:42:16.836] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:43:16.834] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:44:16.845] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:45:16.832] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:46:16.841] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:47:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:48:16.836] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:49:16.835] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:50:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:51:16.842] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:52:16.892] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:53:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:54:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:55:16.892] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:56:16.861] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:57:16.892] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:58:16.892] [   ] [debug] autosave: no needs to save file
+[2022-07-04 12:59:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:00:16.832] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:00:25.135] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-04 13:01:16.843] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:02:16.855] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:03:16.889] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:04:16.861] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:05:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:06:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:07:16.832] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:08:16.864] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:09:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:10:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:11:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:12:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:13:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:14:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:15:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:16:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:17:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:18:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:19:16.832] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:20:16.888] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:21:16.888] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:22:16.888] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:23:16.888] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:24:16.884] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:25:16.868] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:26:16.831] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:27:16.864] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:28:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:29:16.832] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:30:16.832] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:31:16.878] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:32:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:33:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:34:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:35:16.892] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:36:16.856] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:37:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:38:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:39:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:40:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:41:16.878] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:42:16.836] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:43:16.861] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:44:16.831] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:45:16.860] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:46:16.844] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:47:16.854] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:48:16.858] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:49:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:50:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:51:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:52:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:53:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:54:16.852] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:55:16.890] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:56:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:57:16.879] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:58:16.854] [   ] [debug] autosave: no needs to save file
+[2022-07-04 13:59:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 14:00:16.871] [   ] [debug] autosave: no needs to save file
+[2022-07-04 14:01:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 14:02:16.831] [   ] [debug] autosave: no needs to save file
+[2022-07-04 14:03:16.884] [   ] [debug] autosave: no needs to save file
+[2022-07-04 14:04:16.891] [   ] [debug] autosave: no needs to save file
+[2022-07-04 14:05:16.848] [   ] [debug] autosave: no needs to save file
+[2022-07-04 14:05:25.078] [   ] [debug] kill_callback_handler 15
+[2022-07-04 14:05:25.112] [   ] [debug] kill_callback_handler 1
+[2022-07-04 15:27:49.431] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-04 15:27:49.597] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-04 15:27:49.597] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-04 15:27:49.597] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-04 15:27:49.605] [   ] [debug] autosave is started
+[2022-07-04 15:27:49.784] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-04 15:27:49.790] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-04 15:27:49.849] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-04 15:27:56.767] [   ] [debug] Node name: System
+[2022-07-04 15:28:00.903] [   ] [debug] Node name: Yad
+[2022-07-04 15:28:04.770] [   ] [debug] Node name: Ranger
+[2022-07-04 15:28:49.832] [   ] [debug] autosave: no needs to save file
+[2022-07-04 15:29:08.227] [   ] [debug] Node name: windows2usb
+[2022-07-04 15:29:50.096] [   ] [debug] autosave: no needs to save file
+[2022-07-04 15:30:19.719] [   ] [debug] kill_callback_handler 15
+[2022-07-05 02:31:21.972] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-05 02:31:22.134] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-05 02:31:22.135] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-05 02:31:22.135] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-05 02:31:22.142] [   ] [debug] autosave is started
+[2022-07-05 02:31:22.305] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-05 02:31:22.309] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-05 02:31:22.365] [   ] [debug] Node name: windows2usb
+[2022-07-05 02:31:28.241] [   ] [debug] Node name: cherrytree
+[2022-07-05 02:31:29.302] [   ] [debug] Node name: Search
+[2022-07-05 02:31:36.831] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-05 02:32:17.789] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-05 02:32:22.796] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:33:22.830] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:34:22.803] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:35:22.803] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:36:22.847] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:37:22.796] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:38:22.810] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:39:22.799] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:40:22.810] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:41:22.806] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:42:22.797] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:43:22.825] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:44:22.854] [   ] [debug] autosave: no needs to save file
+[2022-07-05 02:44:42.221] [   ] [debug] kill_callback_handler 15
+[2022-07-05 02:44:42.296] [   ] [debug] kill_callback_handler 1
+[2022-07-05 19:47:23.936] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-05 19:47:24.085] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-05 19:47:24.085] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-05 19:47:24.085] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-05 19:47:24.092] [   ] [debug] autosave is started
+[2022-07-05 19:47:24.253] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-05 19:47:24.257] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-05 19:47:24.311] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-05 19:48:24.814] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:48:41.557] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-05 19:49:24.825] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:50:24.855] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:51:24.865] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:52:24.822] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:53:24.862] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:54:24.865] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:55:24.865] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:56:24.865] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:57:24.868] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:58:24.813] [   ] [debug] autosave: no needs to save file
+[2022-07-05 19:59:24.825] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:00:24.815] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:01:24.811] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:02:24.865] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:03:24.835] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:04:24.865] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:05:24.852] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:06:24.818] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:07:24.845] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:08:24.868] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:09:24.848] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:10:24.865] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:11:24.815] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:12:24.835] [   ] [debug] autosave: no needs to save file
+[2022-07-05 20:[2022-07-05 22:06:43.933] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-05 22:06:44.234] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-05 22:06:44.234] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-05 22:06:44.234] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-05 22:06:44.246] [   ] [debug] autosave is started
+[2022-07-05 22:06:44.557] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-05 22:06:44.564] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-05 22:06:44.661] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-05 22:06:48.706] [   ] [debug] Node name: System
+[2022-07-05 22:06:56.799] [   ] [debug] Node name: Emacs
+[2022-07-05 22:07:08.190] [   ] [debug] Node name: fdupes
+[2022-07-05 22:07:37.549] [   ] [debug] 201 -> charset: ASCII
+[2022-07-05 22:07:43.571] [   ] [debug] Node name: Nqq
+[2022-07-05 22:07:44.711] [   ] [debug] autosave: time to save file
+[2022-07-05 22:07:48.447] [   ] [debug] Node name: fdupes
+[2022-07-05 22:08:44.731] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:09:44.711] [   ] [debug] autosave: time to save file
+[2022-07-05 22:09:59.387] [   ] [debug] 117 -> charset: ASCII
+[2022-07-05 22:10:44.725] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:11:44.772] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:12:44.728] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:13:44.717] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:14:44.738] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:15:44.718] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:16:44.748] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:17:44.738] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:18:44.717] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:19:44.745] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:20:44.745] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:21:44.718] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:22:44.772] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:23:44.731] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:24:44.739] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:25:44.772] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:26:44.755] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:27:44.771] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:28:44.771] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:29:44.771] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:30:44.764] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:31:44.720] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:32:44.728] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:33:44.712] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:34:44.725] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:35:44.721] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:36:44.712] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:37:44.716] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:38:44.728] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:39:44.715] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:40:44.727] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:41:44.718] [   ] [debug] autosave: no needs to save file
+[2022-07-05 22:42:27.664] [   ] [debug] kill_callback_handler 15
+[2022-07-05 22:42:27.771] [   ] [debug] kill_callback_handler 1
+[2022-07-07 13:03:03.069] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-07 13:03:03.210] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-07 13:03:03.210] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-07 13:03:03.210] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-07 13:03:03.218] [   ] [debug] autosave is started
+[2022-07-07 13:03:03.356] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-07 13:03:03.360] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-07 13:03:03.412] [   ] [debug] Node name: fdupes
+[2022-07-07 13:04:03.859] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:50:05.152] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-07 14:50:05.300] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-07 14:50:05.300] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-07 14:50:05.300] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-07 14:50:05.308] [   ] [debug] autosave is started
+[2022-07-07 14:50:05.474] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-07 14:50:05.477] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-07 14:50:05.538] [   ] [debug] Node name: fdupes
+[2022-07-07 14:50:09.300] [   ] [debug] Node name: scratch
+[2022-07-07 14:50:14.036] [   ] [debug] 109 -> charset: ASCII
+[2022-07-07 14:51:05.638] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:52:05.625] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:53:05.634] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:54:05.631] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:55:05.637] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:56:05.636] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:57:05.647] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:58:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 14:59:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:00:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:01:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:02:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:03:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:04:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:05:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:06:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:07:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:08:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:09:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:10:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:11:05.682] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:12:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:13:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:14:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:15:05.634] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:16:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:17:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:18:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:19:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:20:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:21:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:22:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:23:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:24:05.659] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:25:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:26:05.680] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:27:05.683] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:28:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:29:05.684] [   ] [debug] autosave: no needs to save file
+[2022-07-07 15:29:31.011] [   ] [debug] kill_callback_handler 15
+[2022-07-07 15:29:31.023] [   ] [debug] kill_callback_handler 1
+[2022-07-07 21:06:22.122] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-07 21:06:22.265] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-07 21:06:22.265] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-07 21:06:22.265] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-07 21:06:22.272] [   ] [debug] autosave is started
+[2022-07-07 21:06:22.418] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-07 21:06:22.422] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-07 21:06:22.481] [   ] [debug] Node name: scratch
+[2022-07-07 21:07:06.387] [   ] [debug] Node name: Sxiv
+[2022-07-07 21:07:13.861] [   ] [debug] Node name: stack
+[2022-07-07 21:07:15.510] [   ] [debug] 3957 -> charset: UTF-8
+[2022-07-07 21:07:22.721] [   ] [debug] autosave: time to save file
+[2022-07-07 21:08:22.736] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:09:22.751] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:10:22.742] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:11:22.734] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:12:22.730] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:13:22.739] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:14:22.738] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:15:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:16:22.757] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:17:22.773] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:18:22.781] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:19:22.782] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:20:22.723] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:21:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:22:22.766] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:23:22.726] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:24:22.772] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:25:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:26:22.781] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:27:22.721] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:27:27.124] [   ] [debug] Node name: gem
+[2022-07-07 21:27:43.512] [   ] [debug] Node name: ghcup
+[2022-07-07 21:28:22.726] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:29:22.723] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:30:22.739] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:31:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:32:22.726] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:33:22.782] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:34:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:35:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:36:22.753] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:37:22.744] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:38:22.728] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:39:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:40:22.739] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:41:22.780] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:42:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:43:22.723] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:44:22.767] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:45:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:46:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:47:22.736] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:48:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:49:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:50:22.782] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:51:22.738] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:52:22.770] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:53:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:54:22.750] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:55:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:56:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:57:22.736] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:58:22.724] [   ] [debug] autosave: no needs to save file
+[2022-07-07 21:59:22.732] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:00:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:01:22.732] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:02:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:03:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:04:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:05:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:06:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:07:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:08:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:09:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:10:22.739] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:11:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:12:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:13:22.735] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:14:22.734] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:15:22.721] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:16:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:17:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:18:22.721] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:19:22.727] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:20:22.726] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:21:22.762] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:22:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:23:22.732] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:24:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:25:22.729] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:26:22.739] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:27:22.754] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:28:22.739] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:29:22.727] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:30:22.723] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:31:22.779] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:32:22.728] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:33:22.726] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:34:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:35:22.775] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:36:22.765] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:37:22.739] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:38:22.723] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:39:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:40:22.731] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:41:22.731] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:42:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:43:22.722] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:44:22.725] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:45:22.743] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:46:22.769] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:47:22.781] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:48:22.724] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:49:22.747] [   ] [debug] autosave: no needs to save file
+[2022-07-07 22:50:22.732] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:09:44.046] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-08 01:09:44.192] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-08 01:09:44.192] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-08 01:09:44.192] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-08 01:09:44.199] [   ] [debug] autosave is started
+[2022-07-08 01:09:44.372] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-08 01:09:44.376] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-08 01:09:44.430] [   ] [debug] Node name: scratch
+[2022-07-08 01:10:17.507] [   ] [debug] Node name: ghcup
+[2022-07-08 01:10:25.451] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-08 01:10:44.725] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:11:44.721] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:12:44.734] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:13:44.726] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:14:44.730] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:15:44.748] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:16:44.744] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:17:44.739] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:18:44.735] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:19:44.723] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:20:44.725] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:21:44.774] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:22:44.744] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:23:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:24:44.741] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:25:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:26:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:27:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:28:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:29:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:30:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:31:44.721] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:32:44.751] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:33:44.728] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:34:44.724] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:35:44.737] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:36:44.728] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:37:44.728] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:38:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:39:44.752] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:40:44.724] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:41:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:42:44.762] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:43:44.747] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:44:44.757] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:45:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:46:44.751] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:47:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:48:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:49:44.724] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:50:44.771] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:51:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:52:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:53:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:54:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:55:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:56:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:57:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:58:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 01:59:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:00:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:01:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:02:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:03:44.781] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:04:44.741] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:05:44.761] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:06:44.771] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:07:44.724] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:08:44.724] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:09:44.747] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:10:44.733] [   ] [debug] autosave: no needs to save file
+[2022-07-08 02:11:44.731] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:02:26.513] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-09 13:02:26.652] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-09 13:02:26.652] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-09 13:02:26.652] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-09 13:02:26.659] [   ] [debug] autosave is started
+[2022-07-09 13:02:26.793] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 13:02:26.797] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 13:02:26.849] [   ] [debug] Node name: scratch
+[2022-07-09 13:02:34.323] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-09 13:02:38.143] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-09 13:03:26.785] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:04:26.798] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:05:26.843] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:06:26.843] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:07:26.843] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:08:26.785] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:09:26.842] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:10:26.789] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:10:39.916] [   ] [debug] Node name: Git
+[2022-07-09 13:10:50.362] [   ] [debug] Node name: git bare repo
+[2022-07-09 13:10:58.066] [   ] [debug] 436 -> charset: UTF-8
+[2022-07-09 13:11:26.799] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:11:47.551] [   ] [debug] 328 -> charset: UTF-8
+[2022-07-09 13:12:26.787] [   ] [debug] autosave: time to save file
+[2022-07-09 13:13:26.792] [   ] [debug] autosave: time to save file
+[2022-07-09 13:14:26.821] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:14:38.723] [   ] [debug] 161 -> charset: UTF-8
+[2022-07-09 13:14:42.572] [   ] [debug] Node name: git bare repo
+[2022-07-09 13:15:26.789] [   ] [debug] autosave: time to save file
+[2022-07-09 13:15:35.842] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-09 13:15:36.030] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-09 13:15:36.030] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-09 13:15:36.030] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-09 13:15:36.040] [   ] [debug] autosave is started
+[2022-07-09 13:15:36.217] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 13:15:36.221] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 13:15:36.281] [   ] [debug] Node name: git bare repo
+[2022-07-09 13:15:38.297] [   ] [debug] 161 -> charset: UTF-8
+[2022-07-09 13:15:40.110] [   ] [debug] Node name: git bare repo
+[2022-07-09 13:16:21.991] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-09 13:16:22.166] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-09 13:16:22.166] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-09 13:16:22.166] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-09 13:16:22.175] [   ] [debug] autosave is started
+[2022-07-09 13:16:22.371] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 13:16:22.374] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 13:16:22.435] [   ] [debug] Node name: git bare repo
+[2022-07-09 13:16:25.403] [   ] [debug] 161 -> charset: UTF-8
+[2022-07-09 13:16:35.678] [   ] [debug] Node name: git bare repo
+[2022-07-09 13:17:22.784] [   ] [debug] autosave: time to save file
+[2022-07-09 13:18:14.863] [   ] [debug] 161 -> charset: UTF-8
+[2022-07-09 13:18:22.799] [   ] [debug] autosave: time to save file
+[2022-07-09 13:18:49.337] [   ] [debug] 125 -> charset: UTF-8
+[2022-07-09 13:19:13.512] [   ] [debug] 191 -> charset: ASCII
+[2022-07-09 13:19:22.784] [   ] [debug] autosave: time to save file
+[2022-07-09 13:20:14.606] [   ] [debug] 11372 -> charset: UTF-8
+[2022-07-09 13:20:22.782] [   ] [debug] autosave: time to save file
+[2022-07-09 13:20:41.649] [   ] [debug] Node name: git bare repo
+[2022-07-09 13:21:03.549] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-09 13:21:22.788] [   ] [debug] autosave: time to save file
+[2022-07-09 13:22:22.783] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:23:22.783] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:24:22.799] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:25:22.843] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:26:22.842] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:27:22.842] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:28:22.842] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:29:22.842] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:30:22.784] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:31:22.794] [   ] [debug] autosave: no needs to save file
+[2022-07-09 13:31:33.195] [   ] [debug] kill_callback_handler 15
+[2022-07-09 13:31:33.234] [   ] [debug] kill_callback_handler 1
+[2022-07-09 18:55:32.607] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-09 18:55:32.774] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-09 18:55:32.774] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-09 18:55:32.774] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-09 18:55:32.783] [   ] [debug] autosave is started
+[2022-07-09 18:55:32.968] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 18:55:32.974] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-09 18:55:33.038] [   ] [debug] Node name: git bare repo
+[2022-07-09 18:55:37.649] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-09 18:55:43.740] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-09 18:56:32.799] [   ] [debug] autosave: no needs to save file
+[2022-07-09 18:57:32.825] [   ] [debug] autosave: no needs to save file
+[2022-07-09 18:58:32.796] [   ] [debug] autosave: no needs to save file
+[2022-07-09 18:59:32.795] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:43:53.763] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-10 00:43:53.915] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-10 00:43:53.915] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-10 00:43:53.915] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-10 00:43:53.922] [   ] [debug] autosave is started
+[2022-07-10 00:43:54.083] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-10 00:43:54.088] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-10 00:43:54.144] [   ] [debug] Node name: backup/Sync/DD
+[2022-07-10 00:44:04.922] [   ] [debug] Node name: git bare repo
+[2022-07-10 00:44:06.821] [   ] [debug] Node name: examples
+[2022-07-10 00:44:11.389] [   ] [debug] Node name: working
+[2022-07-10 00:44:19.820] [   ] [debug] Node name: git bare repo
+[2022-07-10 00:44:34.266] [   ] [debug] Node name: history
+[2022-07-10 00:44:54.035] [   ] [debug] autosave: time to save file
+[2022-07-10 00:45:54.038] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:46:54.038] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:47:54.032] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:48:54.032] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:49:54.052] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:50:54.092] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:51:54.048] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:52:54.055] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:53:54.041] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:54:54.092] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:55:54.033] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:56:54.033] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:57:54.033] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:58:54.038] [   ] [debug] autosave: no needs to save file
+[2022-07-10 00:59:54.038] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:00:54.088] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:01:54.035] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:02:54.092] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:03:54.045] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:04:54.041] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:05:54.054] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:06:54.045] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:07:54.057] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:08:54.032] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:09:54.038] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:10:54.034] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:11:54.507] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:12:54.505] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:13:54.487] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:14:54.504] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:15:54.496] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:16:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:17:54.506] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:18:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:19:54.498] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:20:54.488] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:21:54.503] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:22:54.536] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:23:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:24:54.482] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:25:54.490] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:26:54.493] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:27:54.510] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:28:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:29:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:30:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:31:54.480] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:32:54.493] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:33:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:34:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:35:54.490] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:36:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:37:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:38:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:39:54.493] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:40:54.495] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:41:54.492] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:42:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:43:54.500] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:44:54.482] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:45:54.497] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:46:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:47:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:48:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:49:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:50:54.487] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:51:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:52:54.509] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:53:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:54:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:55:54.498] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:56:54.513] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:57:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:58:54.482] [   ] [debug] autosave: no needs to save file
+[2022-07-10 01:59:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:00:54.513] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:01:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:02:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:03:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:04:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:05:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:06:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:07:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:08:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:09:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:10:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:11:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:12:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:13:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:14:54.523] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:15:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:16:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:17:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:18:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:19:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:20:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:21:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:22:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:23:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:24:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:25:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:26:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:27:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:28:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:29:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:30:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:31:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:32:54.519] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:33:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:34:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:35:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:36:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:37:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:38:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:39:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:40:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:41:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:42:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:43:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:44:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:45:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:46:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:47:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:48:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:49:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:50:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:51:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:52:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:53:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:54:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:55:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:56:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:57:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:58:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 02:59:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:00:54.496] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:01:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:02:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:03:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:04:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:05:54.496] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:06:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:07:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:08:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:09:54.486] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:10:54.525] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:11:54.530] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:12:54.525] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:13:54.484] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:14:54.528] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:15:54.489] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:16:54.521] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:17:54.485] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:18:54.502] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:19:54.519] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:20:54.519] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:21:54.486] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:22:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:23:54.519] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:24:54.500] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:25:54.498] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:26:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:27:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:28:54.482] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:29:54.518] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:30:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:31:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:32:54.489] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:33:54.480] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:34:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:35:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:36:54.500] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:37:54.492] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:38:54.492] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:39:54.482] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:40:54.487] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:41:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:42:54.541] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:43:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:44:54.518] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:45:54.525] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:46:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:47:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:48:54.530] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:49:54.485] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:50:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:51:54.485] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:52:54.499] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:53:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:54:54.537] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:55:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:56:54.518] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:57:54.483] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:58:54.489] [   ] [debug] autosave: no needs to save file
+[2022-07-10 03:59:54.485] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:00:54.516] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:01:54.509] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:02:54.486] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:03:54.482] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:04:54.525] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:05:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:06:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:07:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:08:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:09:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:10:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:11:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:12:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:13:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:14:54.481] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:15:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:16:54.492] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:17:54.516] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:18:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:19:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:20:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:21:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:22:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:23:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:24:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:25:54.516] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:26:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:27:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:28:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:29:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:30:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:31:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:32:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:33:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:34:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:35:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:36:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:37:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:38:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:39:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:40:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:41:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:42:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:43:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:44:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:45:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:46:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:47:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:48:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:49:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:50:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:51:54.532] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:52:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:53:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:54:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:55:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:56:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:57:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:58:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 04:59:54.539] [   ] [debug] autosave: no needs to save file
+[2022-07-10 05:00:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 05:01:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 05:02:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 05:03:54.538] [   ] [debug] autosave: no needs to save file
+[2022-07-10 05:04:54.540] [   ] [debug] autosave: no needs to save file
+[2022-07-10 05:05:32.211] [   ] [debug] kill_callback_handler 15
+[2022-07-10 05:05:32.213] [   ] [debug] kill_callback_handler 1
+[2022-07-10 19:06:13.540] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-10 19:06:13.697] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-10 19:06:13.697] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-10 19:06:13.697] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-10 19:06:13.705] [   ] [debug] autosave is started
+[2022-07-10 19:06:13.876] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-10 19:06:13.880] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-10 19:06:13.940] [   ] [debug] Node name: history
+[2022-07-10 19:06:21.493] [   ] [debug] Node name: bluetooth
+[2022-07-10 19:06:31.010] [   ] [debug] Node name: broken desktop files
+[2022-07-10 19:07:13.843] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:08:13.843] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:09:13.850] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:10:13.846] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:11:13.839] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:12:13.845] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:13:13.869] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:14:13.878] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:15:13.846] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:16:13.841] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:17:13.838] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:18:13.842] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:19:13.843] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:20:13.839] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:21:13.841] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:22:13.850] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:23:13.858] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:24:13.846] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:25:13.839] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:26:13.876] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:27:13.840] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:28:13.846] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:29:13.896] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:30:13.843] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:31:13.848] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:32:13.845] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:33:13.853] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:34:13.840] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:35:13.861] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:36:13.853] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:37:13.839] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:38:13.845] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:39:13.842] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:40:13.839] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:41:13.879] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:42:13.856] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:43:13.849] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:44:13.846] [   ] [debug] autosave: no needs to save file
+[2022-07-10 19:45:13.899] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:11:16.428] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:12:16.425] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:13:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:14:16.428] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:15:16.448] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:16:16.474] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:17:16.435] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:18:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:19:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:20:16.434] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:21:16.425] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:22:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:23:16.420] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:24:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:25:16.415] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:26:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:27:16.434] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:28:16.421] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:29:16.416] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:30:16.414] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:31:16.454] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:32:16.424] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:33:16.421] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:34:16.454] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:35:16.414] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:36:16.425] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:37:16.430] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:38:16.441] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:39:16.419] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:40:16.415] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:41:16.426] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:42:16.414] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:43:16.416] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:44:16.415] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:45:16.421] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:46:16.471] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:47:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:48:16.462] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:49:16.474] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:50:16.416] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:51:16.421] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:52:16.455] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:53:16.415] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:54:16.421] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:55:16.447] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:56:16.418] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:57:16.467] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:58:16.414] [   ] [debug] autosave: no needs to save file
+[2022-07-10 20:59:16.414] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:00:16.416] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:01:16.421] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:02:16.428] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:03:16.424] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:04:16.424] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:05:16.433] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:06:16.417] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:07:16.444] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:08:16.414] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:09:16.431] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:10:16.416] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:11:16.414] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:12:16.471] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:27:51.702] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:28:51.747] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:29:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:30:51.724] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:31:51.710] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:32:51.704] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:33:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:34:51.705] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:35:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:36:51.710] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:37:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:38:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:39:51.713] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:40:51.763] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:41:51.716] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:42:51.713] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:43:51.702] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:44:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:45:51.710] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:46:51.705] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:47:51.759] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:48:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:49:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:50:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:51:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:52:51.726] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:53:51.713] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:54:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:55:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:56:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:57:51.716] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:58:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 21:59:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:00:51.722] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:01:51.709] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:02:51.720] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:03:51.723] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:04:51.763] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:05:51.704] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:06:51.706] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:07:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:08:51.703] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:09:51.733] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:10:51.711] [   ] [debug] autosave: no needs to save file
+[2022-07-10 22:11:42.845] [   ] [debug] kill_callback_handler 15
+[2022-07-10 22:11:42.870] [   ] [debug] kill_callback_handler 1
+[2022-07-11 00:26:38.371] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-11 00:26:38.510] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-11 00:26:38.510] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-11 00:26:38.510] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-11 00:26:38.517] [   ] [debug] autosave is started
+[2022-07-11 00:26:38.656] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-11 00:26:38.660] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-11 00:26:38.715] [   ] [debug] Node name: broken desktop files
+[2022-07-11 00:26:50.552] [   ] [debug] Node name: System
+[2022-07-11 00:26:54.094] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:03.141] [   ] [debug] Node name: Programs
+[2022-07-11 00:27:03.153] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:20.687] [   ] [debug] Node name: Programs
+[2022-07-11 00:27:20.709] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:22.383] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:24.870] [   ] [debug] Node name: window size
+[2022-07-11 00:27:25.433] [   ] [debug] Node name: window id
+[2022-07-11 00:27:25.740] [   ] [debug] Node name: xinput
+[2022-07-11 00:27:26.109] [   ] [debug] Node name: window id
+[2022-07-11 00:27:26.353] [   ] [debug] Node name: window size
+[2022-07-11 00:27:26.530] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:26.732] [   ] [debug] Node name: Programs
+[2022-07-11 00:27:27.205] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:28.151] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:31.014] [   ] [debug] Node name: Inspired
+[2022-07-11 00:27:31.027] [   ] [debug] Node name: Bash
+[2022-07-11 00:27:38.359] [   ] [debug] autosave: time to save file
+[2022-07-11 00:28:01.417] [   ] [debug] Node name: DesignTemplate
+[2022-07-11 00:28:21.044] [   ] [debug] Node name: Pcmanfm
+[2022-07-11 00:28:31.095] [   ] [debug] Node name: Sxiv
+[2022-07-11 00:28:34.371] [   ] [debug] Node name: stack
+[2022-07-11 00:28:34.663] [   ] [debug] Node name: Scrot
+[2022-07-11 00:28:38.360] [   ] [debug] autosave: time to save file
+[2022-07-11 00:28:48.671] [   ] [debug] Node name: spacefm
+[2022-07-11 00:28:58.040] [   ] [debug] 98 -> charset: ASCII
+[2022-07-11 00:29:38.363] [   ] [debug] autosave: time to save file
+[2022-07-11 00:30:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:31:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:32:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:33:38.366] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:34:38.375] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:35:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:36:38.369] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:37:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:38:38.388] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:39:38.358] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:40:38.358] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:41:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:42:38.358] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:43:38.362] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:44:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:45:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:46:38.362] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:47:38.371] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:48:38.362] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:49:38.388] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:50:38.368] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:51:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:52:38.368] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:53:38.358] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:54:38.362] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:55:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:56:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:57:38.381] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:58:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 00:59:38.415] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:00:38.359] [   ] [debug] autosave: time to save file
+[2022-07-11 01:00:46.783] [   ] [debug] 120 -> charset: ASCII
+[2022-07-11 01:01:20.806] [   ] [debug] 6318 -> charset: ASCII
+[2022-07-11 01:01:38.358] [   ] [debug] autosave: time to save file
+[2022-07-11 01:01:40.569] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-11 01:01:50.417] [   ] [debug] Node name: custom dialogue
+[2022-07-11 01:02:07.119] [   ] [debug] Node name: spacefm
+[2022-07-11 01:02:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:03:38.388] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:04:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:05:38.391] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:06:38.371] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:07:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:08:38.358] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:09:38.408] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:10:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:11:38.375] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:12:38.372] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:13:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:14:38.399] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:15:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:16:38.375] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:17:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:18:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:19:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:20:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:21:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:22:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:23:38.371] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:24:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:25:38.395] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:26:38.362] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:27:38.381] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:28:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:29:38.384] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:30:38.428] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:31:38.430] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:32:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:33:38.406] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:34:38.369] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:35:38.375] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:36:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:37:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:38:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:39:38.362] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:40:38.411] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:41:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:42:38.378] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:43:38.358] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:44:38.411] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:45:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:46:38.382] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:47:38.391] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:48:38.368] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:49:38.379] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:50:38.369] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:51:38.401] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:52:38.363] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:53:38.381] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:54:38.404] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:55:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:56:38.371] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:57:38.363] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:58:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 01:59:38.381] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:00:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:01:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:02:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:03:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:04:38.368] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:05:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:06:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:07:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:08:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:09:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:10:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:11:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:12:38.363] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:13:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:14:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:15:38.376] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:16:38.363] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:17:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:18:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:19:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:20:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:21:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:22:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:23:38.374] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:24:38.426] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:25:38.390] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:26:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:27:38.401] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:28:38.374] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:29:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:30:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:31:38.365] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:32:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:33:38.358] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:34:38.368] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:35:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:36:38.362] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:37:38.393] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:38:38.384] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:39:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:40:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:41:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:42:38.371] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:43:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:44:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:45:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:46:38.394] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:47:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:48:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:49:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:50:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:51:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:52:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:53:38.367] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:54:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:55:38.426] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:56:38.407] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:57:38.384] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:58:38.367] [   ] [debug] autosave: no needs to save file
+[2022-07-11 02:59:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:00:38.374] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:01:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:02:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:03:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:04:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:05:38.384] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:06:38.397] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:07:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:08:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:09:38.374] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:10:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:11:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:12:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:13:38.404] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:14:38.394] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:15:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:16:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:17:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:18:38.381] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:19:38.367] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:20:38.384] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:21:38.371] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:22:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:23:38.368] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:24:38.398] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:25:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:26:38.404] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:27:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:28:38.391] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:29:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:30:38.404] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:31:38.404] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:32:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:33:38.367] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:34:38.363] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:35:38.381] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:36:38.418] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:37:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:38:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:39:38.374] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:40:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:41:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:42:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:43:38.384] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:44:38.395] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:45:38.402] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:46:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:47:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:48:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:49:38.361] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:50:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:51:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:52:38.374] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:53:38.397] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:54:38.419] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:55:38.377] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:56:38.410] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:57:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:58:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 03:59:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:00:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:01:38.364] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:02:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:03:38.390] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:04:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:05:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:06:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:07:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:08:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:09:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:10:38.419] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:11:38.380] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:12:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:13:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:14:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:15:38.377] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:16:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:17:38.399] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:18:19.758] [   ] [debug] Node name: Programs
+[2022-07-11 04:18:22.446] [   ] [debug] Node name: fonts
+[2022-07-11 04:18:35.176] [   ] [debug] Node name: font preview
+[2022-07-11 04:18:38.358] [   ] [debug] autosave: time to save file
+[2022-07-11 04:18:44.524] [   ] [debug] 3533 -> charset: ASCII
+[2022-07-11 04:19:38.381] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:20:38.410] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:21:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:22:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:23:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:24:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:25:38.377] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:26:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:27:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:28:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:29:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:30:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:31:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:32:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:33:38.370] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:34:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:35:38.419] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:36:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:37:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:38:38.363] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:39:38.410] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:40:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:41:38.359] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:42:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:43:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:44:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:45:38.399] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:46:38.417] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:47:38.360] [   ] [debug] autosave: no needs to save file
+[2022-07-11 04:47:39.405] [   ] [debug] kill_callback_handler 15
+[2022-07-11 04:47:39.433] [   ] [debug] kill_callback_handler 1
+[2022-07-11 21:24:50.724] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-11 21:24:50.959] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-11 21:24:50.959] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-11 21:24:50.959] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-11 21:24:50.966] [   ] [debug] autosave is started
+[2022-07-11 21:24:51.229] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-11 21:24:51.233] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-11 21:24:51.294] [   ] [debug] Node name: font preview
+[2022-07-11 21:25:06.795] [   ] [debug] Node name: Ranger
+[2022-07-11 21:25:18.760] [   ] [debug] Node name: Rofi
+[2022-07-11 21:25:19.420] [   ] [debug] Node name: ruby
+[2022-07-11 21:25:19.459] [   ] [debug] Node name: Scrot
+[2022-07-11 21:25:19.614] [   ] [debug] Node name: spacefm
+[2022-07-11 21:25:19.701] [   ] [debug] Node name: stack
+[2022-07-11 21:25:20.405] [   ] [debug] Node name: Sxiv
+[2022-07-11 21:25:20.600] [   ] [debug] Node name: usb
+[2022-07-11 21:25:20.773] [   ] [debug] Node name: Xclip
+[2022-07-11 21:25:21.740] [   ] [debug] Node name: Xdo
+[2022-07-11 21:25:22.116] [   ] [debug] Node name: Xrandr
+[2022-07-11 21:25:22.440] [   ] [debug] Node name: windows2usb
+[2022-07-11 21:25:33.015] [   ] [debug] Node name: Xclip
+[2022-07-11 21:25:33.442] [   ] [debug] Node name: Xdo
+[2022-07-11 21:25:36.727] [   ] [debug] Node name: xdg
+[2022-07-11 21:25:49.042] [   ] [debug] Node name: Xdo
+[2022-07-11 21:25:51.227] [   ] [debug] autosave: time to save file
+[2022-07-11 21:26:38.895] [   ] [debug] Node name: xmonad
+[2022-07-11 21:26:49.007] [   ] [debug] 1026 -> charset: ASCII
+[2022-07-11 21:26:51.227] [   ] [debug] autosave: time to save file
+[2022-07-11 21:27:51.247] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:28:51.247] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:29:51.288] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:30:51.241] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:31:51.251] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:32:51.284] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:33:51.247] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:34:51.244] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:35:51.227] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:36:51.227] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:37:51.277] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:38:51.244] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:39:51.284] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:40:51.260] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:41:51.237] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:42:51.237] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:43:51.233] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:44:51.234] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:45:51.233] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:46:51.231] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:47:51.233] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:48:51.234] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:49:51.231] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:50:51.230] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:51:51.234] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:52:51.229] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:53:51.277] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:54:51.263] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:55:51.284] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:56:51.287] [   ] [debug] autosave: no needs to save file
+[2022-07-11 21:57:51.244] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:42:19.538] [   ] [debug] /home/trg/.config/cherrytree/config.cfg parsed
+[2022-07-11 23:42:19.760] [gtk] [critical] gtkmm: object `RecentDocs' not found in GtkBuilder file.
+[2022-07-11 23:42:19.760] [gtk] [critical] gtkmm: Gtk::Builder: widget `RecentDocs' was not found in the GtkBuilder file, or the specified part of it.
+[2022-07-11 23:42:19.760] [gtk] [critical] Gtk::Builder::get_widget(): dynamic_cast<> failed.
+[2022-07-11 23:42:19.767] [   ] [debug] autosave is started
+[2022-07-11 23:42:19.992] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-11 23:42:19.998] [gtk] [warning] Error loading plugin: libnuspell.so.5: cannot open shared object file: No such file or directory
+
+[2022-07-11 23:42:20.059] [   ] [debug] Node name: xmonad
+[2022-07-11 23:42:47.185] [   ] [debug] shift images in MenuBar/context menu
+[2022-07-11 23:43:19.816] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:44:19.829] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:45:19.809] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:46:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:47:19.822] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:48:19.816] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:49:19.820] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:50:19.811] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:51:19.822] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:52:19.868] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:53:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:54:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:55:19.809] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:56:19.816] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:57:19.810] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:58:19.846] [   ] [debug] autosave: no needs to save file
+[2022-07-11 23:59:19.866] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:00:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:01:19.820] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:02:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:03:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:04:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:05:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:06:19.817] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:07:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:08:19.844] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:09:19.809] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:10:19.810] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:11:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:12:19.859] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:13:19.822] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:14:19.862] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:15:19.867] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:16:19.833] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:17:19.819] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:18:19.810] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:19:19.809] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:20:19.859] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:21:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:22:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:23:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:24:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:25:19.832] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:26:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:27:19.836] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:28:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:29:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:30:19.863] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:31:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:32:19.858] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:33:19.836] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:34:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:35:19.825] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:36:19.809] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:37:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:38:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:39:19.835] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:40:19.845] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:41:19.852] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:42:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:43:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:44:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:45:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:46:19.868] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:47:19.845] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:48:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:49:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:50:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:51:19.862] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:52:19.848] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:53:19.838] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:54:19.811] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:55:19.835] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:56:19.846] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:57:19.868] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:58:19.825] [   ] [debug] autosave: no needs to save file
+[2022-07-12 00:59:19.865] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:00:19.815] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:01:19.835] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:02:19.855] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:03:19.815] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:04:19.842] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:05:19.832] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:06:19.815] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:07:19.862] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:08:19.828] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:09:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:10:19.868] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:11:19.815] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:12:19.838] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:13:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:14:19.828] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:15:19.815] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:16:19.818] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:17:19.825] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:18:19.832] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:19:19.842] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:20:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:21:19.868] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:22:19.841] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:23:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:24:19.811] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:25:19.822] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:26:19.851] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:27:19.815] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:28:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:29:19.840] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:30:19.818] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:31:19.859] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:32:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:33:19.810] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:34:19.831] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:35:19.869] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:36:19.826] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:37:19.825] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:38:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:39:19.858] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:40:19.809] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:41:19.815] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:42:19.838] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:43:19.835] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:44:19.837] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:45:19.810] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:46:19.851] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:47:19.844] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:48:19.849] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:49:19.868] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:50:19.818] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:51:19.816] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:52:19.812] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:53:19.825] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:54:19.836] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:55:19.814] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:56:19.809] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:57:19.843] [   ] [debug] autosave: no needs to save file
+[2022-07-12 01:58:19.837] [   ] [debug] autosave: no needs to save file

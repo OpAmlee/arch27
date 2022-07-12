@@ -97,9 +97,11 @@ alias figletc='figlet -f Calvin\ S'
 
 #[ -x /bin/fish ] && SHELL=/bin/fish exec fish
 
+#find / 2> /dev/null | grep <file>
+
 findit ()
 {
-    find / 2> /dev/null | grep "$1"  | grep -v /mnt
+    find / 2> /dev/null | grep "$1"
 }
 
 alias df='df -h'                          # human-readable sizes
@@ -157,15 +159,15 @@ alias tag='git tag'
 alias newtag='git tag -a'
 alias rmgitcache="rm -r ~/.cache/git"
 
-alias bare='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
-alias barep='bare push arch28'
- function barea()
+alias config='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
+alias cp='config push arch28'
+ function ca()
 {
-    bare add "$*"
+    config add "$*"
 }
-function barec()
+function cc()
 {
-    bare commit -m "$1"
+    config commit -m "$1"
 }
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -187,7 +189,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-export GDK_SCALE=2
+export GDK_SCALE=1
 
 #keyboard
 alias kbreset='setxkbmap'
@@ -277,7 +279,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 alias godmenu='cd $HOME/.config/dmenu'
 alias godusk='cd $HOME/.config/dusk'
-
+alias godwm='cd $HOME/.config/dwm'
 alias goscripts='cd $HOME/.scripts'
 
 alias gost='cd $HOME/.config/dusk/st'
@@ -293,11 +295,12 @@ alias ealacritty='nvim ~/.config/alacritty/alacritty.yml'
 alias ebinds='nvim ~/.config/sxhkd/sxhkdrc'
 
 alias ebash='nvim ~/.bashrc-personal'
-
+alias econfigs='sudo nvim /home/trg/.scripts/edit-configs'
 alias edmenu='cd ~/.config/dmenu && nvim ~/.config/dmenu/config.def.h'
 
 alias edusk='cd ~/.config/dusk && nvim ~/.config/dusk/config.def.h'
 alias edunst='nvim ~/.config/dunst/dunstrc'
+alias edwm='cd ~/.config/dwm && nvim ~/.config/dwm/config.def.h'
 
 alias ekitty='nvim ~/.config/kitty/kitty.conf'
 alias ekitty1='nvim ~/.config/kitty/kitty1-scratch.conf'
@@ -318,6 +321,8 @@ alias est='nvim ~/.config/dusk/st/config.def.h'
 
 alias estart='sudo nvim /usr/local/bin/autostart-dusk'
 alias estarship='nvim ~/.config/starship/starship.toml'
+
+alias exprofile='nvim ~/.xprofile'
 
 #neofetch
 #screenfetch
@@ -380,5 +385,3 @@ alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 alias xdgninja="$HOME/xdg-ninja/xdg-ninja.sh"
 
 #eval "$(starship init bash)"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

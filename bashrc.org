@@ -59,7 +59,6 @@
 - [[#xresources][Xresources]]
 - [[#xdg-ninja][xdg-ninja]]
 - [[#starship][Starship]]
-- [[#ruby-on-rails][Ruby on rails]]
 
 * askpass
 #+BEGIN_SRC sh
@@ -231,12 +230,16 @@ alias figletc='figlet -f Calvin\ S'
 #+END_SRC
 
 * find
+#+BEGIN_SRC sh
+#find / 2> /dev/null | grep <file>
+#+END_SRC
+
 
 #+BEGIN_SRC sh
 
 findit ()
 {
-    find / 2> /dev/null | grep "$1"  | grep -v /mnt
+    find / 2> /dev/null | grep "$1"
 }
 
 #+END_SRC
@@ -337,14 +340,14 @@ alias rmgitcache="rm -r ~/.cache/git"
 
 #+BEGIN_SRC sh
 alias config='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
-alias cp='bare push arch28'
+alias cp='config push arch28'
  function ca()
 {
-    bare add "$*"
+    config add "$*"
 }
 function cc()
 {
-    bare commit -m "$1"
+    config commit -m "$1"
 }
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -381,7 +384,7 @@ alias fgrep='fgrep --color=auto'
 * gtk file chooser
 
 #+BEGIN_SRC sh
-export GDK_SCALE=2
+export GDK_SCALE=1
 #+END_SRC
 
 * keyboard
@@ -549,7 +552,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 #+BEGIN_SRC sh
 alias godmenu='cd $HOME/.config/dmenu'
 alias godusk='cd $HOME/.config/dusk'
-
+alias godwm='cd $HOME/.config/dwm'
 alias goscripts='cd $HOME/.scripts'
 
 alias gost='cd $HOME/.config/dusk/st'
@@ -565,11 +568,12 @@ alias ealacritty='nvim ~/.config/alacritty/alacritty.yml'
 alias ebinds='nvim ~/.config/sxhkd/sxhkdrc'
 
 alias ebash='nvim ~/.bashrc-personal'
-
+alias econfigs='sudo nvim /home/trg/.scripts/edit-configs'
 alias edmenu='cd ~/.config/dmenu && nvim ~/.config/dmenu/config.def.h'
 
 alias edusk='cd ~/.config/dusk && nvim ~/.config/dusk/config.def.h'
 alias edunst='nvim ~/.config/dunst/dunstrc'
+alias edwm='cd ~/.config/dwm && nvim ~/.config/dwm/config.def.h'
 
 alias ekitty='nvim ~/.config/kitty/kitty.conf'
 alias ekitty1='nvim ~/.config/kitty/kitty1-scratch.conf'
@@ -591,8 +595,11 @@ alias est='nvim ~/.config/dusk/st/config.def.h'
 alias estart='sudo nvim /usr/local/bin/autostart-dusk'
 alias estarship='nvim ~/.config/starship/starship.toml'
 
+alias exprofile='nvim ~/.xprofile'
 
 #+END_SRC
+
+#+RESULTS:
 
 * reporting
 
@@ -712,10 +719,4 @@ alias xdgninja="$HOME/xdg-ninja/xdg-ninja.sh"
 
 #+BEGIN_SRC sh
 #eval "$(starship init bash)"
-#+END_SRC
-
-* Ruby on rails
-
-#+BEGIN_SRC sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #+END_SRC
