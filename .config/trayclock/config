@@ -1,0 +1,9 @@
+[colors]
+ticks=#f9f2f2
+hours=#f0e2e2
+minutes=#bab5b5
+border=#fbfef2
+background=#171717
+
+[datetime]
+format=%I:%M

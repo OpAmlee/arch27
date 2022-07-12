@@ -1,0 +1,75 @@
+format = """
+[╭── ](bold black)$username$directory $fill $git_branch$git_commit$git_state $battery$time(bold black)$line_break\
+[│](bold black)
+[╰ ](bold black)$character
+"""
+
+add_newline = true
+
+[character]
+success_symbol = "[](bold green) "
+error_symbol = "[](bold red) "
+
+[fill]
+symbol = "─"
+style = "bold black"
+
+[line_break]
+disabled = false
+
+[time]
+disabled = false
+style = "bold #B70BA7"
+format = '[$time]($style) '
+time_format = "%R"
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡"
+discharging_symbol = "💀 "
+
+[[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
+threshold = 18
+style = "bold red"
+
+[[battery.display]] # "bold yellow" style and 💦 symbol when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
+discharging_symbol = "💀 "
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+#symbol = "🌱 "
+symbol = " "
+style = "pink"
+truncation_length = 4
+truncation_symbol = ""
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[username]
+#style_user = "white bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = true
+show_always = false

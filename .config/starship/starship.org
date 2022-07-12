@@ -1,0 +1,132 @@
+#+title: :starship config
+#+PROPERTY: header-args :tangle ~/.config/starship/starship.toml
+#+auto_tangle: t
+
+* table of contents :toc:
+- [[#prompt-layout][prompt layout]]
+- [[#character][character]]
+- [[#fill-for-right-side-prompt][fill for right side prompt]]
+- [[#line-break][line break]]
+- [[#time][time]]
+- [[#template-block5][template block5]]
+- [[#git][git]]
+- [[#username][username]]
+
+* prompt layout
+
+#+BEGIN_SRC sh
+format = """
+[╭── ](bold black)$username$directory $fill $git_branch$git_commit$git_state $battery$time(bold black)$line_break\
+[│](bold black)
+[╰ ](bold black)$character
+"""
+
+add_newline = true
+#+END_SRC
+
+#+RESULTS:
+
+* character
+
+#+BEGIN_SRC sh
+[character]
+success_symbol = "[](bold green) "
+error_symbol = "[](bold red) "
+#+END_SRC
+
+
+
+* fill for right side prompt
+
+#+BEGIN_SRC sh
+[fill]
+symbol = "─"
+style = "bold black"
+#+END_SRC
+
+* line break
+
+#+BEGIN_SRC sh
+[line_break]
+disabled = false
+#+END_SRC
+
+* time
+
+#+BEGIN_SRC sh
+[time]
+disabled = false
+style = "bold #B70BA7"
+format = '[$time]($style) '
+time_format = "%R"
+#+END_SRC
+
+* template block5
+
+#+BEGIN_SRC sh
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡"
+discharging_symbol = "💀 "
+
+[[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
+threshold = 18
+style = "bold red"
+
+[[battery.display]] # "bold yellow" style and 💦 symbol when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
+discharging_symbol = "💀 "
+
+#+END_SRC
+
+* git
+
+#+BEGIN_SRC sh
+
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+#symbol = "🌱 "
+symbol = " "
+style = "pink"
+truncation_length = 4
+truncation_symbol = ""
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+#+END_SRC
+
+
+* username
+
+#+BEGIN_SRC sh
+[username]
+#style_user = "white bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = true
+show_always = false
+#+END_SRC
+
+$git_branch$git_commit$git_state$git_status
