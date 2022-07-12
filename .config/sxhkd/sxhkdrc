@@ -13,8 +13,13 @@ super + Escape; {s,d,p,n}
 super + Delete; {s,d}
     {pkill -USR1 -x sxhkd; notify-send -i /home/trg/Downloads/web/Webp.net-resizeimage.png 'SXHKD' 'reloaded config', $HOME/.scripts/restart/dusk.sh}
 
-super + x
-    $HOME/.scripts/logout.sh
+#super + x
+#    $HOME/.scripts/logout.sh
+
+# Launch Menus
+super + {x,n,d,s}
+    {powermenu,def-nmdmenu,def-dmenu,def-ssdmenu}
+
 
 super + s; {a,n,s,f}
     {alacritty -e htop, cherrytree, flameshot gui, featherpad}
@@ -61,9 +66,12 @@ control + F11
 alt + Return
     kitty -c ~/.config/kitty/kitty3-ranger.conf --single-instance -1
 
-alt + f
-    $HOME/.scripts/firefox-fix.sh
+alt + p
+    firefox --private-window
 
+# custom dmenu scripts
+alt + {w,l,f,g}
+    {edit-configs, quick-links, $HOME/.scripts/firefox-fix.sh, geany}
 
 #===============|
 # CONTROL + ALT |
@@ -78,18 +86,33 @@ control + alt + m
     $HOME/.scripts/autorandr-mobile.sh
 
 
+control + alt + v
+    /usr/bin/virtualbox
 #===============|
 #  SPECIALITY   |
 #===============|
 
+# screenshot
 Print
-    ~/.scripts/sshot-generic.sh
+    takeshot --now
+
+# screenshot active window
+ctrl + Print
+    takeshot --win
+
+# screenshot selected area
+ctrl + shift + Print
+    takeshot --area
 
 
 
-XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +5%
-XF86AudioLowerVolume
-    pactl set-sink-volume 0 -5%
-XF86AudioMute
-    pactl set-sink-mute 0 toggle
+
+
+# Volume controls
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    volume{ --up, --down, --toggle}
+
+# Brightness controls
+XF86MonBrightness{Up,Down}
+    brightness{ --up, --down}
+
