@@ -15,7 +15,7 @@
 #  ║╣ ╔╩╦╝╠═╝║ ║╠╦╝ ║
 #  ╚═╝╩ ╚═╩  ╚═╝╩╚═ ╩
 
-export TERM="xterm-256color"                      # getting proper colors
+export TERM="xterm -kitty"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR="nvim"                        # setting for emacsclient
 #export PATH=$PATH:$HOME/.emacs.d/bin
@@ -186,7 +186,9 @@ bind -m vi-insert 'Control-l: clear-screen'
 
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
-
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
 #  ╔═╗╦═╗╔═╗╔╦╗╔═╗╔╦╗
 #  ╠═╝╠╦╝║ ║║║║╠═╝ ║
 #  ╩  ╩╚═╚═╝╩ ╩╩   ╩

@@ -237,7 +237,44 @@ timer structure
 	# Backup description	
 	30 17 1 * * rsync -avzz (source)(destination)</rich_text>
       </node>
-      <node name="desktop entry" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652763953" ts_lastsave="1656041666">
+      <node name="dbus" unique_id="15" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652382626" ts_lastsave="1657651880">
+        <rich_text>/home/trg/tools/node-v18.1.0/bin:
+/home/trg/.local/bin:/home/trg/.local/bin:
+/home/trg/tools/node-v18.1.0/bin:
+/home/trg/.local/bin:
+/home/trg/.local/bin:$PATH:$HOME/.config/joshuto:
+
+/usr/local/sbin:
+/usr/local/bin:
+
+/usr/bin:
+/home/trg/.dotnet/tools:
+/usr/lib/jvm/default/bin:
+/usr/bin/site_perl:
+/usr/bin/vendor_perl:
+/usr/bin/core_perl:
+/var/lib/snapd/snap/bin:
+
+/home/trg/.emacs.d/doom/bin:
+/home/trg/.dotnet:
+/home/trg/.scripts:
+/home/trg/.local/bin/pylsp:
+/home/trg/.local/bin/:
+/home/trg/.emacs.d/doom/bin:
+/home/trg/.local/bin/pylsp:
+/home/trg/.config/joshuto:
+/home/trg/.emacs.d/doom/bin:
+/home/trg/.dotnet:
+/home/trg/.scripts:
+/home/trg/.local/bin/pylsp:
+/home/trg/.local/bin/)
+
+
+how to get pid
+</rich_text>
+        <rich_text family="monospace">ps -aux | grep {process-to-find-here}</rich_text>
+      </node>
+      <node name="desktop entry" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652763953" ts_lastsave="1657647186">
         <rich_text>[Desktop Entry]
 
 # The type as listed above
@@ -278,7 +315,29 @@ Exec=xfce4-clipman
 Icon=xfce4-clipman-plugin
 OnlyShowIn=XFCE;
 Terminal=false
-Hidden=false</rich_text>
+Hidden=false
+
+
+example from freedesktop.org
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Foo Viewer
+Comment=The best viewer for Foo objects available!
+TryExec=fooview
+Exec=fooview %F
+Icon=fooview
+MimeType=image/x-foo;
+Actions=Gallery;Create;
+
+[Desktop Action Gallery]
+Exec=fooview --gallery
+Name=Browse Gallery
+
+[Desktop Action Create]
+Exec=fooview --create-new
+Name=Create a new Foo!
+Icon=fooview-new</rich_text>
       </node>
       <node name="dignostic" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656041666" ts_lastsave="1656041672">
         <node name="system" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656041672" ts_lastsave="1656041679">
@@ -427,10 +486,58 @@ This script makes use of some of the environment variables as follows, these are
 	
 	</rich_text>
       </node>
-      <node name="icons" unique_id="35" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652762637" ts_lastsave="1655163061">
+      <node name="icons" unique_id="35" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652762637" ts_lastsave="1657651902">
         <rich_text>to find out an icon theme for gtk2.0,3.0
 
 	$ awk -F= '/icon-theme/ {print $2}' ~/.gtkrc-2.0</rich_text>
+      </node>
+      <node name="ip" unique_id="117" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657651902" ts_lastsave="1657658670">
+        <rich_text scale="h1">ip ~</rich_text>
+        <rich_text>
+
+ip address show
+
+
+
+</rich_text>
+        <rich_text scale="h4">Connect to a network</rich_text>
+        <rich_text>
+First, if you do not know your wireless device name, list all Wi-Fi devices: 
+[iwd]# device list
+Then, to initiate a scan for networks (note that this command will not output anything): 
+[iwd]# station </rich_text>
+        <rich_text style="italic">device</rich_text>
+        <rich_text> scan
+You can then list all available networks: 
+[iwd]# station </rich_text>
+        <rich_text style="italic">device</rich_text>
+        <rich_text> get-networks
+Finally, to connect to a network: 
+[iwd]# station </rich_text>
+        <rich_text style="italic">device</rich_text>
+        <rich_text> connect </rich_text>
+        <rich_text style="italic">SSID</rich_text>
+        <rich_text>
+
+iwctl --passphrase </rich_text>
+        <rich_text style="italic">passphrase</rich_text>
+        <rich_text> station </rich_text>
+        <rich_text style="italic">device</rich_text>
+        <rich_text> connect </rich_text>
+        <rich_text style="italic">SSID</rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text scale="h4">Manage known networks</rich_text>
+        <rich_text>
+To list networks you have connected to previously: 
+[iwd]# known-networks list
+To forget a known network: 
+[iwd]# known-networks </rich_text>
+        <rich_text style="italic">SSID</rich_text>
+        <rich_text> forget
+</rich_text>
       </node>
       <node name="sed" unique_id="64" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655163061" ts_lastsave="1655780909">
         <rich_text scale="h1">sed </rich_text>
@@ -565,44 +672,7 @@ s6dqq3fr.default-release
 	
 	</rich_text>
       </node>
-      <node name="dbus" unique_id="15" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652382626" ts_lastsave="1653180340">
-        <rich_text>/home/trg/tools/node-v18.1.0/bin:
-/home/trg/.local/bin:/home/trg/.local/bin:
-/home/trg/tools/node-v18.1.0/bin:
-/home/trg/.local/bin:
-/home/trg/.local/bin:$PATH:$HOME/.config/joshuto:
-
-/usr/local/sbin:
-/usr/local/bin:
-
-/usr/bin:
-/home/trg/.dotnet/tools:
-/usr/lib/jvm/default/bin:
-/usr/bin/site_perl:
-/usr/bin/vendor_perl:
-/usr/bin/core_perl:
-/var/lib/snapd/snap/bin:
-
-/home/trg/.emacs.d/doom/bin:
-/home/trg/.dotnet:
-/home/trg/.scripts:
-/home/trg/.local/bin/pylsp:
-/home/trg/.local/bin/:
-/home/trg/.emacs.d/doom/bin:
-/home/trg/.local/bin/pylsp:
-/home/trg/.config/joshuto:
-/home/trg/.emacs.d/doom/bin:
-/home/trg/.dotnet:
-/home/trg/.scripts:
-/home/trg/.local/bin/pylsp:
-/home/trg/.local/bin/)
-
-
-how to get pid
-</rich_text>
-        <rich_text family="monospace">ps -aux | grep {process-to-find-here}</rich_text>
-      </node>
-      <node name="path" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652851094" ts_lastsave="1656524944">
+      <node name="path" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652851094" ts_lastsave="1657640210">
         <rich_text family="monospace">mkdir "${HOME}/.npm-packages"
 echo NPM_PACKAGES="${HOME}/.npm-packages" &gt;&gt; ${HOME}/.bashrc
 echo prefix=${HOME}/.npm-packages &gt;&gt; ${HOME}/.npmrc
@@ -3147,7 +3217,7 @@ config add /home/trg/.scripts
    14  config push --set-upstream arch28 master</rich_text>
         </node>
       </node>
-      <node name="iDesk" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653066778" ts_lastsave="1653066797">
+      <node name="iDesk" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653066778" ts_lastsave="1657640266">
         <rich_text link="node 56" scale="h1">iDesk</rich_text>
         <rich_text scale="h1"> ~</rich_text>
         <rich_text>
@@ -3755,6 +3825,24 @@ else
 fi</rich_text>
         <rich_text>
 </rich_text>
+      </node>
+      <node name="kitty" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657640266" ts_lastsave="1657643495">
+        <rich_text scale="h1">kitty ~</rich_text>
+        <rich_text>
+
+paths
+	KITTY_CONFIG_DIRECTORY=</rich_text>
+        <rich_text family="monospace">~/.config/kitty</rich_text>
+        <rich_text>.d
+	KITTY_CACHE_DIRECTORY=</rich_text>
+        <rich_text family="monospace">~/.cache/kitty</rich_text>
+        <rich_text>
+	
+	KITTY_RUNTIME_DIRECTORY=
+	
+	term xterm-kitty
+	
+	kitty +list-fonts --psnames | grep Fira</rich_text>
       </node>
       <node name="LivestreamerCLI" unique_id="55" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653064274" ts_lastsave="1653064603">
         <rich_text scale="h1">Streamlink ~</rich_text>
@@ -6686,7 +6774,7 @@ The </rich_text>
 	
 	</rich_text>
       </node>
-      <node name="Xdo" unique_id="61" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653085705" ts_lastsave="1657592735">
+      <node name="Xdo" unique_id="61" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653085705" ts_lastsave="1657592798">
         <rich_text family="monospace" scale="h1">Xdo</rich_text>
         <rich_text scale="h1"> ~</rich_text>
         <rich_text>
@@ -6699,6 +6787,38 @@ The </rich_text>
 		args
 			</rich_text>
         <rich_text weight="heavy">--clearmodifiers</rich_text>
+      </node>
+      <node name="xmonad" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="58" is_bold="0" foreground="" ts_creation="1657592798" ts_lastsave="1657650309">
+        <rich_text scale="h1">xmonad ~</rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text scale="h3">How do I uninstall xmonad?</rich_text>
+        <rich_text>
+
+the </rich_text>
+        <rich_text family="monospace">$PREFIX</rich_text>
+        <rich_text> (that is, gave </rich_text>
+        <rich_text family="monospace">--prefix=$PREFIX</rich_text>
+        <rich_text> argument to </rich_text>
+        <rich_text family="monospace">Setup.lhs configure</rich_text>
+        <rich_text>). If unsure, try your  
+</rich_text>
+        <rich_text family="monospace">$HOME</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">/usr/local</rich_text>
+        <rich_text> as </rich_text>
+        <rich_text family="monospace">$PREFIX</rich_text>
+        <rich_text>. 
+ rm  -f $PREFIX/bin/xmonad
+ rm -rf $HOME/.xmonad
+ rm -rf $PREFIX/lib/xmonad-$VERSION
+ rm -rf $PREFIX/lib/xmonad-contrib-$VERSION
+ ghc-pkg unregister xmonad
+ ghc-pkg unregister xmonad-contrib
+Do not forget to purge that evil source code! 
+</rich_text>
       </node>
       <node name="Xrandr" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="58" is_bold="0" foreground="" ts_creation="1652800418" ts_lastsave="1655359896">
         <rich_text>Xrandr &amp; DPI

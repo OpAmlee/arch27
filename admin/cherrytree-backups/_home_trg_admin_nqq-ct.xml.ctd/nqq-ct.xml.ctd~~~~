@@ -237,7 +237,7 @@ timer structure
 	# Backup description	
 	30 17 1 * * rsync -avzz (source)(destination)</rich_text>
       </node>
-      <node name="desktop entry" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652763953" ts_lastsave="1656041666">
+      <node name="desktop entry" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652763953" ts_lastsave="1657647186">
         <rich_text>[Desktop Entry]
 
 # The type as listed above
@@ -278,7 +278,29 @@ Exec=xfce4-clipman
 Icon=xfce4-clipman-plugin
 OnlyShowIn=XFCE;
 Terminal=false
-Hidden=false</rich_text>
+Hidden=false
+
+
+example from freedesktop.org
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Foo Viewer
+Comment=The best viewer for Foo objects available!
+TryExec=fooview
+Exec=fooview %F
+Icon=fooview
+MimeType=image/x-foo;
+Actions=Gallery;Create;
+
+[Desktop Action Gallery]
+Exec=fooview --gallery
+Name=Browse Gallery
+
+[Desktop Action Create]
+Exec=fooview --create-new
+Name=Create a new Foo!
+Icon=fooview-new</rich_text>
       </node>
       <node name="dignostic" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656041666" ts_lastsave="1656041672">
         <node name="system" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656041672" ts_lastsave="1656041679">
@@ -299,7 +321,7 @@ get journal
 		
 	</rich_text>
       </node>
-      <node name="fonts" unique_id="20" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652453407" ts_lastsave="1653180391">
+      <node name="fonts" unique_id="20" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652453407" ts_lastsave="1657531115">
         <rich_text scale="h1">Fonts ~ 		</rich_text>
         <rich_text>
 	</rich_text>
@@ -339,6 +361,82 @@ get journal
 		Favorites ♥
 		Commands $
 		Notes </rich_text>
+        <node name="font preview" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657531115" ts_lastsave="1657531122">
+          <rich_text scale="h1">font preview ~</rich_text>
+          <rich_text>
+
+
+</rich_text>
+          <rich_text scale="h2">Usage</rich_text>
+          <rich_text>
+</rich_text>
+          <rich_text family="monospace">Usage: fontpreview-ueberzug [-h] [-a TEXT_ALIGN] [-s FONT_SIZE] [-b BG_COLOR] [-f FG_COLOR] [-t PREVIEW_TEXT]
+
+Options:
+    -a     alignment of preview text, you can use center, top/bottom/left/right or
+           north/south/west/east, or combinations like topleft, default is center
+    -s     preview font size, default is 72, note the actual size depends on the preview area
+    -b, -f background and foreground color, default is #ffffff and #000000
+    -t     preview text, you can add '\n' to split into lines
+</rich_text>
+          <rich_text>
+The arguments are passed directly to 'convert' command,  you can check the ImageMagick documentation to find acceptable formats  for them.
+
+
+
+</rich_text>
+          <rich_text scale="h3">Tips</rich_text>
+          <rich_text>
+• To merge the preview image into the terminal, set  background color the same as that of the terminal emulator, this is not  by default.
+
+• To show ligatures, you can use the following or any other text which contains ligature combination:
+
+
+</rich_text>
+          <rich_text family="monospace">FONTPREVIEW_PREVIEW_TEXT="ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n&lt;!-- != == -&gt;\n-| #[ |&gt; &lt;$&gt; ~@" fontpreview-ueberzug
+</rich_text>
+          <rich_text>
+
+
+
+</rich_text>
+          <rich_text scale="h2">Configure</rich_text>
+          <rich_text>
+This script makes use of some of the environment variables as follows, these are the same in </rich_text>
+          <rich_text link="webs https://github.com/sdushantha/fontpreview">fontpreview</rich_text>
+          <rich_text> so you can use the same settings with </rich_text>
+          <rich_text family="monospace">fontpreview-ueberzug</rich_text>
+          <rich_text>:
+◇ </rich_text>
+          <rich_text family="monospace">FONTPREVIEW_FONT_SIZE</rich_text>
+          <rich_text>
+◇ </rich_text>
+          <rich_text family="monospace">FONTPREVIEW_BG_COLOR</rich_text>
+          <rich_text>
+◇ </rich_text>
+          <rich_text family="monospace">FONTPREVIEW_FG_COLOR</rich_text>
+          <rich_text>
+◇ </rich_text>
+          <rich_text family="monospace">FONTPREVIEW_PREVIEW_TEXT</rich_text>
+          <rich_text>
+◇ </rich_text>
+          <rich_text family="monospace">FONTPREVIEW_TEXT_ALIGN</rich_text>
+          <rich_text>
+
+
+
+
+</rich_text>
+          <rich_text scale="h2">Difference from </rich_text>
+          <rich_text link="webs https://github.com/sdushantha/fontpreview" scale="h2">fontpreview</rich_text>
+          <rich_text>
+◇ Does not need two windows (terminal and sxiv) to display. Use </rich_text>
+          <rich_text family="monospace">ueberzug</rich_text>
+          <rich_text> to display the preview image in terminal instead.
+◇ Preview updates as you scroll without having to press enter also going back to the first font in list.
+
+</rich_text>
+        </node>
       </node>
       <node name="history" unique_id="30" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652716649" ts_lastsave="1653180378">
         <rich_text>	
@@ -526,7 +624,7 @@ how to get pid
 </rich_text>
         <rich_text family="monospace">ps -aux | grep {process-to-find-here}</rich_text>
       </node>
-      <node name="path" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652851094" ts_lastsave="1656524944">
+      <node name="path" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652851094" ts_lastsave="1657640210">
         <rich_text family="monospace">mkdir "${HOME}/.npm-packages"
 echo NPM_PACKAGES="${HOME}/.npm-packages" &gt;&gt; ${HOME}/.bashrc
 echo prefix=${HOME}/.npm-packages &gt;&gt; ${HOME}/.npmrc
@@ -3071,7 +3169,7 @@ config add /home/trg/.scripts
    14  config push --set-upstream arch28 master</rich_text>
         </node>
       </node>
-      <node name="iDesk" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653066778" ts_lastsave="1653066797">
+      <node name="iDesk" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653066778" ts_lastsave="1657640266">
         <rich_text link="node 56" scale="h1">iDesk</rich_text>
         <rich_text scale="h1"> ~</rich_text>
         <rich_text>
@@ -3679,6 +3777,24 @@ else
 fi</rich_text>
         <rich_text>
 </rich_text>
+      </node>
+      <node name="kitty" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657640266" ts_lastsave="1657643495">
+        <rich_text scale="h1">kitty ~</rich_text>
+        <rich_text>
+
+paths
+	KITTY_CONFIG_DIRECTORY=</rich_text>
+        <rich_text family="monospace">~/.config/kitty</rich_text>
+        <rich_text>.d
+	KITTY_CACHE_DIRECTORY=</rich_text>
+        <rich_text family="monospace">~/.cache/kitty</rich_text>
+        <rich_text>
+	
+	KITTY_RUNTIME_DIRECTORY=
+	
+	term xterm-kitty
+	
+	kitty +list-fonts --psnames | grep Fira</rich_text>
       </node>
       <node name="LivestreamerCLI" unique_id="55" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653064274" ts_lastsave="1653064603">
         <rich_text scale="h1">Streamlink ~</rich_text>
@@ -6030,6 +6146,14 @@ python3 shebang
 
 </rich_text>
       </node>
+      <node name="Ranger" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652978975" ts_lastsave="1657592712">
+        <rich_text scale="h1">Ranger ~</rich_text>
+        <rich_text>
+
+yd - copy directory name only
+yn - copy file name only
+yp - copy full path</rich_text>
+      </node>
       <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1656439788">
         <rich_text scale="h1">rofi ~</rich_text>
         <rich_text>
@@ -6576,6 +6700,9 @@ The </rich_text>
  
  mount -o gid=users,fmask=113,dmask=002 /dev/sda1 /mnt/usbstick</rich_text>
       </node>
+      <node name="windows2usb" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656966548" ts_lastsave="1657592727">
+        <rich_text>windows2usb /dev/sdb /home/trg/Downloads/Win10_21H2_English_x64.iso</rich_text>
+      </node>
       <node name="Xclip" unique_id="50" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="58" is_bold="0" foreground="" ts_creation="1652977376" ts_lastsave="1653085705">
         <rich_text scale="h1">Xclipboard ~</rich_text>
         <rich_text>
@@ -6599,8 +6726,9 @@ The </rich_text>
 	
 	</rich_text>
       </node>
-      <node name="Xdo" unique_id="61" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653085705" ts_lastsave="1653085866">
-        <rich_text scale="h1">Xdo ~</rich_text>
+      <node name="Xdo" unique_id="61" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653085705" ts_lastsave="1657592798">
+        <rich_text family="monospace" scale="h1">Xdo</rich_text>
+        <rich_text scale="h1"> ~</rich_text>
         <rich_text>
 
 </rich_text>
@@ -6611,6 +6739,38 @@ The </rich_text>
 		args
 			</rich_text>
         <rich_text weight="heavy">--clearmodifiers</rich_text>
+      </node>
+      <node name="xmonad" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="58" is_bold="0" foreground="" ts_creation="1657592798" ts_lastsave="1657650309">
+        <rich_text scale="h1">xmonad ~</rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text scale="h3">How do I uninstall xmonad?</rich_text>
+        <rich_text>
+
+the </rich_text>
+        <rich_text family="monospace">$PREFIX</rich_text>
+        <rich_text> (that is, gave </rich_text>
+        <rich_text family="monospace">--prefix=$PREFIX</rich_text>
+        <rich_text> argument to </rich_text>
+        <rich_text family="monospace">Setup.lhs configure</rich_text>
+        <rich_text>). If unsure, try your  
+</rich_text>
+        <rich_text family="monospace">$HOME</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">/usr/local</rich_text>
+        <rich_text> as </rich_text>
+        <rich_text family="monospace">$PREFIX</rich_text>
+        <rich_text>. 
+ rm  -f $PREFIX/bin/xmonad
+ rm -rf $HOME/.xmonad
+ rm -rf $PREFIX/lib/xmonad-$VERSION
+ rm -rf $PREFIX/lib/xmonad-contrib-$VERSION
+ ghc-pkg unregister xmonad
+ ghc-pkg unregister xmonad-contrib
+Do not forget to purge that evil source code! 
+</rich_text>
       </node>
       <node name="Xrandr" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="58" is_bold="0" foreground="" ts_creation="1652800418" ts_lastsave="1655359896">
         <rich_text>Xrandr &amp; DPI
@@ -6709,17 +6869,6 @@ xrandr --listactivemonitors
  
  autorandr --change</rich_text>
         </node>
-      </node>
-      <node name="Ranger" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652978975" ts_lastsave="1656966548">
-        <rich_text scale="h1">Ranger ~</rich_text>
-        <rich_text>
-
-yd - copy directory name only
-yn - copy file name only
-yp - copy full path</rich_text>
-      </node>
-      <node name="windows2usb" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656966548" ts_lastsave="1656966550">
-        <rich_text>windows2usb /dev/sdb /home/trg/Downloads/Win10_21H2_English_x64.iso</rich_text>
       </node>
       <node name="Yad" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653073801" ts_lastsave="1653084504">
         <rich_text scale="h1">Yad ~</rich_text>

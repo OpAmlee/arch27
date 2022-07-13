@@ -70,7 +70,7 @@ alt + p
     firefox --private-window
 
 # custom dmenu scripts
-alt + {w,l,f,g}
+alt + {w,l,f,h}
     {edit-configs, quick-links, $HOME/.scripts/firefox-fix.sh, geany}
 
 #===============|
