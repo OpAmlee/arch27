@@ -45,7 +45,9 @@
 - [[#propmt][propmt]]
 - [[#ps][ps]]
 - [[#python2-to-python3][Python2 to Python3]]
-- [[#quickeditconfigs][quickeditconfigs]]
+- [[#qtile][qtile]]
+- [[#editconfigs][editconfigs]]
+- [[#navigation][navigation]]
 - [[#reporting][reporting]]
 - [[#rofi][rofi]]
 - [[#shopt][shopt]]
@@ -549,15 +551,16 @@ alias pscpu='ps auxf | sort -nr -k 3'
 #alias python=python3
 #+END_SRC
 
-* quickeditconfigs
+* qtile
 
 #+BEGIN_SRC sh
-alias godmenu='cd $HOME/.config/dmenu'
-alias godusk='cd $HOME/.config/dusk'
-alias godwm='cd $HOME/.config/dwm'
-alias goscripts='cd $HOME/.scripts'
+alias checkqtile='python3 -m py_compile ~/.config/qtile/config.py'
+#+END_SRC
 
-alias gost='cd $HOME/.config/dusk/st'
+* editconfigs
+
+#+BEGIN_SRC sh
+
 
 alias rmc='rm -f config.h'
 alias smi='sudo make install'
@@ -601,7 +604,17 @@ alias exprofile='nvim ~/.xprofile'
 
 #+END_SRC
 
-#+RESULTS:
+* navigation
+
+#+BEGIN_SRC sh
+alias godmenu='cd $HOME/.config/dmenu'
+alias godusk='cd $HOME/.config/dusk'
+alias godwm='cd $HOME/.config/dwm'
+alias goscripts='cd $HOME/.scripts'
+#
+alias gost='cd $HOME/.config/dusk/st'
+alias goxmonad='cd $HOME/.config/xmonad'
+#+END_SRC
 
 * reporting
 

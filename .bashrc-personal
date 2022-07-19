@@ -277,12 +277,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 #alias python=python3
 
-alias godmenu='cd $HOME/.config/dmenu'
-alias godusk='cd $HOME/.config/dusk'
-alias godwm='cd $HOME/.config/dwm'
-alias goscripts='cd $HOME/.scripts'
-
-alias gost='cd $HOME/.config/dusk/st'
+alias checkqtile='python3 -m py_compile ~/.config/qtile/config.py'
 
 alias rmc='rm -f config.h'
 alias smi='sudo make install'
@@ -323,6 +318,14 @@ alias estart='sudo nvim /usr/local/bin/autostart-dusk'
 alias estarship='nvim ~/.config/starship/starship.toml'
 
 alias exprofile='nvim ~/.xprofile'
+
+alias godmenu='cd $HOME/.config/dmenu'
+alias godusk='cd $HOME/.config/dusk'
+alias godwm='cd $HOME/.config/dwm'
+alias goscripts='cd $HOME/.scripts'
+#
+alias gost='cd $HOME/.config/dusk/st'
+alias goxmonad='cd $HOME/.config/xmonad'
 
 #neofetch
 #screenfetch

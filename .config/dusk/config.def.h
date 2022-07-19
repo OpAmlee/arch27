@@ -12,12 +12,12 @@ pdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqppdbqpdbqpdbqpdbqpdb
 
 /*{{{ Technical Appearance */
 static const unsigned int borderpx       = 1;   /* border pixel of windows */ 
-static const unsigned int snap           = 15;  /* snap pixel */
-static const unsigned int gappih         = 10;   /* horiz inner gap between windows */
-static const unsigned int gappiv         = 10;   /* vert inner gap between windows */
-static const unsigned int gappoh         = 10;   /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 10;   /* vert outer gap between windows and screen edge */
-static const unsigned int gappfl          = 10;   /* gap between floating windows (when relevant) */
+static const unsigned int snap           = 1;  /* snap pixel */
+static const unsigned int gappih         = 5;   /* horiz inner gap between windows */
+static const unsigned int gappiv         = 5;   /* vert inner gap between windows */
+static const unsigned int gappoh         = 5;   /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 5;   /* vert outer gap between windows and screen edge */
+static const unsigned int gappfl         = 5;   /* gap between floating windows (when relevant) */
 static const unsigned int smartgaps_fact = 0;   /* smartgaps factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 
 
@@ -202,7 +202,7 @@ static char *colors[SchemeLast][ColCount] = {
 	[SchemeFlexInaSPRLC] = { "#E8D9B1", "#333300", "#333300", "normSPRLC" },
 	[SchemeFlexInaTTMI]  = { "#E8D9B1", "#B32727", "#B32727", "normTTMI" },
 	[SchemeFlexInaTTMIC] = { "#E8D9B1", "#B32727", "#B32727", "normTTMIC" },
-	[SchemeFlexInaFloat] = { "#440044", "#121212", "#0da28c", "normfloat" },
+	[SchemeFlexInaFloat] = { "#121212", "#121212", "#171717", "normfloat" },// corrected border of window in selected floating windows
 	[SchemeFlexSelTTB]   = { "#AFD700", "#121212", "#121212", "selTTB" },// active workspace - letter color- top bar - surrounding border of active work space
 	[SchemeFlexSelLTR]   = { "#E8D9B1", "#550055", "#550055", "selLTR" },
 	[SchemeFlexSelMONO]  = { "#E8D9B1", "#212171", "#212171", "selMONO" },
@@ -218,7 +218,7 @@ static char *colors[SchemeLast][ColCount] = {
 	[SchemeFlexSelSPRLC] = { "#E8D9B1", "#555500", "#555500", "selSPRLC" },
 	[SchemeFlexSelTTMI]  = { "#E8D9B1", "#C91717", "#C91717", "selTTMI" },
 	[SchemeFlexSelTTMIC] = { "#E8D9B1", "#C91717", "#C91717", "selTTMIC" },
-	[SchemeFlexSelFloat] = { "#333300", "#720A42", "#121212", "selfloat" },
+	[SchemeFlexSelFloat] = { "#E8D9B1", "#171717", "#121212", "selfloat" },// color inside bar for selected floating windows
 };
 
 /*}}} */
@@ -298,15 +298,20 @@ static const Rule clientrules[] = {
 	{ .class = "kitty"         , .flags = Terminal },
 //	{ .class = "st"            , .flags = NoSwallow},
 	{ .class = "st-256color"   , .flags = Terminal|AttachBottom },
-	{ .class = "XTerm"         , .flags = Terminal },
+	{ .class = "xterm-256color", .flags = Terminal },
 	{ .class = "Xephyr"        , .flags = Floating|Centered },
-	{ .class = "Yad"           , .flags =   Floating|Centered },
-	{ .title = "Event Tester"  , .flags = NoSwallow },
+	
+    { .class = "Yad"           , .flags =   Floating|Centered },
+    { .class = "yad"           , .flags =   Floating|Centered },
+    { .class = "System Logout" , .flags =   Floating|Centered },
+	
+    { .title = "Event Tester"  , .flags = NoSwallow },
     { .title = "Dunst"         , .flags = AlwaysOnTop },
     { .class = "sxiv"          , .flags = AlwaysOnTop|Centered },
 
     { .class = "flameshot"     , .flags = AlwaysOnTop|Centered },
     { .class = "cherrytree"    , .flags = AlwaysOnTop|Centered },
+
 
 // class role instance title wintype opacity flags floatpos scratchkey workspace
 
@@ -558,11 +563,11 @@ static const Layout layouts[] = {
 
 /* Scratch/Spawn commands:        NULL (scratchkey), command, argument, argument, ..., NULL */
 
-static const char *termcmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty/kitty.conf", NULL };
+static const char *termcmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty.d/kitty.conf", NULL };
 
 
 //static const char *termcmd[]  = { NULL, "st", NULL };
-static const char *term2cmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty/kitty.conf", NULL };
+static const char *term2cmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty.d/kitty.conf", NULL };
 static const char *browsercmd[]  = { NULL, "firefox", NULL };
 static const char *fmcmd[]  = { NULL, "spacefm", NULL };
 static const char *emacscmd[]  = { NULL, "emacs", NULL };
@@ -584,8 +589,8 @@ static const char *dmenucmd[] = {
 };
 
 
-static const char *spcmd_w[] = {"w", "kitty", "--name", "spterm (w)", NULL };
-static const char *spcmd_e[] = {"e", "kitty", "--name", "spterm (e)", "--config", "/home/trg/.config/kitty/kitty1-scratch.conf", NULL };
+static const char *spcmd_w[] = {"w", "kitty", "--name", "spterm (w)", "--config", "/home/trg/.config/kitty.d/kitty.conf", NULL };
+static const char *spcmd_e[] = {"e", "kitty", "--name", "spterm (e)", "--config", "/home/trg/.config/kitty.d/kitty3.conf", NULL };
 static const char *spcmd_r[] = {"r", "cherrytree", "--name", "spterm (r)" ,NULL };
 
 //static const char *spcmd_a[] = {"a", "st"    , "-n",     "spfm (a)" , "-g", "144x41", "-e", "ranger", NULL };

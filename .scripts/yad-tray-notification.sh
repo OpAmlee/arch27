@@ -1,9 +1,9 @@
 #!/bin/bash
 
-mytimeout=5
+mytimeout="5000"
 
 
-yad --image /home/trg/.local/share/images/screenshot-logo2.png --no-buttons --timeout='$1'
+yad --image /home/trg/.local/share/images/screenshot-logo2.png --no-buttons --timeout='echo $1'
 
 
 yad --notification --image=/home/trg/.local/share/icons/user/photo/camera-icon32x32.png

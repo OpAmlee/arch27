@@ -15,7 +15,7 @@
 #  ║╣ ╔╩╦╝╠═╝║ ║╠╦╝ ║
 #  ╚═╝╩ ╚═╩  ╚═╝╩╚═ ╩
 
-export TERM="xterm -kitty"                      # getting proper colors
+export TERM="xterm-kitty"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR="nvim"                        # setting for emacsclient
 #export PATH=$PATH:$HOME/.emacs.d/bin
@@ -89,7 +89,14 @@ if [ -f /usr/share/bash-completion/git-completion.bash ]; then
   . /usr/share/bash-completion/git-completion.bash
 fi
 
-HISTFILE=$HOME/.local/share/history/bash_history
+HISTSIZE=5000
+HISTFILESIZE=10000
+#HISTFILE="$HOME/.bash_history"
+#export HISTSIZE HISTFILESIZE HISTFILE
+
+#echo HISTSIZE is $HISTSIZE
+#echo HISTFILESIZE is $HISTFILESIZE
+#echo HISTFILE is $HISTFILE
 
 # Prompt
 # define the color of the simple-bash-prompt

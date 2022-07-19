@@ -2,16 +2,7 @@
 	"segments": {
 		"left": [
 
-            {
-               "function": "powerline.segments.common.time.date",
-                    "name": "time", 
-                    "args": {
-                                "format": "%H:%M",
-                                "istime": "true"
-                               
-                            },
-                            "priority" : 10
-            },
+            
 
 
             {
@@ -46,7 +37,7 @@
             {
 				"function": "cascading_rainbow.rainbow.rainbow_segment",
 					"args" : {
-								"dir_shorten_len" : 6,
+								"dir_shorten_len" : 1,
 								"dir_limit_depth" : 0
 							},
 				"priority": 50

@@ -76,7 +76,7 @@
 		"gitstatus_untracked":       { "fg": "brightestorange", "bg": "grayX", "attrs": [] },
 		"gitstatus_stashed":         { "fg": "darkblue",        "bg": "grayX", "attrs": [] },
 		"gitstatus:divider":         { "fg": "gray0",           "bg": "grayX", "attrs": [] },
-		"cascading_rainbow":         { "fg": "white",           "bg": "dark_green_gray", "attrs": [] },
+		"cascading_rainbow":         { "fg": "black",           "bg": "dark_green_gray", "attrs": ["bold"] },
         "trg_rainbow":               { "fg": "trgyellow",       "bg": "white_red", "attrs": [] }
 	}
 }

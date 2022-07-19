@@ -30,7 +30,9 @@ super + grave
 
 super + shift + grave
     $HOME/.scripts/conky-toggle2.sh
-	
+
+super + shift + e
+    sudo spacefm
 
 #super + Print
 #    ~/.scripts/sshot-select.sh
@@ -71,8 +73,10 @@ alt + p
 
 # custom dmenu scripts
 alt + {w,l,f,h}
-    {edit-configs, quick-links, $HOME/.scripts/firefox-fix.sh, geany}
+    {$HOME/.scripts/edit-configs, quick-links, $HOME/.scripts/firefox-fix.sh, geany}
 
+alt + x 
+    /home/trg/.scripts/yad-poweroff.sh    
 #===============|
 # CONTROL + ALT |
 #===============|
