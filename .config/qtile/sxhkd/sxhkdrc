@@ -1,0 +1,102 @@
+#   ╔╦╗╦═╗╔═╗  ╔═╗═╗ ╦╦ ╦╦╔═╔╦╗  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗
+#    ║ ╠╦╝║ ╦  ╚═╗╔╩╦╝╠═╣╠╩╗ ║║  ║  ║ ║║║║╠╣ ║║ ╦
+#    ╩ ╩╚═╚═╝  ╚═╝╩ ╚═╩ ╩╩ ╩═╩╝  ╚═╝╚═╝╝╚╝╚  ╩╚═╝
+
+#===============|※
+#    SUPER      |⇉
+#===============|
+
+
+super + Escape; {s,d,p,n}
+    {pkill -USR1 -x sxhkd; notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'SXHKD' 'reloaded config', /bin/bash -c $HOME/.scripts/restart/dusk.sh, /bin/bash -c ~/.scripts/restart-powerline, notify-send -t 2000 "restarting dunst" && sleep 1 && killall dunst } 
+
+super + Delete; {s,d}
+    {pkill -USR1 -x sxhkd; notify-send -i /home/trg/Downloads/web/Webp.net-resizeimage.png 'SXHKD' 'reloaded config', $HOME/.scripts/restart/dusk.sh}
+
+#super + x
+#    $HOME/.scripts/logout.sh
+
+# Launch Menus
+super + {x,n,d,s}
+    {powermenu,def-nmdmenu,def-dmenu,def-ssdmenu}
+
+
+super + s; {a,n,s,f}
+    {alacritty -e htop, cherrytree, flameshot gui, featherpad}
+    
+	
+super + grave
+	$HOME/.scripts/conky-toggle-new.sh
+
+super + shift + grave
+    $HOME/.scripts/conky-toggle2.sh
+
+super + shift + e
+    sudo spacefm
+
+#super + Print
+#    ~/.scripts/sshot-select.sh
+
+
+super + v 
+    virtualbox
+
+
+super + Next
+    ~/.scripts/xdo-page-up.sh
+
+#===============|
+#    CONTROL    |
+#===============|
+
+control + F11
+    ~/.scripts/xdo-hide-window.sh
+
+#control + F12
+# this is used in cherry tree to toggle toolbar
+
+#===============|
+#     ALT       |
+#===============|
+alt + Return
+    kitty -c ~/.config/kitty.d/kitty3-ranger.conf --single-instance -1
+
+alt + p
+    firefox --private-window
+
+# custom dmenu scripts
+alt + {w,l,f,h}
+    {$HOME/.scripts/edit-configs, quick-links, $HOME/.scripts/firefox-fix.sh, geany}
+
+alt + x 
+    /home/trg/.scripts/yad-poweroff.sh    
+#===============|
+# CONTROL + ALT |
+#===============|
+
+control + alt + Delete
+    ~/.scripts/reboot
+
+control + alt + d
+    $HOME/.scripts/autorandr-docked.sh
+control + alt + m
+    $HOME/.scripts/autorandr-mobile.sh
+
+
+control + alt + v
+    /usr/bin/virtualbox
+#===============|
+#  SPECIALITY   |
+#===============|
+
+
+
+
+# Volume controls
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    volume{ --up, --down, --toggle}
+
+# Brightness controls
+XF86MonBrightness{Up,Down}
+    brightness{ --up, --down}
+
