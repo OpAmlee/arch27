@@ -18,3 +18,4 @@ sed -n '/start_keys/,/stop_keys/p' /home/trg/.config/arco-dusk/config.def.h | ya
 
 bindsym $mod+Shift+d exec --no-startup-id alacritty --class scratchpad
 
+#update and make changes to config- test tracking on git
