@@ -6206,7 +6206,7 @@ Eventually, to make sure the installed packages of your system match  the list a
 			},</rich_text>
         </node>
       </node>
-      <node name="python" unique_id="96" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="23" is_bold="0" foreground="" ts_creation="1656484924" ts_lastsave="1656897584">
+      <node name="python" unique_id="96" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="23" is_bold="0" foreground="" ts_creation="1656484924" ts_lastsave="1658162088">
         <rich_text>python ~
 
 echo $VIRTUALENVWRAPPER_PYTHON
@@ -6230,6 +6230,30 @@ env VIRTUALENV_EXTRA_SEARCH_DIR=/path/to/dists\n/path/to/other/dists virtualenv
 python3 shebang
 #!/usr/bin/env python3
 
+links to start virtual env
+https://wiki.archlinux.org/title/Python/Virtual_environment
+
+#venv
+python -m venv envname
+
+#virtualenv
+virtualenv envname
+
+#activation
+source envname/bin/activate
+(envname) $
+
+#deactivate
+(envname) $ deactivate
+
+#python versions
+ls -l envname/bin/python
+
+#If you want to use a different Python version inside the virtual environment, you can use the -p/--python option of virtualenv: 
+virtualenv -p 3.8 envname
+$ ls -l envname/bin/python
+lrwxrwxrwx 1 foo foo 18 Jan 29 18:48 envname/bin/python -&gt; /usr/bin/python3.8
+
 </rich_text>
       </node>
       <node name="Ranger" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652978975" ts_lastsave="1657770854">
@@ -6243,7 +6267,7 @@ yd - copy directory name only
 yn - copy file name only
 yp - copy full path</rich_text>
       </node>
-      <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1656439788">
+      <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1658506592">
         <rich_text scale="h1">rofi ~</rich_text>
         <rich_text>
 
@@ -6253,6 +6277,12 @@ show the list of all commands: rofi -show run
 switch between windows: rofi -show window</rich_text>
         <rich_text>
 	
+</rich_text>
+      </node>
+      <node name="rsync" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658506592" ts_lastsave="1658506598">
+        <rich_text scale="h1">rsync ~</rich_text>
+        <rich_text>
+
 </rich_text>
       </node>
       <node name="ruby" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656439788" ts_lastsave="1656439794">
@@ -7022,10 +7052,12 @@ xrandr --listactivemonitors
     	-e 's/-- KB_GROUP /\n/' \
     	-e 's/", /"\t: /' | \
     	yad --text-info --back=#282c34 --fore=#46d9ff --geometry=1200x800</rich_text>
-        <node name="flags" unique_id="121" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657904466" ts_lastsave="1657904468">
-          <rich_text>  </rich_text>
-          <rich_text weight="heavy">YAD</rich_text>
-          <rich_text> is the fork of </rich_text>
+        <node name="flags" unique_id="121" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657904466" ts_lastsave="1657904514">
+          <rich_text scale="h1">  </rich_text>
+          <rich_text scale="h1" weight="heavy">YAD</rich_text>
+          <rich_text scale="h1"> </rich_text>
+          <rich_text>
+  is the fork of </rich_text>
           <rich_text weight="heavy">Zenity</rich_text>
           <rich_text> program. 
   
@@ -9085,7 +9117,7 @@ Display a file selector with the title </rich_text>
 
 
 	find $HOME -name '*.ps' | yad --progress --pulsate</rich_text>
-          <table char_offset="29601" justification="left" col_min="60" col_max="60" col_widths="0,0,0">
+          <table char_offset="29604" justification="left" col_min="60" col_max="60" col_widths="0,0,0">
             <row>
               <cell></cell>
               <cell></cell>

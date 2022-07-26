@@ -6206,7 +6206,7 @@ Eventually, to make sure the installed packages of your system match  the list a
 			},</rich_text>
         </node>
       </node>
-      <node name="python" unique_id="96" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="23" is_bold="0" foreground="" ts_creation="1656484924" ts_lastsave="1656897584">
+      <node name="python" unique_id="96" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="23" is_bold="0" foreground="" ts_creation="1656484924" ts_lastsave="1658162088">
         <rich_text>python ~
 
 echo $VIRTUALENVWRAPPER_PYTHON
@@ -6229,6 +6229,30 @@ env VIRTUALENV_EXTRA_SEARCH_DIR=/path/to/dists\n/path/to/other/dists virtualenv
 
 python3 shebang
 #!/usr/bin/env python3
+
+links to start virtual env
+https://wiki.archlinux.org/title/Python/Virtual_environment
+
+#venv
+python -m venv envname
+
+#virtualenv
+virtualenv envname
+
+#activation
+source envname/bin/activate
+(envname) $
+
+#deactivate
+(envname) $ deactivate
+
+#python versions
+ls -l envname/bin/python
+
+#If you want to use a different Python version inside the virtual environment, you can use the -p/--python option of virtualenv: 
+virtualenv -p 3.8 envname
+$ ls -l envname/bin/python
+lrwxrwxrwx 1 foo foo 18 Jan 29 18:48 envname/bin/python -&gt; /usr/bin/python3.8
 
 </rich_text>
       </node>
@@ -6963,7 +6987,7 @@ xrandr --listactivemonitors
  autorandr --change</rich_text>
         </node>
       </node>
-      <node name="Yad" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653073801" ts_lastsave="1653084504">
+      <node name="Yad" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653073801" ts_lastsave="1657904466">
         <rich_text scale="h1">Yad ~</rich_text>
         <rich_text>
 
@@ -7022,6 +7046,2264 @@ xrandr --listactivemonitors
     	-e 's/-- KB_GROUP /\n/' \
     	-e 's/", /"\t: /' | \
     	yad --text-info --back=#282c34 --fore=#46d9ff --geometry=1200x800</rich_text>
+        <node name="flags" unique_id="121" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657904466" ts_lastsave="1657904514">
+          <rich_text scale="h1">  </rich_text>
+          <rich_text scale="h1" weight="heavy">YAD</rich_text>
+          <rich_text scale="h1"> </rich_text>
+          <rich_text>
+  is the fork of </rich_text>
+          <rich_text weight="heavy">Zenity</rich_text>
+          <rich_text> program. 
+  
+
+</rich_text>
+          <rich_text scale="h2">OPTIONS</rich_text>
+          <rich_text>
+This program follows the usual GNU command line syntax, with longoptions starting with two dashes (`-').  
+
+</rich_text>
+          <rich_text scale="h3">Dialog options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--calendar</rich_text>
+          <rich_text>
+	Display calendar dialog.
+</rich_text>
+          <rich_text weight="heavy">--color</rich_text>
+          <rich_text>
+	Display color selection dialog.
+</rich_text>
+          <rich_text weight="heavy">--dnd</rich_text>
+          <rich_text>
+	Display drag-and-drop box.
+</rich_text>
+          <rich_text weight="heavy">--entry</rich_text>
+          <rich_text>
+	Display text entry dialog.
+</rich_text>
+          <rich_text weight="heavy">--icons</rich_text>
+          <rich_text>
+	Display box with shortcut icons.
+</rich_text>
+          <rich_text weight="heavy">--file</rich_text>
+          <rich_text>
+	Display file selection dialog.
+</rich_text>
+          <rich_text weight="heavy">--font</rich_text>
+          <rich_text>
+	Display font selection dialog.
+</rich_text>
+          <rich_text weight="heavy">--form</rich_text>
+          <rich_text>
+	Display form dialog
+</rich_text>
+          <rich_text weight="heavy">--html</rich_text>
+          <rich_text>
+	Display HTML dialog
+</rich_text>
+          <rich_text weight="heavy">--list</rich_text>
+          <rich_text>
+	Display list dialog
+</rich_text>
+          <rich_text weight="heavy">--multi-progress</rich_text>
+          <rich_text>
+	Display multi progress bars dialog.
+</rich_text>
+          <rich_text weight="heavy">--notebook</rich_text>
+          <rich_text>
+	Display notebook dialog.
+</rich_text>
+          <rich_text weight="heavy">--notification</rich_text>
+          <rich_text>
+	Display notification icon.
+</rich_text>
+          <rich_text weight="heavy">--print</rich_text>
+          <rich_text>
+	Display print dialog.
+</rich_text>
+          <rich_text weight="heavy">--progress</rich_text>
+          <rich_text>
+	Display progress indication dialog.
+</rich_text>
+          <rich_text weight="heavy">--text-info</rich_text>
+          <rich_text>
+	Display text information dialog.
+</rich_text>
+          <rich_text weight="heavy">--scale</rich_text>
+          <rich_text>
+	Display scale dialog. 
+
+</rich_text>
+          <rich_text scale="h3">General options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--title=</rich_text>
+          <rich_text style="italic">TITLE</rich_text>
+          <rich_text>
+	Set the dialog title.
+</rich_text>
+          <rich_text weight="heavy">--window-icon=</rich_text>
+          <rich_text style="italic">ICON</rich_text>
+          <rich_text>
+	Set the window icon.
+</rich_text>
+          <rich_text weight="heavy">--width=</rich_text>
+          <rich_text style="italic">WIDTH</rich_text>
+          <rich_text>
+	Set the dialog window width.
+</rich_text>
+          <rich_text weight="heavy">--height=</rich_text>
+          <rich_text style="italic">HEIGHT</rich_text>
+          <rich_text>
+	Set the dialog window height.
+</rich_text>
+          <rich_text weight="heavy">--posx=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the X position of dialog window. </rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text> can be negative.
+</rich_text>
+          <rich_text weight="heavy">--posy=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the Y position of dialog window. </rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text> can be negative.
+</rich_text>
+          <rich_text weight="heavy">--geometry=</rich_text>
+          <rich_text style="italic">WIDTHxHEIGHT+X+Y</rich_text>
+          <rich_text>
+	Use standard X Window geometry notation for placing dialog.When this option is used, </rich_text>
+          <rich_text style="italic">width</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">height</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">posx</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">posy</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">mouse</rich_text>
+          <rich_text> and </rich_text>
+          <rich_text style="italic">center</rich_text>
+          <rich_text> options areignored. This option is obsolete for gtk3 builds.
+</rich_text>
+          <rich_text weight="heavy">--timeout=</rich_text>
+          <rich_text style="italic">TIMEOUT</rich_text>
+          <rich_text>
+	Set the dialog timeout in seconds.
+</rich_text>
+          <rich_text weight="heavy">--timeout-indicator=</rich_text>
+          <rich_text style="italic">POSITION</rich_text>
+          <rich_text>
+	Show timeout indicator in given position. Positions are </rich_text>
+          <rich_text style="italic">top</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">bottom</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">right</rich_text>
+          <rich_text>.Style of indicator may be set through the gtkrc file.See </rich_text>
+          <rich_text style="italic" link="webs https://code.google.com/p/yad/wiki/TimeoutIndicator">http://code.google.com/p/yad/wiki/TimeoutIndicator</rich_text>
+          <rich_text> for details.
+</rich_text>
+          <rich_text weight="heavy">--parent-win=</rich_text>
+          <rich_text style="italic">XID</rich_text>
+          <rich_text>
+	Specify a parent window for the dialog. This makes </rich_text>
+          <rich_text style="italic">YAD</rich_text>
+          <rich_text> possible to use as embedded GUI tool.
+</rich_text>
+          <rich_text weight="heavy">--kill-parent</rich_text>
+          <rich_text style="italic">[=SIGNAL]</rich_text>
+          <rich_text>
+	Send SIGNAL to parent process. Default value of SIGNAL is a SIGTERM.SIGNAL may be specified by it's number or symbolic name with or without SIG prefix.See </rich_text>
+          <rich_text link="webs https://www.systutorials.com/docs/linux/man/7-signal/">signal</rich_text>
+          <rich_text>(7) for details about signals.
+</rich_text>
+          <rich_text weight="heavy">--plug=</rich_text>
+          <rich_text style="italic">KEY</rich_text>
+          <rich_text>
+	Run dialog in plug mode for swallow as a notebook tab. See </rich_text>
+          <rich_text style="italic">NOTEBOOK</rich_text>
+          <rich_text> section for more.
+</rich_text>
+          <rich_text weight="heavy">--tabnum=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the tab number for plugged dialog. See </rich_text>
+          <rich_text style="italic">NOTEBOOK</rich_text>
+          <rich_text> section for more.
+</rich_text>
+          <rich_text weight="heavy">--text=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set the dialog text.
+</rich_text>
+          <rich_text weight="heavy">--text-align=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set type of dialog text justification. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> may be </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">right</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">center</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">fill</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--image=</rich_text>
+          <rich_text style="italic">IMAGE</rich_text>
+          <rich_text>
+	Set the dialog image which appears on the left side of dialog.</rich_text>
+          <rich_text style="italic">IMAGE</rich_text>
+          <rich_text> might be file name or icon name from current icon theme.
+</rich_text>
+          <rich_text weight="heavy">--image-on-top</rich_text>
+          <rich_text>
+	Show image above main widget instead of left. This option is always on for print dialog.
+</rich_text>
+          <rich_text weight="heavy">--icon-theme=</rich_text>
+          <rich_text style="italic">THEME</rich_text>
+          <rich_text>
+	Use specified GTK icon theme instead of default.
+</rich_text>
+          <rich_text weight="heavy">--expander=</rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text>
+	Hide main widget with expander. </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text> is an optional argument with expander's label.
+</rich_text>
+          <rich_text weight="heavy">--button=</rich_text>
+          <rich_text style="italic">BUTTON:ID</rich_text>
+          <rich_text>
+	Add the dialog button. May be used multiply times. </rich_text>
+          <rich_text style="italic">ID</rich_text>
+          <rich_text> is an exit code or a command.</rich_text>
+          <rich_text style="italic">BUTTON</rich_text>
+          <rich_text> may be gtk stock item name for predefined buttons (like gtk-close or gtk-ok) or text in a form</rich_text>
+          <rich_text style="italic">LABEL[!ICON[!TOOLTIP]]</rich_text>
+          <rich_text> where `!' is an item separator.Full list of stock items may be found in gtk-demo program, in snippet called </rich_text>
+          <rich_text style="italic">"Stock Items and Icon Browser"</rich_text>
+          <rich_text>.If no buttons specified </rich_text>
+          <rich_text style="italic">OK</rich_text>
+          <rich_text> and </rich_text>
+          <rich_text style="italic">Cancel</rich_text>
+          <rich_text> buttons used. See </rich_text>
+          <rich_text weight="heavy">EXIT STATUS</rich_text>
+          <rich_text> section for more.If </rich_text>
+          <rich_text style="italic">ID</rich_text>
+          <rich_text> have a non-numeric value it treats like a command and click on such button doesn't close the dialog.
+</rich_text>
+          <rich_text weight="heavy">--no-buttons</rich_text>
+          <rich_text>
+	Don't show buttons.
+</rich_text>
+          <rich_text weight="heavy">--buttons-layout=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set buttons layout type. Possible types are: </rich_text>
+          <rich_text style="italic">spread</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">edge</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">start</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">end</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">center</rich_text>
+          <rich_text>.Default is </rich_text>
+          <rich_text style="italic">end</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--no-markup</rich_text>
+          <rich_text>
+	Don't use pango markup in dialog's text.
+</rich_text>
+          <rich_text weight="heavy">--no-escape</rich_text>
+          <rich_text>
+	Don't close dialog if </rich_text>
+          <rich_text style="italic">Escape</rich_text>
+          <rich_text> was pressed.
+</rich_text>
+          <rich_text weight="heavy">--always-print-result</rich_text>
+          <rich_text>
+	Print result for aby of the return codes. This options doesn't work if timeout was reached or </rich_text>
+          <rich_text style="italic">Escape</rich_text>
+          <rich_text> was pressed.
+</rich_text>
+          <rich_text weight="heavy">--dialog-sep</rich_text>
+          <rich_text>
+	Show separator between dialog and buttons. Works only with gtk+-2.0.
+</rich_text>
+          <rich_text weight="heavy">--borders=</rich_text>
+          <rich_text style="italic">NUM</rich_text>
+          <rich_text>
+	Set dialog window borders.
+</rich_text>
+          <rich_text weight="heavy">--sticky</rich_text>
+          <rich_text>
+	Make window visible on all desktops.
+</rich_text>
+          <rich_text weight="heavy">--fixed</rich_text>
+          <rich_text>
+	Make window fixed width and height.
+</rich_text>
+          <rich_text weight="heavy">--center</rich_text>
+          <rich_text>
+	Place window on center of screen.
+</rich_text>
+          <rich_text weight="heavy">--mouse</rich_text>
+          <rich_text>
+	Place window under mouse position.
+</rich_text>
+          <rich_text weight="heavy">--on-top</rich_text>
+          <rich_text>
+	Place window over other windows.
+</rich_text>
+          <rich_text weight="heavy">--undecorated</rich_text>
+          <rich_text>
+	Make window undecorated (remove title and window borders).
+</rich_text>
+          <rich_text weight="heavy">--skip-taskbar</rich_text>
+          <rich_text>
+	Don't show window in taskbar and pager.
+</rich_text>
+          <rich_text weight="heavy">--maximized</rich_text>
+          <rich_text>
+	Run dialog window maximized.
+</rich_text>
+          <rich_text weight="heavy">--fullscreen</rich_text>
+          <rich_text>
+	Run dialog in fullscreen mode. This option may not work on all window managers.
+</rich_text>
+          <rich_text weight="heavy">--splash</rich_text>
+          <rich_text>
+	Open window with "splashscreen" window hints. For details see description of </rich_text>
+          <rich_text style="italic">_NET_WM_WINDOW_TYPE_SPLASH</rich_text>
+          <rich_text>in EWMH specification. The behavior of dialog with this option is HIGHLY DEPENDS on settings of your window manager.
+</rich_text>
+          <rich_text weight="heavy">--no-focus</rich_text>
+          <rich_text>
+	Dialog window never take focus.
+</rich_text>
+          <rich_text weight="heavy">--close-on-unfocus</rich_text>
+          <rich_text>
+	Close the dialog window when it loose the focus.
+</rich_text>
+          <rich_text weight="heavy">--selectable-labels</rich_text>
+          <rich_text>
+	If set, user can select dialog's text and copy it to clipboard.This option also affects on label fields in form dialog.
+</rich_text>
+          <rich_text weight="heavy">--image-path=</rich_text>
+          <rich_text style="italic">PATH</rich_text>
+          <rich_text>
+	Add specified path to the standard list of directories for looking for icons. This option can be used multiply times.
+</rich_text>
+          <rich_text weight="heavy">--rest=</rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>
+	Read extra arguments from given file instead of command line. Each line of a file treats as a single argument.
+</rich_text>
+          <rich_text weight="heavy">--response=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set default response value for Ctrl+Enter action.
+</rich_text>
+          <rich_text weight="heavy">--gtkrc=</rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>
+	Read and parse additional GTK+ settings from given file. This option doesn't work with GTK+-3.x builds.
+</rich_text>
+          <rich_text weight="heavy">--hscroll-policy=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set the policy type for horizontal scrollbars. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> can be one of the </rich_text>
+          <rich_text style="italic">auto</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">always</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">never</rich_text>
+          <rich_text>. Default is </rich_text>
+          <rich_text style="italic">auto</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--vscroll-policy=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set the policy type for vertical scrollbars. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> can be one of the </rich_text>
+          <rich_text style="italic">auto</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">always</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">never</rich_text>
+          <rich_text>. Default is </rich_text>
+          <rich_text style="italic">auto</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--enable-spell</rich_text>
+          <rich_text>
+	Enable spell checking in textview widgets
+</rich_text>
+          <rich_text weight="heavy">--spell-lang=</rich_text>
+          <rich_text style="italic">LANGUAGE</rich_text>
+          <rich_text>
+	Set spell checking language to </rich_text>
+          <rich_text style="italic">LANGUAGE</rich_text>
+          <rich_text>. By default language guesses from current locale. 
+
+</rich_text>
+          <rich_text scale="h3">Calendar options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--day=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the calendar day.
+</rich_text>
+          <rich_text weight="heavy">--month=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the calendar month.
+</rich_text>
+          <rich_text weight="heavy">--year=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the calendar year.
+</rich_text>
+          <rich_text weight="heavy">--date-format=</rich_text>
+          <rich_text style="italic">PATTERN</rich_text>
+          <rich_text>
+	Set the format for the returned date. By default is `%x'. See </rich_text>
+          <rich_text style="italic" link="webs https://www.systutorials.com/docs/linux/man/3-strftime/">strftime</rich_text>
+          <rich_text style="italic">(3)</rich_text>
+          <rich_text> for more details.
+</rich_text>
+          <rich_text weight="heavy">--show-weeks</rich_text>
+          <rich_text>
+	Show the week numbers at the left side of calendar.
+</rich_text>
+          <rich_text weight="heavy">--details=</rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>
+	Read days description from </rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>.  File with days details must be in following format: 
+
+
+	&lt;date&gt; &lt;description&gt;  </rich_text>
+          <rich_text style="italic">date</rich_text>
+          <rich_text> field is date in format, specified with </rich_text>
+          <rich_text style="italic">--date-format</rich_text>
+          <rich_text> option. </rich_text>
+          <rich_text style="italic">description</rich_text>
+          <rich_text> is a string with date details, which may include Pango markup. 
+  
+
+</rich_text>
+          <rich_text scale="h3">Color selection options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--init-color=</rich_text>
+          <rich_text style="italic">COLOR</rich_text>
+          <rich_text>
+	Set initial color value.
+</rich_text>
+          <rich_text weight="heavy">--gtk-palette</rich_text>
+          <rich_text>
+	Show system palette inside color dialog.
+</rich_text>
+          <rich_text weight="heavy">--extra</rich_text>
+          <rich_text>
+	Show extra information about color in returned string.
+</rich_text>
+          <rich_text weight="heavy">--alpha</rich_text>
+          <rich_text>
+	Add opacity to output color string.
+</rich_text>
+          <rich_text weight="heavy">--palette</rich_text>
+          <rich_text style="italic">[=FILENAME]</rich_text>
+          <rich_text>
+	Show palette and set predefined colors from given filename.By default used </rich_text>
+          <rich_text style="italic">/etc/X11/rgb.txt</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--expand-palette</rich_text>
+          <rich_text>
+	Expander for list of user-defined colors will be initially opened.
+</rich_text>
+          <rich_text weight="heavy">--mode=</rich_text>
+          <rich_text style="italic">MODE</rich_text>
+          <rich_text>
+	Set output color mode. Possible values are </rich_text>
+          <rich_text style="italic">hex</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">rgb</rich_text>
+          <rich_text>. Default is </rich_text>
+          <rich_text style="italic">hex</rich_text>
+          <rich_text>. HEX mode looks like </rich_text>
+          <rich_text style="italic">#rrggbbaa</rich_text>
+          <rich_text>, RGB mode - </rich_text>
+          <rich_text style="italic">rgba(r, g, b, a)</rich_text>
+          <rich_text>.In RGBA mode opacity have values from 0.0 to 1.0. 
+
+</rich_text>
+          <rich_text scale="h3">Drag-and-Drop box options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--tooltip</rich_text>
+          <rich_text>
+	Use dialog text as a tooltip for Drag-and-Drop box.
+</rich_text>
+          <rich_text weight="heavy">--command=</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>
+	Run command when data received. Data strings pass to command as an argument.By default data just prints to stdout. 
+
+</rich_text>
+          <rich_text scale="h3">Text entry options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--entry-label=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set the entry label text.
+</rich_text>
+          <rich_text weight="heavy">--entry-text=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set the initial entry text or default item in combo-box.
+</rich_text>
+          <rich_text weight="heavy">--hide-text</rich_text>
+          <rich_text>
+	Hide the entry text.
+</rich_text>
+          <rich_text weight="heavy">--completion</rich_text>
+          <rich_text>
+	Use completion instead of combo-box.
+</rich_text>
+          <rich_text weight="heavy">--complete=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Use specific type for extended completion. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> can be </rich_text>
+          <rich_text style="italic">any</rich_text>
+          <rich_text> for match any of typed words, </rich_text>
+          <rich_text style="italic">all</rich_text>
+          <rich_text> for match all of typed words or</rich_text>
+          <rich_text style="italic">regex</rich_text>
+          <rich_text> when typed text treats as regular expression.
+</rich_text>
+          <rich_text weight="heavy">--editable</rich_text>
+          <rich_text>
+	Allow make changes to text in combo-box.
+</rich_text>
+          <rich_text weight="heavy">--numeric</rich_text>
+          <rich_text>
+	Use spin button instead of text entry. Additional parameters in command line treats as minimum and maximumvalues, step value and precisions (in that order). All this values are optional. Default range is from 0 to 65535 with step 1.
+</rich_text>
+          <rich_text weight="heavy">--float-precision=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set precision of floating point numbers. By default precision is three digits after point.
+</rich_text>
+          <rich_text weight="heavy">--licon=</rich_text>
+          <rich_text style="italic">IMAGE</rich_text>
+          <rich_text>
+	Set an icon on a left side of entry.
+</rich_text>
+          <rich_text weight="heavy">--licon-action=</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>
+	Specify a command which will be run when the left icon clicked. Output of command will be set as entry text.
+</rich_text>
+          <rich_text weight="heavy">--ricon=</rich_text>
+          <rich_text style="italic">IMAGE</rich_text>
+          <rich_text>
+	Set an icon on a right side of entry.
+</rich_text>
+          <rich_text weight="heavy">--ricon-action=</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>
+	Specify a command which will be run when the right icon clicked. Output of command will be set as entry text.
+</rich_text>
+          <rich_text weight="heavy">--num-output</rich_text>
+          <rich_text>
+	Output index of active element instead of text for combo-box entry.  Any extra data specified in command line adds as an items of combo-box entry, except of numeric mode. 
+ If icon specified and icon action is not given, click on icon just clear the entry. Numeric fields will ignore the icons. 
+  
+
+</rich_text>
+          <rich_text scale="h3">Iconbox options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--read-dir=</rich_text>
+          <rich_text style="italic">PATH</rich_text>
+          <rich_text>
+	Read .desktop files from specified directory.
+</rich_text>
+          <rich_text weight="heavy">--monitor</rich_text>
+          <rich_text>
+	Watch for changes in directory and automatically update content of iconbox.
+</rich_text>
+          <rich_text weight="heavy">--generic</rich_text>
+          <rich_text>
+	Use field GenericName instead of Name for shortcut label.
+</rich_text>
+          <rich_text weight="heavy">--sort-by-name</rich_text>
+          <rich_text>
+	Use field Name instead of filename for sorting items.
+</rich_text>
+          <rich_text weight="heavy">--descend</rich_text>
+          <rich_text>
+	Sort items in descending order. If data reads from stdin this option is useless without </rich_text>
+          <rich_text style="italic">--sort-by-name</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--listen</rich_text>
+          <rich_text>
+	Read data from stdin. Data must be in order - </rich_text>
+          <rich_text style="italic">Name</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">Tooltip</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">Icon</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">Command</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">InTerm</rich_text>
+          <rich_text>separated by newline. </rich_text>
+          <rich_text style="italic">InTerm</rich_text>
+          <rich_text> is a case insensitive boolean constant (</rich_text>
+          <rich_text style="italic">TRUE</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">FALSE</rich_text>
+          <rich_text>).
+</rich_text>
+          <rich_text weight="heavy">--item-width</rich_text>
+          <rich_text>
+	Set items width.
+</rich_text>
+          <rich_text weight="heavy">--compact</rich_text>
+          <rich_text>
+	Use compact mode. Icon and name of each item is placed in a single row.
+</rich_text>
+          <rich_text weight="heavy">--single-click</rich_text>
+          <rich_text>
+	Activate items by single mouse click. This option may not works properly in case of compact mode.
+</rich_text>
+          <rich_text weight="heavy">--term</rich_text>
+          <rich_text>
+	Pattern for terminal. By default use `xterm -e %s' where %s replaced by the command.  If both directory and stdin specified, content of iconbox will be read from directory. 
+  
+
+</rich_text>
+          <rich_text scale="h3">File selection options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--filename=</rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>
+	Set the filename.
+</rich_text>
+          <rich_text weight="heavy">--multiple</rich_text>
+          <rich_text>
+	Allow selection of multiple filenames in file selection dialog.
+</rich_text>
+          <rich_text weight="heavy">--directory</rich_text>
+          <rich_text>
+	Activate directory-only selection.
+</rich_text>
+          <rich_text weight="heavy">--save</rich_text>
+          <rich_text>
+	Activate save mode.
+</rich_text>
+          <rich_text weight="heavy">--separator=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Specify separator character when returning multiple filenames.
+</rich_text>
+          <rich_text weight="heavy">--confirm-overwrite</rich_text>
+          <rich_text style="italic">[=TEXT]</rich_text>
+          <rich_text>
+	Confirm file selection if filename already exists.Optional argument is a text for confirmation dialog.
+</rich_text>
+          <rich_text weight="heavy">--quoted-output</rich_text>
+          <rich_text>
+	Output values will be shell-style quoted. 
+
+</rich_text>
+          <rich_text scale="h3">Font selection options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--fontname=</rich_text>
+          <rich_text style="italic">FONTNAME</rich_text>
+          <rich_text>
+	Set the initial font. </rich_text>
+          <rich_text style="italic">FONTNAME</rich_text>
+          <rich_text> is a string with font representation in theform </rich_text>
+          <rich_text style="italic">"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]"</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--preview</rich_text>
+          <rich_text>
+	Set the preview text.
+</rich_text>
+          <rich_text weight="heavy">--separate-output</rich_text>
+          <rich_text>
+	Separate output of selected font description.
+</rich_text>
+          <rich_text weight="heavy">--separator=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set output separator character. Default is `|'.
+</rich_text>
+          <rich_text weight="heavy">--quoted-output</rich_text>
+          <rich_text>
+	Output data will be in shell-style quotes. 
+
+</rich_text>
+          <rich_text scale="h3">Form options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--field=</rich_text>
+          <rich_text style="italic">LABEL[:TYPE]</rich_text>
+          <rich_text>
+	Add field to form. Type may be </rich_text>
+          <rich_text style="italic">H</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">RO</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">NUM</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">CHK</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">CB</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">CBE</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">CE</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">FL</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">SFL</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">DIR</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">CDIR</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">FN</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">MFL</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">MDIR</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">DT</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">SCL</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">CLR</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">BTN</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">FBTN</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">LBL</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">TXT</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">H</rich_text>
+          <rich_text> - hidden field type. All characters are displayed as the invisible char.
+</rich_text>
+          <rich_text weight="heavy">RO</rich_text>
+          <rich_text> - field is in read-only mode.
+</rich_text>
+          <rich_text weight="heavy">NUM</rich_text>
+          <rich_text> - field is a numeric. Initial value format for this field is </rich_text>
+          <rich_text style="italic">VALUE[!RANGE[!STEP![PREC]]]</rich_text>
+          <rich_text>, where </rich_text>
+          <rich_text style="italic">RANGE</rich_text>
+          <rich_text> must be in form </rich_text>
+          <rich_text style="italic">MIN..MAX</rich_text>
+          <rich_text>. `!' is a default item separator. </rich_text>
+          <rich_text style="italic">PREC</rich_text>
+          <rich_text> is a precision for decimals.
+</rich_text>
+          <rich_text weight="heavy">CHK</rich_text>
+          <rich_text> - checkbox field. Initial value is a case insensitive boolean constant (</rich_text>
+          <rich_text style="italic">TRUE</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">FALSE</rich_text>
+          <rich_text>).
+</rich_text>
+          <rich_text weight="heavy">CB</rich_text>
+          <rich_text> - combo-box field. Initial value is a list </rich_text>
+          <rich_text style="italic">VAL1!VAL2!...</rich_text>
+          <rich_text>. The separator is the same as in </rich_text>
+          <rich_text style="italic">NUM</rich_text>
+          <rich_text> field. Value started with `^' threats as default for combo-box.
+</rich_text>
+          <rich_text weight="heavy">CBE</rich_text>
+          <rich_text> - editable combo-box field. Initial value same as for combo-box.
+</rich_text>
+          <rich_text weight="heavy">CE</rich_text>
+          <rich_text> - entry with completion. Initial value same as for combo-box.
+</rich_text>
+          <rich_text weight="heavy">FL</rich_text>
+          <rich_text> - file selection button.
+</rich_text>
+          <rich_text weight="heavy">SFL</rich_text>
+          <rich_text> - field for create file.
+</rich_text>
+          <rich_text weight="heavy">DIR</rich_text>
+          <rich_text> - directory selection button.
+</rich_text>
+          <rich_text weight="heavy">CDIR</rich_text>
+          <rich_text> - field for create folder.
+</rich_text>
+          <rich_text weight="heavy">FN</rich_text>
+          <rich_text> - font selection button. Initial value same as in font dialog.
+</rich_text>
+          <rich_text weight="heavy">MFL</rich_text>
+          <rich_text> - select multiple files. Value of this field is a list of files separated by </rich_text>
+          <rich_text style="italic">item-separator</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">MDIR</rich_text>
+          <rich_text> - select multiple folders. Value of this field is a list of folders separated by </rich_text>
+          <rich_text style="italic">item-separator</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">DT</rich_text>
+          <rich_text> - date field.
+</rich_text>
+          <rich_text weight="heavy">SCL</rich_text>
+          <rich_text> - scale field. Value of this field in a range 0..100.
+</rich_text>
+          <rich_text weight="heavy">CLR</rich_text>
+          <rich_text> - color selection button. Output values for this field generates in the same manner as for color dialog.
+</rich_text>
+          <rich_text weight="heavy">BTN</rich_text>
+          <rich_text> - button field. Label may be in form text in a form </rich_text>
+          <rich_text style="italic">LABEL[!ICON[!TOOLTIP]]</rich_text>
+          <rich_text> where `!' is an item separator. </rich_text>
+          <rich_text style="italic">LABEL</rich_text>
+          <rich_text> is a text of button label or gtk stock id. </rich_text>
+          <rich_text style="italic">ICON</rich_text>
+          <rich_text> is a buttons icon (stock id or file name). </rich_text>
+          <rich_text style="italic">TOOLTIP</rich_text>
+          <rich_text> is an optional text for popup help string. Initial value is a command which is running when button is clicked. A special sympols </rich_text>
+          <rich_text style="italic">%N</rich_text>
+          <rich_text> in command are replaced by value of field </rich_text>
+          <rich_text style="italic">N</rich_text>
+          <rich_text>. If command starts with </rich_text>
+          <rich_text style="italic">@</rich_text>
+          <rich_text>, the output of command will be parsed and lines started with number and colon will be treats as a new field values.A quoting style for value when </rich_text>
+          <rich_text style="italic">sh -c</rich_text>
+          <rich_text> is used - a single quotes around command and double quotes around -c argument
+</rich_text>
+          <rich_text weight="heavy">FBTN</rich_text>
+          <rich_text> - same as button field, but with full relief of a button.
+</rich_text>
+          <rich_text weight="heavy">LBL</rich_text>
+          <rich_text> - text label. If field name is empty, horizontal separator line will be shown.
+</rich_text>
+          <rich_text weight="heavy">TXT</rich_text>
+          <rich_text> - multiline text entry. This field is always occupy all of form width. Without type field will be a simple text entry. 
+
+</rich_text>
+          <rich_text weight="heavy">--align=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set alignment of field labels. Possible types are </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">center</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">right</rich_text>
+          <rich_text>. Default is left.
+</rich_text>
+          <rich_text weight="heavy">--columns=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set number of columns in form. Fields will be placed from top to bottom.
+</rich_text>
+          <rich_text weight="heavy">--separator=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set output separator character. Default is `|'.
+</rich_text>
+          <rich_text weight="heavy">--focus-field=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set focused field.
+</rich_text>
+          <rich_text weight="heavy">--cycle-read</rich_text>
+          <rich_text>
+	Cycled reading of stdin data. Sending FormFeed character clears the form. This symbol may be sent as </rich_text>
+          <rich_text style="italic">echo -e '\f'</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--item-separator=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set separator character for combo-box or scale values. Default is `!'.
+</rich_text>
+          <rich_text weight="heavy">--date-format=</rich_text>
+          <rich_text style="italic">PATTERN</rich_text>
+          <rich_text>
+	Set the format for the date fields (same as in calendar dialog).
+</rich_text>
+          <rich_text weight="heavy">--float-precision=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set precision of floating point numbers. By default precision is three digits after point.
+</rich_text>
+          <rich_text weight="heavy">--complete=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Use specific type for extended completion. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> can be </rich_text>
+          <rich_text style="italic">any</rich_text>
+          <rich_text> for match any of typed words, </rich_text>
+          <rich_text style="italic">all</rich_text>
+          <rich_text> for match all of typed words or</rich_text>
+          <rich_text style="italic">regex</rich_text>
+          <rich_text> when typed text treats as regular expression.
+</rich_text>
+          <rich_text weight="heavy">--scroll</rich_text>
+          <rich_text>
+	Make form scrollable.
+</rich_text>
+          <rich_text weight="heavy">--quoted-output</rich_text>
+          <rich_text>
+	Output values will be in shell-style quotes.
+</rich_text>
+          <rich_text weight="heavy">--output-by-row</rich_text>
+          <rich_text>
+	Output field values row by row if several columns is specified.
+</rich_text>
+          <rich_text weight="heavy">--num-output</rich_text>
+          <rich_text>
+	Output index of active element instead of text for combo-box fields.  Additional data in command line interprets as a default values for form fields. A special value </rich_text>
+          <rich_text style="italic">@disabled@</rich_text>
+          <rich_text>  makes corresponding field inactive. If no extra arguments specified in a  command line, data will be readed from stdin, one value per line.  Cycled reading means that for </rich_text>
+          <rich_text style="italic">N</rich_text>
+          <rich_text> fields </rich_text>
+          <rich_text style="italic">N+1</rich_text>
+          <rich_text> value will replace the first field. Empty values are skipped when reading from stdin. 
+  
+
+</rich_text>
+          <rich_text scale="h3">HTML options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--uri=</rich_text>
+          <rich_text style="italic">URI</rich_text>
+          <rich_text>
+	Open specified location. </rich_text>
+          <rich_text style="italic">URI</rich_text>
+          <rich_text> can be a filename or internet address. If </rich_text>
+          <rich_text style="italic">URI</rich_text>
+          <rich_text> is not an existing file and protocol is not specified a prefix </rich_text>
+          <rich_text style="italic">http://</rich_text>
+          <rich_text> will be added to </rich_text>
+          <rich_text style="italic">URI</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--browser</rich_text>
+          <rich_text>
+	Turn on browser mode. In this mode all clicked links will be opened in html widget and command </rich_text>
+          <rich_text style="italic">Open</rich_text>
+          <rich_text> will be added to context menu.
+</rich_text>
+          <rich_text weight="heavy">--print-uri</rich_text>
+          <rich_text>
+	Print clicked links to standard output. By default clicked links opens with </rich_text>
+          <rich_text style="italic">xdg-open</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--mime=</rich_text>
+          <rich_text style="italic">MIME</rich_text>
+          <rich_text>
+	Set mime type of data passed to standard input to </rich_text>
+          <rich_text style="italic">MIME</rich_text>
+          <rich_text>. Default is </rich_text>
+          <rich_text style="italic">text/html</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--encodintg=</rich_text>
+          <rich_text style="italic">ENCODING</rich_text>
+          <rich_text>
+	Set encoding of data passed to standard input to </rich_text>
+          <rich_text style="italic">ENCODING</rich_text>
+          <rich_text>. Default is </rich_text>
+          <rich_text style="italic">UTF-8</rich_text>
+          <rich_text>. 
+
+</rich_text>
+          <rich_text scale="h3">List options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--column=</rich_text>
+          <rich_text style="italic">STRING[:TYPE]</rich_text>
+          <rich_text>
+	Set the column header. Types are </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">NUM</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">SZ</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">FLT</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">CHK</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">RD</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">BAR</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">IMG</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">HD</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">TIP</rich_text>
+          <rich_text>.</rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text> type is default. Use </rich_text>
+          <rich_text style="italic">NUM</rich_text>
+          <rich_text> for integers and </rich_text>
+          <rich_text style="italic">FLT</rich_text>
+          <rich_text> for double values. </rich_text>
+          <rich_text style="italic">TIP</rich_text>
+          <rich_text> is used for define tooltip column.</rich_text>
+          <rich_text style="italic">SZ</rich_text>
+          <rich_text> size column type. Works exactly like </rich_text>
+          <rich_text style="italic">NUM</rich_text>
+          <rich_text> column but shows human readable sizes instead of numbers.</rich_text>
+          <rich_text style="italic">CHK</rich_text>
+          <rich_text> (checkboxes) and </rich_text>
+          <rich_text style="italic">RD</rich_text>
+          <rich_text> (radio toggle) are a boolean columns.</rich_text>
+          <rich_text style="italic">BAR</rich_text>
+          <rich_text> is a progress bar column. Value must be between </rich_text>
+          <rich_text style="italic">0</rich_text>
+          <rich_text> and </rich_text>
+          <rich_text style="italic">100</rich_text>
+          <rich_text>. If value is outside is range it will be croped to neares legal value.</rich_text>
+          <rich_text style="italic">HD</rich_text>
+          <rich_text> type means a hidden column. Such columns are not displayes in the list, only in output.</rich_text>
+          <rich_text style="italic">IMG</rich_text>
+          <rich_text> may be path to image or icon name from currnet GTK+ icon theme.Size of icons may be set in gtk config file at GTK_ICON_SIZE_MENU position of gtk-icon-sizes. Image field prints as empty value. Special column names </rich_text>
+          <rich_text style="italic">@fore@</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">@back@</rich_text>
+          <rich_text> and </rich_text>
+          <rich_text style="italic">@font@</rich_text>
+          <rich_text> sets corresponding rows attributes. Values of those columns don't show in results. 
+
+</rich_text>
+          <rich_text weight="heavy">--checklist</rich_text>
+          <rich_text>
+	Use check boxes for first column.
+</rich_text>
+          <rich_text weight="heavy">--radiolist</rich_text>
+          <rich_text>
+	Use radio toggle for first column.
+</rich_text>
+          <rich_text weight="heavy">--separator=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set output separator characters.
+</rich_text>
+          <rich_text weight="heavy">--multiple</rich_text>
+          <rich_text>
+	Allow multiple rows to be selected.
+</rich_text>
+          <rich_text weight="heavy">--editable</rich_text>
+          <rich_text>
+	Allow changes to text.
+</rich_text>
+          <rich_text weight="heavy">--editable-cols=</rich_text>
+          <rich_text style="italic">LIST</rich_text>
+          <rich_text>
+	Set the list of editable columns. </rich_text>
+          <rich_text style="italic">LIST</rich_text>
+          <rich_text> must be a string of numbers separated by comma.
+</rich_text>
+          <rich_text weight="heavy">--no-headers</rich_text>
+          <rich_text>
+	Do not show column headers.
+</rich_text>
+          <rich_text weight="heavy">--no-click</rich_text>
+          <rich_text>
+	Disable sorting of column content by clicking on its header.
+</rich_text>
+          <rich_text weight="heavy">--no-rules-hint</rich_text>
+          <rich_text>
+	Don't draw even and odd rows by a different colors. This option depends on your current gtk theme and may not work.
+</rich_text>
+          <rich_text weight="heavy">--grid-lines=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Draw grid lines of type </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> in list dialog. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> can be one of the </rich_text>
+          <rich_text style="italic">hor[izontal]</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">vert[ical]</rich_text>
+          <rich_text> of </rich_text>
+          <rich_text style="italic">both</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--no-selection</rich_text>
+          <rich_text>
+	Disable selection in list.
+</rich_text>
+          <rich_text weight="heavy">--print-all</rich_text>
+          <rich_text>
+	Print all data from the list.
+</rich_text>
+          <rich_text weight="heavy">--print-column=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Specify what column will be printed to standard output. </rich_text>
+          <rich_text style="italic">0</rich_text>
+          <rich_text> may be used to print all columns (this is default).
+</rich_text>
+          <rich_text weight="heavy">--hide-column=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Hide a specific column.
+</rich_text>
+          <rich_text weight="heavy">--expand-column=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the column expandable by default. </rich_text>
+          <rich_text style="italic">0</rich_text>
+          <rich_text> sets all columns expandable.
+</rich_text>
+          <rich_text weight="heavy">--search-column=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the quick search column. </rich_text>
+          <rich_text style="italic">0</rich_text>
+          <rich_text> mean to disable searching. By default search mades on first column.
+</rich_text>
+          <rich_text weight="heavy">--tooltip-column=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the column with popup tooltips.
+</rich_text>
+          <rich_text weight="heavy">--sep-column=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the row separator column. If the cell value from this column equal to specified row separator value such row will be draw as separator.Separator value must be set.
+</rich_text>
+          <rich_text weight="heavy">--sep-value=</rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text>
+	Set the </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text> as a row separator value. This feature highly depends on your current GTK+ theme and may not work properly.
+</rich_text>
+          <rich_text weight="heavy">--limit=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the number of rows in list dialog. Will be shown only the last </rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text> rows. This option will take effect only when data reading from stdin.
+</rich_text>
+          <rich_text weight="heavy">--wrap-width=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the width of column before wrapping to </rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--wrap-cols=</rich_text>
+          <rich_text style="italic">LIST</rich_text>
+          <rich_text>
+	Set the list of wrapped columns. </rich_text>
+          <rich_text style="italic">LIST</rich_text>
+          <rich_text> must be a string of numbers separated by comma.
+</rich_text>
+          <rich_text weight="heavy">--ellipsize=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set ellipsize mode for text columns. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> may be </rich_text>
+          <rich_text style="italic">NONE</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">START</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">MIDDLE</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">END</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--ellipsize-cols=</rich_text>
+          <rich_text style="italic">LIST</rich_text>
+          <rich_text>
+	Set the list of ellipsized columns. </rich_text>
+          <rich_text style="italic">LIST</rich_text>
+          <rich_text> must be a string of numbers separated by comma.
+</rich_text>
+          <rich_text weight="heavy">--dclick-action=</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>
+	Set the </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> as a double-click command. When user double-clicked on row, </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> will be launched with values of all columns as an arguments. By default double-click selects row and act as </rich_text>
+          <rich_text style="italic">OK</rich_text>
+          <rich_text> button for simple lists, set the checkbox if </rich_text>
+          <rich_text style="italic">--checklist</rich_text>
+          <rich_text> specified and do nothing when list run with </rich_text>
+          <rich_text style="italic">--multiple</rich_text>
+          <rich_text> option.When double-click specified </rich_text>
+          <rich_text style="italic">Enter</rich_text>
+          <rich_text> acts as a double-click and </rich_text>
+          <rich_text style="italic">Ctrl+Enter</rich_text>
+          <rich_text> acts as an </rich_text>
+          <rich_text style="italic">OK</rich_text>
+          <rich_text> button.</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> may contain a special character `%s' for setting a position for arguments. By default arguments will be concatenated to the end of </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>.If </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> starts with </rich_text>
+          <rich_text style="italic">@</rich_text>
+          <rich_text>, its output will replace values of current row.This option doesn't work with </rich_text>
+          <rich_text style="italic">--editable</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--select-action=</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>
+	Set the </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> as a action when selection is changed. </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> will be launched with values of all columns as an arguments.</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> may contain a special character `%s' for setting a position for arguments. By default arguments will be concatenated to the end of </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>.This option doesn't work with </rich_text>
+          <rich_text style="italic">--multiple</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--add-action=</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>
+	Set the </rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text> as a action when new row is added from a context menu. Command launched without any additional arguments. Output of this command sets the new row values.
+</rich_text>
+          <rich_text weight="heavy">--regex-search</rich_text>
+          <rich_text>
+	Use regular expressions in search for text fields.
+</rich_text>
+          <rich_text weight="heavy">--listen</rich_text>
+          <rich_text>
+	Listen data from stdin even if command-line values was specified.
+</rich_text>
+          <rich_text weight="heavy">--quoted-output</rich_text>
+          <rich_text>
+	Output values will be shell-style quoted.
+</rich_text>
+          <rich_text weight="heavy">--float-precision=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set precision of floating point numbers. By default precision is three digits after point.
+Sending FormFeed character to list clears it. This symbol may be sent as </rich_text>
+          <rich_text style="italic">echo -e '\f'</rich_text>
+          <rich_text>.
+	 
+
+</rich_text>
+          <rich_text scale="h3">Multi progress bars dialog options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--bar=</rich_text>
+          <rich_text style="italic">LABEL[:TYPE]</rich_text>
+          <rich_text>
+	Add progress bar. </rich_text>
+          <rich_text style="italic">LABEL</rich_text>
+          <rich_text> is a text label for progress bar. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> is a progress bar type.Types are: </rich_text>
+          <rich_text style="italic">NORM</rich_text>
+          <rich_text> for normal progress bar, </rich_text>
+          <rich_text style="italic">RTL</rich_text>
+          <rich_text> for inverted progress bar and </rich_text>
+          <rich_text style="italic">PULSE</rich_text>
+          <rich_text> for pulsate progress bar.
+</rich_text>
+          <rich_text weight="heavy">--vertical</rich_text>
+          <rich_text>
+	Set vertical orientation of progress bars.
+</rich_text>
+          <rich_text weight="heavy">--align=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set alignment of bar labels. Possible types are </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">center</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">right</rich_text>
+          <rich_text>. Default is left.
+</rich_text>
+          <rich_text weight="heavy">--auto-close</rich_text>
+          <rich_text>
+	Close dialog when 100% has been reached for all of non-pulsating progress bars.
+</rich_text>
+          <rich_text weight="heavy">--watch-bar</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Watch for 100% of bar </rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text> for close dialog.
+</rich_text>
+          <rich_text weight="heavy">--auto-kill</rich_text>
+          <rich_text>
+	Kill parent process if cancel button is pressed.  Initial values for bars set as an extra arguments. Each lines with progress data passed to stdin must be started from </rich_text>
+          <rich_text style="italic">N:</rich_text>
+          <rich_text> where </rich_text>
+          <rich_text style="italic">N</rich_text>
+          <rich_text> is a number of progress bar. 
+  
+
+</rich_text>
+          <rich_text scale="h3">Notebook options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--key=</rich_text>
+          <rich_text style="italic">KEY</rich_text>
+          <rich_text>
+	Set the key of the children.
+</rich_text>
+          <rich_text weight="heavy">--tab=</rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text>
+	Add tab with specified label to notebook. </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text> may be in a form </rich_text>
+          <rich_text style="italic">LABEL[!ICON[!TOOLTIP]]</rich_text>
+          <rich_text>where `!' is an item separator.
+</rich_text>
+          <rich_text weight="heavy">--tab-pos=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set the tabs position. Value may be </rich_text>
+          <rich_text style="italic">top</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">bottom</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text>, or </rich_text>
+          <rich_text style="italic">right</rich_text>
+          <rich_text>. Default is  </rich_text>
+          <rich_text style="italic">top</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--tab-borders=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set the borders width around widget in tabs.  See </rich_text>
+          <rich_text weight="heavy">NOTEBOOK and PANED</rich_text>
+          <rich_text> section for more about notebook dialog. 
+  
+
+</rich_text>
+          <rich_text scale="h3">Notification options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--command=</rich_text>
+          <rich_text style="italic">CMD</rich_text>
+          <rich_text>
+	Set the command running when clicked on the icon. Default action is </rich_text>
+          <rich_text style="italic">quit</rich_text>
+          <rich_text> if </rich_text>
+          <rich_text style="italic">--listen</rich_text>
+          <rich_text> not specified.
+</rich_text>
+          <rich_text weight="heavy">--listen</rich_text>
+          <rich_text>
+	Listen for commands on stdin. See </rich_text>
+          <rich_text weight="heavy">NOTIFICATION</rich_text>
+          <rich_text> section.
+</rich_text>
+          <rich_text weight="heavy">--separator=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set separator character for menu values. Default is </rich_text>
+          <rich_text style="italic">|</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--item-separator=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set separator character for menu items. Default is </rich_text>
+          <rich_text style="italic">!</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--menu=</rich_text>
+          <rich_text style="italic">STRING</rich_text>
+          <rich_text>
+	Set initial menu for right-click.
+</rich_text>
+          <rich_text weight="heavy">--no-middle</rich_text>
+          <rich_text>
+	Disable exit on middle click.
+</rich_text>
+          <rich_text weight="heavy">--hidden</rich_text>
+          <rich_text>
+	Doesn't show icon at startup.  See </rich_text>
+          <rich_text weight="heavy">NOTIFICATION</rich_text>
+          <rich_text> section for more about separators. 
+  
+
+</rich_text>
+          <rich_text scale="h3">Paned options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--key=</rich_text>
+          <rich_text style="italic">KEY</rich_text>
+          <rich_text>
+	Set the key of the children.
+</rich_text>
+          <rich_text weight="heavy">--orient=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set orientation of panes inside dialog. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> may be in </rich_text>
+          <rich_text style="italic">hor[izontal]</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">vert[ical]</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--splitter=</rich_text>
+          <rich_text style="italic">POS</rich_text>
+          <rich_text>
+	Set the initial splitter position.  See </rich_text>
+          <rich_text weight="heavy">NOTEBOOK and PANED</rich_text>
+          <rich_text> section for more about paned dialog. 
+  
+
+</rich_text>
+          <rich_text scale="h3">Picture options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--size=</rich_text>
+          <rich_text style="italic">VALUE</rich_text>
+          <rich_text>
+	Set initial size of picture. Available values are </rich_text>
+          <rich_text style="italic">fit</rich_text>
+          <rich_text> for fitting image in window or </rich_text>
+          <rich_text style="italic">orig</rich_text>
+          <rich_text> for show picture in original size.
+</rich_text>
+          <rich_text weight="heavy">--inc=</rich_text>
+          <rich_text>NUMBER
+	Set increment value for scaling image.
+</rich_text>
+          <rich_text weight="heavy">--filename=</rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>
+	Set picture filename.  Some actions on a picture like scaling or rotating available from popup menu. Those actions can be made only on static images. 
+  
+
+</rich_text>
+          <rich_text scale="h3">Print options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--type=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set source file type. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> may be a </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text> for text files, </rich_text>
+          <rich_text style="italic">IMAGE</rich_text>
+          <rich_text> for image files or </rich_text>
+          <rich_text style="italic">RAW</rich_text>
+          <rich_text> for files in postscript or pdf formats.
+</rich_text>
+          <rich_text weight="heavy">--filename=</rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>
+	Set name or path to the source file.
+</rich_text>
+          <rich_text weight="heavy">--headers</rich_text>
+          <rich_text>
+	Add headers to the top of page with filename and page number. This option doesn't work for </rich_text>
+          <rich_text style="italic">RAW</rich_text>
+          <rich_text> type.
+</rich_text>
+          <rich_text weight="heavy">--add-preview</rich_text>
+          <rich_text>
+	Add </rich_text>
+          <rich_text style="italic">Preview</rich_text>
+          <rich_text> button to the print dialog. This option doesn't work for </rich_text>
+          <rich_text style="italic">RAW</rich_text>
+          <rich_text> type.
+</rich_text>
+          <rich_text weight="heavy">--fontname=</rich_text>
+          <rich_text style="italic">FONTNAME</rich_text>
+          <rich_text>
+	Set the font for printing text. </rich_text>
+          <rich_text style="italic">FONTNAME</rich_text>
+          <rich_text> is a string with font representation in the form </rich_text>
+          <rich_text style="italic">"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]"</rich_text>
+          <rich_text>. This option works only for </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text> type. 
+
+</rich_text>
+          <rich_text scale="h3">Progress options</rich_text>
+          <rich_text>
+  When the --progress option is used, yad reads lines of progress data from stdin. When the lines begin with </rich_text>
+          <rich_text style="italic">#</rich_text>
+          <rich_text> the text after </rich_text>
+          <rich_text style="italic">#</rich_text>
+          <rich_text> is displayed in the progress bar label. Numeric values treats like a persents for progress bar. 
+
+</rich_text>
+          <rich_text weight="heavy">--progress-text=</rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text>
+	Set text in progress bar to </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--percentage=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set initial percentage.
+</rich_text>
+          <rich_text weight="heavy">--rtl</rich_text>
+          <rich_text>
+	Set Right-To-Left progress bar direction.
+</rich_text>
+          <rich_text weight="heavy">--auto-close</rich_text>
+          <rich_text>
+	Close dialog when 100% has been reached.
+</rich_text>
+          <rich_text weight="heavy">--auto-kill</rich_text>
+          <rich_text>
+	Kill parent process if cancel button is pressed.
+</rich_text>
+          <rich_text weight="heavy">--pulsate</rich_text>
+          <rich_text>
+	Pulsate progress bar.
+</rich_text>
+          <rich_text weight="heavy">--enable-log</rich_text>
+          <rich_text style="italic">[=TEXT]</rich_text>
+          <rich_text>
+	Show log window. This window gathers all of lines from stdin, started from </rich_text>
+          <rich_text style="italic">#</rich_text>
+          <rich_text> instead of setting appropriate progress labels.Optional argument </rich_text>
+          <rich_text style="italic">TEXT</rich_text>
+          <rich_text> is a text label for window expander.
+</rich_text>
+          <rich_text weight="heavy">--log-on-top</rich_text>
+          <rich_text>
+	Place log window above progress bar.
+</rich_text>
+          <rich_text weight="heavy">--log-expanded</rich_text>
+          <rich_text>
+	Start with expanded log window.
+</rich_text>
+          <rich_text weight="heavy">--log-height</rich_text>
+          <rich_text>
+	Set the height of log window. 
+
+</rich_text>
+          <rich_text scale="h3">Multiprogress options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--bar=</rich_text>
+          <rich_text style="italic">LABEL[:TYPE]</rich_text>
+          <rich_text>
+	Add the progress bar with type </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> can be one of the </rich_text>
+          <rich_text style="italic">norm</rich_text>
+          <rich_text> for average progress bar, </rich_text>
+          <rich_text style="italic">rtl</rich_text>
+          <rich_text> for progress bar with inverted direction, </rich_text>
+          <rich_text style="italic">pulse</rich_text>
+          <rich_text> for pulsating progress bar (m,oves on receiving data) or </rich_text>
+          <rich_text style="italic">perm</rich_text>
+          <rich_text> for permanent pulsatin progress bar. </rich_text>
+          <rich_text style="italic">prem</rich_text>
+          <rich_text> progress bar understant two commands - </rich_text>
+          <rich_text style="italic">start</rich_text>
+          <rich_text> for start movement and </rich_text>
+          <rich_text style="italic">stop</rich_text>
+          <rich_text> for stop it.
+</rich_text>
+          <rich_text weight="heavy">--watch-bar=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Watch for specific bar for auto closing.
+</rich_text>
+          <rich_text weight="heavy">--align=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set alignment of bar labels. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> can be </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">center</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">right</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--auto-close</rich_text>
+          <rich_text>
+	Dismiss the dialog when 100% of all bars (or only watching bar) has been reached.
+</rich_text>
+          <rich_text weight="heavy">--auto-kill</rich_text>
+          <rich_text>
+	Kill parent process if cancel button was pressed. 
+
+</rich_text>
+          <rich_text scale="h3">Text info options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--filename=</rich_text>
+          <rich_text style="italic">FILENAME</rich_text>
+          <rich_text>
+	Open specified file.
+</rich_text>
+          <rich_text weight="heavy">--editable</rich_text>
+          <rich_text>
+	Allow changes to text.
+</rich_text>
+          <rich_text weight="heavy">--fore=</rich_text>
+          <rich_text style="italic">COLOR</rich_text>
+          <rich_text>
+	Set foreground color of text.
+</rich_text>
+          <rich_text weight="heavy">--back=</rich_text>
+          <rich_text style="italic">COLOR</rich_text>
+          <rich_text>
+	Set background color of text.
+</rich_text>
+          <rich_text weight="heavy">--fontname=</rich_text>
+          <rich_text style="italic">FONTNAME</rich_text>
+          <rich_text>
+	Set text font. </rich_text>
+          <rich_text style="italic">FONTNAME</rich_text>
+          <rich_text> must be in a Pango font description format. By default </rich_text>
+          <rich_text style="italic">Monospace</rich_text>
+          <rich_text> is used.
+</rich_text>
+          <rich_text weight="heavy">--wrap</rich_text>
+          <rich_text>
+	Enable text wrapping.
+</rich_text>
+          <rich_text weight="heavy">--justify=</rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text>
+	Set justification. </rich_text>
+          <rich_text style="italic">TYPE</rich_text>
+          <rich_text> may be </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">right</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">center</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">fill</rich_text>
+          <rich_text>.Default is </rich_text>
+          <rich_text style="italic">left</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--margins=</rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>
+	Set text margins to </rich_text>
+          <rich_text style="italic">NUMBER</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--tail</rich_text>
+          <rich_text>
+	Autoscroll to end when new text appears. Works only when text is read from stdin.
+</rich_text>
+          <rich_text weight="heavy">--show-cursor</rich_text>
+          <rich_text>
+	Show cursor in read-only mode.
+</rich_text>
+          <rich_text weight="heavy">--show-uri</rich_text>
+          <rich_text>
+	Make links in text clickable. Links opens with </rich_text>
+          <rich_text style="italic">xdg-open</rich_text>
+          <rich_text> command.
+</rich_text>
+          <rich_text weight="heavy">--uri-color</rich_text>
+          <rich_text>
+	Set color for links. Default is </rich_text>
+          <rich_text style="italic">blue</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">--lang=LANGUAGE</rich_text>
+          <rich_text>
+	Highlight syntax for specified </rich_text>
+          <rich_text style="italic">LANGUAGE</rich_text>
+          <rich_text>. This option works only if yad builds with gtksourceview.
+</rich_text>
+          <rich_text weight="heavy">--listen</rich_text>
+          <rich_text>
+	Listen data from stdin even if filename was specified. Sending FormFeed character to text dialog clears it. This symbol may be sent as </rich_text>
+          <rich_text style="italic">echo -e '\f'</rich_text>
+          <rich_text>. Pressing </rich_text>
+          <rich_text style="italic">Ctrl+S</rich_text>
+          <rich_text> popups the search entry in text dialog. 
+ 
+
+</rich_text>
+          <rich_text scale="h3">Scale options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--value=</rich_text>
+          <rich_text style="italic">VALUE</rich_text>
+          <rich_text>
+	Set initial value.
+</rich_text>
+          <rich_text weight="heavy">--min-value=</rich_text>
+          <rich_text style="italic">VALUE</rich_text>
+          <rich_text>
+	Set minimum value.
+</rich_text>
+          <rich_text weight="heavy">--max-value=</rich_text>
+          <rich_text style="italic">VALUE</rich_text>
+          <rich_text>
+	Set maximum value.
+</rich_text>
+          <rich_text weight="heavy">--step=</rich_text>
+          <rich_text style="italic">VALUE</rich_text>
+          <rich_text>
+	Set step size.
+</rich_text>
+          <rich_text weight="heavy">--page=</rich_text>
+          <rich_text style="italic">VALUE</rich_text>
+          <rich_text>
+	Set paging size. By default page value is STEP*10.
+</rich_text>
+          <rich_text weight="heavy">--print-partial</rich_text>
+          <rich_text>
+	Print partial values.
+</rich_text>
+          <rich_text weight="heavy">--hide-value</rich_text>
+          <rich_text>
+	Hide value.
+</rich_text>
+          <rich_text weight="heavy">--vertical</rich_text>
+          <rich_text>
+	Show vertical scale.
+</rich_text>
+          <rich_text weight="heavy">--invert</rich_text>
+          <rich_text>
+	Invert scale direction.
+</rich_text>
+          <rich_text weight="heavy">--inc-buttons</rich_text>
+          <rich_text>
+	Show buttons on edges of a scale for increasing or decreasing scale value.
+</rich_text>
+          <rich_text weight="heavy">--mark=</rich_text>
+          <rich_text style="italic">[NAME]:VALUE</rich_text>
+          <rich_text>
+	Add a mark to scale. May be used multiply times. </rich_text>
+          <rich_text style="italic">NAME</rich_text>
+          <rich_text> is an optional arguments for set label to mark. 
+
+</rich_text>
+          <rich_text scale="h3">File filters options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">--file-filter=</rich_text>
+          <rich_text style="italic">NAME | PATTERN1 PATTERN2 ...</rich_text>
+          <rich_text>
+	Add a filename filter. </rich_text>
+          <rich_text style="italic">NAME</rich_text>
+          <rich_text> is a displayed filter name, </rich_text>
+          <rich_text style="italic">PATTERN</rich_text>
+          <rich_text>is a shell-style filename pattern (for example *.txt). This option may be used multiply times.
+</rich_text>
+          <rich_text weight="heavy">--mime-filter=</rich_text>
+          <rich_text style="italic">NAME | MIME1 MIME2 ...</rich_text>
+          <rich_text>
+	Add a mime-type filter. </rich_text>
+          <rich_text style="italic">NAME</rich_text>
+          <rich_text> is a displayed filter name, </rich_text>
+          <rich_text style="italic">PATTERN</rich_text>
+          <rich_text>is a name of mime type (for example text/plain). This option may be used multiply times.
+</rich_text>
+          <rich_text weight="heavy">--image-filter=</rich_text>
+          <rich_text style="italic">[NAME]</rich_text>
+          <rich_text>
+	Add filter for images supported by gdk-pixbuf library. </rich_text>
+          <rich_text style="italic">NAME</rich_text>
+          <rich_text> in as optional name for this filter.
+</rich_text>
+          <rich_text weight="heavy">--add-preview</rich_text>
+          <rich_text>
+	Add preview widget. Preview images loads from large or normal thumbnails according to XDG Thumbnailsspecification v0.8.0 (</rich_text>
+          <rich_text link="webs https://standards.freedesktop.org/thumbnail-spec/latest/)">http://standards.freedesktop.org/thumbnail-spec/latest/)</rich_text>
+          <rich_text> or creates by yad for image files and savesas large thumbnails. This options applies to all of yad's file chooser dialogs. 
+ 
+
+</rich_text>
+          <rich_text scale="h3">Miscellaneous options</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">-?, --help</rich_text>
+          <rich_text>
+	Show summary of options.
+</rich_text>
+          <rich_text weight="heavy">--about</rich_text>
+          <rich_text>
+	Display an about dialog.
+</rich_text>
+          <rich_text weight="heavy">--version</rich_text>
+          <rich_text>
+	Show version of program. 
+  Also the standard GTK+ options are accepted. 
+  
+
+</rich_text>
+          <rich_text scale="h2">NOTEBOOK and PANED</rich_text>
+          <rich_text>
+Notebook is a complex dialog which swallow other dialogs in his tabs.Dialogs identifies by unique key (integer) and must be runs in a special plug mode (--plug option).Following example runs notebook dialog with two tabs, first has a simple text and second is an entry dialog. 
+#! /bin/sh
+
+yad --plug=12345 --tabnum=1 --text="first tab with text" &amp;&gt; res1 &amp;
+yad --plug=12345 --tabnum=2 --text="second tab" --entry &amp;&gt; res2 &amp;
+yad --notebook --key=12345 --tab="Tab 1" --tab="Tab 2"
+ NOTE: The order of output results for tabs is undefined! 
+ Paned works in a same manner as a notebook with one restriction - only first and secong plug dialogs will be swallowed to panes. 
+  
+
+</rich_text>
+          <rich_text scale="h2">NOTIFICATION</rich_text>
+          <rich_text>
+Allows commands to be sent to yad in the form </rich_text>
+          <rich_text weight="heavy">command:args</rich_text>
+          <rich_text>.Possible commands are </rich_text>
+          <rich_text style="italic">icon</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">tooltip</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">visible</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">action</rich_text>
+          <rich_text>, </rich_text>
+          <rich_text style="italic">menu</rich_text>
+          <rich_text> and </rich_text>
+          <rich_text style="italic">quit</rich_text>
+          <rich_text>.
+</rich_text>
+          <rich_text weight="heavy">icon:ICONNAME</rich_text>
+          <rich_text>
+	Set notification icon to ICONNAME.
+</rich_text>
+          <rich_text weight="heavy">tooltip:STRING</rich_text>
+          <rich_text>
+	Set notification tooltip.
+</rich_text>
+          <rich_text weight="heavy">visible:[true|false|blink]</rich_text>
+          <rich_text>
+	Set notification icon to visible, invisible or blinking states.
+</rich_text>
+          <rich_text weight="heavy">action:COMMAND</rich_text>
+          <rich_text>
+	Specify the command running when click on the icon.Special string </rich_text>
+          <rich_text style="italic">"quit"</rich_text>
+          <rich_text> exit the program.
+</rich_text>
+          <rich_text weight="heavy">menu:STRING</rich_text>
+          <rich_text>
+	Set popup menu for notification icon.STRING must be in form </rich_text>
+          <rich_text style="italic">name1[!action1[!icon1]]|name2[!action2[!icon2]]...</rich_text>
+          <rich_text>.Empty name add separator to menu.Separator character for values (e.g. `|') sets with --separator argument.Separator character for menu items (e.g. `!') sets with --item-separator argument.
+</rich_text>
+          <rich_text weight="heavy">quit</rich_text>
+          <rich_text>
+	Exit the program. Middle click on icon also send </rich_text>
+          <rich_text style="italic">quit</rich_text>
+          <rich_text> command. 
+
+</rich_text>
+          <rich_text scale="h2">ENVIRONMENT VARIABLES</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">YAD_OPTIONS</rich_text>
+          <rich_text>
+	This variable can holds some default options for yad. All options in thisvariable may be redefined from command line.
+</rich_text>
+          <rich_text weight="heavy">YAD_PID</rich_text>
+          <rich_text>
+	This variable sets to the value of current dialog's pid and accessible in alldialog children.
+</rich_text>
+          <rich_text weight="heavy">YAD_XID</rich_text>
+          <rich_text>
+	This variable sets to the value of current dialog's X Window ID and accessible in alldialog children. This variable is not set in print and notification dialogs,and in a dialogs which acts as a notebook children. 
+
+</rich_text>
+          <rich_text scale="h2">USER DEFINED SIGNALS</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">SIGUSR1</rich_text>
+          <rich_text>
+	Close dialog with 0 exit code.
+</rich_text>
+          <rich_text weight="heavy">SIGUSR2</rich_text>
+          <rich_text>
+	Close dialog with 1 exit code. 
+
+</rich_text>
+          <rich_text scale="h2">EXIT STATUS</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">0</rich_text>
+          <rich_text>
+	The user has pressed </rich_text>
+          <rich_text style="italic">OK</rich_text>
+          <rich_text> button
+</rich_text>
+          <rich_text weight="heavy">1</rich_text>
+          <rich_text>
+	The user has pressed </rich_text>
+          <rich_text style="italic">Cancel</rich_text>
+          <rich_text> button
+</rich_text>
+          <rich_text weight="heavy">70</rich_text>
+          <rich_text>
+	The dialog has been closed because the timeout has been reached.
+</rich_text>
+          <rich_text weight="heavy">252</rich_text>
+          <rich_text>
+	The dialog has been closed by pressing </rich_text>
+          <rich_text style="italic">Esc</rich_text>
+          <rich_text> or used the window functions to close the dialog
+Exit codes for user-specified buttons must be specified in command line. Even exit code mean to print result, odd just return exit code.
+	 
+
+</rich_text>
+          <rich_text scale="h2">WIDGETS NAMES</rich_text>
+          <rich_text>
+
+The look and feel of yad's dialogs can be customized through gtkrc file. Here is the names of yad's widgets:
+	 
+</rich_text>
+          <rich_text justification="left"></rich_text>
+          <rich_text>
+ 
+
+</rich_text>
+          <rich_text scale="h2">FILES</rich_text>
+          <rich_text>
+
+</rich_text>
+          <rich_text weight="heavy">yad.conf</rich_text>
+          <rich_text>
+	YAD default settings. </rich_text>
+          <rich_text style="italic">yad.conf</rich_text>
+          <rich_text> placed in </rich_text>
+          <rich_text style="italic">$XDG_CONFIG_HOME</rich_text>
+          <rich_text> or </rich_text>
+          <rich_text style="italic">$HOME/.config</rich_text>
+          <rich_text>directory. This file contain comments on every defaults and will be automaticallyrecreated on yad'd start if it doesn't exists. 
+
+</rich_text>
+          <rich_text scale="h2">EXAMPLES</rich_text>
+          <rich_text>
+Display a file selector with the title </rich_text>
+          <rich_text style="italic">Select a file to remove</rich_text>
+          <rich_text>. The file selected is returned on standard output.
+
+	yad  --title="Select a file to remove" --file-selection  Display a text entry dialog with the title </rich_text>
+          <rich_text style="italic">Select Host</rich_text>
+          <rich_text> and the text </rich_text>
+          <rich_text style="italic">Select the host you would like to flood-ping</rich_text>
+          <rich_text>. The entered text is returned on standard output. 
+
+
+	yad  --title "Select Host" --entry --text "Select the host you would like to flood-ping"  Display a dialog, asking </rich_text>
+          <rich_text style="italic">Microsoft Windows has been found! Would you like to remove it?</rich_text>
+          <rich_text>. The return code will be 0 (true in shell) if </rich_text>
+          <rich_text style="italic">YES</rich_text>
+          <rich_text> is selected, and 1 (false) if </rich_text>
+          <rich_text style="italic">NO</rich_text>
+          <rich_text> is selected. 
+
+
+	yad  --image "dialog-question" --title "Alert" --button=gtk-yes:0 --button=gtk-no:1 --text "Microsoft Windows has been found! Would you like to remove it?"  Show the search results in a list dialog with the title </rich_text>
+          <rich_text style="italic">Search Results</rich_text>
+          <rich_text> and the text </rich_text>
+          <rich_text style="italic">Finding all header files...</rich_text>
+          <rich_text>. 
+
+
+	find . -name '*.h' | yad --list --title "Search Results" --text "Finding all header files.." --column "Files"  Show an icon in the notification area 
+
+
+	yad --notification --image=update.png --text "System update necessary!" --command "xterm -e apt-get upgrade"  Display a weekly shopping list in a check list dialog with </rich_text>
+          <rich_text style="italic">Apples</rich_text>
+          <rich_text> and </rich_text>
+          <rich_text style="italic">Oranges</rich_text>
+          <rich_text> pre selected 
+
+
+	yad --list --checklist --column "Buy" --column "Item" TRUE Apples TRUE Oranges FALSE Pears FALSE Toothpaste  Display a progress dialog while searching for all the postscript files in your home directory 
+
+
+	find $HOME -name '*.ps' | yad --progress --pulsate</rich_text>
+          <table char_offset="29604" justification="left" col_min="60" col_max="60" col_widths="0,0,0">
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>yad-dialog-window</cell>
+              <cell>GtkDialog</cell>
+              <cell>Dialog window</cell>
+            </row>
+            <row>
+              <cell>yad-dialog-image</cell>
+              <cell>GtkImage</cell>
+              <cell>Dialog image</cell>
+            </row>
+            <row>
+              <cell>yad-dialog-label</cell>
+              <cell>GtkLabel</cell>
+              <cell>Dialog text</cell>
+            </row>
+            <row>
+              <cell>yad-calendar-widget</cell>
+              <cell>GtkCalendar</cell>
+              <cell>Calendar widget</cell>
+            </row>
+            <row>
+              <cell>yad-color-widget</cell>
+              <cell>GtkColorChooser</cell>
+              <cell>Color selection widget</cell>
+            </row>
+            <row>
+              <cell>yad-color-palette</cell>
+              <cell>GtkTreeView</cell>
+              <cell>Predefined colors list</cell>
+            </row>
+            <row>
+              <cell>yad-entry-label</cell>
+              <cell>GtkLabel</cell>
+              <cell>Entry label</cell>
+            </row>
+            <row>
+              <cell>yad-entry-widget</cell>
+              <cell>GtkEntry</cell>
+              <cell>Entry widget</cell>
+            </row>
+            <row>
+              <cell>yad-entry-spin</cell>
+              <cell>GtkSpinButton</cell>
+              <cell>Entry widget for numeric values</cell>
+            </row>
+            <row>
+              <cell>yad-entry-combo</cell>
+              <cell>GtkComboBox</cell>
+              <cell>Entry widget with combo</cell>
+            </row>
+            <row>
+              <cell>yad-entry-edit-combo</cell>
+              <cell>GtkComboBoxEntry</cell>
+              <cell>Entry widget with editable combo</cell>
+            </row>
+            <row>
+              <cell>yad-file-widget</cell>
+              <cell>GtkFileChooser</cell>
+              <cell>File selection widget</cell>
+            </row>
+            <row>
+              <cell>yad-font-widget</cell>
+              <cell>GtkFontChooser</cell>
+              <cell>Font selection widget</cell>
+            </row>
+            <row>
+              <cell>yad-form-flabel</cell>
+              <cell>GtkLabel</cell>
+              <cell>Field label in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-button</cell>
+              <cell>GtkButton</cell>
+              <cell>Button field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-entry</cell>
+              <cell>GtkEntrfy</cell>
+              <cell>Entry field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-spin</cell>
+              <cell>GtkSpinButton</cell>
+              <cell>Numeric entry field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-check</cell>
+              <cell>GtkCheckButton</cell>
+              <cell>Checkbox field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-combo</cell>
+              <cell>GtkComboBox</cell>
+              <cell>Combo field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-edit-combo</cell>
+              <cell>GtkComboBoxEntry</cell>
+              <cell>Editable combo field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-file</cell>
+              <cell>GtkFileChooserButton</cell>
+              <cell>File or directory field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-font</cell>
+              <cell>GtkFontChooserButton</cell>
+              <cell>Font field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-color</cell>
+              <cell>GtkColorChooserButton</cell>
+              <cell>Color field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-label</cell>
+              <cell>GtkLabel</cell>
+              <cell>Label field in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-scale</cell>
+              <cell>GtkScale</cell>
+              <cell>Scale widget in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-separator</cell>
+              <cell>GtkSeparator</cell>
+              <cell>Separator in form</cell>
+            </row>
+            <row>
+              <cell>yad-form-text</cell>
+              <cell>GtkTextView</cell>
+              <cell>Multiline text field in form</cell>
+            </row>
+            <row>
+              <cell>yad-icons-full</cell>
+              <cell>GtkIconView</cell>
+              <cell>Icons widget for normal mode</cell>
+            </row>
+            <row>
+              <cell>yad-icons-compact</cell>
+              <cell>GtkTreeView</cell>
+              <cell>Icons widget for compact mode</cell>
+            </row>
+            <row>
+              <cell>yad-list-widget</cell>
+              <cell>GtkTreeView</cell>
+              <cell>List widget</cell>
+            </row>
+            <row>
+              <cell>yad-notebook-widget</cell>
+              <cell>GtkNotebook</cell>
+              <cell>Notebook widget</cell>
+            </row>
+            <row>
+              <cell>yad-paned-widget</cell>
+              <cell>GtkPaned</cell>
+              <cell>Horizontal or vertical pane widget</cell>
+            </row>
+            <row>
+              <cell>yad-progress-widget</cell>
+              <cell>GtkProgressBar</cell>
+              <cell>Progressbar widget</cell>
+            </row>
+            <row>
+              <cell>yad-scale-widget</cell>
+              <cell>GtkScale</cell>
+              <cell>Scale widget</cell>
+            </row>
+            <row>
+              <cell>yad-text-widget</cell>
+              <cell>GtkTextView</cell>
+              <cell>Text info widget</cell>
+            </row>
+            <row>
+              <cell>yad-timeout-indicator</cell>
+              <cell>GtkProgreeBar</cell>
+              <cell>Timeout indicator</cell>
+            </row>
+            <row>
+              <cell>Widget name</cell>
+              <cell>Widget type</cell>
+              <cell>Description</cell>
+            </row>
+          </table>
+        </node>
       </node>
     </node>
   </node>

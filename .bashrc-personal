@@ -74,6 +74,11 @@ alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
 alias edunst='nvim ~/.config/dunst/dunstrc'
 
+function emacs ()
+{
+    emacsclient "$@" 2>/dev/null || /usr/bin/emacs "$@"
+}
+
 #Neovim
 alias senv='sudoedit nvim'
 alias snv='sudo nvim'
@@ -142,9 +147,14 @@ function lm()
     ls -l "$*" | awk '{print $6, $7, $8}'
 }
 
-alias fznv='nvim $(fzf --height 40% --reverse)'
-alias fzsenv='sudoedit nvim $(fzf --height 40% --reverse)'
-alias nvfull="fzf --height 40% --layout reverse --info inline --border --preview 'file {}' --preview-window up,1,border-horizontal --color 'fg:#928374,fg+:#18E406,bg:#121212,preview-bg:#1F2022,border:#6D6259'"
+alias fzfnv='nvim $(fzf --height 40% --reverse)'
+alias fzfsnv='sudoedit nvim $(fzf --height 40% --reverse)'
+alias fzfsearch="fzf --height 40% --layout reverse --info inline --border --preview 'file {}' --preview-window up,1,border-horizontal --color 'fg:#928374,fg+:#18E406,bg:#121212,preview-bg:#1F2022,border:#6D6259'"
+
+alias fzfpac="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+alias fzfparu="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+
+#alias fzfpacx="pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S"
 
 alias addup='git add -u'
 alias addall='git add .'

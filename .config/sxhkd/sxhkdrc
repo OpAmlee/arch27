@@ -38,26 +38,17 @@ super + shift + e
 #    ~/.scripts/sshot-select.sh
 
 
+super + v 
+    virtualbox
 
 
 
-super + Next
-    ~/.scripts/xdo-page-up.sh
-
-super + Insert
-    $HOME/.scripts/xdo-type-nvim-start-fold.sh
-
-super + Delete
-    $HOME/.scripts/xdo-type-nvim-end-fold.sh
 #===============|
 #    CONTROL    |
 #===============|
 
-control + r
-    ~/.scripts/dusk.keys.sh
 
-control + F11
-    ~/.scripts/xdo-hide-window.sh
+
 
 #control + F12
 # this is used in cherry tree to toggle toolbar
@@ -65,15 +56,13 @@ control + F11
 #===============|
 #     ALT       |
 #===============|
-alt + Return
-    kitty -c ~/.config/kitty/kitty3-ranger.conf --single-instance -1
 
 alt + p
     firefox --private-window
 
 # custom dmenu scripts
-alt + {w,l,f,h}
-    {$HOME/.scripts/edit-configs, quick-links, $HOME/.scripts/firefox-fix.sh, geany}
+alt + {l,f,g}
+    {bash -e "/usr/local/bin/quick-links", $HOME/.scripts/firefox-fix.sh, geany}
 
 alt + x 
     /home/trg/.scripts/yad-poweroff.sh    
@@ -84,39 +73,73 @@ alt + x
 control + alt + Delete
     ~/.scripts/reboot
 
-control + alt + d
-    $HOME/.scripts/autorandr-docked.sh
-control + alt + m
-    $HOME/.scripts/autorandr-mobile.sh
 
 
-control + alt + v
+alt + v
     /usr/bin/virtualbox
 #===============|
 #  SPECIALITY   |
 #===============|
 
-# screenshot
-Print
-    takeshot --now
-
-# screenshot active window
-ctrl + Print
-    takeshot --win
-
-# screenshot selected area
-ctrl + shift + Print
-    takeshot --area
 
 
 
 
 
-# Volume controls
-XF86Audio{RaiseVolume,LowerVolume,Mute}
-    volume{ --up, --down, --toggle}
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
 
-# Brightness controls
-XF86MonBrightness{Up,Down}
-    brightness{ --up, --down}
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 5%+ && volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 5%- && volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
+
+#Mute
+XF86AudioMute
+    amixer set Master toggle; if amixer get Master | grep -Fq "[off]"; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1); fi  
+
+#Playerctl works for Pragha, Spotify and others
+#Delete the line for playerctl if you want to use mpc
+#and replace it with the corresponding code
+#mpc works for e.g.ncmpcpp
+#mpc toggle
+#mpc next
+#mpc prev
+#mpc stop
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+#   174 XF86AudioStop
+#   172 XF86AudioPlay
+#   174 XF86AudioStop
+#   173 XF86AudioPrev
+#   171 XF86AudioNext
+#   121 XF86AudioMute
+#   122 XF86AudioLowerVolume
 

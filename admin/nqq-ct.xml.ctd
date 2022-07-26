@@ -6267,7 +6267,7 @@ yd - copy directory name only
 yn - copy file name only
 yp - copy full path</rich_text>
       </node>
-      <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1656439788">
+      <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1658506592">
         <rich_text scale="h1">rofi ~</rich_text>
         <rich_text>
 
@@ -6278,6 +6278,22 @@ switch between windows: rofi -show window</rich_text>
         <rich_text>
 	
 </rich_text>
+      </node>
+      <node name="rsync" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658506592" ts_lastsave="1658506852">
+        <rich_text scale="h1">rsync ~</rich_text>
+        <rich_text>
+
+latest backup command 
+
+
+
+move files to shared drive
+
+sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/mnt/backup/backup-e"} /mnt/backup/backup-e
+
+</rich_text>
+        <codebox char_offset="33" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="python3" highlight_brackets="1" show_line_numbers="0">sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/mnt/backup/backup-e"} /mnt/backup/backup-e</codebox>
+        <codebox char_offset="63" justification="left" frame_width="500" frame_height="50" width_in_pixels="1" syntax_highlighting="python3" highlight_brackets="1" show_line_numbers="0">sudo rsync -aAXv &lt;files to copy&gt; &lt;location&gt;</codebox>
       </node>
       <node name="ruby" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656439788" ts_lastsave="1656439794">
         <rich_text scale="h1">ruby ~</rich_text>

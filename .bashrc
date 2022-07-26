@@ -15,7 +15,8 @@
 #  ║╣ ╔╩╦╝╠═╝║ ║╠╦╝ ║
 #  ╚═╝╩ ╚═╩  ╚═╝╩╚═ ╩
 
-export TERM="xterm-kitty"                      # getting proper colors
+export TERM="xterm-256color"                      # getting proper colors
+export TERMCMD="xterm-kitty"
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR="nvim"                        # setting for emacsclient
 #export PATH=$PATH:$HOME/.emacs.d/bin
@@ -31,6 +32,9 @@ export VISUAL="nvim"
 export BROWSER="firefox"
 
 alias rc="nvim ~/.bashrc && source ~/.bashrc"
+
+
+#export SCREEN_SIZE="1366x768 ./scripts/xephyr"
 
 # use nvim for editor in visudo
 alias nvim-visudo="sudo EDITOR=nvim visudo"

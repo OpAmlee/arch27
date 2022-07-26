@@ -6206,7 +6206,7 @@ Eventually, to make sure the installed packages of your system match  the list a
 			},</rich_text>
         </node>
       </node>
-      <node name="python" unique_id="96" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="23" is_bold="0" foreground="" ts_creation="1656484924" ts_lastsave="1658161880">
+      <node name="python" unique_id="96" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="23" is_bold="0" foreground="" ts_creation="1656484924" ts_lastsave="1658162088">
         <rich_text>python ~
 
 echo $VIRTUALENVWRAPPER_PYTHON
@@ -6233,7 +6233,26 @@ python3 shebang
 links to start virtual env
 https://wiki.archlinux.org/title/Python/Virtual_environment
 
+#venv
+python -m venv envname
 
+#virtualenv
+virtualenv envname
+
+#activation
+source envname/bin/activate
+(envname) $
+
+#deactivate
+(envname) $ deactivate
+
+#python versions
+ls -l envname/bin/python
+
+#If you want to use a different Python version inside the virtual environment, you can use the -p/--python option of virtualenv: 
+virtualenv -p 3.8 envname
+$ ls -l envname/bin/python
+lrwxrwxrwx 1 foo foo 18 Jan 29 18:48 envname/bin/python -&gt; /usr/bin/python3.8
 
 </rich_text>
       </node>
@@ -6248,7 +6267,7 @@ yd - copy directory name only
 yn - copy file name only
 yp - copy full path</rich_text>
       </node>
-      <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1656439788">
+      <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1658506592">
         <rich_text scale="h1">rofi ~</rich_text>
         <rich_text>
 
@@ -6259,6 +6278,18 @@ switch between windows: rofi -show window</rich_text>
         <rich_text>
 	
 </rich_text>
+      </node>
+      <node name="rsync" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658506592" ts_lastsave="1658506695">
+        <rich_text scale="h1">rsync ~</rich_text>
+        <rich_text>
+
+latest backup command 
+
+
+
+move filer
+sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/mnt/backup/backup-e"} /mnt/backup/backup-e</rich_text>
+        <codebox char_offset="33" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="python3" highlight_brackets="1" show_line_numbers="0">sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/mnt/backup/backup-e"} /mnt/backup/backup-e</codebox>
       </node>
       <node name="ruby" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656439788" ts_lastsave="1656439794">
         <rich_text scale="h1">ruby ~</rich_text>

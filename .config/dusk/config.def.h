@@ -88,7 +88,7 @@ static int lowercase_workspace_labels = 1;               /* whether to change wo
 /* See util.h for options */
 static unsigned long functionality = 0
 //	|AutoReduceNmaster // automatically reduce the number of master clients if one is closed
-//	|SmartGaps // enables no or increased gaps if there is only one visible window
+	|SmartGaps // enables no or increased gaps if there is only one visible window
 //	|SmartGapsMonocle // enforces no gaps in monocle layout
 	|Systray // enables a systray in the bar
 //	|SystrayNoAlpha // disables the use of transparency for the systray, enable if you do not use a compositor
@@ -594,7 +594,10 @@ static const char *spcmd_e[] = {"e", "kitty", "--name", "spterm (e)", "--config"
 static const char *spcmd_r[] = {"r", "cherrytree", "--name", "spterm (r)" ,NULL };
 
 //static const char *spcmd_a[] = {"a", "st"    , "-n",     "spfm (a)" , "-g", "144x41", "-e", "ranger", NULL };
-static const char *spcmd_a[] = {"a", "kitty"    , "--name","spfm (a)","-e","ranger", NULL };
+static const char *spcmd_a[] = {"a", "kitty", "--name","spfm (a)", "--config", "/home/trg/.config/kitty.d/kitty3.conf", "-e", "ranger", NULL };
+
+//static const char *spcmd_a[] = {"a", "kitty"    , "--name","spfm (a)","-e","ranger", NULL };
+
 static const char *statusclickcmd[] = { NULL, "bin/statusbar/statusclick.sh", NULL };
 /*  }}} */
 
