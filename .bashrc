@@ -15,7 +15,7 @@
 #  ║╣ ╔╩╦╝╠═╝║ ║╠╦╝ ║
 #  ╚═╝╩ ╚═╩  ╚═╝╩╚═ ╩
 
-export TERM="xterm-256color"                      # getting proper colors
+export TERM="xterm-kitty"                      # getting proper colors
 export TERMCMD="xterm-kitty"
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR="nvim"                        # setting for emacsclient

@@ -170,6 +170,8 @@ alias newtag='git tag -a'
 alias rmgitcache="rm -r ~/.cache/git"
 
 alias config='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
+alias virt='/usr/bin/git --git-dir=$HOME/srv/ --work-tree=$HOME/srv'
+
 alias cp='config push arch28'
  function ca()
 {

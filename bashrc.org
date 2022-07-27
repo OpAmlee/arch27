@@ -356,6 +356,8 @@ alias rmgitcache="rm -r ~/.cache/git"
 
 #+BEGIN_SRC sh
 alias config='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
+alias virt='/usr/bin/git --git-dir=$HOME/srv/ --work-tree=$HOME/srv'
+
 alias cp='config push arch28'
  function ca()
 {

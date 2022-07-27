@@ -765,7 +765,7 @@ let g:Hexokinase_optInPatterns = [
 let g:Hexokinase_ftOptInPatterns = {
 \     'css': 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names',
 \     'html': 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names',
-\     'c': 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names'
+\     'c': 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names',
 \ }
 
 let g:loaded_pearl_provider = 0"}}}
