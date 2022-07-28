@@ -11,10 +11,9 @@ from __future__ import (absolute_import, division, print_function)
 
 # You can import any python module as needed.
 import os
-
+from threading import Thread
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
-
 
 # Any class that is a subclass of "Command" will be integrated into ranger as a
 # command.  Try typing ":my_edit<ENTER>" in ranger!
@@ -60,13 +59,8 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
-
 # Dragon Drop
-
-    from threading import Thread
-
 class dragon(Command):
-
     def execute(self):
         th = Thread(target=self.dragondaemon, daemon=True)
         th.start()
@@ -75,3 +69,30 @@ class dragon(Command):
     def dragondaemon(self):
         arguments = 'kitty --class dragon-term -e dragon-daemon {}'.format(" ".join(self.args[1:]))
         self.fm.execute_command(arguments)
+# https://github.com/ranger/ranger/wiki/Integrating-File-Search-with-fzf
+# Now, simply bind this function to a key, by adding this to your ~/.config/ranger/rc.conf: map <C-f> fzf_select
+# fzf_locate
+class fzf_locate(Command):
+    """
+    :fzf_locate
+    Find a file using fzf.
+    With a prefix argument select only directories.
+    See: https://github.com/junegunn/fzf
+    """
+    def execute(self):
+        import subprocess
+        if self.quantifier:
+            command="locate home media | fzf -e -i"
+        else:
+            command="locate home media | fzf -e -i"
+        fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
+        stdout, stderr = fzf.communicate()
+        if fzf.returncode == 0:
+            fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
+            if os.path.isdir(fzf_file):
+                self.fm.cd(fzf_file)
+            else:
+                self.fm.select_file(fzf_file)
+
+
+

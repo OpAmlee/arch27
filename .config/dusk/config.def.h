@@ -570,12 +570,12 @@ static const char *termcmd[]  = { NULL, "kitty","--config","/home/trg/.config/ki
 static const char *term2cmd[]  = { NULL, "kitty","--config","/home/trg/.config/kitty.d/kitty.conf", NULL };
 static const char *browsercmd[]  = { NULL, "firefox", NULL };
 static const char *fmcmd[]  = { NULL, "spacefm", NULL };
-static const char *emacscmd[]  = { NULL, "emacs", NULL };
+//static const char *emacscmd[]  = { NULL, "emacs", NULL };
 static const char *notecmd[]  = { NULL, "notepadqq", NULL };
 
 
 //static const char *sshotcmd[] = { ".scripts/flameshot.sh", NULL };
-static const char *screenshotcmd[] = { NULL, "./scripts/sshot-generic.sh", NULL };
+//static const char *screenshotcmd[] = { NULL, "./scripts/sshot-generic.sh", NULL };
 
 static const char *dmenucmd[] = {
 	NULL,
@@ -614,11 +614,11 @@ static Key keys[] = {
 /*}}}*/
 
 /*   MODKEY *//*{{{*/
-{ KeyPress,   MODKEY,            XK_d,            spawn,                  {.v = dmenucmd } },  /*spawn dmenu for launching other programs */
-{ KeyPress,   MODKEY,            XK_c,            spawn,                  {.v = emacscmd } }, // draw/spawn a emacs
+//{ KeyPress,   MODKEY,            XK_d,            spawn,                  {.v = dmenucmd } },  /*spawn dmenu for launching other programs */
+//{ KeyPress,   MODKEY,            XK_c,            spawn,                  {.v = emacscmd } }, // draw/spawn a emacs
 { KeyPress,   MODKEY,            XK_b,            togglebar,              {0} }, // toggles the display of the bar(s) on the current monitor
 { KeyPress,   MODKEY,            XK_z,            showhideclient,         {0} }, // hide the currently selected client (or show if hidden)
-{ KeyPress,   MODKEY,            XK_q,            killclient,             {0} }, // close the currently focused window
+{ KeyPress,   MODKEY,            XK_c,            killclient,             {0} }, // close the currently focused window
 { KeyPress,   MODKEY,            XK_v,            group,                  {0} }, // groups floating clients together
 { KeyPress,   MODKEY,            XK_m,            togglemark,             {0} }, // marks or unmarks the selected client for group action
 { KeyPress,   MODKEY,            XK_n,            zoom,                   {0} }, // moves the currently focused window to/from the master area (for tiled layouts)
@@ -643,7 +643,7 @@ static Key keys[] = {
 { KeyPress,   MODKEY,            XK_Tab,          viewwsdir,              {.i = +2 } }, // view the next workspace right of current workspace that has clients (on the current monitor)
 { KeyPress,   MODKEY,            XK_space,        setlayout,              {0} }, // toggles between current and previous layout
 { KeyPress,   MODKEY,            XK_Return,       spawn,                  {.v = term2cmd } }, // spawn a terminal
-{ KeyPress,   MODKEY,            XK_Print,        spawn,                  {.v = screenshotcmd } },  /*spawn dmenu for launching other programs */
+//{ KeyPress,   MODKEY,            XK_Print,        spawn,                  {.v = screenshotcmd } },  /*spawn dmenu for launching other programs */
 
 
     /*}}}*/  
@@ -688,7 +688,7 @@ static Key keys[] = {
 { KeyPress,   MODKEY|Ctrl,       XK_period,       viewwsdir,              {.i = +1 } }, // view the workspace on the immediate right of current workspace (on the current monitor)
 { KeyPress,   MODKEY|Ctrl,       XK_bracketleft,  rotatelayoutaxis,       {.i = -4 } }, // cycle through the available tiling arrangements for the secondary stack area
 { KeyPress,   MODKEY|Ctrl,       XK_bracketright, rotatelayoutaxis,       {.i = +4 } }, // cycle through the available tiling arrangements for the secondary stack area
-/*}}}*/
+/*}}}za*/
 
 /*   MODKEY|Ctrl|Shift *//*{{{*/
 { KeyPress,   MODKEY|Ctrl|Shift, XK_m,            layoutconvert,          {0} }, // flip between horizontal and vertical layout
@@ -786,14 +786,28 @@ static Key keys[] = {
 //	{ KeyPress,   MODKEY,                       XK_,             riodraw,                {0} }, // use slop to resize the currently selected client
 //	{ KeyPress,   MODKEY,                       XK_,             unfloatvisible,         {0} }, // makes all floating clients on the currently selected workspace tiled
 //	{ KeyPress,   MODKEY,                       XK_,             switchcol,              {0} }, // changes focus between the master and the primary stack area  
-//	{ KeyPress,   MODKEY,                       XK_,             xrdb,                   {0 } }, // reloads colors from XResources
+	{ KeyPress,  MODKEY|Alt,                    XK_r,             xrdb,                   {0 } }, // reloads colors from XResources
 /*}}}*/
 
-/*  Extras  *//*{{{*/
-    { KeyPress,   MODKEY,                       XK_F5,           setlayout,              {.v = &layouts[0]} }, // sets a specific layout, see the layouts array for indices
-    { KeyPress,   MODKEY,                       XK_F6,           setlayout,              {.v = &layouts[9]} }, // sets a specific layout, see the layouts array for indices 
-    { KeyPress,   MODKEY,                       XK_F7,           setlayout,              {.v = &layouts[2]} }, // sets a specific layout, see the layouts array for indices
-/*}}}*/
+/*  Extras  *//*{{{*/ // sets a specific layout, see the layouts array for indices
+    { KeyPress,  MODKEY|Alt,  XK_F1,   setlayout,  {.v = &layouts[1]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F2,   setlayout,  {.v = &layouts[2]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F3,   setlayout,  {.v = &layouts[3]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F4,   setlayout,  {.v = &layouts[4]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F5,   setlayout,  {.v = &layouts[5]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F6,   setlayout,  {.v = &layouts[6]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F7,   setlayout,  {.v = &layouts[7]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F8,   setlayout,  {.v = &layouts[8]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F9,   setlayout,  {.v = &layouts[9]} }, 
+    { KeyPress,  MODKEY|Alt,  XK_F10,  setlayout,  {.v = &layouts[10]}}, 
+    { KeyPress,  MODKEY|Alt,  XK_F11,  setlayout,  {.v = &layouts[11]}}, 
+    { KeyPress,  MODKEY|Alt,  XK_F12,  setlayout,  {.v = &layouts[12]}}, 
+    
+
+
+
+
+    /*}}}*/
 
 
 };

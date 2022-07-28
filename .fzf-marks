@@ -26,3 +26,5 @@ firefox : /home/trg/.mozilla/firefox
 desktop-apps : /home/trg/.local/share/applications
 qtile : /home/trg/.config/qtile
 kitty : /home/trg/.config/kitty.d
+forks : /home/trg/forks
+workspace : /home/trg

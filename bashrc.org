@@ -283,7 +283,8 @@ getoctal()
 #+BEGIN_SRC sh
 
 alias viewfont='fontpreview-ueberzug'
-# logout
+alias refreshfonts='sudo fc-cache -f -v'
+alias checkfonts='grep /fonts ~/.local/share/xorg/Xorg.0.log'
 
  #+END_SRC
 
