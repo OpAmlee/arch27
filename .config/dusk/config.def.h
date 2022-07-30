@@ -594,7 +594,7 @@ static const char *spcmd_e[] = {"e", "kitty", "--name", "spterm (e)", "--config"
 static const char *spcmd_r[] = {"r", "cherrytree", "--name", "spterm (r)" ,NULL };
 
 //static const char *spcmd_a[] = {"a", "st"    , "-n",     "spfm (a)" , "-g", "144x41", "-e", "ranger", NULL };
-static const char *spcmd_a[] = {"a", "kitty", "--name","spfm (a)", "--config", "/home/trg/.config/kitty.d/kitty3.conf", "-e", "ranger", NULL };
+static const char *spcmd_a[] = {"a", "kitty", "--name","spfm (a)", "--config", "/home/trg/.config/kitty.d/ranger-kitty.conf", "-e", "ranger", NULL };
 
 //static const char *spcmd_a[] = {"a", "kitty"    , "--name","spfm (a)","-e","ranger", NULL };
 
