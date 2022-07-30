@@ -20,7 +20,6 @@ format = """
 [│](bold black)
 [╰ ](bold black)$character
 """
-
 add_newline = true
 #+END_SRC
 
@@ -40,7 +39,7 @@ error_symbol = "[](bold red) "
 
 #+BEGIN_SRC sh
 [fill]
-symbol = "─"
+symbol = ""
 style = "bold black"
 #+END_SRC
 
@@ -55,7 +54,7 @@ disabled = false
 
 #+BEGIN_SRC sh
 [time]
-disabled = false
+disabled = true
 style = "bold #B70BA7"
 format = '[$time]($style) '
 time_format = "%R"

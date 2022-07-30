@@ -3,7 +3,6 @@ format = """
 [│](bold black)
 [╰ ](bold black)$character
 """
-
 add_newline = true
 
 [character]
@@ -11,14 +10,14 @@ success_symbol = "[](bold green) "
 error_symbol = "[](bold red) "
 
 [fill]
-symbol = "─"
+symbol = ""
 style = "bold black"
 
 [line_break]
 disabled = false
 
 [time]
-disabled = false
+disabled = true
 style = "bold #B70BA7"
 format = '[$time]($style) '
 time_format = "%R"

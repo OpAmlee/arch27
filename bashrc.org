@@ -31,7 +31,7 @@
 - [[#grub][grub]]
 - [[#gpgencryption][gpgencryption]]
 - [[#grepcolor][grepcolor]]
-- [[#gtk-file-chooser][gtk file chooser]]
+- [[#grep][grep]]
 - [[#keyboard][keyboard]]
 - [[#manpager][manpager]]
 - [[#merge][merge]]
@@ -400,10 +400,12 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 #+END_SRC
 
-* gtk file chooser
+* grep
 
 #+BEGIN_SRC sh
-export GDK_SCALE=1
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 #+END_SRC
 
 * keyboard
@@ -528,11 +530,11 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 
 #+BEGIN_SRC sh
 export PATH="$PATH:/home/trg/.local/bin/"
-export LC_ALL=en_US.UTF-8
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. $HOME/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+#export LC_ALL=en_US.UTF-8
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. $HOME/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
 #+END_SRC
 
 * pip
@@ -750,5 +752,5 @@ alias xdgninja="$HOME/xdg-ninja/xdg-ninja.sh"
 * Starship
 
 #+BEGIN_SRC sh
-#eval "$(starship init bash)"
+eval "$(starship init bash)"
 #+END_SRC

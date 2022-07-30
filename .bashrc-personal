@@ -202,7 +202,9 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-export GDK_SCALE=1
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 #keyboard
 alias kbreset='setxkbmap'
@@ -267,11 +269,11 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 #alias pip=pip3
 
 export PATH="$PATH:/home/trg/.local/bin/"
-export LC_ALL=en_US.UTF-8
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. $HOME/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+#export LC_ALL=en_US.UTF-8
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. $HOME/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
 
 #alias pip="/usr/bin/pip"
 
@@ -400,4 +402,4 @@ alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 
 alias xdgninja="$HOME/xdg-ninja/xdg-ninja.sh"
 
-#eval "$(starship init bash)"
+eval "$(starship init bash)"

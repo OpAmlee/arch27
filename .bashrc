@@ -1,26 +1,12 @@
+#	╔╦╗╦═╗╔═╗  \│/  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗  \│/  ╔╗ ╔═╗╔═╗╦ ╦
+#	 ║ ╠╦╝║ ╦  ═╬═  ║  ║ ║║║║╠╣ ║║ ╦  ═╬═  ╠╩╗╠═╣╚═╗╠═╣
+#	 ╩ ╩╚═╚═╝  /│\  ╚═╝╚═╝╝╚╝╚  ╩╚═╝  /│\  ╚═╝╩ ╩╚═╝╩ ╩
 #!/bin/sh
-
-#  ╔╗ ╔═╗╔═╗╦ ╦  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗  \│/  ╔╦╗╦═╗╦╔═╗╔═╗╔═╗╔═╗╦═╗╦═╗╦═╗
-#  ╠╩╗╠═╣╚═╗╠═╣  ║  ║ ║║║║╠╣ ║║ ╦  ─ ─   ║ ╠╦╝║║ ╦║ ╦║ ╦║╣ ╠╦╝╠╦╝╠╦╝
-#  ╚═╝╩ ╩╚═╝╩ ╩  ╚═╝╚═╝╝╚╝╚  ╩╚═╝  /│\   ╩ ╩╚═╩╚═╝╚═╝╚═╝╚═╝╩╚═╩╚═╩╚═
-
-# BIG THANKS TO DEREK TAYLOR AT DISTROTUBE AND ERIC DEBOIS WITH ARCO LINUX
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/
-# |____/ |_|
-
-#  ╔═╗═╗ ╦╔═╗╔═╗╦═╗╔╦╗
-#  ║╣ ╔╩╦╝╠═╝║ ║╠╦╝ ║
-#  ╚═╝╩ ╚═╩  ╚═╝╩╚═ ╩
 
 export TERM="xterm-kitty"                      # getting proper colors
 export TERMCMD="xterm-kitty"
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR="nvim"                        # setting for emacsclient
-#export PATH=$PATH:$HOME/.emacs.d/bin
-#export PATH="$HOME/bin:$PATH"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 export ALTERNATE_EDITOR=''
@@ -45,7 +31,7 @@ source /usr/bin/virtualenvwrapper.sh
 
 export GDK_DPI_SCALE=0
 export GDK_BACKEND=x11
-export GDK_SCALE=1
+export GDK_SCALE=1.5
 
 complete -c man which
 #export PATH=$PATH':~/.gem/ruby/3.0.0/bin'
@@ -102,79 +88,7 @@ HISTFILESIZE=10000
 #echo HISTFILESIZE is $HISTFILESIZE
 #echo HISTFILE is $HISTFILE
 
-# Prompt
-# define the color of the simple-bash-prompt
-simple_bash_prompt_bracket_color="\033[1;32m"
-simple_bash_prompt_command_color="\033[0;97m"
-simple_bash_prompt_device_color="\033[1;34m"
-simple_bash_prompt_dir_color="\033[1;37m"
-simple_bash_prompt_git_branch_color="\033[1;33m"
-simple_bash_prompt_git_color="\033[0;33m"
-simple_bash_prompt_user_color="\033[1;36m"
-simple_bash_prompt_separator_color="\033[1;37m"
-simple_bash_prompt_symbol_color="\033[1;31m"
-simple_bash_prompt_reset="\033[m"
 
-# define the prompt terminator character
-simple_bash_prompt_symbol="\\$"
-
-# set the color with the exit status of the last command
-simple_bash_prompt_exit_status_color () {
-    if [ $1 -eq 0 ]; then
-        echo -e "\033[0;32m"
-    else
-        echo -e "\033[0;31m"
-    fi
-}
-
-# check if current directory is a git repo
-simple_bash_prompt_is_git_repo () {
-    git rev-parse 2> /dev/null
-}
-
-# print the git branch
-simple_bash_prompt_get_git_branch () {
-    simple_bash_prompt_git_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-    if [ "$simple_bash_prompt_git_branch" = "HEAD" ]; then
-        echo "no branch"
-    else
-        echo $simple_bash_prompt_git_branch
-    fi
-}
-
-# define the simple-bash-prompt
-simple_bash_prompt_build_prompt () {
-simple_bash_prompt_exit_status=$?
-simple_bash_prompt="\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]┬─\
-\[$simple_bash_prompt_bracket_color\][\
-\[$simple_bash_prompt_user_color\]\u\
-\[$simple_bash_prompt_separator_color\]@\
-\[$simple_bash_prompt_device_color\]\h\
-\[$simple_bash_prompt_separator_color\]:\
-\[$simple_bash_prompt_dir_color\]\w\
-\[$simple_bash_prompt_bracket_color\]]\
-\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]─\
-\[$simple_bash_prompt_bracket_color\][\
-\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]\t\
-\[$simple_bash_prompt_bracket_color\]]"
-if $(simple_bash_prompt_is_git_repo); then
-    simple_bash_prompt+="\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]─"
-    simple_bash_prompt+="\[$simple_bash_prompt_git_color\]["
-    simple_bash_prompt+="\[$simple_bash_prompt_git_branch_color\]\$(simple_bash_prompt_get_git_branch)"
-    simple_bash_prompt+="\[$simple_bash_prompt_git_color\]]"
-fi
-if [ "$TERM" = "linux" ]; then
-    simple_bash_prompt+="\n\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]└─>"
-    simple_bash_prompt+="\[$simple_bash_prompt_symbol_color\]$simple_bash_prompt_symbol \[$simple_bash_prompt_reset\]"
-else
-    simple_bash_prompt+="\n\[\$(simple_bash_prompt_exit_status_color $simple_bash_prompt_exit_status)\]╰─>"
-    simple_bash_prompt+="\[$simple_bash_prompt_symbol_color\]$simple_bash_prompt_symbol \[$simple_bash_prompt_reset\]"
-fi
-PS1=$simple_bash_prompt
-}
-export PROMPT_COMMAND=simple_bash_prompt_build_prompt
-
-#PS1='${arch_chroot:+($arch_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[33m\] ▸▹ \[\033[00m\]'
 alias zathura='devour zathura'
 alias sxiv='devour sxiv'
 
@@ -200,10 +114,6 @@ bind -m vi-insert 'Control-l: clear-screen'
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
-#  ╔═╗╦═╗╔═╗╔╦╗╔═╗╔╦╗
-#  ╠═╝╠╦╝║ ║║║║╠═╝ ║
-#  ╩  ╩╚═╚═╝╩ ╩╩   ╩
-
 #export PS1="$PS1""\[\e]0;$1 \a\]"
 
 # This is commented out if using starship prompt
@@ -319,83 +229,15 @@ up () {
   fi
 }
 
-#  ╔═╗╔╦╗╔═╗╔═╗╔═╗  \│/  ╦  ╦╦╔╦╗  \│/  ╔╗╔╦  ╦╦╔╦╗
-#  ║╣ ║║║╠═╣║  ╚═╗  ─ ─  ╚╗╔╝║║║║  ─ ─  ║║║╚╗╔╝║║║║
-#  ╚═╝╩ ╩╩ ╩╚═╝╚═╝  /│\   ╚╝ ╩╩ ╩  /│\  ╝╚╝ ╚╝ ╩╩ ╩
 
-alias vim='nvim'
-alias em='/usr/bin/emacs -nw'
-alias emacs="emacsclient -c -a 'emacs'"
-alias doomsync="~/.emacs.d/bin/doom sync"
-alias doomdoctor="~/.emacs.d/bin/doom doctor"
-alias doomupgrade="~/.emacs.d/bin/doom upgrade"
-alias doompurge="~/.emacs.d/bin/doom purge"
 
-#  ╦  ╔═╗  ╔╦╗╔═╗  ╔═╗═╗ ╦╔═╗
-#  ║  ╚═╗   ║ ║ ║  ║╣ ╔╩╦╝╠═╣
-#  ╩═╝╚═╝   ╩ ╚═╝  ╚═╝╩ ╚═╩ ╩
 
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
-
-#  ╔═╗╔═╗╔═╗╔╦╗╔═╗╔╗╔  \│/  ╦ ╦╔═╗╦ ╦  \│/  ╔═╗╔═╗╦═╗╦ ╦
-#  ╠═╝╠═╣║  ║║║╠═╣║║║  ─ ─  ╚╦╝╠═╣╚╦╝  ─ ─  ╠═╝╠═╣╠╦╝║ ║
-#  ╩  ╩ ╩╚═╝╩ ╩╩ ╩╝╚╝  /│\   ╩ ╩ ╩ ╩   /│\  ╩  ╩ ╩╩╚═╚═╝
-
-alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
-alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
-alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
-alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
-
-#  ╔╦╗╦╦═╗╦═╗╔═╗╦═╗╔═╗
-#  ║║║║╠╦╝╠╦╝║ ║╠╦╝╚═╗
-#  ╩ ╩╩╩╚═╩╚═╚═╝╩╚═╚═╝
-
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
-#shutdown or reboot
-alias ssn="sudo shutdown now"
-alias sr="sudo reboot"
-#update betterlockscreen images
-alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
-
-#  ╔═╗╦═╗╔═╗╔═╗  ╦  ╦╔╗╔╦ ╦═╗ ╦
-#  ╠═╣╠╦╝║  ║ ║  ║  ║║║║║ ║╔╩╦╝
-#  ╩ ╩╩╚═╚═╝╚═╝  ╩═╝╩╝╚╝╚═╝╩ ╚═
-
-alias att="arcolinux-tweak-tool"
-alias adt="arcolinux-desktop-trasher"
-alias abl="arcolinux-betterlockscreen"
-alias agm="arcolinux-get-mirrors"
-alias amr="arcolinux-mirrorlist-rank-info"
-alias aom="arcolinux-osbeck-as-mirror"
-alias ars="arcolinux-reflector-simple"
-alias atm="arcolinux-tellme"
-alias avs="arcolinux-vbox-share"
-alias awa="arcolinux-welcome-app"
 
 #  ╔═╗╦═╗╔═╗╔═╗  ╔═╗╔═╗╦  ╔═╗╦═╗
 #  ║ ╦╠╦╝║╣ ╠═╝  ║  ║ ║║  ║ ║╠╦╝
 #  ╚═╝╩╚═╚═╝╩    ╚═╝╚═╝╩═╝╚═╝╩╚═
 
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 
-#  ╔═╗╔═╗╔╗╔╔═╗╦╦═╗╔╦╗  ╔╗ ╔═╗╔═╗╔═╗╦═╗╔═╗  ╔═╗╦  ╦╔═╗╦═╗╦ ╦╦═╗╦╔╦╗╔═╗
-#  ║  ║ ║║║║╠╣ ║╠╦╝║║║  ╠╩╗║╣ ╠╣ ║ ║╠╦╝║╣   ║ ║╚╗╔╝║╣ ╠╦╝║║║╠╦╝║ ║ ║╣
-#  ╚═╝╚═╝╝╚╝╚  ╩╩╚═╩ ╩  ╚═╝╚═╝╚  ╚═╝╩╚═╚═╝  ╚═╝ ╚╝ ╚═╝╩╚═╚╩╝╩╚═╩ ╩ ╚═╝
-
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
 
 # adding flags
 alias df='df -h'                          # human-readable sizes
