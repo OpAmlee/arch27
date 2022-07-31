@@ -7,7 +7,6 @@ export TERM="xterm-kitty"                      # getting proper colors
 export TERMCMD="xterm-kitty"
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR="nvim"                        # setting for emacsclient
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 export ALTERNATE_EDITOR=''
 alias e='emacsclient --tty'
@@ -19,7 +18,7 @@ export BROWSER="firefox"
 
 alias rc="nvim ~/.bashrc && source ~/.bashrc"
 
-
+export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 #export SCREEN_SIZE="1366x768 ./scripts/xephyr"
 
 # use nvim for editor in visudo

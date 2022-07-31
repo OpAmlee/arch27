@@ -3,44 +3,66 @@
 #+auto_tangle: t
 
 * table of contents :toc:
-- [[#prompt-layout][prompt layout]]
+- [[#colors][colors]]
+- [[#layout][layout]]
+- [[#directory][directory]]
 - [[#character][character]]
-- [[#fill-for-right-side-prompt][fill for right side prompt]]
+- [[#right-prompt][right prompt]]
 - [[#line-break][line break]]
 - [[#time][time]]
-- [[#template-block5][template block5]]
+- [[#example][example]]
+- [[#battery][battery]]
 - [[#git][git]]
 - [[#username][username]]
+- [[#c][c]]
+- [[#new][new]]
+- [[#new-1][new]]
+- [[#new-2][new]]
 
-* prompt layout
+* colors
+#+BEGIN_SRC
+
+[character]
+#+END_SRC
+
+* layout
 
 #+BEGIN_SRC sh
 format = """
-[╭── ](bold black)$username$directory $fill $git_branch$git_commit$git_state $battery$time(bold black)$line_break\
-[│](bold black)
-[╰ ](bold black)$character
+[╭── ](fg:235)$username $directory $fill $git_branch $git_commit $git_status $battery $time(fg:235)$line_break\
+[│](fg:235)
+[╰ ](fg:235)$character
 """
 add_newline = true
 #+END_SRC
 
-#+RESULTS:
+* directory
+
+#+BEGIN_SRC sh
+[directory]
+truncation_length = 3
+style = "fg:8"
+read_only = " "
+read_only_style = "red"
+#symbol = " "
+#+END_SRC
+
 
 * character
 
 #+BEGIN_SRC sh
 [character]
-success_symbol = "[](bold green) "
+success_symbol = "[](bold green) "
 error_symbol = "[](bold red) "
 #+END_SRC
 
 
-
-* fill for right side prompt
+* right prompt
 
 #+BEGIN_SRC sh
 [fill]
-symbol = ""
-style = "bold black"
+symbol = "─"
+style = "fg:235"
 #+END_SRC
 
 * line break
@@ -60,24 +82,54 @@ format = '[$time]($style) '
 time_format = "%R"
 #+END_SRC
 
-* template block5
+* example
+
+#+BEGIN_SRC sh
+
+#+END_SRC
+
+
+
+* battery
 
 #+BEGIN_SRC sh
 [battery]
-full_symbol = "🔋 "
+format = "[$percentage]($style) "
+full_symbol = " "
+charging_symbol = "⚡"
+
+[[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
+threshold = 20
+style = "bold red"
 charging_symbol = "⚡"
 discharging_symbol = "💀 "
 
-[[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
-threshold = 18
-style = "bold red"
-
-[[battery.display]] # "bold yellow" style and 💦 symbol when capacity is between 10% and 30%
+[[battery.display]] # capacity is above last value listed and below next value
 threshold = 30
-style = "bold yellow"
-discharging_symbol = "💀 "
+style = "fg:202"
+charging_symbol = "⚡"
+discharging_symbol = " "
 
+[[battery.display]] # capacity is above last value listed and below next value
+threshold = 60
+style = "fg:11"
+charging_symbol = "⚡"
+discharging_symbol = " "
+
+[[battery.display]] # capacity is above last value listed and below next value
+threshold = 75
+style = "fg:41"
+charging_symbol = "⚡"
+discharging_symbol = " "
+
+[[battery.display]] # capacity is above last value listed and below 100
+threshold = 100
+style = "fg:40"
+charging_symbol = "⚡"
+discharging_symbol = " "
+#discharging_symbol = "🔋 "
 #+END_SRC
+
 
 * git
 
@@ -85,11 +137,10 @@ discharging_symbol = "💀 "
 
 
 [git_branch]
-format = "[$symbol$branch(:$remote_branch)]($style) "
-#symbol = "🌱 "
-symbol = " "
-style = "pink"
-truncation_length = 4
+format = "[$symbol $branch(:$remote_branch)]($style) "
+symbol = " "
+style = "fg:8"
+truncation_length = 10
 truncation_symbol = ""
 
 [git_commit]
@@ -98,34 +149,67 @@ style = "bold white"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = "[🍒 PICKING](bold red)"
+cherry_pick = "[🍒 picking](bold white)"
+rebase = "[rebasing](bold white)"
+merge = "[merging](bold white)"
+revert = "[reverting](bold white)"
 
-[git_status]
-conflicted = "⚔️ "
-ahead = "🏎️ 💨 ×${count}"
-behind = "🐢 ×${count}"
-diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
-untracked = "🛤️  ×${count}"
-stashed = "📦 "
-modified = "📝 ×${count}"
-staged = "🗃️  ×${count}"
-renamed = "📛 ×${count}"
-deleted = "🗑️  ×${count}"
+
+
+#[git_status]
+
+#conflicted = "⚔ x${count}"
+#ahead = "🏎 ×${count}"
+#behind = "🐢 ×${count}"
+#diverged = "🔱 🏎 💨 ×${ahead_count} 🐢 ×${behind_count}"
+#up_to_date = "✓"
+#modified = "📝 ×${count}"
+#staged = "🗃 ×${count}"
+#renamed = "📛 ×${count}"
+#deleted = "🗑 ×${count}"
+#untracked = "🛤  ×${count}"
+#stashed = "📦 ×${count}"
+#deleted = "🗑  ×${count}"
 style = "bright-white"
-format = "$all_status$ahead_behind"
+#format = "$all_status$ahead_behind"
 
 #+END_SRC
-
 
 * username
 
 #+BEGIN_SRC sh
 [username]
-#style_user = "white bold"
+style_user = "fg:251"
 style_root = "red bold"
 format = "[$user]($style) "
-disabled = true
-show_always = false
+disabled = false
+show_always = true
+
 #+END_SRC
 
-$git_branch$git_commit$git_state$git_status
+
+* c
+
+#+BEGIN_SRC sh
+[c]
+format = "via [$symbol ($version(-$name) )]($style)"
+symbol = ""
+#+END_SRC
+
+* new
+
+#+BEGIN_SRC sh
+#
+#+END_SRC
+
+* new
+
+#+BEGIN_SRC sh
+#
+#+END_SRC
+
+* new
+
+#+BEGIN_SRC sh
+#
+#+END_SRC

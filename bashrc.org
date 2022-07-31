@@ -372,10 +372,9 @@ function cc()
 alias jctl="journalctl -p 3 -xb"
 
 # termbin
-alias tb="nc termbin.com 9999"
 
 #moving your personal files and folders from /personal to ~
-alias personal='cp -Rf /personal/* ~'
+alias personal='cp -Rf /bu/* ~'
 #+end_src
 
 * grub
