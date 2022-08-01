@@ -72,6 +72,8 @@ alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.confi
 
 alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
+alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
+
 alias edunst='nvim ~/.config/dunst/dunstrc'
 
 function emacs ()
@@ -109,13 +111,6 @@ findit ()
     find / 2> /dev/null | grep "$1"
 }
 
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
-alias vifm='./.config/vifm/scripts/vifmrun'
-alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
-alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
-
 getoctal()
 {
     stat -c '%a' "$1"
@@ -148,12 +143,13 @@ function lm()
     ls -l "$*" | awk '{print $6, $7, $8}'
 }
 
-alias fzfnv='nvim $(fzf --height 40% --reverse)'
+alias fzfnv='nvim $(fzf --height 100% --reverse)'
 alias fzfsnv='sudoedit nvim $(fzf --height 40% --reverse)'
 alias fzfsearch="fzf --height 40% --layout reverse --info inline --border --preview 'file {}' --preview-window up,1,border-horizontal --color 'fg:#928374,fg+:#18E406,bg:#121212,preview-bg:#1F2022,border:#6D6259'"
 
 alias fzfpac="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias fzfparu="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+
 
 #alias fzfpacx="pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S"
 
@@ -171,7 +167,7 @@ alias newtag='git tag -a'
 alias rmgitcache="rm -r ~/.cache/git"
 
 alias config='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
-alias virt='/usr/bin/git --git-dir=$HOME/srv/ --work-tree=$HOME/srv'
+alias syscon='/usr/bin/git --git-dir=/usr --work-tree=/usr'
 
 alias cp='config push arch28'
  function ca()
@@ -201,10 +197,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
 #keyboard
 alias kbreset='setxkbmap'
 alias kbset='/bin/bash -c "sleep 1; /usr/bin/xmodmap /home/$USER/.Xmodmap"'
@@ -222,7 +214,7 @@ alias nvim-visudo="sudo EDITOR=nvim visudo"
 #export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 ## "nvim" as manpager
-export MANPAGER="nvim -c 'set ft=man' -"
+#export MANPAGER="nvim -c 'set ft=man' -"
 
 # Comment this line out to enable default emacs-like bindings
 set -o vi
@@ -267,7 +259,6 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 
 #alias pip=pip3
 
-export PATH="$PATH:/home/trg/.local/bin/"
 #export LC_ALL=en_US.UTF-8
 #powerline-daemon -q
 #POWERLINE_BASH_CONTINUATION=1
@@ -285,7 +276,6 @@ export PATH="$PATH:/home/trg/.local/bin/"
 #export PS1="\@ \w \$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\n\u@\W \\$\[$(tput sgr0)\]"
 
 alias psa="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 
@@ -294,50 +284,37 @@ alias pscpu='ps auxf | sort -nr -k 3'
 alias checkqtile='python3 -m py_compile ~/.config/qtile/config.py'
 
 alias rmc='rm -f config.h'
-alias smi='sudo make install'
 
 
 # Quick Edit Configs
 
 alias ealacritty='nvim ~/.config/alacritty/alacritty.yml'
-
 alias ebinds='nvim ~/.config/sxhkd/sxhkdrc'
-
 alias ebash='nvim ~/.bashrc-personal'
 alias econfigs='sudo nvim /home/trg/.scripts/edit-configs'
 alias edmenu='cd ~/.config/dmenu && nvim ~/.config/dmenu/config.def.h'
-
 alias edusk='cd ~/.config/dusk && nvim ~/.config/dusk/config.def.h'
 alias edunst='nvim ~/.config/dunst/dunstrc'
 alias edwm='cd ~/.config/dwm && nvim ~/.config/dwm/config.def.h'
-
-alias ekitty='nvim ~/.config/kitty/kitty.conf'
-alias ekitty1='nvim ~/.config/kitty/kitty1-scratch.conf'
-alias ekitty2='nvim ~/.config/kitty/kitty2-standard.conf'
-alias ekitty3='nvim ~/.config/kitty/kitty3-ranger.conf'
-alias ekitty4='nvim ~/.config/kitty/kitty4-fallback.conf'
-
+alias ekitty='nvim ~/.config/kitty.d/kitty.conf'
+alias ekitty1='nvim ~/.config/kitty.d/kitty1.conf'
+alias ekitty2='nvim ~/.config/kitty.d/kitty2.conf'
+alias ekitty3='nvim ~/.config/kitty.d/kitty3.conf'
+alias ekitty4='nvim ~/.config/kitty.d/ranger-kitty.conf'
 alias efeatherpad='nvim ~/.config/featherpad/fp.conf'
-
 alias eleafpad='nvim ~/.config/leafpad/leafpadrc'
-
 alias envim='nvim ~/.config/nvim/init.vim'
-
 alias erifle='nvim ~/.config/ranger/rifle.conf'
 alias eranger='nvim ~/.config/ranger/rc.conf'
-
 alias est='nvim ~/.config/dusk/st/config.def.h'
-
 alias estart='sudo nvim /usr/local/bin/autostart-dusk'
 alias estarship='nvim ~/.config/starship/starship.toml'
-
 alias exprofile='nvim ~/.xprofile'
 
 alias godmenu='cd $HOME/.config/dmenu'
 alias godusk='cd $HOME/.config/dusk'
 alias godwm='cd $HOME/.config/dwm'
 alias goscripts='cd $HOME/.scripts'
-#
 alias gost='cd $HOME/.config/dusk/st'
 alias goxmonad='cd $HOME/.config/xmonad'
 
@@ -374,7 +351,7 @@ alias se='sudoedit'
 alias smi='sudo make install'
 
 alias logout='pkill -Kill -u $USER'
-#alias shutdown='sudo shutdown -n now'
+alias shutdown='sudo shutdown -n now'
 alias shutdown='systemctl shutdown'
 alias reboot='systemctl reboot'
 alias ssn="sudo shutdown now"

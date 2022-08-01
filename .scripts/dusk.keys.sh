@@ -12,7 +12,7 @@
 #    -e 's/\[ (/(/' \
 #    -e 's/-- KB_GROUP /\n/' \
 #    -e 's/", /"\t: /' | \
-##    yad --text-info --back=#282c34 --fore=#46d9ff --geometry=1200x800
+##    yad --text-info --back=#02010F --fore=#DDDDDD --geometry=800x600
 
 
     sed -n '/START_KEYS/,/END_KEYS/p' ~/.config/dusk/config.def.h | \
@@ -28,4 +28,4 @@ sed -e 's/^[ \t]*//' \
 
 
 
-        yad --text-info --back=#282c34 --no-buttons --fore=#46d9ff --geometry=1200x800
+        yad --text-info --back=#02010F --fore=#DDDDDD --geometry=800x600 --no-buttons

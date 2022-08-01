@@ -277,6 +277,8 @@ static const Rule clientrules[] = {
 
 	{ .instance = "spfm (a)", .scratchkey = 'a', .flags = Floating },
 	{ .instance = "spfm (s)", .scratchkey = 's', .flags = Floating },
+    
+    { .instance = "fzf", .flags = Floating|Centered|AlwaysOnTop },
 
 //For example, to make Firefox's preferences dialog float,
     { "firefox",     NULL,       "firefox Preferences",        NULL,         NULL,     -1 },
@@ -590,7 +592,7 @@ static const char *dmenucmd[] = {
 
 
 static const char *spcmd_w[] = {"w", "kitty", "--name", "spterm (w)", "--config", "/home/trg/.config/kitty.d/kitty.conf", NULL };
-static const char *spcmd_e[] = {"e", "kitty", "--name", "spterm (e)", "--config", "/home/trg/.config/kitty.d/kitty3.conf", NULL };
+static const char *spcmd_e[] = {"e", "kitty", "--name", "spterm (e)", "--config", "/home/trg/.config/kitty.d/kitty2.conf", NULL };
 static const char *spcmd_r[] = {"r", "cherrytree", "--name", "spterm (r)" ,NULL };
 
 //static const char *spcmd_a[] = {"a", "st"    , "-n",     "spfm (a)" , "-g", "144x41", "-e", "ranger", NULL };

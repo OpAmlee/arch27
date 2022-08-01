@@ -61,11 +61,11 @@ alt + p
     firefox --private-window
 
 # custom dmenu scripts
-alt + {l,f,g}
-    {bash -e "/usr/local/bin/quick-links", $HOME/.scripts/firefox-fix.sh, geany}
+alt + {l,w,g,f}
+    {bash -e "/usr/local/bin/quick-links", $HOME/.scripts/firefox-fix.sh, geany, fzf}
 
-alt + x 
-    /home/trg/.scripts/yad-poweroff.sh    
+alt + s
+    $HOME/.scripts/fzf-search-scripts.sh
 #===============|
 # CONTROL + ALT |
 #===============|
