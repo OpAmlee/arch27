@@ -1,0 +1,29 @@
+#       ╔═╗╔═╗╔═╗  ╔═╗╦ ╦╔═╗╔═╗╦ ╦  ╔═╗╦╔╗╔╔╦╗╔═╗╦═╗        #
+#       ╠╣ ╔═╝╠╣   ╠╣ ║ ║╔═╝╔═╝╚╦╝  ╠╣ ║║║║ ║║║╣ ╠╦╝        #
+#       ╚  ╚═╝╚    ╚  ╚═╝╚═╝╚═╝ ╩   ╚  ╩╝╚╝═╩╝╚═╝╩╚═        #
+
+
+
+#export FZF_DEFAULT_COMMAND='fzf'
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf "$@" --preview 'tree -C {} | head -200' ;;
+    *)            fzf "$@" ;;
+  esac
+}
+
+
+
+z() {
+  [ $# -gt 0 ] && _z "$*" && return
+  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}
+
+alias view="fzf --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'" 
+
+
+
