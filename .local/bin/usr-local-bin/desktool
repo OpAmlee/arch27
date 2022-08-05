@@ -1,0 +1,596 @@
+#!/bin/bash
+
+#mx-mx-idesktool v1.0, released January 2020. 
+#A script by the MX Linux Dev Team, user spidermouse and others to configure the idesk app. Based on mx-mx-idesktool v1.36 released August 2004 by John Murray john@jmurray.id.au
+
+
+#First make sure yad is available
+if ! hash yad > /dev/null ; then
+    echo "ERROR: Yad not installed or not in path."
+    exit
+else
+    echo "Yad found. So far so good.."
+fi
+
+
+#make sure idesk is available
+if ! hash idesk > /dev/null ; then
+    echo "ERROR: idesk not installed or not in path. Try http://sourceforge.net/projects/idesk/"
+    exit
+else
+	echo "idesk found - we're on a roll :)"
+fi
+
+#make sure the .idesktop folder exists and if not make it now, so idesk can start
+mkdir -p ~/.idesktop
+
+#find out whether an argument was used
+
+if [ "$#" -ne 1 ]; then
+        argy=nope
+else
+        argy=yup
+fi
+argu="${1}"
+
+#See what icons are available
+#if [ -d /usr/share/idesk/icons/ ]; then
+#        icondir=/usr/share/idesk/icons/
+#else
+icondir=/usr/share/icons/
+#fi
+
+DIALOG=yad
+
+###############################################
+############Declare some Functions#############
+writeconf()
+{
+echo -e "table Config
+  FontName: arial
+  FontSize: 12
+  FontColor: #ffffff
+  Locked: false
+  Transparency: 0
+  Shadow: true
+  ShadowColor: #000000
+  ShadowX: 1
+  ShadowY: 2
+  Bold: false
+  ClickDelay: 200
+  IconSnap: false
+  SnapWidth: 55
+  SnapHeight: 100
+  SnapOrigin: BottomRight
+  SnapShadow: true
+  SnapShadowTrans: 200
+  CaptionOnHover: true
+  CaptionPlacement: bottom
+end
+table Actions
+  Lock: control left singleClk
+  Reload: middle doubleClk
+  Drag: right hold
+  EndDrag: right singleClk
+  Execute[0]: left singleClk
+  Execute[1]: left doubleClk
+end" > "${HOME}/.ideskrc"
+}
+################################################
+################################################
+newcaption()
+{
+new_caption="$($DIALOG --title "idesktool" \
+                       --form --text="Icon Caption:\n(Leave blank for no caption)" \
+                       --separator="" \
+                       --button="Back":3 \
+                       --button="Cancel":1 \
+                       --button="Next":0 \
+		       --field="Caption" "$cap" 2>/dev/null)"
+retval=$?
+
+case $retval in
+        0) cap="${new_caption}"
+           caption="$(echo "${new_caption}" | sed 's/\$/\\$/g')"
+	   ;;
+        3) if [ "$firstwindow" = "argynope" ]; then
+                argynope
+           else
+                argyyep
+           fi
+	   ;;
+        *) argynope
+           ;;
+esac
+
+newcommands
+}
+
+##########################################################
+##########################################################
+
+newcommands()
+{
+
+#We replace troublesome characters with underscores so as to avoid problems writing the file
+modcaption="$(echo "${caption}" | sed "s/[\ \$\/\*\&\|\?\^\"\']/_/g")"
+
+#if the icon has no caption (ie. empty string) we need to make a unique filename for it,
+#otherwise we just use the caption for the filename
+
+if [ "${modcaption}" = "" ]; then
+        modcaption="NoCaption$$"
+fi
+
+iconplaceholder="${icondir}"
+
+#We replace troublesome characters with underscores using sed here, so as to avoid problems writing the file
+modcaption=`echo $caption | sed "s/[\ \$\/\*\&\|\?\^\"\']/_/g"`
+
+#if the icon has no caption (ie. empty string) we need to make a unique filename for it,
+#otherwise we just use the caption for the filename
+if [ "$modcaption" = "" ]; then
+   modcaption="NoCaption$$"
+fi
+
+currentxvalue=400
+currentyvalue=500
+
+inputbox="$($DIALOG --form --separator="\n" --title "idesktool 1.36" \
+                    --text="NOTE: The default right-click command \nruns this configuration tool (recommended)." \
+                    --button="Back":3 --button="Cancel":1 --button="Next":0  \
+                    --field="Left-Click Command:":LBL  "" \
+                    --field="Right-Click Command:":LBL "" \
+                    --field="Select png icon":LBL "" \
+                    --field="X":LBL "" \
+                    --field="Y":LBL "" \
+                    --field="" "$command" \
+                    --field="" "idesktool ${modcaption}.lnk" \
+                    --field="":FL "${iconplaceholder}" \
+                    --field="":NUM "${currentxvalue}" \
+                    --field="":NUM "${currentyvalue}" \
+                    --columns=2 --file-filter="png | *.png *.PNG" 
+          )"
+retval=$?
+
+case $retval in
+     0) command="$(echo "${inputbox}" | sed -n "6p")"
+	rightclick="$(echo "${inputbox}"  | sed -n "7p")"
+        icon="$(echo "${inputbox}"  | sed -n "8p")"
+        currentxvalue="$(echo "${inputbox}"  | sed -n "9p")"
+        currentyvalue="$(echo "${inputbox}"  | sed -n "10p")"
+	;;
+     3) if [ "$firstwindow" = "argyyep" ]; then
+                argyyep
+        else
+                newcaption
+	fi
+        ;;
+     *) argynope
+        ;;
+esac
+
+iconvalidate
+
+}
+
+###########################################################
+###########################################################
+
+getcurrentvalues()
+{
+
+#get the caption
+	currentcaption=`cat $currentlnkfile | grep "Caption:" | sed "s/Caption://" | sed "s/^[ \t]*//"`
+#get the icon
+	currenticon=`cat $currentlnkfile | grep "Icon:" | sed "s/Icon:\ //" | sed "s/^[ \t]*//"`
+#get the left click command
+	command=`cat $currentlnkfile | grep "Command\[0\]:" | sed "s/Command\[0\]:\ //" | sed "s/^[ \t]*//"`
+#get the right click command
+	currentrightclick=`cat $currentlnkfile | grep "Command\[1\]:" | sed "s/Command\[1\]:\ //" | sed "s/^[ \t]*//"`
+#get the X value
+	currentxvalue=`cat $currentlnkfile | grep "X:" | sed "s/X://" | sed "s/^[ \t]*//"`
+#get the Y value
+	currentyvalue=`cat $currentlnkfile | grep "Y:" | sed "s/Y://" | sed "s/^[ \t]*//"`
+
+modifycaption
+
+}
+
+#################################################################
+#################################################################
+
+modifycaption()
+
+{
+
+inputbox="$($DIALOG --title "idesktool" \
+                    --form --text="Icon Caption:\n(Leave blank for no caption)" --separator="" \
+                    --button="Back":3 --button="Cancel":1 --button="Next":0 \
+                    --field="Caption" "$currentcaption" )"
+retval=$?
+
+case $retval in
+     0) cap="${inputbox}"
+	caption="$(echo "${inputbox}" | sed 's/\$/\\$/g')"
+	;;
+     3) if [ "$firstwindow" = "argyyep" ]; then
+                argyyep
+        else
+                getlnkfile
+	fi
+        ;;
+     *) argynope
+        ;;
+esac
+
+comefrom=modif
+
+modifycommands
+
+}
+
+##############################################################
+##############################################################
+
+modifycommands()
+
+{
+
+if [ "$comefrom" = "modif" ]; then
+        iconplaceholder="${currenticon}"
+else
+        iconplaceholder="${icondir}"
+fi
+
+#We replace troublesome characters with underscores using sed here, so as to avoid problems writing the file
+modcaption=`echo $caption | sed "s/[\ \$\/\*\&\|\?\^\"\']/_/g"`
+
+#if the icon has no caption (ie. empty string) we need to make a unique filename for it,
+#otherwise we just use the caption for the filename
+if [ "$modcaption" = "" ]; then
+   modcaption="NoCaption$$"
+fi
+
+inputbox="$($DIALOG --form --separator="\n" --title "idesktool 1.36" \
+                    --text="NOTE: The default right-click command \nruns this configuration tool (recommended)." \
+                    --button="Back":3 --button="Cancel":1 --button="Next":0  \
+                    --field="Left-Click Command:":LBL  "" \
+                    --field="Right-Click Command:":LBL "" \
+                    --field="Select png icon":LBL "" \
+                    --field="X":LBL "" \
+                    --field="Y":LBL "" \
+                    --field="" "$command" \
+                    --field="" "idesktool ${modcaption}.lnk" \
+                    --field="":FL "${iconplaceholder}" \
+                    --field="":NUM "${currentxvalue}" \
+                    --field="":NUM "${currentyvalue}" \
+                    --columns=2 --file-filter="png | *.png *.PNG" 
+          )"
+retval=$?
+
+case $retval in
+     0) command="$(echo "${inputbox}" | sed -n "6p")"
+	rightclick="$(echo "${inputbox}"  | sed -n "7p")"
+        icon="$(echo "${inputbox}"  | sed -n "8p")"
+        currentxvalue="$(echo "${inputbox}"  | sed -n "9p")"
+        currentyvalue="$(echo "${inputbox}"  | sed -n "10p")"
+	;;
+     3) if [ "$firstwindow" = "argyyep" ]; then
+                argyyep
+        else
+                modifycaption
+	fi
+        ;;
+     *) argynope
+        ;;
+esac
+
+iconvalidate
+}
+
+###########################################################
+###########################################################
+
+iconvalidate()
+{
+if [ -e "${icon}" ]; then
+        iconexists=yep
+else
+        $DIALOG --title "D'OH!" \
+                --icon "./warning.xpm" \
+                --text "Error: Icon Image File Not Found." \
+                --button="Quit":1 \
+                --button="Back":0
+        case $? in
+                0) if [ "${comefrom}" = "modif" ]; then
+                             modifycommands
+	           else
+                             newcommands
+                   fi
+                   ;;
+                *) argynope
+                   ;;
+        esac
+fi
+
+iconcheck="$(echo "${icon}" | grep -i "\.png")"
+
+if [ "${iconcheck}" = "$icon" ]; then
+        writefile
+else
+        $DIALOG --title "D'OH!" \
+                --icon ./warning.xpm \
+                --text "Error: Unknown Filetype. The icon should be be a png image."
+        case $? in
+                0) if [ "${comefrom}" = "modif" ]; then
+                             modifycommands
+	           else
+                             newcommands
+                   fi
+                   ;;
+                *) argynope
+                   ;;
+        esac
+fi
+
+}
+
+###########################################################
+
+deleteandrefresh()
+{
+rm -f "${currentlnkfile}"
+killall idesk
+exec idesk &
+argynope
+}
+
+#############################################################
+#############################################################
+
+getlnkfile()
+{
+
+cd "${HOME}/.idesktop"
+currentlnkfile="$($DIALOG --width 500 --height 500 \
+                          --button="Back":3 --button="Cancel":1 --button="Next":0 \
+                          --title "Please choose a file" \
+                          --file-selection --file-filter="lnk | *.lnk")"
+retval=$?
+
+case $retval in
+        0) fileselectedyet=yes
+           filecheck="$(echo "${currentlnkfile}" | grep -i "\.lnk")"
+           if [ "${filecheck}" = "${currentlnkfile}" ] && [ -e "${currentlnkfile}" ]; then
+                  if [ "${choice}" = "Properties" ]; then
+                          getcurrentvalues
+                  else
+                          deleteandrefresh
+                  fi
+           else
+                  $DIALOG --title "D'OH!" \
+                          --icon ./warning.xpm \
+                          --text "Error: You need to select a valid file"
+                  case $? in
+                       0) fileselectedyet=no
+                          getlnkfile
+                          ;;
+                       *) argynope
+                          ;;
+                  esac
+           fi
+           ;;
+        3) argynope
+           ;;
+        *) argynope
+           ;;
+esac
+
+}
+
+##############################################################
+##############################################################
+
+refresh()
+{
+killall idesk
+exec idesk &
+argynope
+}
+
+###################################################################
+###################################################################
+
+writefile()
+{
+
+if [ "${choice}" = "Properties" ]; then
+        rm -f "${currentlnkfile}"
+else
+        currentxvalue=400
+        currentyvalue=500
+fi
+
+touch "${HOME}/.idesktop/${modcaption}.lnk"
+echo "table Icon" > "${HOME}/.idesktop/${modcaption}.lnk"
+echo "  Caption: ${caption}" | sed 's/.\$/\$/g' >> "${HOME}/.idesktop/${modcaption}.lnk"
+echo "  Icon: ${icon}" >> "${HOME}/.idesktop/${modcaption}.lnk"
+echo "  X: ${currentxvalue}" >> "${HOME}/.idesktop/${modcaption}.lnk"
+echo "  Y: ${currentyvalue}" >> "${HOME}/.idesktop/${modcaption}.lnk"
+echo "  Command[0]: ${command}" >> "${HOME}/.idesktop/${modcaption}.lnk"
+echo "  Command[1]: ${rightclick}" >> "${HOME}/.idesktop/${modcaption}.lnk"
+echo "end" >> "${HOME}/.idesktop/${modcaption}.lnk"
+
+$DIALOG --no-buttons --width 500 --title "Finished!" \
+        --text "All done. Restarting idesk now..." --timeout=3
+refresh
+
+}
+
+####################################################################
+####################################################################
+
+argyyep()
+{
+
+firstwindow=argyyep
+
+choice="$($DIALOG  --title  "idesktool" --width 500 --height 400 \
+                   --list --select-action='bash -c "kill -s SIGUSR1 ${YAD_PID}"' \
+                   --column "select" --column "description" \
+                   --text "Desktop Icon Manager" \
+                   --button="Quit":1 \
+                "Properties" "View or Edit an Icon"  \
+                "Delete" "Remove an Icon"  \
+                "New" "Add a New Icon"  \
+                "Refresh" "Reload the Desktop"  \
+	        "Configure" "Edit iDesk's conf. file" \
+                "Help" "Help" 2>/dev/null)"
+retval=$?
+
+choice="$(echo ${choice} | cut -d '|' -f1)"
+
+case $retval in
+        0) case ${choice} in
+                Delete)	     deleteandrefresh
+                ;;
+                Properties)  getcurrentvalues      
+                ;;
+	        Refresh)     refresh
+                ;;
+	        New)         cap=""
+                             command=""
+	                     newcaption
+                ;;
+                Configure)   editconfig
+                ;;
+                Help)        mxdesktool_help
+                ;;
+           esac
+           ;;
+        *)      exit
+                ;;
+esac
+}
+
+##################################################################
+###################################################################
+
+argynope()
+{
+
+firstwindow=argynope
+
+choice="$($DIALOG  --title  "idesktool" --width 500 --height 400 \
+                   --list --select-action='bash -c "kill -s SIGUSR1 ${YAD_PID}"' \
+                   --column "select" --column "description" \
+                   --text "Desktop Icon Manager" \
+                   --button="Quit":1 \
+                "Properties" "View or Edit This Icon"  \
+                "Delete" "Remove This Icon"  \
+                "New" "Add a New Icon"  \
+                "Refresh" "Reload the Desktop"  \
+	        "Configure" "Edit iDesk's conf. file" \
+                "Help" "Help" 2>/dev/null)"
+retval=$?
+
+choice="$(echo "${choice}" | cut -d '|' -f1)"
+
+#echo $retval $choice
+
+case $retval in
+        0) case ${choice} in
+                Delete)	     getlnkfile
+                             deleteandrefresh
+                ;;
+                Properties)  getlnkfile
+                ;;
+	        Refresh)     refresh
+                ;;
+	        New)         cap=""
+                             command=""
+	                     newcaption
+                ;;
+                Configure)   editconfig
+                ;;
+                Help)        mxdesktool_help
+                ;;
+           esac
+           ;;
+        *)      exit
+                ;;
+esac
+}
+
+##########################################################
+##########################################################
+editconfig()
+{
+yad --title "iDesk Configuration" --width 500 --height 600  \
+	--text-info --editable < <(cat "${HOME}/.ideskrc") 2>/dev/null > /tmp/editbox.txt.$$
+
+case $? in
+      0) cat "/tmp/editbox.txt.$$" > "${HOME}/.ideskrc"
+         rm -f "/tmp/editbox.txt.$$"
+         refresh
+         argynope
+         ;;
+      *) rm -f "/tmp/editbox.txt.$$"
+         argynope
+         ;;
+esac
+
+}
+
+##########################################################
+##########################################################
+
+mxdesktool_help()
+{
+     $DIALOG --title "idesktool" --text="Help or about this script GPL licence" --button="gtk-close":0 2>/dev/null
+     if [ "${argy}" = "nope" ]; then
+             argynope
+     else
+             argyyep
+     fi
+}
+
+##########################################################
+##########################################################
+
+#now let's see whether the configuration files are present
+if [ -e "${HOME}/.ideskrc" ]; then
+        echo "Config. file  found - excellent!"
+else
+        $DIALOG --title "iDesk Configuration" \
+                --text "WARNING: No ideskrc file was found.\nWould you like to have this file\nadded now?" \
+                --button="No!gtk-no":1 --button="Yes!gtk-yes":0
+case $? in
+        0) writeconf
+           $DIALOG --title "iDesk Configuration"\
+                --button="No!gtk-no":1 --button="Yes!gtk-yes":0 \
+                --text "\tThe configuration file has been written. \n
+                Drag any icons you create to the
+                desired locations and they will
+                be remembered between sessions \n\n 
+                Would you like to run the icon wizard now?" 2>/dev/null
+           case $? in
+                   0) argynope
+                      ;;
+                   *) exit
+                      ;;
+           esac
+           ;;
+        *) exit
+           ;;
+esac
+fi
+
+echo "$argy"
+if [ "${argy}" = "nope" ]; then
+        argynope
+else
+        currentlnkfile="${HOME}/.idesktop/${argu}"
+        argyyep
+fi
