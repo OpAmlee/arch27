@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$RANGERCD && unset RANGERCD && ranger_cd

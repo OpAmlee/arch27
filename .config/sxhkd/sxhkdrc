@@ -2,28 +2,19 @@
 #    ║ ╠╦╝║ ╦  ╚═╗╔╩╦╝╠═╣╠╩╗ ║║  ║  ║ ║║║║╠╣ ║║ ╦
 #    ╩ ╩╚═╚═╝  ╚═╝╩ ╚═╩ ╩╩ ╩═╩╝  ╚═╝╚═╝╝╚╝╚  ╩╚═╝
 
-#===============|※
-#    SUPER      |⇉
+#    Super      |⇉{{{
 #===============|
 
 
-super + Escape; {s,d,p,n}
-    {pkill -USR1 -x sxhkd; notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'SXHKD' 'reloaded config', /bin/bash -c $HOME/.scripts/restart/dusk.sh, /bin/bash -c ~/.scripts/restart-powerline, notify-send -t 2000 "restarting dunst" && sleep 1 && killall dunst }
 
-super + Delete; {s,d}
-    {pkill -USR1 -x sxhkd; notify-send -i /home/trg/Downloads/web/Webp.net-resizeimage.png 'SXHKD' 'reloaded config', $HOME/.scripts/restart/dusk.sh}
-
-#super + x
-#    $HOME/.scripts/logout.sh
 
 # Launch Menus
 super + {x,n,d,s}
     {powermenu,def-nmdmenu,def-dmenu,def-ssdmenu}
 
 
-super + s; {a,n,s,f}
+super + v; {a,n,s,f}
     {alacritty -e htop, cherrytree, flameshot gui, featherpad}
-
 
 super + grave
 	$HOME/.scripts/conky-toggle-new.sh
@@ -34,27 +25,24 @@ super + shift + grave
 super + shift + e
     sudo spacefm
 
-#super + Print
-#    ~/.scripts/sshot-select.sh
-
-
 super + v
     virtualbox
 
+super + Escape; {s,d,p,n}
+    {pkill -USR1 -x sxhkd; notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'SXHKD' 'reloaded config', /bin/bash -c $HOME/.scripts/restart/dusk.sh, /bin/bash -c ~/.scripts/restart-powerline, notify-send -t 2000 "restarting dunst" && sleep 1 && killall dunst }
 
+super + Delete; {s,d}
+    {pkill -USR1 -x sxhkd; notify-send -i /home/trg/Downloads/web/Webp.net-resizeimage.png 'SXHKD' 'reloaded config', $HOME/.scripts/restart/dusk.sh}
 
+#}}}
+
+#    Control    {{{
 #===============|
-#    CONTROL    |
-#===============|
+control + e
+    emacs
+# }}}
 
-
-
-
-#control + F12
-# this is used in cherry tree to toggle toolbar
-
-#===============|
-#     ALT       |
+#     Alt   {{{
 #===============|
 
 alt + p
@@ -66,31 +54,25 @@ alt + {l,w,g,f}
 
 alt + s
     $HOME/.scripts/fzf-search-scripts.sh
-#===============|
-# CONTROL + ALT |
+
+alt + v
+    /usr/bin/virtualbox
+
+
+# }}}
+
+# Control + Alt |{{{
 #===============|
 
 control + alt + Delete
     ~/.scripts/reboot
 
-control + e
-    emacs
-
-alt + v
-    /usr/bin/virtualbox
-#===============|
-#  SPECIALITY   |
-#===============|
-
-
-
-
-
+# }}}
 
 #################################################################
 #     MULTIMEDIA KEYS
 #################################################################
-
+#   Volume{{{
 #Raises volume
 XF86AudioRaiseVolume
     amixer set Master 5%+ && volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
@@ -103,15 +85,8 @@ XF86AudioLowerVolume
 XF86AudioMute
     amixer set Master toggle; if amixer get Master | grep -Fq "[off]"; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1); fi
 
-#Playerctl works for Pragha, Spotify and others
-#Delete the line for playerctl if you want to use mpc
-#and replace it with the corresponding code
-#mpc works for e.g.ncmpcpp
-#mpc toggle
-#mpc next
-#mpc prev
-#mpc stop
-
+#Playerctl works for Pragha, Spotify and others}}}
+#   media player{{{
 #PLAY
 XF86AudioPlay
     playerctl play-pause
@@ -128,6 +103,8 @@ XF86AudioPrev
 XF86AudioStop
     playerctl stop
 
+# }}}
+#   screen brightness{{{
 #Brightness up
 XF86MonBrightnessUp
     xbacklight -inc 10
@@ -136,7 +113,17 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     xbacklight -dec 10
 
-#   174 XF86AudioStop
+#   174 XF86AudioStop}}}
+
+#Delete the line for playerctl if you want to use mpc
+#and replace it with the corresponding code
+#mpc works for e.g.ncmpcpp
+#mpc toggle
+#mpc next
+#mpc prev
+#mpc stop
+
+
 #   172 XF86AudioPlay
 #   174 XF86AudioStop
 #   173 XF86AudioPrev

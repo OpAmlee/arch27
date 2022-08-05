@@ -1,0 +1,7 @@
+
+# disable audio bell ** note there is also a blocker at /etc/modprobe
+set bell-style none
+
+# scroll up and down for readline programs
+"\e[A": history-search-backward
+"\e[B": history-search-forward

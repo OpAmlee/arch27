@@ -1,0 +1,13 @@
+[init]
+	defaultBranch = master
+[user]
+	email = opadamlee@gmail.com
+	name = trg
+[credential]
+	helper = store --file ~/.my-credentials
+[pull]
+	ff = true
+[color]
+	ui = auto
+[merge]
+	tool = kdiff3

@@ -1,0 +1,29 @@
+table Config
+  FontName: arial
+  FontSize: 12
+  FontColor: #ffffff
+  Locked: false
+  Transparency: 0
+  Shadow: true
+  ShadowColor: #000000
+  ShadowX: 1
+  ShadowY: 2
+  Bold: false
+  ClickDelay: 200
+  IconSnap: false
+  SnapWidth: 55
+  SnapHeight: 100
+  SnapOrigin: BottomRight
+  SnapShadow: true
+  SnapShadowTrans: 200
+  CaptionOnHover: true
+  CaptionPlacement: bottom
+end
+table Actions
+  Lock: control left singleClk
+  Reload: middle doubleClk
+  Drag: right hold
+  EndDrag: right singleClk
+  Execute[0]: left singleClk
+  Execute[1]: left doubleClk
+end

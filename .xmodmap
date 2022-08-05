@@ -1,0 +1,13 @@
+pointer = 1 2 3 4 5 8 9 6 7 10 11
+
+#xmodmap -e "clear Lock"
+
+#xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+#xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+#xmodmap -pke > ~/.xmodmapd
+
+clear Lock
+keysym Caps_Lock = Escape
+keysym Escape = Caps_Lock
+add Lock = Caps_Lock
+

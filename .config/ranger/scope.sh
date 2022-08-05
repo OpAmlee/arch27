@@ -135,7 +135,7 @@ handle_image() {
        #image/svg+xml|image/svg)
        #rsvg-convert --keep-aspect-ratio --width "${DEFAULT_SIZE%x*}" "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}.png" \
         #&& mv "${IMAGE_CACHE_PATH}.png" "${IMAGE_CACHE_PATH}" \
-        #&& exit 6 
+        #&& exit 6
 ## SVG
 image/svg+xml|image/svg)
     #convert -- "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
@@ -360,5 +360,5 @@ handle_fallback
 
 exit 1
 
-exiftool -f -filename -filesize -datetimeoriginal -modifydate -imagesize -aperture -shutterspeed -iso -focallength -model -lensid -shuttercount -subject -hierarchicalsubject -comment -rating -label -GPSposition -GPSaltitude "${FILE_PATH}" | sed 's/: -//;s/     ://;s/GP S/GPS /;s/Above Sea Level/asl/;'; exit 5 
+exiftool -f -filename -filesize -datetimeoriginal -modifydate -imagesize -aperture -shutterspeed -iso -focallength -model -lensid -shuttercount -subject -hierarchicalsubject -comment -rating -label -GPSposition -GPSaltitude "${FILE_PATH}" | sed 's/: -//;s/     ://;s/GP S/GPS /;s/Above Sea Level/asl/;'; exit 5
 	    exit 1

@@ -929,7 +929,7 @@ let g:python3_host_prog = '/usr/bin/python3'"}}}
 " Ruby{{{
 "let g:ruby_host_prog = '/home/trg/.gem/ruby/3.0.0/bin/neovim-ruby-host'
 
-let g:ruby_host_prog="/home/trg/.local/share/gem/ruby/3.0.0/gems/neovim-0.9.0/exe/neovim-ruby-host"
+let g:ruby_host_prog="/home/trg/.gem/ruby/3.0.0/bin/neovim-ruby-host"
 "}}}
 " Pearl{{{
 let g:loaded_perl_provider = 0

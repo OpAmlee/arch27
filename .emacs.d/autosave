@@ -1,0 +1,67 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu May  5 15:59:03 2022
+;; Desktop file format version 208
+;; Emacs version 28.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (25204 14999 162985 950000) (desktop . "208") "trg@trg-duskx" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-ADBO-Source Code Pro-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1") (font-parameter) (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 1) (bottom-divider-width . 1) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#f2f3f7") (background-color . "#0c0a20") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "white") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#1ea8fc") (environment) (powerline-cache) (nil . "Unprintable entity") (last-focus-update . t) (persp . #s(perspective "main" ("Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity") (((min-height . 4) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 80) (min-pixel-width . 90) (min-pixel-height-ignore . 80) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 20) (min-pixel-width-safe . 18)) leaf (pixel-width . 2516) (pixel-height . 1345) (total-width . 280) (total-height . 67) (normal-height . 1.0) (normal-width . 1.0) (parameters (better-jumper-struct . #s(better-jumper-jump-list-struct (0 4 . [("/home/trg/.config/doom/config.org" 11517 "yb2c3o") ("/home/trg/.config/doom/config.org" 1163 "ig60v4") ("/home/trg/.config/doom/config.org" 25130 "3ygqf9") ("/home/trg/.config/doom/config.org" 1373 "ih048c") nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil]) -1))) (buffer "config.org" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 31971) (start . 30545)) (prev-buffers ("doom" 1 269) (".config" 1 800) ("*new*" 1 1) ("*dashboard*" 1 1) ("*scratch*" 1 1))) nil nil nil nil)) (persp-buffer-predicate-old . doom-buffer-frame-predicate) (persp-buffer-predicate-generated . "Unprintable entity") (Emacs . "Unprintable entity") (Dired . "Unprintable entity") (OrgMode . "Unprintable entity") (frameset--id . "EB1C-FBA8-DDB2-62F5") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (Emacs . "Unprintable entity") (Dired . "Unprintable entity") (OrgMode . "Unprintable entity") (frameset--text-pixel-width . 2500) (frameset--text-pixel-height . 1365) (Elisp . "Unprintable entity") (height . 59) (width . 227) (left . 1386) (top . 51)) ((min-height . 5) (min-width . 20) (min-height-ignore . 5) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 115) (min-pixel-width . 220) (min-pixel-height-ignore . 115) (min-pixel-width-ignore . 88) (min-pixel-height-safe . 23) (min-pixel-width-safe . 44)) hc (pixel-width . 2516) (pixel-height . 1342) (total-width . 229) (total-height . 58) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 2142) (pixel-height . 1342) (total-width . 195) (total-height . 58) (normal-height . 1.0) (normal-width . 0.8513513513513513) (parameters (better-jumper-struct . #s(better-jumper-jump-list-struct (0 4 . [("/home/trg/.config/doom/config.org" 11517 "yb2c3o") ("/home/trg/.config/doom/config.org" 1163 "ig60v4") ("/home/trg/.config/doom/config.org" 25130 "3ygqf9") ("/home/trg/.config/doom/config.org" 1373 "ih048c") nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil]) -1))) (buffer "packages.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1935) (start . 1865)) (prev-buffers ("doom" 1 610) ("*new*" 1 1) ("*dashboard*" 1 1) ("config.org" 30825 31971) (".config" 1 800))) (leaf (last . t) (pixel-width . 374) (pixel-height . 1342) (total-width . 34) (total-height . 58) (normal-height . 1.0) (normal-width . 0.14864864864864866) (parameters (better-jumper-struct . #s(better-jumper-jump-list-struct (0 4 . [("/home/trg/.config/doom/config.org" 11517 "yb2c3o") ("/home/trg/.config/doom/config.org" 1163 "ig60v4") ("/home/trg/.config/doom/config.org" 25130 "3ygqf9") ("/home/trg/.config/doom/config.org" 1373 "ih048c") nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil]) -1))) (buffer " *MINIMAP*" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 nil nil 0 t nil) (vscroll . 0) (dedicated . t) (point . 1935) (start . 1)) (prev-buffers ("packages.el" 1 1865)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist '((48 . ";centaur-tabs-modified-marker \"•\")\n")))
+(setq file-name-history '(#("/home/trg/.config/doom/" 0 23 (ivy-index 0)) #("/home/trg/.config/" 0 18 (ivy-index 0)) #("/home/trg/.config/doom/init.el" 0 30 (ivy-index 8)) #("/home/trg/admin/" 0 16 (ivy-index 0)) #("/home/trg/admin/nqq-commands.org" 0 32 (ivy-index 20)) #("/home/trg/.config/doom/config.el" 0 32 (ivy-index 3)) #("/home/trg/.config/doom/config.org" 0 33 (ivy-index 4)) #("/home/trg/.config/doom/packages.el" 0 34 (ivy-index 9)) "~/admin/" "~/.doom.d/" "~/.doom.d/packages.el" "~/.emacs.d/" "~/.doom.d/packages.el" "~/.doom.d/init.el" "~/.doom.d/config.el" "~/.doom.d/init.el" "~/.doom.d/config.el" "~/.doom.d/packages.el" "~/.doom.d/config.el" "~/.doom.d/init.el" "~/.doom.d/packages.el" "~/.doom.d/init.el" "~/.doom.d/packages.el" "~/.doom.d/init.el" "~/.doom.d/packages.el" "~/.doom.d/init.el" "~/.doom.d/config.el" "~/.doom.d/packages.el" "~/.doom.d/config.el" "~/.doom.d/" "~/admin/org-mode.test2.org" "~/admin/" "~/admin/org-mode-test.org" "~/admin/" "~/.doom.d/config.el" "/home/trg/.doom.d/" "~/.doom.d/" "~/.config/" "~/red.png" "~/dtos.doom.d/" "~/.doom.d/packages.el" "~/.doom.d/config.el" "~/.doom.d/" "/home/trg/" "~/home/trg/emacs.d" ":"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/trg/.config/doom/packages.el"
+  "packages.el"
+  'emacs-lisp-mode
+  '(eldoc-mode general-override-mode beacon-mode outline-minor-mode ivy-mode ivy-posframe-mode rainbow-mode projectile-mode flycheck-mode ws-butler-mode smartparens-mode gcmh-mode vi-tilde-fringe-mode TeX-PDF-mode which-key-mode hl-todo-mode highlight-numbers-mode persp-mode yas-minor-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode diff-hl-margin-mode whitespace-mode evil-traces-mode rainbow-delimiters-mode highlight-quoted-mode)
+  1935
+  '(1785 nil)
+  nil
+  nil
+  '((indicate-empty-lines . t) (tab-width . 8) (buffer-display-time 25204 14973 647928 232000) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (1785))))
+
+(desktop-create-buffer 208
+  nil
+  "doom"
+  'dired-mode
+  '(general-override-mode beacon-mode ivy-mode ivy-posframe-mode rainbow-mode solaire-mode projectile-mode dtrt-indent-mode ws-butler-mode gcmh-mode TeX-PDF-mode which-key-mode persp-mode yas-minor-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode diff-hl-dired-mode diff-hl-margin-mode diff-hl-margin-local-mode evil-traces-mode all-the-icons-dired-mode dired-omit-mode)
+  610
+  '(269 nil)
+  t
+  '("/home/trg/.config/doom/")
+  '((tab-width . 1) (buffer-display-time 25204 14772 302027 960000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/trg/.config/doom/config.org"
+  "config.org"
+  'org-mode
+  '(visual-line-mode eldoc-mode general-override-mode beacon-mode ivy-mode ivy-posframe-mode rainbow-mode projectile-mode flycheck-mode ws-butler-mode smartparens-mode gcmh-mode org-indent-mode vi-tilde-fringe-mode org-fancy-priorities-mode TeX-PDF-mode which-key-mode evil-org-mode persp-mode yas-minor-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode diff-hl-margin-mode whitespace-mode evil-traces-mode)
+  31971
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (indicate-empty-lines . t) (indent-tabs-mode) (buffer-display-time 25204 14717 973312 170000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  ".config"
+  'dired-mode
+  '(general-override-mode beacon-mode ivy-mode ivy-posframe-mode rainbow-mode solaire-mode projectile-mode dtrt-indent-mode ws-butler-mode gcmh-mode TeX-PDF-mode which-key-mode persp-mode yas-minor-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode diff-hl-dired-mode diff-hl-margin-mode diff-hl-margin-local-mode evil-traces-mode all-the-icons-dired-mode dired-omit-mode)
+  800
+  '(nil nil)
+  t
+  '("/home/trg/.config/")
+  '((tab-width . 1) (buffer-display-time 25204 14717 951426 355000) (overwrite-mode))
+  '((mark-ring nil)))
+
