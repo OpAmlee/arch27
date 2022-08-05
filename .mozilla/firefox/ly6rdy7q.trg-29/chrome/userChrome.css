@@ -1,27 +1,42 @@
-/*   ╔═╗╦╦═╗╔═╗╔═╗╔═╗═╗ ╦  \│/  ╔═╗╔═╗╔═╗┬ ┬┌─┐┌─┐┬┌─┌─┐
-     ╠╣ ║╠╦╝║╣ ╠╣ ║ ║╔╩╦╝  ─ ─  ║  ╚═╗╚═╗├─┤├─┤│  ├┴┐└─┐
-     ╚  ╩╩╚═╚═╝╚  ╚═╝╩ ╚═  /│\  ╚═╝╚═╝╚═╝┴ ┴┴ ┴└─┘┴ ┴└─┘                    */
+/* Example userChrome.css file */
 
-@import url(style/centered_tab_contrnt.css);
-@import url(style/tab_close_buttons_on_hover.css);
-/*@import url(style/toggle_tabs_toolbar_with_alt.css);*/
-@import url(style/hide_statuspanel_when_fullscreen.css);
-@import url(style/google_style_urlbar_popup.css);
-@import url(style/one_click_scale.css);
-@import url(style/scrollable_url_bar.css);
-@import url(style/linux_fix.css);
-@import url(style/vertical_bookmarks_toolbar.css);
-@import url(style/hide_url_icons.css);
-@import url(style/window_control_force_linux_system_style.css);
-@import url(style/window_control_placeholder_support.css);
+/* Import your desired components first */
 
-@import url(style/autohide_menubar.css):
+@import url(chrome/tab_close_button_always_on_hover.css);
+@import url(chrome/tab_loading_progress_throbber.css);
+@import url(chrome/button_effect_scale_onclick.css);
+@import url(chrome/blank_page_background.css);
+@import url(chrome/autohide_menubar.css);
+@import url(chrome/hide_toolbox_top_bottom_borders.css);
+@import url(chrome/vertical_context_navigation.css);
+@import url(chrome/minimal_popup_scrollbars.css);
+@import url(chrome/button_effect_icon_glow.css);
+@import url(chrome/dark_context_menus.css);
+@import url(chrome/dark_additional_windows.css);
+@import url(chrome/dark_checkboxes_and_radios.css);
+@import url(chrome/minimal_text_fields.css);
+@import url(chrome/minimal_toolbarbuttons.css);
+@import url(chrome/urlbar_centered_text.css);
+@import url(hacks/vertical_bookmarks_toolbar_modified.css);
+@import url(hacks/centered_tab_content.css);
+/*@import url(hacks/tab_close_buttons_on_hover.css);*/
+/* Apply your custom modifications after imports */
 
-@import url(testing/blank_page_background.css):
+:root{
+  --toolbar-bgcolor: rgb(0, 6, 16) !important;
+  --uc-menu-bkgnd: var(--toolbar-bgcolor);
+  --arrowpanel-background: var(--toolbar-bgcolor) !important;
+  --autocomplete-popup-background: var(--toolbar-bgcolor) !important;
+  --uc-menu-disabled: rgb(36, 2, 32) !important;
+  --lwt-toolbar-field-focus: rgb(42, 9, 1) !important;
+}
 
-@import url(testing/classic_firefox_menubutton.css):
-@import url(testing/click_selected_tab_to_focus_urlbar.css):
+#sidebar-box{ --sidebar-background-color: var(--toolbar-bgcolor) !important; }
+window.sidebar-panel{ --lwt-sidebar-background-color: rgb(28, 84, 24) !important; }
 
-@import url(testing/compact_proton.css):
-
-
+.tabbrowser-tab .tab-close-button{
+  display:none;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button{
+  display:-moz-box !important;
+}

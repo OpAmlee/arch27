@@ -11,7 +11,7 @@ pdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqpdbqppdbqpdbqpdbqpdbqpdb
 /*  Mon 27 May 2022 09:51:10 PM CDT*/
 
 /*{{{ Technical Appearance */
-static const unsigned int borderpx       = 1;   /* border pixel of windows */ 
+static const unsigned int borderpx       = 1;   /* border pixel of windows */
 static const unsigned int snap           = 1;  /* snap pixel */
 static const unsigned int gappih         = 5;   /* horiz inner gap between windows */
 static const unsigned int gappiv         = 5;   /* vert inner gap between windows */
@@ -139,7 +139,7 @@ static int flexwintitle_separator        = 0;  // width of client separator
 
 /*{{{ Fonts */
 static const char *fonts[]               = { "BlexMono Nerd Font:size=14" };
-static const char dmenufont[]            = "Go Mono For Powerline:size=16";
+static const char dmenufont[]            = "BlexMono Nerd Font:size=16";
 /*}}} */
 
 /* {{{ Dmenu colorscheme */
@@ -170,7 +170,7 @@ static char *colors[SchemeLast][ColCount] = {
 	[SchemeUrg]          = { "#bbbbbb", "#222222", "#d10f3f", "urg" },
 	[SchemeMarked]       = { "#615656", "#ECB820", "#ECB820", "marked" },
 	[SchemeScratchNorm]  = { "#787878", "#121212", "#020011", "scratchnorm" },//bar text - bottom bar - inactive window border
-	[SchemeScratchSel]   = { "#AFD700", "#121212", "#121212", "scratchsel" },// bar text -  bottom bar - active window border 
+	[SchemeScratchSel]   = { "#AFD700", "#121212", "#121212", "scratchsel" },// bar text -  bottom bar - active window border
 	[SchemeFlexActTTB]   = { "#E8D9B1", "#080707", "#080707", "actTTB" },
 	[SchemeFlexActLTR]   = { "#E8D9B1", "#440044", "#F00890", "actLTR" },
 	[SchemeFlexActMONO]  = { "#E8D9B1", "#000044", "#000044", "actMONO" },
@@ -263,7 +263,7 @@ static const Rule clientrules[] = {
 	 *	WM_WINDOW_ROLE(STRING) = role
 	 *	_NET_WM_WINDOW_TYPE(ATOM) = wintype
 	 */
-	
+
 	{ .wintype = WTYPE "DESKTOP", .flags = Unmanaged|Lower },
 	{ .wintype = WTYPE "DOCK", .flags = Unmanaged|Raise },
 	{ .wintype = WTYPE "DIALOG", .flags = AlwaysOnTop|Centered|Floating },
@@ -277,7 +277,7 @@ static const Rule clientrules[] = {
 
 	{ .instance = "spfm (a)", .scratchkey = 'a', .flags = Floating },
 	{ .instance = "spfm (s)", .scratchkey = 's', .flags = Floating },
-    
+
     { .instance = "fzf", .flags = Floating|Centered|AlwaysOnTop },
 
 //For example, to make Firefox's preferences dialog float,
@@ -302,11 +302,11 @@ static const Rule clientrules[] = {
 	{ .class = "st-256color"   , .flags = Terminal|AttachBottom },
 	{ .class = "xterm-256color", .flags = Terminal },
 	{ .class = "Xephyr"        , .flags = Floating|Centered },
-	
+
     { .class = "Yad"           , .flags =   Floating|Centered },
     { .class = "yad"           , .flags =   Floating|Centered },
     { .class = "System Logout" , .flags =   Floating|Centered },
-	
+
     { .title = "Event Tester"  , .flags = NoSwallow },
     { .title = "Dunst"         , .flags = AlwaysOnTop },
     { .class = "sxiv"          , .flags = AlwaysOnTop|Centered },
@@ -379,7 +379,7 @@ static const BarDef bars[] = {
 	{  0,      1,   0,    "0%    100%   100% -1h ", "Secondary bottom" },
 	{  2,      0,   0,    "0%    0%     100% -1h ", "Tertiary top" },
 	{  2,      1,   0,    "0%    100%   100% -1h ", "Tertiary bottom" },
-    
+
 //    {  0,      0,   0,    "0%    0%     100% -1h ", "Primary top" },
 //	{  0,      1,   0,    "0%    100%   100% -1h ", "Primary bottom" },
 //	{  1,      0,   0,    "0%    0%     100% -1h ", "Secondary top" },
@@ -414,7 +414,7 @@ static const BarRule barrules[] = {
 	{ -1,       0,     0,       0,   0,   PWRL,  BAR_ALIGN_LEFT,         size_workspaces,          draw_workspaces,         click_workspaces,         hover_workspaces,         "workspaces" },
 
 	{'A',       0,     4,       5,   5,   0,     BAR_ALIGN_RIGHT,        size_systray,             draw_systray,            click_systray,            NULL,                     "systray" },
-// switching from theme 6 to 4 changed (active workspace indicator color and sys tray being the same) now primary bar color is tan outline is orange systray is dark brown active bar is brown 
+// switching from theme 6 to 4 changed (active workspace indicator color and sys tray being the same) now primary bar color is tan outline is orange systray is dark brown active bar is brown
 	{  0,       0,     0,       0,   0,   PWRL,  BAR_ALIGN_RIGHT,        size_powerline,           draw_powerline,          NULL,                     NULL,                     "powerline join" },
 	{ -1,       0,     0,       0,   0,   PWRL,  BAR_ALIGN_LEFT,         size_powerline,           draw_powerline,          NULL,                     NULL,                     "powerline join" },
 	{ -1,       0,     5,       0,   0,   0,     BAR_ALIGN_LEFT,         size_ltsymbol,            draw_ltsymbol,           click_ltsymbol,           NULL,                     "layout" },
@@ -468,13 +468,13 @@ static const BarRule barrules[] = {
  *               string (hidden by default) and the workspace has no clients
  *       occ   - the occupied icon shows if the workspace has clients   }}}*/
 static const WorkspaceRule wsrules[] = {
-/*  WorkspaceRule wsrules legend  
+/*  WorkspaceRule wsrules legend
  |===========================================================================================================|=====================|
  |      n     m     p     l     m     n     n     g |                                                        |       Icons         |
  |      a     o     i     a     f     m     s     a |                                                        |=====================|
- |      m     n     n     y     a     a     t     p |                                                        |      
+ |      m     n     n     y     a     a     t     p |                                                        |    
  |      e     i     n     o     c     s     a     s |                                                        |
- |            t     e     u     t     t     c       |                     Schemes                            |                     
+ |            t     e     u     t     t     c       |                     Schemes                            |
  |            o     d     t           e     k       |======================================================= |=====================|
  |==================================================|     default,         visible,    selected,    occupied, def,  vac,     occ, */
     {  "1",  -1,    1,    3,  .50,   -1,   -1,   -1, SchemeWsNorm, SchemeWsVisible, SchemeWsSel, SchemeWsOcc, "ﳐ",   "",   "ﳐ", },
@@ -487,6 +487,8 @@ static const WorkspaceRule wsrules[] = {
 	{  "8",  -1,    0,   07,  .70,    1,   -1,   -1, SchemeWsNorm, SchemeWsVisible, SchemeWsSel, SchemeWsOcc, "",   "",   "", },
 	{  "9",  -1,    1,    3,  .50,   -1,   -1,   -1, SchemeWsNorm, SchemeWsVisible, SchemeWsSel, SchemeWsOcc, "",   "",   "", },
 };
+
+
 
 static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
@@ -648,7 +650,7 @@ static Key keys[] = {
 //{ KeyPress,   MODKEY,            XK_Print,        spawn,                  {.v = screenshotcmd } },  /*spawn dmenu for launching other programs */
 
 
-    /*}}}*/  
+    /*}}}*/
 
 /*   MODKEY|Shift *//*{{{*/
 { KeyPress,   MODKEY|Shift,      XK_r,            restart,                {0} }, // restart dusk
@@ -658,7 +660,7 @@ static Key keys[] = {
 { KeyPress,   MODKEY|Shift,      XK_h,            setcfact,               {.f = +0.25} }, // increase size respective to other windows within the same area
 { KeyPress,   MODKEY|Shift,      XK_l,            setcfact,               {.f = -0.25} }, // decrease client size respective to other windows within the same area
 { KeyPress,   MODKEY|Shift,      XK_o,            setcfact,               {0} },
-{ KeyPress,   MODKEY|Shift,      XK_Return,       spawn,                  {.v = dmenucmd } }, // draw/spawn menu	
+{ KeyPress,   MODKEY|Shift,      XK_Return,       spawn,                  {.v = dmenucmd } }, // draw/spawn menu
 { KeyPress,   MODKEY|Shift,      XK_plus,         changeopacity,          {.f = +0.05 } }, // increase the client opacity (for compositors that support _NET_WM_OPACITY)
 { KeyPress,   MODKEY|Shift,      XK_minus,        changeopacity,          {.f = -0.05 } }, // decrease the client opacity (for compositors that support _NET_WM_OPACITY)
 { KeyPress,   MODKEY|Shift,      XK_comma,        focusmon,               {.i = -1 } }, // focus on the previous monitor, if any
@@ -672,7 +674,7 @@ static Key keys[] = {
 { KeyPress,   MODKEY|Alt,        XK_comma,        clienttomon,            {.i = -1 } }, // sends the current client to an adjacent monitor
 { KeyPress,   MODKEY|Alt,        XK_period,       clienttomon,            {.i = +1 } }, // sends the current client to an adjacent monitor
 { KeyPress,   MODKEY|Alt,        XK_a,            markall,                {2} }, // marks all hidden clients on the selected workspace
-{ KeyPress,   MODKEY|Alt,        XK_space,        spawn,                  {.v = termcmd } }, // draw/spawn default terminal	
+{ KeyPress,   MODKEY|Alt,        XK_space,        spawn,                  {.v = termcmd } }, // draw/spawn default terminal
 { KeyPress,   MODKEY|Alt,        XK_bracketleft,  rotatelayoutaxis,       {.i = -2 } }, // cycle through the available tiling arrangements for the master area
 { KeyPress,   MODKEY|Alt,        XK_bracketright, rotatelayoutaxis,       {.i = +2 } }, // cycle through the available tiling arrangements for the master area
 /*}}}*/
@@ -787,24 +789,24 @@ static Key keys[] = {
 //	{ KeyPress,   MODKEY,                       XK_,             rotatestack,            {.i = -1 } }, // rotate all clients (counter-clockwise)
 //	{ KeyPress,   MODKEY,                       XK_,             riodraw,                {0} }, // use slop to resize the currently selected client
 //	{ KeyPress,   MODKEY,                       XK_,             unfloatvisible,         {0} }, // makes all floating clients on the currently selected workspace tiled
-//	{ KeyPress,   MODKEY,                       XK_,             switchcol,              {0} }, // changes focus between the master and the primary stack area  
+//	{ KeyPress,   MODKEY,                       XK_,             switchcol,              {0} }, // changes focus between the master and the primary stack area
 	{ KeyPress,  MODKEY|Alt,                    XK_r,             xrdb,                   {0 } }, // reloads colors from XResources
 /*}}}*/
 
 /*  Extras  *//*{{{*/ // sets a specific layout, see the layouts array for indices
-    { KeyPress,  MODKEY|Alt,  XK_F1,   setlayout,  {.v = &layouts[1]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F2,   setlayout,  {.v = &layouts[2]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F3,   setlayout,  {.v = &layouts[3]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F4,   setlayout,  {.v = &layouts[4]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F5,   setlayout,  {.v = &layouts[5]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F6,   setlayout,  {.v = &layouts[6]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F7,   setlayout,  {.v = &layouts[7]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F8,   setlayout,  {.v = &layouts[8]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F9,   setlayout,  {.v = &layouts[9]} }, 
-    { KeyPress,  MODKEY|Alt,  XK_F10,  setlayout,  {.v = &layouts[10]}}, 
-    { KeyPress,  MODKEY|Alt,  XK_F11,  setlayout,  {.v = &layouts[11]}}, 
-    { KeyPress,  MODKEY|Alt,  XK_F12,  setlayout,  {.v = &layouts[12]}}, 
-    
+    { KeyPress,  MODKEY|Alt,  XK_F1,   setlayout,  {.v = &layouts[1]} },
+    { KeyPress,  MODKEY|Alt,  XK_F2,   setlayout,  {.v = &layouts[2]} },
+    { KeyPress,  MODKEY|Alt,  XK_F3,   setlayout,  {.v = &layouts[3]} },
+    { KeyPress,  MODKEY|Alt,  XK_F4,   setlayout,  {.v = &layouts[4]} },
+    { KeyPress,  MODKEY|Alt,  XK_F5,   setlayout,  {.v = &layouts[5]} },
+    { KeyPress,  MODKEY|Alt,  XK_F6,   setlayout,  {.v = &layouts[6]} },
+    { KeyPress,  MODKEY|Alt,  XK_F7,   setlayout,  {.v = &layouts[7]} },
+    { KeyPress,  MODKEY|Alt,  XK_F8,   setlayout,  {.v = &layouts[8]} },
+    { KeyPress,  MODKEY|Alt,  XK_F9,   setlayout,  {.v = &layouts[9]} },
+    { KeyPress,  MODKEY|Alt,  XK_F10,  setlayout,  {.v = &layouts[10]}},
+    { KeyPress,  MODKEY|Alt,  XK_F11,  setlayout,  {.v = &layouts[11]}},
+    { KeyPress,  MODKEY|Alt,  XK_F12,  setlayout,  {.v = &layouts[12]}},
+
 
 
 

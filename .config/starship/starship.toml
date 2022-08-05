@@ -7,7 +7,7 @@ add_newline = true
 
 [directory]
 truncation_length = 3
-style = "fg:8"
+style = "fg:129"
 read_only = " "
 read_only_style = "red"
 #symbol = " "

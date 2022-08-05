@@ -9,12 +9,13 @@
 - [[#backup][backup]]
 - [[#background][background]]
 - [[#bashinsulter][bashinsulter]]
-- [[#bat][bat]]
+- [[#battery][battery]]
 - [[#change-shells][change shells]]
 - [[#confimbeforeoverwrite][confimbeforeoverwrite]]
 - [[#doas][doas]]
 - [[#dtoscopypaste][dtoscopypaste]]
 - [[#dunst][dunst]]
+- [[#editconfigs][editconfigs]]
 - [[#emacs][emacs]]
 - [[#emacsandvim][emacsandvim]]
 - [[#exa][exa]]
@@ -35,6 +36,7 @@
 - [[#merge][merge]]
 - [[#mirrors][mirrors]]
 - [[#monitors][monitors]]
+- [[#navigation][navigation]]
 - [[#mtrack][mtrack]]
 - [[#pacmanparu][pacmanparu]]
 - [[#path][path]]
@@ -45,8 +47,6 @@
 - [[#ps][ps]]
 - [[#python2-to-python3][Python2 to Python3]]
 - [[#qtile][qtile]]
-- [[#editconfigs][editconfigs]]
-- [[#navigation][navigation]]
 - [[#reporting][reporting]]
 - [[#rofi][rofi]]
 - [[#shopt][shopt]]
@@ -139,7 +139,7 @@ if [ -f /etc/bash.command-not-found ]; then
 fi
 #+END_SRC
 
-* bat
+* battery
 
 #+BEGIN_SRC sh
 alias showbat="$HOME/.scripts/show-bat.sh"
@@ -192,6 +192,45 @@ alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.confi
 #+BEGIN_SRC sh
 alias edunst='nvim ~/.config/dunst/dunstrc'
 #+END_SRC
+
+* editconfigs
+
+#+BEGIN_SRC sh
+alias rmc='rm -f config.h'
+# Quick Edit Configs
+alias ealacritty='nvim ~/.config/alacritty/alacritty.yml'
+alias ebinds='nvim ~/.config/sxhkd/sxhkdrc'
+alias ebash='nvim ~/.bashrc-personal'
+alias econfigs='sudo nvim /home/trg/.scripts/edit-configs'
+
+alias edmenu='cd ~/.config/dmenu && nvim ~/.config/dmenu/config.def.h'
+alias edusk='cd ~/.config/dusk && nvim ~/.config/dusk/config.def.h'
+alias edunst='nvim ~/.config/dunst/dunstrc'
+alias edwm='cd ~/.config/dwm && nvim ~/.config/dwm/config.def.h'
+
+alias efzfmarks='nvim $HOME/.config/ranger/plugins/fzf-marks/fzf_marks.py'
+
+alias ekitty='nvim ~/.config/kitty.d/kitty.conf'
+alias ekitty1='nvim ~/.config/kitty.d/kitty1.conf'
+alias ekitty2='nvim ~/.config/kitty.d/kitty2.conf'
+alias ekitty3='nvim ~/.config/kitty.d/kitty3.conf'
+
+alias efeatherpad='nvim ~/.config/featherpad/fp.conf'
+alias eleafpad='nvim ~/.config/leafpad/leafpadrc'
+alias envim='nvim ~/.config/nvim/init.vim'
+
+alias eranger='nvim ~/.config/ranger/rc.conf'
+alias erangerkitty='nvim ~/.config/kitty.d/ranger-kitty.conf'
+alias erifle='nvim ~/.config/ranger/rifle.conf'
+
+alias est='nvim ~/.config/dusk/st/config.def.h'
+alias estart='sudo nvim /usr/local/bin/autostart-dusk'
+alias estarship='nvim ~/.config/starship/starship.toml'
+alias exprofile='nvim ~/.xprofile'
+#+END_SRC
+
+#+RESULTS:
+
 
 * emacs
 
@@ -324,23 +363,22 @@ alias fzfparu="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru
 #alias fzfpacx="pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S"
 #+END_SRC
 
-#+RESULTS:
 
 * git
 
 #+BEGIN_SRC sh
-alias addup='git add -u'
-alias addall='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
-alias clone='git clone'
-alias commit='git commit -m'
-alias fetch='git fetch'
-alias pull='git pull origin'
-alias push='git push origin'
-alias tag='git tag'
-alias newtag='git tag -a'
-alias rmgitcache="rm -r ~/.cache/git"
+alias gau='git add -u'
+alias gaa='git add .'
+alias gbr='git branch'
+alias gch='git checkout'
+alias gcl='git clone'
+alias gco='git commit -m'
+alias gfe='git fetch'
+alias gpull='git pull origin'
+alias gpush='git push origin'
+alias gtag='git tag'
+alias gntag='git tag -a'
+alias grmc="rm -r ~/.cache/git"
 
 #+end_src
 
@@ -458,6 +496,19 @@ alias m4='xrandr --output eDP-1 --off --output DP-1-2 --off \
 
 #+RESULTS:
 
+* navigation
+
+#+BEGIN_SRC sh
+alias godmenu='cd $HOME/.config/dmenu'
+alias godusk='cd $HOME/.config/dusk'
+alias godwm='cd $HOME/.config/dwm'
+alias goscripts='cd $HOME/.scripts'
+alias gost='cd $HOME/.config/dusk/st'
+alias goxmonad='cd $HOME/.config/xmonad'
+alias goranger='cd $HOME/.config/ranger'
+#+END_SRC
+
+
 * mtrack
 
 #+offt to limit of 1
@@ -557,50 +608,8 @@ alias pscpu='ps auxf | sort -nr -k 3'
 alias checkqtile='python3 -m py_compile ~/.config/qtile/config.py'
 #+END_SRC
 
-* editconfigs
-
-#+BEGIN_SRC sh
 
 
-alias rmc='rm -f config.h'
-
-
-# Quick Edit Configs
-
-alias ealacritty='nvim ~/.config/alacritty/alacritty.yml'
-alias ebinds='nvim ~/.config/sxhkd/sxhkdrc'
-alias ebash='nvim ~/.bashrc-personal'
-alias econfigs='sudo nvim /home/trg/.scripts/edit-configs'
-alias edmenu='cd ~/.config/dmenu && nvim ~/.config/dmenu/config.def.h'
-alias edusk='cd ~/.config/dusk && nvim ~/.config/dusk/config.def.h'
-alias edunst='nvim ~/.config/dunst/dunstrc'
-alias edwm='cd ~/.config/dwm && nvim ~/.config/dwm/config.def.h'
-alias ekitty='nvim ~/.config/kitty.d/kitty.conf'
-alias ekitty1='nvim ~/.config/kitty.d/kitty1.conf'
-alias ekitty2='nvim ~/.config/kitty.d/kitty2.conf'
-alias ekitty3='nvim ~/.config/kitty.d/kitty3.conf'
-alias ekitty4='nvim ~/.config/kitty.d/ranger-kitty.conf'
-alias efeatherpad='nvim ~/.config/featherpad/fp.conf'
-alias eleafpad='nvim ~/.config/leafpad/leafpadrc'
-alias envim='nvim ~/.config/nvim/init.vim'
-alias erifle='nvim ~/.config/ranger/rifle.conf'
-alias eranger='nvim ~/.config/ranger/rc.conf'
-alias est='nvim ~/.config/dusk/st/config.def.h'
-alias estart='sudo nvim /usr/local/bin/autostart-dusk'
-alias estarship='nvim ~/.config/starship/starship.toml'
-alias exprofile='nvim ~/.xprofile'
-#+END_SRC
-
-* navigation
-
-#+BEGIN_SRC sh
-alias godmenu='cd $HOME/.config/dmenu'
-alias godusk='cd $HOME/.config/dusk'
-alias godwm='cd $HOME/.config/dwm'
-alias goscripts='cd $HOME/.scripts'
-alias gost='cd $HOME/.config/dusk/st'
-alias goxmonad='cd $HOME/.config/xmonad'
-#+END_SRC
 
 * reporting
 

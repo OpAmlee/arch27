@@ -254,9 +254,9 @@ List of keybindings (SPC h b b)")
        :desc "Eww web browser" "w" #'eww
        :desc "Eww reload page" "R" #'eww-reload))
 
-(setq doom-font (font-spec :family "Source Code Pro" :size 18)
-      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 15)
-      doom-big-font (font-spec :family "Source Code Pro" :size 30))
+(setq doom-font (font-spec :family "Blex Mono Nerd Font" :size 18)
+      doom-variable-pitch-font (font-spec :family "Blex Mono Nerd Font" :size 15)
+      doom-big-font (font-spec :family "Blex Mono Nerd Font" :size 30))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -320,7 +320,7 @@ List of keybindings (SPC h b b)")
       (:prefix ("t" . "toggle")
        :desc "Toggle minimap-mode" "m" #'minimap-mode))
 
-(set-face-attribute 'mode-line nil :font "Ubuntu Mono-17")
+(set-face-attribute 'mode-line nil :font "Blex Mono Nerd Font")
 (setq doom-modeline-height 30     ;; sets modeline height
       doom-modeline-bar-width 10   ;; sets right bar width
       doom-modeline-persp-name t  ;; adds perspective name to modeline

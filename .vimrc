@@ -234,12 +234,11 @@ set termguicolors
 let no_buffers_menu=1
 
 " make line inbetween nerdtree invisible
-set fillchars+=vert:\ 
 
 " remove random vertical line
-set colorcolumn="120"
+"set colorcolumn="120"
 
-" Better command line completion 
+" Better command line completion
 set wildmenu
 
 " mouse support{{{
@@ -276,6 +275,33 @@ au TermEnter * setlocal scrolloff=0
 au TermLeave * setlocal scrolloff=3
 
 
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" strip trailing whitespace when :w
+autocmd BufWritePre * :%s/\s\+$//e
+
+
+set wrap
+set linebreak
+" note trailing space at end of next line
+set showbreak=>\ \ \
+
+
+
+
+
+
+
+
+
+
+
+
+
+" status line format    {{{
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+
 "" Status bar
 set laststatus=2
 
@@ -287,10 +313,14 @@ set title
 set titleold="Terminal"
 set titlestring=%F
 
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
+
+"}}}
+
+" splits right-below    {{{
 set splitright
 set splitbelow
+"}}}
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
@@ -315,8 +345,9 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 "}}}
-
 "" NERDTree configuration{{{
+set fillchars+=vert:\
+
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['node_modules','\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
@@ -329,7 +360,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,*node_modules/
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 "}}}
-
 " NERDTree bindings{{{
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -337,7 +367,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 "}}}
-
 " grep.vim{{{
 nnoremap <silent> <leader>f :Rgrep<CR>
 let Grep_Default_Options = '-IR'
@@ -345,14 +374,12 @@ let Grep_Skip_Files = '*.log *.db'
 let Grep_Skip_Dirs = '.git node_modules'
 
 " }}}
-
-" terminal emulation
+" terminal emulation{{{
 nnoremap <silent> <leader>sh :terminal<CR>
-
-" remove trailing whitespaces
+"}}}
+" remove trailing whitespaces{{{
 command! FixWhitespace :%s/\s\+$//e
-
-
+"}}}
 "" Functions{{{
 "*****************************************************************************
 if !exists('*s:setupWrapping')
@@ -363,7 +390,6 @@ if !exists('*s:setupWrapping')
   endfunction
 endif
 "}}}
-
 "" Autocmd Rules{{{
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
@@ -393,12 +419,10 @@ augroup END
 set autoread"
 
 "}}}
-
 "" Split{{{
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 " }}}
-
 "" Git {{{
 
 
@@ -412,7 +436,6 @@ noremap <Leader>gd :Gvdiffsplit<CR>
 noremap <Leader>gr :GRemove<CR>
 
 "}}}
-
 " session management{{{
 nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
@@ -420,7 +443,6 @@ nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
 "}}}
-
 "" Tabs{{{
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
@@ -444,23 +466,19 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 "}}}
-
 " ale{{{
 let g:ale_linters = {}
 "}}}
-
 " Tagbar{{{
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 "}}}
-
 " Disable visualbell{{{
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 "}}}
-
 "" Copy/Paste/Cut{{{
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
@@ -543,17 +561,11 @@ augroup vimrc-javascript
   autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
 augroup END
 "}}}
-
-" lisp
-
 " json{{{
 autocmd Filetype json
   \ let g:indentLine_setConceal = 0 |
   \ let g:vim_json_syntax_conceal = 0
 "}}}
-
-
-
 " php{{{
 " Phpactor plugin
 " Include use statement
@@ -580,7 +592,6 @@ vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 " Extract method from selection
 vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 "}}}
-
 " python{{{
 augroup vimrc-python
   autocmd!
@@ -588,6 +599,7 @@ augroup vimrc-python
       \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
+
 "}}}
 " jedi-vim{{{
 let g:jedi#popup_on_dot = 0
@@ -606,11 +618,9 @@ let g:jedi#smart_auto_mappings = 0
     \'python': ['flake8'], })
 
 " vim-airline}}}
-
 " Syntax highlight{{{
 let python_highlight_all = 1
 "}}}
-
 " ruby{{{
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
@@ -640,7 +650,6 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 "}}}
-
 " For ruby refactory{{{
 if has('nvim')
   runtime! macros/matchit.vim
@@ -649,7 +658,6 @@ else
 endif
 
 "}}}
-
 " Ruby refactory{{{
 nnoremap <leader>rap  :RAddParameter<cr>
 nnoremap <leader>rcpc :RConvertPostConditional<cr>
@@ -662,7 +670,6 @@ vnoremap <leader>rriv :RRenameInstanceVariable<cr>
 vnoremap <leader>rem  :RExtractMethod<cr>
 
 "}}}
-
 " rust{{{
 " Vim racer
 au FileType rust nmap gd <Plug>(rust-def)
@@ -671,12 +678,10 @@ au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 "}}}
-
 " svelte{{{
 let g:vim_svelte_plugin_load_full_syntax = 1
 
 "}}}
-
 " vuejs{{{
 " vim vue
 let g:vue_disable_pre_processors=1
@@ -684,7 +689,6 @@ let g:vue_disable_pre_processors=1
 let g:vim_vue_plugin_load_full_syntax = 1
 
 "}}}
-
 " vim-airline{{{
 
     let g:airline_theme = 'material'
@@ -730,7 +734,6 @@ let g:vim_vue_plugin_load_full_syntax = 1
     let g:airline_symbols.linenr = ''
     endif
 "}}}
-
 "  Hexokinaseei Color Picker{{{
 let g:Hexokinase_highlighters = [ 'foregroundfull' ]
 
@@ -769,8 +772,6 @@ let g:Hexokinase_ftOptInPatterns = {
 \ }
 
 let g:loaded_pearl_provider = 0"}}}
-
-
 "" fzf.vim{{{
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
@@ -903,7 +904,6 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 
 "}}}
-
 " Timestamps{{{
 "
 " press F5
@@ -912,7 +912,6 @@ inoremap <F5> <C-R>=strftime("%c")<CR>
 " type dts
 iab <expr> dts strftime("%c")
 "}}}
-
 " folding{{{
 inoremap <F1> <C-O>za
 nnoremap <F1> za
@@ -920,7 +919,6 @@ onoremap <F1> <C-C>za
 vnoremap <F1> zf
 
 "}}}
-
 " undo history{{{
 set undofile				" Save undos after file closes
 set undodir=$HOME/.config/nvim/undo	" where to save undo histories
@@ -928,20 +926,15 @@ set undolevels=1000			" How many undos
 set undoreload=10000		" number of lines to save for undo
 
 let g:python3_host_prog = '/usr/bin/python3'"}}}
-
 " Ruby{{{
 "let g:ruby_host_prog = '/home/trg/.gem/ruby/3.0.0/bin/neovim-ruby-host'
 
 let g:ruby_host_prog="/home/trg/.local/share/gem/ruby/3.0.0/gems/neovim-0.9.0/exe/neovim-ruby-host"
 "}}}
-
 " Pearl{{{
 let g:loaded_perl_provider = 0
 
 "}}}
-
-
-
 "" Include user's local vim config{{{{{{
 if filereadable(expand("~/.config/nvim/local_init.vim"))
   source ~/.config/nvim/local_init.vim
@@ -949,6 +942,4 @@ endif
 
 "}}}
 
-
-
-
+command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(<f-args>) == 0 ? 'SUCCEEDED' : 'FAILED')

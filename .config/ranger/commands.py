@@ -350,11 +350,15 @@ class fasd(Command):
         return dirs
 ###############################################################################
 #   fasd dir
+
+
 class fasd_dir(Command):
     def execute(self):
         import subprocess
         import os.path
-        fzf = self.fm.execute_command("fasd -dl | grep -iv cache | fzf 2>/dev/tty", universal_newlines=True, stdout=subprocess.PIPE)
+        fzf = self.fm.execute_command(
+                "fasd -dl | grep -iv cache | fzf 2>/dev/tty",
+                universal_newlines=True, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
             fzf_file = os.path.abspath(stdout.rstrip('\n'))
@@ -393,22 +397,27 @@ class fzf_select(Command):
 
         if fd is not None:
             hidden = ('--hidden' if self.fm.settings.show_hidden else '')
-            exclude = "--no-ignore-vcs --exclude '.git' --exclude '*.py[co]' --exclude '__pycache__'"
+            exclude = "--no-ignore-vcs --exclude\
+                    '.git' --exclude '*.py[co]' --exclude '__pycache__'"
             only_directories = ('--type directory' if self.quantifier else '')
             fzf_default_command = '{} --follow {} {} {} --color=always'.format(
                 fd, hidden, exclude, only_directories
             )
         else:
-            hidden = ('-false' if self.fm.settings.show_hidden else r"-path '*/\.*' -prune")
-            exclude = r"\( -name '\.git' -o -iname '\.*py[co]' -o -fstype 'dev' -o -fstype 'proc' \) -prune"
+            hidden = ('-false' if self.fm.settings.show_hidden else
+                      r"-path '*/\.*' -prune")
+            exclude = r"\( -name '\.git' -o -iname '\.*py[co]'\
+                    -o -fstype 'dev' -o -fstype 'proc' \) -prune"
             only_directories = ('-type d' if self.quantifier else '')
-            fzf_default_command = 'find -L . -mindepth 1 {} -o {} -o {} -print | cut -b3-'.format(
+            fzf_default_command = 'find -L . -mindepth 1 {} -o {} -o {} \
+                    -print | cut -b3-'.format(
                 hidden, exclude, only_directories
             )
 
         env = os.environ.copy()
         env['FZF_DEFAULT_COMMAND'] = fzf_default_command
-        env['FZF_DEFAULT_OPTS'] = '--height=40% --layout=reverse --ansi --preview="{}"'.format('''
+        env['FZF_DEFAULT_OPTS'] = '--border=rounded  --height=100% \
+                --layout=reverse --ansi --preview="{}"'.format('''
             (
                 batcat --color=always {} ||
                 bat --color=always {} ||
@@ -418,7 +427,8 @@ class fzf_select(Command):
         ''')
 
         fzf = self.fm.execute_command('fzf --no-multi', env=env,
-                                      universal_newlines=True, stdout=subprocess.PIPE)
+                                      universal_newlines=True,
+                                      stdout=subprocess.PIPE)
         stdout, _ = fzf.communicate()
         if fzf.returncode == 0:
             selected = os.path.abspath(stdout.strip())
@@ -446,7 +456,6 @@ class fd_search(Command):
     def execute(self):
         import re
         import subprocess
-        from ranger.ext.get_executables import get_executables
 
         self.SEARCH_RESULTS.clear()
 
@@ -470,26 +479,33 @@ class fd_search(Command):
             return
 
         hidden = ('--hidden' if self.fm.settings.show_hidden else '')
-        exclude = "--no-ignore-vcs --exclude '.git' --exclude '*.py[co]' --exclude '__pycache__'"
+        exclude = "--no-ignore-vcs --exclude '.git' \
+                --exclude '*.py[co]' --exclude '__pycache__'"
         command = '{} --follow {} {} {} --print0 {}'.format(
             fd, depth, hidden, exclude, target
         )
-        fd = self.fm.execute_command(command, universal_newlines=True, stdout=subprocess.PIPE)
+        fd = self.fm.execute_command(
+                command, universal_newlines=True, stdout=subprocess.PIPE)
         stdout, _ = fd.communicate()
 
         if fd.returncode == 0:
             results = filter(None, stdout.split('\0'))
-            if not self.fm.settings.show_hidden and self.fm.settings.hidden_filter:
+            if not self.fm.settings.show_hidden \
+                    and self.fm.settings.hidden_filter:
                 hidden_filter = re.compile(self.fm.settings.hidden_filter)
-                results = filter(lambda res: not hidden_filter.search(os.path.basename(res)), results)
-            results = map(lambda res: os.path.abspath(os.path.join(self.fm.thisdir.path, res)), results)
+                results = filter(lambda res: not hidden_filter.search(
+                    os.path.basename(res)), results)
+            results = map(lambda res: os.path.abspath(
+                os.path.join(self.fm.thisdir.path, res)), results)
             self.SEARCH_RESULTS.extend(sorted(results, key=str.lower))
             if len(self.SEARCH_RESULTS) > 0:
-                self.fm.notify('Found {} result{}.'.format(len(self.SEARCH_RESULTS),
-                                                           ('s' if len(self.SEARCH_RESULTS) > 1 else '')))
+                self.fm.notify('Found {} result{}.'.format(len(
+                    self.SEARCH_RESULTS),
+                 ('s' if len(self.SEARCH_RESULTS) > 1 else '')))
                 self.fm.select_file(self.SEARCH_RESULTS[0])
             else:
                 self.fm.notify('No results found.')
+
 
 class fd_next(Command):
     """
@@ -533,20 +549,26 @@ class fzf_rga_documents_search(Command):
         if self.arg(1):
             search_string = self.rest(1)
         else:
-            self.fm.notify("Usage: fzf_rga_search_documents <search string>", bad=True)
+            self.fm.notify(
+                    "Usage: fzf_rga_search_documents <search string>", bad=True
+                    )
             return
 
         import subprocess
         import os.path
         from ranger.container.file import File
-        command="rga '%s' . --rga-adapters=pandoc,poppler | fzf +m | awk -F':' '{print $1}'" % search_string
-        fzf = self.fm.execute_command(command, universal_newlines=True, stdout=subprocess.PIPE)
+        command = "rga '%s' . --rga-adapters=pandoc,poppler | \
+                fzf +m | awk -F':' '{print $1}'" % search_string
+        fzf = self.fm.execute_command(
+                command, universal_newlines=True, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
             fzf_file = os.path.abspath(stdout.rstrip('\n'))
             self.fm.execute_file(File(fzf_file))
 
 ###############################################################################
+
+
 
 ###############################################################################
 

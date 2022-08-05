@@ -6,4 +6,4 @@ border=#fbfef2
 background=#171717
 
 [datetime]
-format=%I:%M
+format=%H:%M

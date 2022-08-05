@@ -8,7 +8,7 @@
 
 
 super + Escape; {s,d,p,n}
-    {pkill -USR1 -x sxhkd; notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'SXHKD' 'reloaded config', /bin/bash -c $HOME/.scripts/restart/dusk.sh, /bin/bash -c ~/.scripts/restart-powerline, notify-send -t 2000 "restarting dunst" && sleep 1 && killall dunst } 
+    {pkill -USR1 -x sxhkd; notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'SXHKD' 'reloaded config', /bin/bash -c $HOME/.scripts/restart/dusk.sh, /bin/bash -c ~/.scripts/restart-powerline, notify-send -t 2000 "restarting dunst" && sleep 1 && killall dunst }
 
 super + Delete; {s,d}
     {pkill -USR1 -x sxhkd; notify-send -i /home/trg/Downloads/web/Webp.net-resizeimage.png 'SXHKD' 'reloaded config', $HOME/.scripts/restart/dusk.sh}
@@ -23,8 +23,8 @@ super + {x,n,d,s}
 
 super + s; {a,n,s,f}
     {alacritty -e htop, cherrytree, flameshot gui, featherpad}
-    
-	
+
+
 super + grave
 	$HOME/.scripts/conky-toggle-new.sh
 
@@ -38,7 +38,7 @@ super + shift + e
 #    ~/.scripts/sshot-select.sh
 
 
-super + v 
+super + v
     virtualbox
 
 
@@ -73,7 +73,8 @@ alt + s
 control + alt + Delete
     ~/.scripts/reboot
 
-
+control + e
+    emacs
 
 alt + v
     /usr/bin/virtualbox
@@ -100,7 +101,7 @@ XF86AudioLowerVolume
 
 #Mute
 XF86AudioMute
-    amixer set Master toggle; if amixer get Master | grep -Fq "[off]"; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1); fi  
+    amixer set Master toggle; if amixer get Master | grep -Fq "[off]"; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1); fi
 
 #Playerctl works for Pragha, Spotify and others
 #Delete the line for playerctl if you want to use mpc

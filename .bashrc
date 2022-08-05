@@ -46,9 +46,10 @@ elif [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
 
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
-
-
+export LC_ALL="en_US.UTF-8"
 # Git completion
 if [ -f /usr/share/bash-completion/git-completion.bash ]; then
   . /usr/share/bash-completion/git-completion.bash
@@ -165,6 +166,7 @@ fi
 cd ~
 
 
+eval `keychain --eval id_rsa`
 #####################################################3
 export PYTHONPATH=/usr/bin/python3
 export PYENV_ROOT="$HOME/.pyenv"
@@ -174,3 +176,6 @@ eval "$(pyenv init -)"
 [[ -f ~/fzf/fzf_bash ]] && . ~/fzf/fzf_bash
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 [ -f "/home/trg/.ghcup/env" ] && source "/home/trg/.ghcup/env" # ghcup-env
+export PATH="/home/trg/git-fuzzy/bin:$PATH"
+
+[ -f ~/.config/fzf/ranger-fzf-opts ] && source ~/.config/fzf/ranger-fzf-opts

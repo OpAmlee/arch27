@@ -113,57 +113,64 @@ I then promptly did just that with grep -e "blength" /etc/profile.d/*. The outpu
 disable-beep.sh:setterm -blength 0
 </rich_text>
       </node>
-      <node name="backup/Sync/DD" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652374537" ts_lastsave="1659221273">
-        <rich_text>			sudo mkfs.vfat /dev/sdb
-			windows2usb /dev/sdb /home/trg/iso/Win10_21H2_English_x64.iso	
-			cd ~/Downloads	
-			sudo dd if=name-of-iso.iso of=/dev/sdb status=progress
-			
-			sudo dd if=/home/trg/Downloads/kali-linux-2022.1-raspberry-pi-armhf.img.xz of=/dev/sde1 status=progressress
-            kali-linux-2022.1-raspberry-pi-armhf.img.xz
-	
-		Use DD to clone partiton to another drive-
-	
-			sudo dd if=source-disk of=destination-disk [option]
-			lsblk
-			fdisk -l
-			sudo dd if=/dev/sdb of=/dev/sdc status=progress
-			
-		Copy using DD command- 
-			partition- $ dd if=/dev/sda1 of=/dev/sdb1 bs=64K conv=noerror,sync status=progress
-			drive- $ dd if=/dev/sda of=/dev/sdb bs=64K conv=noerror,sync status=progress
-		
-		Backup using rsync
-			example is moving usr to attached ssd
-			sudo rsync -av /usr /run/media/trg/23f69f0a-2bbb-4dcc-95e4-5b5fe96c354a/
-			
-			rsync
-			
-				rsync option source-directory destination-directory
+      <node name="backup/Sync/DD" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652374537" ts_lastsave="1659681214">
+        <rich_text>
+</rich_text>
+        <rich_text scale="h1">last back up command ~</rich_text>
+        <rich_text> 
 
-						rsync -r /media/hdd1/data-1/ /media/hdd2/data-2/
-								This command will simply make an exact copy of your files in the data-1 directory inside the data-2 directory.
+sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/bu/*","$HOME/.cache/*","/media/*","/lost+found","/srv/*"} /mnt/backup/bu-a	
+	
+			
+			
+sudo mkfs.vfat /dev/sdb
+windows2usb /dev/sdb /home/trg/iso/Win10_21H2_English_x64.iso	
+cd ~/Downloads	
+sudo dd if=name-of-iso.iso of=/dev/sdb status=progress
+
+sudo dd if=/home/trg/Downloads/kali-linux-2022.1-raspberry-pi-armhf.img.xz of=/dev/sde1 status=progressress
+kali-linux-2022.1-raspberry-pi-armhf.img.xz
+
+Use DD to clone partiton to another drive-
+	
+sudo dd if=source-disk of=destination-disk [option]
+lsblk
+fdisk -l
+sudo dd if=/dev/sdb of=/dev/sdc status=progress
+			
+Copy using DD command- 
+partition- $ dd if=/dev/sda1 of=/dev/sdb1 bs=64K conv=noerror,sync status=progress
+drive- $ dd if=/dev/sda of=/dev/sdb bs=64K conv=noerror,sync status=progress
+		
+Backup using rsync
+example is moving usr to attached ssd
+sudo rsync -av /usr /run/media/trg/23f69f0a-2bbb-4dcc-95e4-5b5fe96c354a/
+
+rsync
+
+	rsync option source-directory destination-directory
+
+			rsync -r /media/hdd1/data-1/ /media/hdd2/data-2/
+					This command will simply make an exact copy of your files in the data-1 directory inside the data-2 directory.
 								
 						
 			
-			Just use the ‘-a’ option and it will preserve the date, ownership, permissions, groups, etc. of the files.
-			
-			rsync -av --delete /media/hdd1/data-1/ /media/hdd2/data-2/
-			
-			rsync -vrltD --stats --human-readable /tmp/software /nas10 | pv -lep -s 42
-			
-			2022/05/17 - 21:58
-			
-			This was a TAR.GZ back up of firefox config
-			tar zcvfp ~/firefox_profile_backup.tar.gz ~/.mozilla/firefox/s6dqq3fr.default-release
-			
-			$ killall firefox firefox-bin
+Just use the ‘-a’ option and it will preserve the date, ownership, permissions, groups, etc. of the files.
+
+rsync -av --delete /media/hdd1/data-1/ /media/hdd2/data-2/
+
+rsync -vrltD --stats --human-readable /tmp/software /nas10 | pv -lep -s 42
+
+2022/05/17 - 21:58
+
+This was a TAR.GZ back up of firefox config
+tar zcvfp ~/firefox_profile_backup.tar.gz ~/.mozilla/firefox/s6dqq3fr.default-release
+
+$ killall firefox firefox-bin
 $ ls ~/.mozilla/firefox/
 $ ~/.local/bin/firefox-sync.sh s6dqq3fr.default-release
 
-
-latest backup command 
-sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/mnt/backup/backup-e"} /mnt/backup/backup-e</rich_text>
+</rich_text>
         <node name="auto backup script" unique_id="129" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658802400" ts_lastsave="1658802665">
           <rich_text>auto backup 
 
@@ -312,6 +319,11 @@ if __name__ == '__main__':
 
 </rich_text>
         </node>
+      </node>
+      <node name="backlight" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659427184" ts_lastsave="1659427187">
+        <rich_text>
+xbacklight -set 50
+</rich_text>
       </node>
       <node name="battery icon" unique_id="151" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659221273" ts_lastsave="1659221353">
         <rich_text>
@@ -512,7 +524,7 @@ Exec=fooview --create-new
 Name=Create a new Foo!
 Icon=fooview-new</rich_text>
       </node>
-      <node name="dignostic" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656041666" ts_lastsave="1658852122">
+      <node name="dignostic" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656041666" ts_lastsave="1659679085">
         <node name="system" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656041672" ts_lastsave="1656041679">
           <rich_text>disgnostic on system 
 
@@ -522,6 +534,11 @@ get journal
 </rich_text>
           <rich_text family="monospace">sudo journalctl -b -1 | curl -F 'f:1=&lt;-' ix.io </rich_text>
         </node>
+      </node>
+      <node name="ncdu diskspace" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659679085" ts_lastsave="1659679086">
+        <rich_text>ncdu
+
+</rich_text>
       </node>
       <node name="emojis" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658852122" ts_lastsave="1658854186">
         <node name="array" unique_id="137" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658854186" ts_lastsave="1658854644">
@@ -550,13 +567,33 @@ get journal
 , "〽️", "🔱", "▪️", "▫️", "◾", "◽", "◼️", "◻️", "⬛", "⬜", "✅", "🔲", "🔳", "⚫", "⚪", "🔴", "🔵", "🔷", "🔶", "🔹", "🔸", "🔺", "🔻"</rich_text>
         </node>
       </node>
-      <node name="keybinds" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652737883" ts_lastsave="1652933381">
+      <node name="keybinds" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652737883" ts_lastsave="1659505000">
         <rich_text>	get lock status
 		$ </rich_text>
         <rich_text family="monospace">xset q | grep Caps</rich_text>
         <rich_text>
 		
 	</rich_text>
+      </node>
+      <node name="keychain" unique_id="162" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659505000" ts_lastsave="1659505097">
+        <rich_text>
+added to ~/.bashrc
+eval `keychain --eval id_rsa`
+
+
+
+</rich_text>
+        <rich_text scale="h3">Clearing Keys</rich_text>
+        <rich_text>
+Sometimes, it might be necessary to flush all cached keys in memory. To do this, type: 
+root # keychain --clear
+
+helpful article
+</rich_text>
+        <rich_text link="webs https://www.funtoo.org/Funtoo:Keychain">https://www.funtoo.org/Funtoo:Keychain</rich_text>
+        <rich_text>
+
+</rich_text>
       </node>
       <node name="fonts" unique_id="20" prog_lang="dosbatch" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652453407" ts_lastsave="1659063017">
         <rich_text>Fonts ~
@@ -629,8 +666,8 @@ sudo pacman -Rcns terminus-font
 
 xrdb ~/.Xresources
 </rich_text>
-        <node name="font preview" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657531115" ts_lastsave="1659062329">
-          <rich_text scale="h1">font preview ~</rich_text>
+        <node name="font preview" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657531115" ts_lastsave="1659683160">
+          <rich_text scale="h1">font preview ~nQQ</rich_text>
           <rich_text>
 
 
@@ -1029,7 +1066,7 @@ python3 -m pip install --user --upgrade pynvim
   
   /usr/bin/python3 -m pip install wheel</rich_text>
         </node>
-        <node name="general" unique_id="99" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656524944" ts_lastsave="1656525027">
+        <node name="general" unique_id="99" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656524944" ts_lastsave="1659580523">
           <rich_text>path general
 
 
@@ -1042,6 +1079,26 @@ gem install --user neovim
 pretty sure gem install neovim
 </rich_text>
           <rich_text link="file L2hvbWUvdHJnLy5sb2NhbC9zaGFyZS9nZW0vcnVieS8zLjAuMC9nZW1zL25lb3ZpbS0wLjkuMC9leGUvbmVvdmltLXJ1YnktaG9zdA==">/home/trg/.local/share/gem/ruby/3.0.0/gems/neovim-0.9.0/exe/neovim-ruby-host</rich_text>
+        </node>
+        <node name="scratch" unique_id="165" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659580523" ts_lastsave="1659580629">
+          <rich_text>/home/trg/git-fuzzy/bin:
+/home/trg/.ghcup/bin:
+/home/trg/.pyenv/shims:
+/home/trg/.local/bin:
+/home/trg/.cabal/bin:
+/home/trg/.local/bin:
+/home/trg/bin:
+/usr/local/bin:
+/usr/bin:/bin:
+/usr/local/sbin:
+/home/trg/.dotnet/tools:
+/usr/bin/site_perl:
+/usr/bin/vendor_perl:
+/usr/bin/core_perl:
+
+/home/trg/bin:
+/home/trg/go/bin:
+/home/trg/go/bin</rich_text>
         </node>
       </node>
       <node name="permission" unique_id="14" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652378051" ts_lastsave="1656388832">
@@ -2785,11 +2842,97 @@ How to change font in figlet
 
 	
 	</rich_text>
-        <node name="keybinds" unique_id="148" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659160449" ts_lastsave="1659160565">
+        <node name="keybinds" unique_id="148" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659160449" ts_lastsave="1659416426">
           <rich_text scale="h1">firefox keybinds ~</rich_text>
           <rich_text>
 
-	control + l is shortcut to url bar</rich_text>
+	control + l is shortcut to url bar
+	
+Navigation
+Command 	Shortcut
+Back 	Alt + ←
+Ctrl + [
+Backspace*
+*when browser.backspace_action is set to 0 (as in the Configuration Editor), which is not the default.
+Forward 	Alt + →
+Ctrl + ]
+Shift + Backspace*
+*see above.
+Home 	Alt + Home
+Open File 	Ctrl + O
+Reload 	F5
+Ctrl + R
+Reload (override cache) 	Ctrl + F5
+Ctrl + Shift + R
+Stop 	Esc
+Current Page
+Command 	Shortcut
+Focus Next Link or Input Field 	Tab
+Focus Previous Link or Input Field 	Shift + Tab
+Go Down a Screen 	Page Down
+Space bar
+Go Up a Screen 	Page Up
+Shift + Space bar
+Go to Bottom of Page 	End
+Ctrl + ↓
+Go to Top of Page 	Home
+Ctrl + ↑
+Move to Next Frame, Pop-Up 	F6
+Move to Previous Frame, Pop-Up 	Shift + F6
+Print 	Ctrl + P
+Save Focused Link 	Alt + Enter
+-when browser.altClickSave is set to true (as in the Configuration Editor), which is not the default.
+Save Page As 	Ctrl + S
+Zoom In 	Ctrl + +
+Zoom Out 	Ctrl + -
+Zoom Reset 	Ctrl + 0
+Editing
+Command 	Shortcut
+Copy 	Ctrl + C
+Cut 	Ctrl + X
+Delete 	Del
+Delete Word to the Left 	Ctrl + Backspace
+Delete Word to the Right 	Ctrl + Del
+Go one Word to the Left 	Ctrl + ←
+Go one Word to the Right 	Ctrl + →
+Go to Beginning of Line 	Home
+Go to End of Line 	End
+Go to Beginning of Text 	Ctrl + Home
+Go to End of Text 	Ctrl + End
+Paste 	Ctrl + V
+Paste (as plain text) 	Ctrl + Shift + V
+Redo 	Ctrl + Y
+Ctrl + Shift + Z
+Select All 	Ctrl + A
+Undo 	Ctrl + Z
+Search
+Command 	Shortcut 	
+Find in This Page 	Ctrl + F 	
+Find Again 	F3
+Ctrl + G 	
+Find Previous 	Shift + F3
+Ctrl + Shift + G 	
+Quick Find within link-text only 	' 	
+Quick Find 	/ 	
+Close the Find or Quick Find bar 	Esc
+- when the Find or Quick Find bar is focused 	
+Switch Search Engine 	Alt + ↓
+Alt + ↑
+- after you have written something (or pressed ↓) in the address bar 	
+Web Search with Default Search Engine 	Type ? and a space (or only ?) into empty Address Bar
+Focus Address bar for Web Search with Default Search Engine 	Ctrl + K
+Ctrl + J
+- if search bar is not shown 	
+Focus Search bar 	Ctrl + K
+Ctrl + J
+- if search bar is shown 	
+Change the Default Search Engine 	Ctrl + ↓
+Ctrl + ↑
+- in the Search bar or the Search field of the New Tab page. 	
+View menu to switch, add or manage search engines 	Alt + ↓
+Alt + ↑
+F4
+- when the Search bar is focused </rich_text>
         </node>
         <node name="settings" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659160455" ts_lastsave="1659160499">
           <rich_text scale="h1">Firefox settings ~</rich_text>
@@ -3122,7 +3265,7 @@ Ctrl + Triple click   Select a whole line plus its trailing newline if any
 
 
 </rich_text>
-        <node name="alias" unique_id="154" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659291416" ts_lastsave="1659323654">
+        <node name="alias" unique_id="154" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659291416" ts_lastsave="1659665363">
           <rich_text scale="h1">fzf alias~</rich_text>
           <rich_text>
 
@@ -3201,17 +3344,14 @@ paru -Qq | fzf --multi --preview 'paru -Qil {}' --layout=reverse --bind 'enter:e
 
 
 </rich_text>
-          <rich_text family="monospace">find ~/.scripts -type f | \
-fzf</rich_text>
+          <rich_text family="monospace">find ~/.scripts -type f | fzf</rich_text>
           <rich_text> --multi --reverse --border=rounded \
 --preview 'bat --style=numbers --color=always --line-range :500 {}' \
 --color 'fg:#928374,fg+:#18E406,bg:#121212,preview-bg:#1F2022,border:#6D6259' \
---bind 'enter:execute(kitty -e nvim)'
+--bind 'enter:execute(-e nvim)'
 
-</rich_text>
-        </node>
-        <node name="commands" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659291921" ts_lastsave="1659309902">
-          <rich_text>
+
+
 </rich_text>
           <rich_text weight="heavy">history</rich_text>
           <rich_text> </rich_text>
@@ -3252,11 +3392,97 @@ history | fzf --tac --no-sort --layout=reverse --border=rounded
           <rich_text> </rich_text>
           <rich_text weight="heavy">bg:#222222,preview-bg:#333333</rich_text>
           <rich_text>
-                       
-                       
+
+
  </rich_text>
           <rich_text family="monospace">fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'</rich_text>
-          <rich_text>                </rich_text>
+          <rich_text>
+ </rich_text>
+        </node>
+        <node name="ranger" unique_id="160" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659502903" ts_lastsave="1659661237">
+          <rich_text scale="h1">fzf in ranger</rich_text>
+          <rich_text>
+
+mark layout goes off this env varible
+FZF_FZM_OPTS</rich_text>
+        </node>
+        <node name="marks" unique_id="166" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659661176" ts_lastsave="1659665222">
+          <rich_text scale="h1">fzf marks ~</rich_text>
+          <rich_text>
+
+Customization is supported by environment variables like this one.
+</rich_text>
+          <rich_text scale="h4">export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/starship/starship.toml"</rich_text>
+          <rich_text>
+
+`FZF_MARKS_FILE`, same variable used in
+[urbainvaes/fzf-marks][urbainvaes-fzf-marks], defaults to `${HOME}/.fzf-marks`.
+
+</rich_text>
+          <rich_text scale="h4">export FZF_MARKS_FILE=`${HOME}/.fzf-marks`</rich_text>
+          <rich_text>
+
+`FZF_MARKS_CMD`, path to the `fzf` executable binary. You don't need this
+unless your `fzf` is not added in the `PATH`.
+
+</rich_text>
+          <rich_text scale="h4">export FZF_MARKS_CMD=`</rich_text>
+          <rich_text link="file L3Vzci9iaW4vZnpm" scale="h4">/usr/bin/fzf</rich_text>
+          <rich_text scale="h4">`</rich_text>
+          <rich_text>
+
+`FZF_FZM_OPTS`, controls how command `fzm` (from this plugin) behave, defaults to
+`--cycle +m --ansi --bind=ctrl-o:accept,ctrl-t:toggle --select-1`.
+
+</rich_text>
+          <rich_text scale="h4">export FZF_FZM_OPTS=</rich_text>
+          <rich_text>`--cycle +m --ansi --bind=ctrl-o:accept,ctrl-t:toggle --select-1`
+
+</rich_text>
+          <rich_text scale="h4">export FZF_FZM_OPTS="--reverse --height 75% --min-height 30 --cycle +m --ansi --bind=ctrl-o:accept,ctrl-t:toggle --select-1"</rich_text>
+          <rich_text>
+
+`FZF_DMARK_OPTS`, controls how command `dmark` (from this plugin) behave,
+defaults to `--cycle -m --ansi --bind=ctrl-o:accept,ctrl-t:toggle`.
+(`dmark` only supports delete one mark at each time for now, that's why I use `-m`)
+
+</rich_text>
+          <rich_text scale="h4">export FZF_DMARK_OPTS=</rich_text>
+          <rich_text>`--cycle +m --ansi --bind=right:acceptctrl-o:accept,ctrl-t:toggle --select-1`
+
+Besides above `FZF_*` related settings, fzf's behavior is also controlled by
+`FZF_DEFAULT_OPTS`, which is an env from `fzf` itself. Read `man fzf` for
+detail.
+
+</rich_text>
+          <rich_text scale="h4">export FZF_MARKS_FILE=`${HOME}/.config/fzf-marks`
+export FZF_MARKS_CMD=`</rich_text>
+          <rich_text link="file L3Vzci9iaW4vZnpm" scale="h4">/usr/bin/fzf</rich_text>
+          <rich_text scale="h4">`
+export FZF_FZM_OPTS="--reverse --height 75% --min-height 30 --cycle +m --ansi --bind=ctrl-o:accept,ctrl-t:toggle --select-1" </rich_text>
+          <rich_text>
+</rich_text>
+          <rich_text scale="h4">export FZF_DMARK_OPTS=</rich_text>
+          <rich_text>`--cycle +m --ansi --bind=right:acceptctrl-o:accept,ctrl-t:toggle --select-1`
+
+</rich_text>
+          <rich_text family="monospace">export FZF_DEFAULT_COMMAND</rich_text>
+          <rich_text family="monospace" foreground="#f92672">=</rich_text>
+          <rich_text family="monospace" foreground="#d88200">"fd . </rich_text>
+          <rich_text family="monospace">$HOME</rich_text>
+          <rich_text family="monospace" foreground="#d88200">"</rich_text>
+          <rich_text family="monospace">
+export FZF_CTRL_T_COMMAND</rich_text>
+          <rich_text family="monospace" foreground="#f92672">=</rich_text>
+          <rich_text family="monospace" foreground="#d88200">"</rich_text>
+          <rich_text family="monospace">$FZF_DEFAULT_COMMAND</rich_text>
+          <rich_text family="monospace" foreground="#d88200">"</rich_text>
+          <rich_text family="monospace">
+export FZF_ALT_C_COMMAND</rich_text>
+          <rich_text family="monospace" foreground="#f92672">=</rich_text>
+          <rich_text family="monospace" foreground="#d88200">"fd -t d . </rich_text>
+          <rich_text family="monospace">$HOME</rich_text>
+          <rich_text family="monospace" foreground="#d88200">"</rich_text>
         </node>
       </node>
       <node name="gem" unique_id="100" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="114" is_bold="0" foreground="" ts_creation="1656525168" ts_lastsave="1657247263">
@@ -3348,12 +3574,14 @@ To install other GHC versions and tools, run:
 If you are new to Haskell, check out </rich_text>
         <rich_text link="webs https://www.haskell.org/ghcup/steps/">https://www.haskell.org/ghcup/steps/</rich_text>
       </node>
-      <node name="Git" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652374469" ts_lastsave="1659243996">
+      <node name="Git" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652374469" ts_lastsave="1659668165">
         <rich_text scale="h1">GIT </rich_text>
         <rich_text>
 
 </rich_text>
         <rich_text link="webs https://git-scm.com/docs">https://git-scm.com/docs</rich_text>
+        <rich_text>
+</rich_text>
         <node name="config" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658897146" ts_lastsave="1658897246">
           <rich_text>
 </rich_text>
@@ -3462,7 +3690,7 @@ Next do -
           <rich_text family="monospace">ssh -T git@github.com
 </rich_text>
         </node>
-        <node name="git bare repo" unique_id="108" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657390250" ts_lastsave="1657431874">
+        <node name="git bare repo" unique_id="108" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657390250" ts_lastsave="1659424832">
           <rich_text scale="h1">git bare repo ~</rich_text>
           <rich_text>
 
@@ -3680,6 +3908,12 @@ I hope you find this technique useful to track your configuration. If you're cur
 
 
 </rich_text>
+        </node>
+        <node name="git fuzzy" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659424832" ts_lastsave="1659424834">
+          <rich_text>git fuzzy
+
+</rich_text>
+          <rich_text link="webs https://github.com/bigH/git-fuzzy">https://github.com/bigH/git-fuzzy</rich_text>
         </node>
         <node name="history" unique_id="109" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657431874" ts_lastsave="1657431875">
           <rich_text>
@@ -4051,7 +4285,7 @@ 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
 						
 	</rich_text>
         </node>
-        <node name="alias" unique_id="152" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659243996" ts_lastsave="1659244010">
+        <node name="alias" unique_id="152" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659243996" ts_lastsave="1659577585">
           <rich_text scale="h1">alias ~</rich_text>
           <rich_text>	
 
@@ -4066,6 +4300,61 @@ $ git config --global alias.st status</rich_text>
 
 </rich_text>
         </node>
+        <node name="scratch" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659577585" ts_lastsave="1659577689">
+          <rich_text>git --help
+usage: git [-v | --version] [-h | --help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           [--super-prefix=&lt;path&gt;] [--config-env=&lt;name&gt;=&lt;envvar&gt;]
+           &lt;command&gt; [&lt;args&gt;]
+
+git --exec-path=/usr/bin/git --git-dir=~/gitbare --work-tree=$HOME
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects</rich_text>
+        </node>
+      </node>
+      <node name="grep" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659668165" ts_lastsave="1659668169">
+        <rich_text scale="h1">grep~</rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text link="fold L3Vzci9zaGFyZS9pY29ucy9BZHdhaXRhL3NjYWxhYmxlL3N0YXR1cw==">/usr/share/icons/Adwaita/scalable/status</rich_text>
+        <rich_text>
+
+</rich_text>
       </node>
       <node name="grub" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658807137" ts_lastsave="1658807142">
         <rich_text scale="h1">grub ~</rich_text>
@@ -4735,7 +5024,7 @@ paths
 			neofetch -vv --w3m --source ~/Desktop/hereisapic.pngNeofetch
  </rich_text>
       </node>
-      <node name="Neovim" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652912749" ts_lastsave="1655346997">
+      <node name="Neovim" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652912749" ts_lastsave="1659501651">
         <rich_text>
 
 
@@ -4831,6 +5120,35 @@ nnoremap &lt;F9&gt; za
 onoremap &lt;F9&gt; &lt;C-C&gt;za
 vnoremap &lt;F9&gt; zf
 </rich_text>
+        </node>
+        <node name="commands" unique_id="158" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659501651" ts_lastsave="1659577088">
+          <rich_text scale="h1">neovim commands</rich_text>
+          <rich_text>
+
+search and replace in entire document
+</rich_text>
+          <rich_text family="monospace">%s/foo/bar/g</rich_text>
+          <rich_text>
+
+
+strip trailing spaces
+%s/\s\+$//e
+
+strip spaces 
+%s/^\s\+//e
+
+
+let &amp;t_SI = "\e[6 q"
+let &amp;t_EI = "\e[2 q"
+
+" strip trailing whitespace when :w
+autocmd BufWritePre * :%s/\s\+$//e
+
+</rich_text>
+          <rich_text family="monospace">let g:python_recommended_style = 0</rich_text>
+          <rich_text>
+</rich_text>
+          <rich_text family="monospace">autocmd FileType python setlocal noexpandtab</rich_text>
         </node>
       </node>
       <node name="Org ~" unique_id="52" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1653020988" ts_lastsave="1653038912">
@@ -7111,6 +7429,200 @@ $ ls -l envname/bin/python
 lrwxrwxrwx 1 foo foo 18 Jan 29 18:48 envname/bin/python -&gt; /usr/bin/python3.8
 
 </rich_text>
+        <node name="line breaks" unique_id="161" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659503793" ts_lastsave="1659504000">
+          <rich_text>line breaks in python
+
+example code from forum
+
+Make sure to indent the continued line appropriately. The preferred place to break around a binary operator is after the operator, not before it. Some examples:
+
+class Rectangle(Blob):
+
+  def __init__(self, width, height,
+                color='black', emphasis=None, highlight=0):
+       if (width == 0 and height == 0 and
+          color == 'red' and emphasis == 'strong' or
+           highlight &gt; 100):
+           raise ValueError("sorry, you lose")
+       if width == 0 and height == 0 and (color == 'red' or
+                                          emphasis is None):
+           raise ValueError("I don't think so -- values are %s, %s" %
+                            (width, height))
+       Blob.__init__(self, width, height,
+                     color, emphasis, highlight)file_2.write(file_1.read())
+
+
+
+
+code im working on
+
+class fzm(FzfMarksBase):
+    """
+    fzm: select and jump to bookmark stored in fzf-marks
+    """
+
+    fzf_opts = os.environ.get(
+        "FZF_FZM_OPTS",
+        "--reverse --cycle +m --ansi \
+                --bind=ctrl-o:accept,ctrl-t:toggle --select-1",
+    )
+
+    def execute(self):
+        import subprocess
+
+        target = None
+        query = ""
+
+        if self.arg(1):
+            query = self.arg(1)
+
+        if not os.path.exists(self.bookmark_file):
+            self.fm.notify("No fzf bookmark is created yet!", bad=True)
+            return
+
+        command = '&lt; "{2}" sort -f | {0} {1} --query "{3}"'.format(
+            self.fzf_cmd, self.fzf_opts, self.bookmark_file, query
+        )
+
+        process = self.fm.execute_command(
+            command, universal_newlines=True, stdout=subprocess.PIPE
+        )
+        stdout, stderr = process.communicate()
+        if process.returncode == 0:
+            key, target = stdout.rstrip().split(" : ", 1)
+            target = os.path.expanduser(target)
+
+        if not target:
+            return
+        elif os.path.isdir(target):
+            self.fm.cd(target)
+        elif os.path.isfile(target):
+            self.fm.select_file(target)
+        else:
+            self.fm.notify(
+                "Invalid fzf bookmark location: {} : {}".format(key, target), True
+            )</rich_text>
+        </node>
+        <node name="remove spaces" unique_id="163" prog_lang="python3" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659570861" ts_lastsave="1659570896">
+          <rich_text>import subprocess
+from ranger.api.commands import Command
+
+
+class git(Command):
+
+    commands = 'init status clone add rm restore commit remote push'.split()
+
+
+def execute(self):
+    # empty
+    if not self.arg(1):
+        return self.fm.notify("For commands check \"git help\"")
+
+        # help
+    if self.arg(1) == "help":
+        return self.fm.notify("Not done yet!", bad=True)
+
+
+if self.arg(1) == self.commands[0]:
+        subprocess.run(["git", "init", "--quiet"])
+        return self.fm.notify("Git repository initialized successefully")
+
+
+    # status
+if self.arg(1) == self.commands[1]:
+        output = subprocess.check_output(["git", "status"]).decode()
+
+with open('/tmp/gitplug-status', 'w') as out:
+        out.write(output)
+
+     return self.fm.edit_file('/tmp/gitplug-status')
+
+# clone
+# TIP!
+#       to clone private repositorues you have to store your data
+#       using: "git config --global credential.helper store" in your
+#       terminals emulator(not ranger! it will not work!) and then
+#       do one pull still from terminals emulator and then you can
+#       clone private repositories from ranger.
+if self.arg(1) == self.commands[2]:
+    if not self.arg(2):
+        return self.fm.notify("Missing url!", bad=True)
+
+    if self.arg(2):
+        subprocess.run(["git", "clone", self.arg(2), "--quiet"])
+        return self.fm.notify("git repository successfully cloned!")
+
+# add
+if self.arg(1) == self.commands[3]:
+    if not self.arg(2):
+        return self.fm.notify("Missing arguments! Usage :git add &lt;file&gt;", bad=True)
+
+    if self.arg(2):
+        subprocess.run(["git", "add", self.arg(2)])
+        return self.fm.notify("added files to git repo!")
+
+#rm
+if self.arg(1) == self.commands[4]:
+    if not self.arg(2):
+        return self.fm.notify("Missing arguments! Usage :git rm &lt;file&gt;", bad=True)
+
+    if self.arg(2):
+        subprocess.run(["git", "rm", self.arg(2)])
+        return self.fm.notify("removed files from branch!")
+
+# restore
+if self.arg(1) == self.commands[5]:
+    if not self.arg(2):
+        return self.fm.notify("Missing arguments! Usage :git restore &lt;file&gt;", bad=True)
+
+    if self.arg(2):
+        subprocess.run(["git", "restore", "--staged", self.arg(2), "--quiet"])
+        return self.fm.notify("restored files!")
+
+# commit
+if self.arg(1) == self.commands[6]:
+    if not self.rest(2):
+        return self.fm.notify("Missing commit text", bad=True)
+
+    if self.rest(2):
+        subprocess.run(["git", "commit", "-m", self.rest(2), "--quiet"])
+        return self.fm.notify("git commit finished!")
+
+# remote
+if self.arg(1) == self.commands[7]:
+    if not self.arg(2):
+        return self.fm.notify("Missing arguments! Use: git remote add/rm &lt;name&gt; &lt;url&gt;", bad=True)
+
+    if self.arg(2) == "add":
+        if not self.arg(3):
+            return self.fm.notify("Missing name and url!", bad=True)
+
+        if self.arg(3):
+            if not self.arg(4):
+                return self.fm.notify("Missing url!", bad=True)
+
+            if self.arg(4):
+                subprocess.run(["git", "remote", "add", self.arg(3), self.arg(4)])
+                return self.fm.notify("Remote added to repo!")
+
+    if self.arg(2) == "rm":
+        if not self.arg(3):
+            return self.fm.notify("Missing name!", bad=True)
+
+        if self.arg(3):
+            subprocess.run(["git", "remote", "rm", self.arg(3)])
+            return self.fm.notify("old remote trashed")
+
+# push
+if self.arg(1) == self.commands[8]:
+    if self.arg(2) == "-u" and self.arg(3) and self.arg(4):
+        subprocess.run(["git", "push", "--quiet", "-u", self.arg(3), self.arg(4)])
+        return self.fm.notify("successfully pushed")
+
+    if not self.arg(2):
+        subprocess.run(["git", "push", "--quiet"])
+        return self.fm.notify("successfully pushed")</rich_text>
+        </node>
       </node>
       <node name="qtile" unique_id="125" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="23" is_bold="0" foreground="" ts_creation="1658719233" ts_lastsave="1658719278">
         <rich_text scale="h1">qtile ~</rich_text>
@@ -7147,8 +7659,22 @@ Triggered with key:
 	</rich_text>
         </node>
       </node>
-      <node name="Ranger" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652978975" ts_lastsave="1657770854">
+      <node name="Ranger" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652978975" ts_lastsave="1659501756">
         <rich_text scale="h1">Ranger ~</rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+
+</rich_text>
+        <rich_text link="file L2hvbWUvdHJnLy5jb25maWcvcXRpbGUvaWNvbnMvcmFuZ2VyLnBuZw==">/home/trg/.config/qtile/icons/ranger.png</rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text link="webs https://wiki.archlinux.org/title/ranger">https://wiki.archlinux.org/title/ranger</rich_text>
         <rich_text>
 
 optional packages
@@ -7157,6 +7683,16 @@ atool  elinks  ffmpegthumbnailer  highlight  libcaca  lynx  mediainfo  odt2txt  
 yd - copy directory name only
 yn - copy file name only
 yp - copy full path</rich_text>
+        <encoded_png char_offset="10" justification="left" link="">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</encoded_png>
+        <node name="tips" unique_id="159" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659501756" ts_lastsave="1659501758">
+          <rich_text># clone
+# TIP!
+#       to clone private repositorues you have to store your data
+#       using: "git config --global credential.helper store" in your
+#       terminals emulator(not ranger! it will not work!) and then
+#       do one pull still from terminals emulator and then you can
+#       clone private repositories from ranger</rich_text>
+        </node>
       </node>
       <node name="Rofi" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="39" is_bold="0" foreground="" ts_creation="1656184139" ts_lastsave="1658506592">
         <rich_text scale="h1">rofi ~</rich_text>
