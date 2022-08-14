@@ -200,7 +200,7 @@ alias gntag='git tag -a'
 alias grmc="rm -r ~/.cache/git"
 
 alias config='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
-alias srvconfig='/usr/bin/git --git-dir=/srv/git -u --work-tree=/'
+alias srvconfig='/usr/bin/git --git-dir=/srv/git --work-tree=/'
 alias cs='config status'
 alias cp='config push arch28'
 
