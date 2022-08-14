@@ -1,7 +1,0 @@
-remove emacs daemon
-
-	from 
-		/home/trg/.config/systemd/user
-		emacs.service - this symbolic links to below
-			default.target.wants
-				emacs.service

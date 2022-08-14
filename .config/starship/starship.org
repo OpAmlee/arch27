@@ -4,83 +4,36 @@
 
 * table of contents :toc:
 - [[#layout][layout]]
-- [[#directory][directory]]
-- [[#character][character]]
-- [[#right-prompt][right prompt]]
-- [[#line-break][line break]]
-- [[#time][time]]
 - [[#battery][battery]]
+- [[#character][character]]
+- [[#conda][conda]]
+- [[#cmd-duration][cmd duration]]
+- [[#directory][directory]]
 - [[#git][git]]
+- [[#line-break][line break]]
+- [[#python][python]]
+- [[#right-prompt][right prompt]]
 - [[#username][username]]
-- [[#c][c]]
-- [[#new][new]]
-- [[#ssh][ssh]]
-- [[#new-1][new]]
 
 * layout
 
 #+BEGIN_SRC sh
 format = """
-[╭── ](fg:235)$username $directory $fill $git_branch $git_commit $battery $time(fg:235)$line_break\
-[│](fg:235)
+[╭── ](fg:235)$username $directory $fill $cmd_duration $python$conda$git_branch $git_status $git_commit$battery$line_break\
 [╰ ](fg:235)$character
 """
 add_newline = true
+# [│](fg:235)
 #+END_SRC
 
-* directory
-
-#+BEGIN_SRC sh
-[directory]
-truncation_length = 3
-style = "fg:129"
-read_only = " "
-read_only_style = "red"
-#symbol = " "
-#+END_SRC
-
-
-* character
-
-#+BEGIN_SRC sh
-[character]
-success_symbol = "[](bold green) "
-error_symbol = "[](bold red) "
-#+END_SRC
-
-
-* right prompt
-
-#+BEGIN_SRC sh
-[fill]
-symbol = "─"
-style = "fg:235"
-#+END_SRC
-
-* line break
-
-#+BEGIN_SRC sh
-[line_break]
-disabled = false
-#+END_SRC
-
-* time
-
-#+BEGIN_SRC sh
-[time]
-disabled = true
-style = "bold #B70BA7"
-format = '[$time]($style) '
-time_format = "%R"
-#+END_SRC
 
 * battery
 
 #+BEGIN_SRC sh
 [battery]
 format = "[$percentage]($style) "
-full_symbol = " "
-charging_symbol = "⚡"
+#full_symbol = " "
+#charging_symbol = "⚡"
 
 [[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
 threshold = 20
@@ -108,10 +61,48 @@ discharging_symbol = " "
 
 [[battery.display]] # capacity is above last value listed and below 100
 threshold = 100
-style = "fg:40"
+style = "italic fg:35"
 charging_symbol = "⚡"
 discharging_symbol = " "
 #discharging_symbol = "🔋 "
+#+END_SRC
+
+
+
+* character
+
+#+BEGIN_SRC sh
+[character]
+success_symbol = "[ ](bold green) "
+error_symbol = "[](fg:162) "
+disabled = false
+#+END_SRC
+
+
+* conda
+#+BEGIN_SRC sh
+[conda]
+format = "[$symbol$environment]($style) "
+symbol = ""
+style = "fg:4"
+#+END_SRC
+
+* cmd duration
+#+BEGIN_SRC sh
+[cmd_duration]
+min_time = 500
+format = "[$duration](fg:172)"
+#+END_SRC
+
+* directory
+
+#+BEGIN_SRC sh
+[directory]
+truncation_length = 8
+style = "fg:129"
+read_only = " "
+read_only_style = "red"
+#symbol = " "
 #+END_SRC
 
 
@@ -122,8 +113,8 @@ discharging_symbol = " "
 
 [git_branch]
 format = "[$symbol $branch(:$remote_branch)]($style) "
-symbol = " "
-style = "fg:8"
+symbol = " "
+style = "italic fg:87"
 truncation_length = 20
 truncation_symbol = ""
 
@@ -131,74 +122,69 @@ truncation_symbol = ""
 commit_hash_length = 8
 style = "bold white"
 
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+
 [git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = "[🍒 picking](bold white)"
+cherry_pick = "[picking](bold white)"
 rebase = "[rebasing](bold white)"
 merge = "[merging](bold white)"
 revert = "[reverting](bold white)"
+disabled = false
+
+#+END_SRC
 
 
+#+RESULTS:
 
-[git_status]
+* line break
 
-#conflicted = "⚔ x${count}"
-#ahead = "🏎 ×${count}"
-#behind = "🐢 ×${count}"
-#diverged = "🔱 🏎 💨 ×${ahead_count} 🐢 ×${behind_count}"
-#up_to_date = "✓"
-#modified = "📝 ×${count}"
-staged = "🗃 ×${count}"
-#renamed = "📛 ×${count}"
-#deleted = "🗑 ×${count}"
-#untracked = "🛤  ×${count}"
-#stashed = "📦 ×${count}"
-#deleted = "🗑  ×${count}"
-style = "bright-white"
-#format = "$all_status$ahead_behind"
+#+BEGIN_SRC sh
+[line_break]
+disabled = false
+#+END_SRC
 
+* python
+
+#+BEGIN_SRC sh
+[python]
+#format = '[${symbol} ${pyenv_prefix} ${detect_folders}(${version} )(\($virtualenv\) )]($style)'
+format = '[${symbol}  ${pyenv_prefix} ${detect_folders}(${version} )(\($virtualenv\) )]($style)'
+symbol = ""
+style = "fg:4"
+
+version_format = "v${minor}"
+
+pyenv_version_name = false
+pyenv_prefix = "pyenv"
+python_binary = ["./venv/bin/python", "python3"]
+detect_folders = ["ranger","env39","~/.pyenv","~/anaconda3/env/env39"]
+detect_extensions = ["py"]
+detect_files = [".python-version", "Pipfile", "__init__.py", "pyproject.toml", "requirements.txt", "setup.py", "tox.ini"]
+disabled = true
+#+END_SRC
+
+
+* right prompt
+
+#+BEGIN_SRC sh
+[fill]
+symbol = " "
+style = "fg:235"
 #+END_SRC
 
 * username
 
 #+BEGIN_SRC sh
 [username]
+format = "[$user]($style)"
 style_user = "fg:251"
-style_root = "red bold"
-format = "[$user]($style) "
-disabled = false
-show_always = true
+style_root = "bold #FF5B00"
+show_always = false
+# Hide the username. The username will only show in certain scenarios
+disabled = true
 
-#+END_SRC
-
-
-* c
-
-#+BEGIN_SRC sh
-[c]
-format = "via [$symbol ($version(-$name) )]($style)"
-symbol = ""
-#+END_SRC
-
-* new
-
-#+BEGIN_SRC sh
-#
-#+END_SRC
-
-* ssh
-
-#+BEGIN_SRC sh
-[hostname]
-ssh_only = false
-format = "[$ssh_symbol](bold blue) on [$hostname](bold red) "
-trim_at = ".companyname.com"
-ssh_symbol = "🌐 "
-disabled = false
-#+END_SRC
-
-* new
-
-#+BEGIN_SRC sh
-#
 #+END_SRC

@@ -19,11 +19,13 @@
 @import url(chrome/urlbar_centered_text.css);
 @import url(hacks/vertical_bookmarks_toolbar_modified.css);
 @import url(hacks/centered_tab_content.css);
+@import url(chrome/tab_separator_lines.css);
 /*@import url(hacks/tab_close_buttons_on_hover.css);*/
 /* Apply your custom modifications after imports */
 
+@import url(content/auto_devtools_theme.css);
 :root{
-  --toolbar-bgcolor: rgb(0, 6, 16) !important;
+  --toolbar-bgcolor: rgb(7, 7, 8) !important;
   --uc-menu-bkgnd: var(--toolbar-bgcolor);
   --arrowpanel-background: var(--toolbar-bgcolor) !important;
   --autocomplete-popup-background: var(--toolbar-bgcolor) !important;
@@ -39,4 +41,6 @@ window.sidebar-panel{ --lwt-sidebar-background-color: rgb(28, 84, 24) !important
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button{
   display:-moz-box !important;
+
 }
+

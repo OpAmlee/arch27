@@ -107,6 +107,7 @@ alias est='nvim ~/.config/dusk/st/config.def.h'
 alias estart='sudo nvim /usr/local/bin/autostart-dusk'
 alias estarship='nvim ~/.config/starship/starship.toml'
 alias exprofile='nvim ~/.xprofile'
+alias exresources='nvim ~/.Xresources && xrdb -I$HOME ~/.Xresources'
 
 function emacs ()
 {
@@ -179,8 +180,8 @@ alias fzfnv='nvim $(fzf --height 100% --reverse)'
 alias fzfsnv='sudoedit nvim $(fzf --height 40% --reverse)'
 alias fzfsearch="fzf --height 40% --layout reverse --info inline --border --preview 'file {}' --preview-window up,1,border-horizontal --color 'fg:#928374,fg+:#18E406,bg:#121212,preview-bg:#1F2022,border:#6D6259'"
 
-alias fzfpac="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
-alias fzfparu="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+alias fzpac="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+alias fzp="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
 
 
 #alias fzfpacx="pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S"
@@ -199,10 +200,11 @@ alias gntag='git tag -a'
 alias grmc="rm -r ~/.cache/git"
 
 alias config='/usr/bin/git --git-dir=$HOME/gitbare/ --work-tree=$HOME'
-alias syscon='/usr/bin/git --git-dir=/usr --work-tree=/usr'
-
+alias srvconfig='/usr/bin/git --git-dir=/srv/git -u --work-tree=/'
+alias cs='config status'
 alias cp='config push arch28'
- function ca()
+
+function ca()
 {
     config add "$*"
 }
@@ -213,7 +215,6 @@ function cc()
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
-# termbin
 
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /bu/* ~'
@@ -229,10 +230,15 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+alias hs=' history 11 | head -n 10'
+alias hsg=' history | grep '
+
 #keyboard
 alias kbreset='setxkbmap'
 alias kbset='/bin/bash -c "sleep 1; /usr/bin/xmodmap /home/$USER/.Xmodmap"'
 alias xevsimple='/bin/bash -c "sleep 5; /home/$USER/.scripts/xev-simple.sh"'
+
+alias make='colormake'
 
 # use nvim for editor in visudo
 alias nvim-visudo="sudo EDITOR=nvim visudo"
@@ -253,12 +259,13 @@ set -o vi
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
-alias merge='xrdb -merge ~/.Xresources'
+alias merge='xrdb -I$HOME ~/.Xresources'
 
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mirrorbak="sudo cp -f /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak"
 #update betterlockscreen images
 alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
@@ -320,6 +327,63 @@ alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 
 #alias python=python3
+
+function ranger-cd {
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command rm -f -- "$tempfile" 2>/dev/null
+}
+#bind '"\C-o":"ranger-cd\C-m"'
+
+ ranger () {
+        local LOGFILE='/tmp/cd_ranger'
+        # `command ranger` to launch ranger itself,
+        # instead of causing an infinite loop with
+        # this function calling itself
+        command ranger "$@" || exit $?
+        if [[ -f "${LOGFILE}" ]]
+        then
+                cd "$(cat "${LOGFILE}")"
+                rm -f "${LOGFILE}"
+        fi
+}
+
+#!/bin/zsh
+# wraps ranger to cd to rangers' directory when exiting
+# Modified from:
+# https://github.com/ranger/ranger/wiki/Integration-with-other-programs#changing-directories
+
+#ranger() {
+#	_call_ranger() {
+#		if [[ -n "$PIPENV_ACTIVE" ]]; then
+#			/usr/bin/ranger "$@" || return $?
+#		else
+#			command ranger "$@" || return $?
+#		fi
+
+#	}
+
+#	local IFS tempfile
+#	local -a ranger_args=()
+#	IFS=$'\t\n'
+#	tempfile="$(mktemp -t ranger.XXXXXX)"
+#	ranger_args+=(--cmd="map S chain shell echo %d > "$tempfile"; quitall!")
+#	ranger_args+=("$@")
+#
+#	_call_ranger "${ranger_args[@]}"
+#	[[ -f "$tempfile" ]] && cd -- "$(cat "$tempfile")"
+#	rm -f "$tempfile"
+#}
 
 alias checkqtile='python3 -m py_compile ~/.config/qtile/config.py'
 

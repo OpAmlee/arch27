@@ -6,7 +6,6 @@ class git(Command):
 
     commands = 'init status clone add rm restore commit remote push'.split()
 
-
     def execute(self):
         # empty
         if not self.arg(1):
@@ -78,13 +77,15 @@ class git(Command):
                 return self.fm.notify("Missing commit text", bad=True)
 
             if self.rest(2):
-                subprocess.run(["git", "commit", "-m", self.rest(2), "--quiet"])
+                subprocess.run(
+                        ["git", "commit", "-m", self.rest(2), "--quiet"])
                 return self.fm.notify("Successfully commited!")
-        
         # remote
         if self.arg(1) == self.commands[7]:
             if not self.arg(2):
-                return self.fm.notify("Missing arguments! Use: git remote add/rm <name> <url>", bad=True)
+                return self.fm.notify(
+                        "Missing arguments! Use: git \
+                                remote add/rm <name> <url>", bad=True)
 
             if self.arg(2) == "add":
                 if not self.arg(3):
@@ -95,7 +96,9 @@ class git(Command):
                         return self.fm.notify("Missing url!", bad=True)
 
                     if self.arg(4):
-                        subprocess.run(["git", "remote", "add", self.arg(3), self.arg(4)])
+                        subprocess.run(
+                                ["git", "remote", "add", self.arg(
+                                    3), self.arg(4)])
                         return self.fm.notify("Remote successfully added!")
 
             if self.arg(2) == "rm":
@@ -109,7 +112,9 @@ class git(Command):
         # push
         if self.arg(1) == self.commands[8]:
             if self.arg(2) == "-u" and self.arg(3) and self.arg(4):
-                subprocess.run(["git", "push", "--quiet", "-u", self.arg(3), self.arg(4)])
+                subprocess.run(
+                        ["git", "push", "--quiet", "-u", self.arg(
+                            3), self.arg(4)])
                 return self.fm.notify("Repository successfully pushed")
 
             if not self.arg(2):

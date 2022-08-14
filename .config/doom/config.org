@@ -1,7 +1,7 @@
 #+TITLE: TRG's Doom Emacs Config
 #+PROPERTY: header-args :tangle ~/.config/doom/config.el
 #+AUTHOR: original author Derek Taylor (DT)
-#+DESCRIPTION: TRG's personal Doom Emacs config.
+#+DESCRIPTION: TRG's personal Doom Emacs config. Structure borrow from Derek Taylor @ distrotube
 #+STARTUP: showeverything
 
 * TABLE OF CONTENTS :toc:
@@ -225,22 +225,23 @@ To use tabs in Doom Emacs, be sure to uncomment "tabs" in Doom's init.el.  Displ
 | centaur-tabs-backward-group | /Previous tab group/        | g <up>           |
 
 #+BEGIN_SRC emacs-lisp
-(setq centaur-tabs-set-bar 'over
+(setq centaur-tabs-set-bar 'under
       centaur-tabs-set-icons t
       centaur-tabs-gray-out-icons 'buffer
-      centaur-tabs-height 24
+      centaur-tabs-height 35
       centaur-tabs-set-modified-marker t
       centaur-tabs-style "slant"
+      centaur-tabs-set-close-button nil
       ;;centaur-tabs-modified-marker "•")
       centaur-tabs-modified-marker "*")
 
 (map! :leader
       :desc "Toggle tabs globally" "t c" #'centaur-tabs-mode
       :desc "Toggle tabs local display" "t C" #'centaur-tabs-local-mode)
-(evil-define-key 'normal centaur-tabs-mode-map (kbd "g <right>") 'centaur-tabs-forward        ; default Doom binding is 'g t'
-                                               (kbd "g <left>")  'centaur-tabs-backward       ; default Doom binding is 'g T'
-                                               (kbd "g <down>")  'centaur-tabs-forward-group
-                                               (kbd "g <up>")    'centaur-tabs-backward-group)
+(evil-define-key 'normal centaur-tabs-mode-map (kbd "g <right>") 'centaur-tabs-forward  ; default Doom binding is 'g t'
+(kbd "g <left>")  'centaur-tabs-backward  ; default Doom binding is 'g T'
+(kbd "g <down>")  'centaur-tabs-forward-group
+(kbd "g <up>")    'centaur-tabs-backward-group)
 #+END_SRC
 
 * CLIPPY
@@ -268,7 +269,8 @@ Emacs Dashboard is an extensible startup screen showing you recent files, bookma
   :init      ;; tweak dashboard config before loading it
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
-  (setq dashboard-banner-logo-title "\nKEYBINDINGS:\
+  (setq dashboard-banner-logo-title "\nHello TRG! Welcome to Emacs Dashboard\
+\nKEYBINDINGS:\
 \nFind file               (SPC .)     \
 Open buffer list    (SPC b i)\
 \nFind recent files       (SPC f r)   \
@@ -412,7 +414,7 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 Setting the theme to doom-one.  To try out new themes, I set a keybinding for counsel-load-theme with 'SPC h t'.
 
 #+BEGIN_SRC emacs-lisp
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-outrun-electric)
 (map! :leader
       :desc "Load new theme" "h t" #'counsel-load-theme)
 #+END_SRC
@@ -664,7 +666,7 @@ https://github.com/seagle0128/doom-modeline
 
 #+begin_src emacs-lisp
 (set-face-attribute 'mode-line nil :font "Blex Mono Nerd Font")
-(setq doom-modeline-height 30     ;; sets modeline height
+(setq doom-modeline-height 45     ;; sets modeline height
       doom-modeline-bar-width 10   ;; sets right bar width
       doom-modeline-persp-name t  ;; adds perspective name to modeline
       doom-modeline-buffer-state-icon t
@@ -917,7 +919,7 @@ Settings for the various shells and terminal emulators within Emacs.
 + 'eshell-aliases-file' -- sets an aliases file for the eshell.
 
 #+BEGIN_SRC emacs-lisp
-(setq shell-file-name "/bin/fish"
+(setq shell-file-name "/bin/bash"
       vterm-max-scrollback 5000)
 (setq eshell-rc-script "~/.config/doom/eshell/profile"
       eshell-aliases-file "~/.config/doom/eshell/aliases"

@@ -9,8 +9,8 @@
 
 
 # Launch Menus
-super + {x,n,d,s}
-    {powermenu,def-nmdmenu,def-dmenu,def-ssdmenu}
+super + {x,n,d,s,t}
+    {powermenu,def-nmdmenu,def-dmenu,def-ssdmenu,xterm}
 
 
 super + v; {a,n,s,f}
@@ -28,8 +28,16 @@ super + shift + e
 super + v
     virtualbox
 
-super + Escape; {s,d,p,n}
-    {pkill -USR1 -x sxhkd; notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'SXHKD' 'reloaded config', /bin/bash -c $HOME/.scripts/restart/dusk.sh, /bin/bash -c ~/.scripts/restart-powerline, notify-send -t 2000 "restarting dunst" && sleep 1 && killall dunst }
+super + Escape; {s,d,p,n,x}
+    { \
+    pkill -USR1 -x sxhkd; \
+    notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png \
+    'SXHKD' 'reloaded config', \
+    /bin/bash -c $HOME/.scripts/restart/dusk.sh, \
+    /bin/bash -c ~/.scripts/restart-powerline, \
+    notify-send -t 2000 "restarting dunst" && sleep 1 && killall dunst, \
+    $HOME/.scripts/mergex; \
+    notify-send -i /usr/share/icons/Adwaita/32x32/emblems/emblem-synchronizing.png 'Xresources' 'reloaded config'}
 
 super + Delete; {s,d}
     {pkill -USR1 -x sxhkd; notify-send -i /home/trg/Downloads/web/Webp.net-resizeimage.png 'SXHKD' 'reloaded config', $HOME/.scripts/restart/dusk.sh}
@@ -39,7 +47,9 @@ super + Delete; {s,d}
 #    Control    {{{
 #===============|
 control + e
-    emacs
+    emacsclient -c 
+  #  emacsclient --eval '(load-file "~/.emacs.d/init.el")'
+  # /bin/emacs -bg '#070707' --no-splash --maximized --title emacs
 # }}}
 
 #     Alt   {{{
@@ -57,7 +67,8 @@ alt + s
 
 alt + v
     /usr/bin/virtualbox
-
+alt + u 
+    urxvt
 
 # }}}
 

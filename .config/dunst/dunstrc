@@ -17,17 +17,17 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = none
+    follow = mouse
 
     ### Geometry ###
 
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 5000
+    width = 700
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = 200
 
     # Position the notification in the top right corner
     origin = bottom-center
@@ -110,7 +110,7 @@
 
     ### Text ###
 
-    font = Liberation Serif 16
+    font = BlexMono Nerd Font 16
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -173,7 +173,7 @@
     ignore_newline = no
 
     # Stack together notifications with the same content
-    stack_duplicates = true
+    stack_duplicates = false
 
     # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
@@ -184,7 +184,7 @@
     ### Icons ###
 
     # Align icons left/right/top/off
-    icon_position = off
+    icon_position = left
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
@@ -195,8 +195,8 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-
+    #: icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/
+    icon_path =/usr/share/icons/FlatWoken/22x22/status:/usr/share/icons/FlatWoken/22x22/devices:/usr/share/icons/Adwaita/24x24/legacy
     ### History ###
 
     # Should a notification popped up from history be sticky or timeout
@@ -218,17 +218,17 @@
     always_run_script = true
 
     # Define the title of the windows spawned by dunst
-    title = Dunst
+    title = dunst
 
     # Define the class of the windows spawned by dunst
-    class = Dunst
+    class = dunst
 
     # Define the corner radius of the notification window
     # in pixel size. If the radius is 0, you have no rounded
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 4
+    corner_radius = 10
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -292,14 +292,14 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#171717"
-    foreground = "#EDEEE6"
+    foreground = "#79C5D9"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#171717"
-    foreground = "#AFD700"
+    background = "#121212CC"
+    foreground = "#17FA07"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon

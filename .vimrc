@@ -1,9 +1,10 @@
 "   ╔╦╗╦═╗╔═╗  \│/  ╔╗╔╔═╗╔═╗╦  ╦╦╔╦╗
 "    ║ ╠╦╝║ ╦  ─ ─  ║║║║╣ ║ ║╚╗╔╝║║║║
 "    ╩ ╩╚═╚═╝  /│\  ╝╚╝╚═╝╚═╝ ╚╝ ╩╩ ╩
-" location : $ symlink $HOME/.vim to $HOME/.config/nvim/init.vim
-" description: nvim config
-"" Vim-Plug core{{{
+" vim-bootstrap 2022-05-18 20:48:32
+
+"*****************************************************************************
+"" Vim-Plug core
 "*****************************************************************************
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 if has('win32')&&!has('win64')
@@ -31,8 +32,10 @@ endif
 
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
-"}}}
-"" Plug install packages{{{
+
+"*****************************************************************************
+"" Plug install packages
+"*****************************************************************************
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
@@ -156,100 +159,98 @@ Plug 'leafOfTree/vim-vue-plugin'
 " vim=hexokinase
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
-"*****************************************************************************}}}
-" Include user's extra bundle{{{
+"*****************************************************************************
+"*****************************************************************************
+call plug#end()
+"" Include user's extra bundle
 if filereadable(expand("~/.config/nvim/local_bundles.vim"))
   source ~/.config/nvim/local_bundles.vim
 endif
 
-call plug#end()
-"}}}
-" plugin indent{{{
+
+
 " Required:
 filetype plugin indent on
-"}}}
-"" Encoding{{{
+
+
+"*****************************************************************************
+"" Basic Setup
+"*****************************************************************************"
+"" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-"}}}
-"" Fix backspace indent{{{
+
+
+"" Fix backspace indent
 set backspace=indent,eol,start
-"}}}
-"" Tabs. May be overridden by autocmd rules{{{
+
+"" Tabs. May be overridden by autocmd rules
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
-"}}}
-"" Map leader {{{
+
+"" Map leader to ,
 let mapleader=','
-"}}}
-" Enable hidden buffers{{{
+
+"" Enable hidden buffers
 set hidden
-"}}}
-" Searching{{{
+
+"" Searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-"}}}
-" file formats{{{
+
 set fileformats=unix,dos,mac
-"}}}
-" Shell {{{
+
 if exists('$SHELL')
     set shell=$SHELL
 else
     set shell=/bin/bash
 endif
-"}}}
-" session management{{{
+
+" session management
 let g:session_directory = "~/.config/nvim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
-"}}}
-" themes{{{
+
+" themes
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'darker'
 colorscheme material
-"}}}
-" syntax {{{
-syntax on
-"}}}
-" ruler {{{
-set ruler
-"}}}
-" line number {{{
-set number
-"}}}
-" fold method{{{
-set foldmethod=marker
-"}}}
-" termguicolors {{{
-set termguicolors
-"}}}
 
+
+
+"*****************************************************************************
+"" Visual Settings
+"*****************************************************************************
+syntax on
+set ruler
+set number
+set foldmethod=marker
+set termguicolors
 let no_buffers_menu=1
 
 " make line inbetween nerdtree invisible
+set fillchars+=vert:\
 
 " remove random vertical line
-"set colorcolumn="120"
+set colorcolumn=""
 
 " Better command line completion
 set wildmenu
 
-" mouse support{{{
+" mouse support
 set mouse=a
-"}}}
+
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
 
-" Mac {{{
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
     set guifont=Menlo:h12
@@ -257,50 +258,24 @@ if has("gui_running")
   endif
 else
   let g:CSApprox_loaded = 1
-  "}}}
-  " IndentLine{{{
+
+  " IndentLine
   let g:indentLine_enabled = 1
   let g:indentLine_concealcursor = ''
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
+
+
 endif
-"}}}
 
 
-" Disable blinking cursor{{{
-"set gcr=a:blinkon0
-"}}}
+
+"" Disable the blinking cursor.
+set gcr=a:blinkon0
 
 au TermEnter * setlocal scrolloff=0
 au TermLeave * setlocal scrolloff=3
 
-
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
-" strip trailing whitespace when :w
-autocmd BufWritePre * :%s/\s\+$//e
-
-
-set wrap
-set linebreak
-" note trailing space at end of next line
-set showbreak=>\ \ \
-
-
-
-
-
-
-
-
-
-
-
-
-
-" status line format    {{{
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
 "" Status bar
 set laststatus=2
@@ -313,27 +288,36 @@ set title
 set titleold="Terminal"
 set titlestring=%F
 
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
-
-"}}}
-
-" splits right-below    {{{
 set splitright
 set splitbelow
-"}}}
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+" tab split
+noremap tt :tab split<CR>
+
+
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
 
+" vim-airline
+let g:airline_theme = 'hybrid'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline_skip_empty_sections = 1
 
-"" Abbreviations{{{
-
+"*****************************************************************************
+"" Abbreviations
+"*****************************************************************************
+"" no one is really happy until you have this shortcuts
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Qall! qall!
@@ -344,10 +328,8 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
-"}}}
-"" NERDTree configuration{{{
-set fillchars+=vert:\
 
+"" NERDTree configuration
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['node_modules','\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
@@ -359,28 +341,25 @@ let NERDTreeShowHidden=1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,*node_modules/
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
-"}}}
-" NERDTree bindings{{{
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
-"}}}
-" grep.vim{{{
+" grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
 let Grep_Default_Options = '-IR'
 let Grep_Skip_Files = '*.log *.db'
 let Grep_Skip_Dirs = '.git node_modules'
 
-" }}}
-" terminal emulation{{{
+" terminal emulation
 nnoremap <silent> <leader>sh :terminal<CR>
-"}}}
-" remove trailing whitespaces{{{
+
+
+"*****************************************************************************
+"" Commands
+"*****************************************************************************
+" remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
-"}}}
-"" Functions{{{
+
+"*****************************************************************************
+"" Functions
 "*****************************************************************************
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
@@ -389,8 +368,10 @@ if !exists('*s:setupWrapping')
     set textwidth=79
   endfunction
 endif
-"}}}
-"" Autocmd Rules{{{
+
+"*****************************************************************************
+"" Autocmd Rules
+"*****************************************************************************
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -416,16 +397,17 @@ augroup vimrc-make-cmake
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
 
-set autoread"
+set autoread
 
-"}}}
-"" Split{{{
+"*****************************************************************************
+"" Mappings
+"*****************************************************************************
+
+"" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
-" }}}
-"" Git {{{
 
-
+"" Git
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Git commit --verbose<CR>
 noremap <Leader>gsh :Git push<CR>
@@ -435,20 +417,16 @@ noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiffsplit<CR>
 noremap <Leader>gr :GRemove<CR>
 
-"}}}
-" session management{{{
+" session management
 nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
-"}}}
-"" Tabs{{{
+"" Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
-
-"}}}
 
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
@@ -459,32 +437,53 @@ noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+"" fzf.vim
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 
-" snippets{{{
+" The Silver Searcher
+if executable('ag')
+  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+
+" ripgrep
+if executable('rg')
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+  set grepprg=rg\ --vimgrep
+  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+endif
+
+cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>e :FZF -m<CR>
+"Recovery commands from history through FZF
+nmap <leader>y :History:<CR>
+
+" snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
-"}}}
-" ale{{{
+
+" ale
 let g:ale_linters = {}
-"}}}
-" Tagbar{{{
+
+" Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
-"}}}
-" Disable visualbell{{{
+
+" Disable visualbell
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
-"}}}
-"" Copy/Paste/Cut{{{
+
+"" Copy/Paste/Cut
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
-"}}}
-
 
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
@@ -496,24 +495,23 @@ if has('macunix')
   vmap <C-c> :w !pbcopy<CR><CR>
 endif
 
-"" Buffer nav{{{
+"" Buffer nav
 noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
+
 "" Close buffer
 noremap <leader>c :bd<CR>
-"}}}
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
-"" Switching windows{{{
+"" Switching windows
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
-"}}}
 
 let g:kitty_navigator_no_mappings = 1
 
@@ -533,26 +531,28 @@ vnoremap K :m '<-2<CR>gv=gv
 "" Open current line on GitHub
 nnoremap <Leader>o :.Gbrowse<CR>
 
+"*****************************************************************************
+"" Custom configs
+"*****************************************************************************
 
-
-" c {{{
+" c
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType vim,c++,txt setlocal foldmethod=marker
-" }}}
-" haskell{{{
+
+" haskell
 let g:haskell_conceal_wide = 1
 let g:haskell_multiline_strings = 1
 let g:necoghc_enable_detailed_browse = 1
 autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
-"}}}
 
-" html{{{
+
+" html
 " for html files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-"}}}
 
-" javascript{{{
+
+" javascript
 let g:javascript_enable_domhtmlcss = 1
 
 " vim-javascript
@@ -560,13 +560,19 @@ augroup vimrc-javascript
   autocmd!
   autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
 augroup END
-"}}}
-" json{{{
+
+
+" lisp
+
+" json
 autocmd Filetype json
   \ let g:indentLine_setConceal = 0 |
   \ let g:vim_json_syntax_conceal = 0
-"}}}
-" php{{{
+
+" lua
+
+
+" php
 " Phpactor plugin
 " Include use statement
 nmap <Leader>u :call phpactor#UseAdd()<CR>
@@ -591,8 +597,10 @@ nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
 vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 " Extract method from selection
 vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
-"}}}
-" python{{{
+
+
+" python
+" vim-python
 augroup vimrc-python
   autocmd!
   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
@@ -600,8 +608,7 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
-"}}}
-" jedi-vim{{{
+" jedi-vim
 let g:jedi#popup_on_dot = 0
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
@@ -612,16 +619,18 @@ let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 
-"}}}
-" ale{{{
+" ale
 :call extend(g:ale_linters, {
     \'python': ['flake8'], })
 
-" vim-airline}}}
-" Syntax highlight{{{
+" vim-airline
+let g:airline#extensions#virtualenv#enabled = 1
+
+" Syntax highlight
 let python_highlight_all = 1
-"}}}
-" ruby{{{
+
+
+" ruby
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
@@ -642,23 +651,21 @@ let g:tagbar_type_ruby = {
         \ 'F:singleton methods'
     \ ]
 \ }
-"}}}
-" RSpec.vim mappings{{{
+
+" RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-"}}}
-" For ruby refactory{{{
+" For ruby refactory
 if has('nvim')
   runtime! macros/matchit.vim
 else
   packadd! matchit
 endif
 
-"}}}
-" Ruby refactory{{{
+" Ruby refactory
 nnoremap <leader>rap  :RAddParameter<cr>
 nnoremap <leader>rcpc :RConvertPostConditional<cr>
 nnoremap <leader>rel  :RExtractLet<cr>
@@ -669,72 +676,80 @@ vnoremap <leader>rrlv :RRenameLocalVariable<cr>
 vnoremap <leader>rriv :RRenameInstanceVariable<cr>
 vnoremap <leader>rem  :RExtractMethod<cr>
 
-"}}}
-" rust{{{
+
+" rust
 " Vim racer
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
-"}}}
-" svelte{{{
+
+
+" svelte
 let g:vim_svelte_plugin_load_full_syntax = 1
 
-"}}}
-" vuejs{{{
+
+" vuejs
 " vim vue
 let g:vue_disable_pre_processors=1
 " vim vue plugin
 let g:vim_vue_plugin_load_full_syntax = 1
 
-"}}}
-" vim-airline{{{
 
-    let g:airline_theme = 'material'
-    let g:airline#extensions#branch#enabled = 1
-    let g:airline#extensions#ale#enabled = 1
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tagbar#enabled = 1
-    let g:airline_skip_empty_sections = 1
-    let g:airline#extensions#virtualenv#enabled = 1
+"*****************************************************************************
+"*****************************************************************************
 
-    if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-    endif
+"" Include user's local vim config
+if filereadable(expand("~/.config/nvim/local_init.vim"))
+  source ~/.config/nvim/local_init.vim
+endif
 
-    if !exists('g:airline_powerline_fonts')
-    let g:airline#extensions#tabline#left_sep = ' '
-    let g:airline#extensions#tabline#left_alt_sep = '|'
-    let g:airline_left_sep          = '▶'
-    let g:airline_left_alt_sep      = '»'
-    let g:airline_right_sep         = '◀'
-    let g:airline_right_alt_sep     = '«'
-    let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
-    let g:airline#extensions#readonly#symbol   = '⊘'
-    let g:airline#extensions#linecolumn#prefix = '¶'
-    let g:airline#extensions#paste#symbol      = 'ρ'
-    let g:airline_symbols.linenr    = '␊'
-    let g:airline_symbols.branch    = '⎇'
-    let g:airline_symbols.paste     = 'ρ'
-    let g:airline_symbols.paste     = 'Þ'
-    let g:airline_symbols.paste     = '∥'
-    let g:airline_symbols.whitespace = 'Ξ'
-    else
-    let g:airline#extensions#tabline#left_sep = ''
-    let g:airline#extensions#tabline#left_alt_sep = ''
+"*****************************************************************************
+"" Convenience variables
+"*****************************************************************************
 
-    " powerline symbols
-    let g:airline_left_sep = ''
-    let g:airline_left_alt_sep = ''
-    let g:airline_right_sep = ''
-    let g:airline_right_alt_sep = ''
-    let g:airline_symbols.branch = ''
-    let g:airline_symbols.readonly = ''
-    let g:airline_symbols.linenr = ''
-    endif
-"}}}
-"  Hexokinaseei Color Picker{{{
+" vim-airline
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+if !exists('g:airline_powerline_fonts')
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+  let g:airline_left_sep          = '▶'
+  let g:airline_left_alt_sep      = '»'
+  let g:airline_right_sep         = '◀'
+  let g:airline_right_alt_sep     = '«'
+  let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
+  let g:airline#extensions#readonly#symbol   = '⊘'
+  let g:airline#extensions#linecolumn#prefix = '¶'
+  let g:airline#extensions#paste#symbol      = 'ρ'
+  let g:airline_symbols.linenr    = '␊'
+  let g:airline_symbols.branch    = '⎇'
+  let g:airline_symbols.paste     = 'ρ'
+  let g:airline_symbols.paste     = 'Þ'
+  let g:airline_symbols.paste     = '∥'
+  let g:airline_symbols.whitespace = 'Ξ'
+else
+  let g:airline#extensions#tabline#left_sep = ''
+  let g:airline#extensions#tabline#left_alt_sep = ''
+
+  " powerline symbols
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
+endif
+
+
+" Neovim default
+let g:Hexokinase_highlighters = [ 'foregroundfull' ]
+
+" Vim default
 let g:Hexokinase_highlighters = [ 'foregroundfull' ]
 
 "" All possible highlighters
@@ -750,7 +765,7 @@ let g:Hexokinase_highlighters = [ 'foregroundfull' ]
 " Patterns to match for all filetypes
 " Can be a comma separated string or a list of strings
 " Default value:
-let g:Hexokinase_optInPatterns = 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names'
+let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 
 " All possible values
 let g:Hexokinase_optInPatterns = [
@@ -766,37 +781,15 @@ let g:Hexokinase_optInPatterns = [
 " Filetype specific patterns to match
 " entry value must be comma seperated list
 let g:Hexokinase_ftOptInPatterns = {
-\     'css': 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names',
-\     'html': 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names',
-\     'c': 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names',
+\     'css': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
+\     'html': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
+\     'c': 'full_hex,rgb'
 \ }
 
-let g:loaded_pearl_provider = 0"}}}
-"" fzf.vim{{{
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
+let g:loaded_pearl_provider = 0
 
-" The Silver Searcher
-if executable('ag')
-  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-  set grepprg=ag\ --nogroup\ --nocolor
-endif
 
-" ripgrep
-if executable('rg')
-  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
-  set grepprg=rg\ --vimgrep
-  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
-endif
 
-cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>e :FZF -m<CR>
-"Recovery commands from history through FZF
-nmap <leader>y :History:<CR>
-"}}}
-" fzf{{{
 " This is the default option:
 "   - Preview window on the right with 50% width
 "   - CTRL-/ will toggle preview window.
@@ -806,10 +799,10 @@ let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
 " Preview window on the upper side of the window with 40% height,
 " hidden by default, ctrl-/ to toggle
-"let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
+let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
 
 " Empty value to disable preview window altogether
-"let g:fzf_preview_window = []
+let g:fzf_preview_window = []
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
@@ -839,107 +832,38 @@ let g:fzf_action = {
   \ 'ctrl-o': function('s:copy_results'),
   \ }
 
-
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-" An action can be a reference to a function that processes selected lines
-function! s:build_quickfix_list(lines)
-  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
-  copen
-  cc
-endfunction
-
-let g:fzf_action = {
-  \ 'ctrl-q': function('s:build_quickfix_list'),
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-" Default fzf layout
-" - Popup window (center of the screen)
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-
-" - Popup window (center of the current window)
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
-
-" - Popup window (anchored to the bottom of the current window)
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true, 'yoffset': 1.0 } }
-
-" - down / up / left / right
-let g:fzf_layout = { 'down': '40%' }
-
-" - Window using a Vim command
-let g:fzf_layout = { 'window': 'enew' }
-let g:fzf_layout = { 'window': '-tabnew' }
-let g:fzf_layout = { 'window': '10new' }
-
-" Customize fzf colors to match your color scheme
-" - fzf#wrap translates this to a set of `--color` options
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-
-" Enable per-command history
-" - History files will be stored in the specified directory
-" - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
-"   'previous-history' instead of 'down' and 'up'.
-let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:ruby_host_prog="/home/trg/.local/share/gem/ruby/3.0.0/gems/neovim-0.9.0/exe/neovim-ruby-host"
 
 
 
 
-"}}}
-" Timestamps{{{
+" Timestamps
 "
 " press F5
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
 " type dts
 iab <expr> dts strftime("%c")
-"}}}
-" folding{{{
+"
+" folding
 inoremap <F1> <C-O>za
 nnoremap <F1> za
 onoremap <F1> <C-C>za
 vnoremap <F1> zf
 
-"}}}
-" undo history{{{
+
+" undo history
 set undofile				" Save undos after file closes
 set undodir=$HOME/.config/nvim/undo	" where to save undo histories
 set undolevels=1000			" How many undos
 set undoreload=10000		" number of lines to save for undo
 
-let g:python3_host_prog = '/usr/bin/python3'"}}}
-" Ruby{{{
-"let g:ruby_host_prog = '/home/trg/.gem/ruby/3.0.0/bin/neovim-ruby-host'
-
-let g:ruby_host_prog="/home/trg/.gem/ruby/3.0.0/bin/neovim-ruby-host"
-"}}}
-" Pearl{{{
+let g:python3_host_prog = '/usr/bin/python3'
+let g:ruby_host_prog = '/home/trg/.gem/ruby/3.0.0/bin/neovim-ruby-host'
 let g:loaded_perl_provider = 0
 
-"}}}
-"" Include user's local vim config{{{{{{
-if filereadable(expand("~/.config/nvim/local_init.vim"))
-  source ~/.config/nvim/local_init.vim
-endif
 
-"}}}
-
-command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(<f-args>) == 0 ? 'SUCCEEDED' : 'FAILED')
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

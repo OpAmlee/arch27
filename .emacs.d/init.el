@@ -55,3 +55,8 @@
 ;;
 ;; And then we're good to go!
 (doom-initialize-modules)
+
+(tool-bar-mode -1)
+
+
+(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))

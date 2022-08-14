@@ -280,7 +280,6 @@ static const Rule clientrules[] = {
 
     { .instance = "fzf", .flags = Floating|Centered|AlwaysOnTop },
 
-//For example, to make Firefox's preferences dialog float,
     { "firefox",     NULL,       "firefox Preferences",        NULL,         NULL,     -1 },
 
 //	{ .class = "firefox"       , .workspace = "NULL"  },
@@ -291,13 +290,14 @@ static const Rule clientrules[] = {
 	{ .role = "pop-up"         , .flags = AlwaysOnTop|Floating|Centered },
 
 
-    { .class = "firefox" , .role = "GtkFileChooserDialog", .floatpos = "30% 30%", .flags = AlwaysOnTop|Centered|Floating },
+    { .role = "GtkFileChooserDialog", .floatpos = "30% 30%", .flags = AlwaysOnTop|Centered },
 
 	{ .class = "Gnome-terminal", .role = "gnome-terminal-preferences", .flags = Centered },
 	{ .class = "Diffuse"       , .workspace = "4", .flags = NoSwallow|SwitchWorkspace|RevertWorkspace },
 	{ .class = "File-roller"   , .workspace = "9", .flags = Centered|Floating|SwitchWorkspace|RevertWorkspace },
 	{ .class = "Alacritty"     , .flags = Terminal|NoSwallow },
 	{ .class = "kitty"         , .flags = Terminal },
+    { .class = "urxvt"         , .flags = Terminal },
 //	{ .class = "st"            , .flags = NoSwallow},
 	{ .class = "st-256color"   , .flags = Terminal|AttachBottom },
 	{ .class = "xterm-256color", .flags = Terminal },
@@ -308,8 +308,10 @@ static const Rule clientrules[] = {
     { .class = "System Logout" , .flags =   Floating|Centered },
 
     { .title = "Event Tester"  , .flags = NoSwallow },
+    { .title = "Save Image"    , .flags = NoSwallow, .floatpos = "50% 50%", .flags = Centered },
     { .title = "Dunst"         , .flags = AlwaysOnTop },
     { .class = "sxiv"          , .flags = AlwaysOnTop|Centered },
+    { .class = "viewnior"      , .flags = AlwaysOnTop|Centered },
 
     { .class = "flameshot"     , .flags = AlwaysOnTop|Centered },
     { .class = "cherrytree"    , .flags = AlwaysOnTop|Centered },

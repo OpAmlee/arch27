@@ -3,9 +3,9 @@
   <author>Current User</author>
   <_description>User Defined Style</_description>
   <style name="text"                foreground="#ffffff" background="#090819"/>
-  <style name="selection"           foreground="#e01b24" background="#0d0b23"/>
+  <style name="selection"           foreground="#06f213" background="#0d0b23"/>
   <style name="cursor"              foreground="#ffffff"/>
   <style name="current-line"        background="#15133a"/>
   <style name="current-line-number" background="#15133a"/>
-  <style name="line-numbers"        foreground="#e13f20" background="#0d0f16"/>
+  <style name="line-numbers"        foreground="#e66100" background="#0d0f16"/>
 </style-scheme>

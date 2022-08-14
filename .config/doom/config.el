@@ -88,22 +88,23 @@
 (use-package! calfw)
 (use-package! calfw-org)
 
-(setq centaur-tabs-set-bar 'over
+(setq centaur-tabs-set-bar 'under
       centaur-tabs-set-icons t
       centaur-tabs-gray-out-icons 'buffer
-      centaur-tabs-height 24
+      centaur-tabs-height 35
       centaur-tabs-set-modified-marker t
       centaur-tabs-style "slant"
+      centaur-tabs-set-close-button nil
       ;;centaur-tabs-modified-marker "•")
       centaur-tabs-modified-marker "*")
 
 (map! :leader
       :desc "Toggle tabs globally" "t c" #'centaur-tabs-mode
       :desc "Toggle tabs local display" "t C" #'centaur-tabs-local-mode)
-(evil-define-key 'normal centaur-tabs-mode-map (kbd "g <right>") 'centaur-tabs-forward        ; default Doom binding is 'g t'
-                                               (kbd "g <left>")  'centaur-tabs-backward       ; default Doom binding is 'g T'
-                                               (kbd "g <down>")  'centaur-tabs-forward-group
-                                               (kbd "g <up>")    'centaur-tabs-backward-group)
+(evil-define-key 'normal centaur-tabs-mode-map (kbd "g <right>") 'centaur-tabs-forward  ; default Doom binding is 'g t'
+(kbd "g <left>")  'centaur-tabs-backward  ; default Doom binding is 'g T'
+(kbd "g <down>")  'centaur-tabs-forward-group
+(kbd "g <up>")    'centaur-tabs-backward-group)
 
 (map! :leader
       (:prefix ("c h" . "Help info from Clippy")
@@ -114,7 +115,8 @@
   :init      ;; tweak dashboard config before loading it
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
-  (setq dashboard-banner-logo-title "\nKEYBINDINGS:\
+  (setq dashboard-banner-logo-title "\nHello TRG! Welcome to Emacs Dashboard\
+\nKEYBINDINGS:\
 \nFind file               (SPC .)     \
 Open buffer list    (SPC b i)\
 \nFind recent files       (SPC f r)   \
@@ -185,7 +187,7 @@ List of keybindings (SPC h b b)")
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
 
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-outrun-electric)
 (map! :leader
       :desc "Load new theme" "h t" #'counsel-load-theme)
 
@@ -321,7 +323,7 @@ List of keybindings (SPC h b b)")
        :desc "Toggle minimap-mode" "m" #'minimap-mode))
 
 (set-face-attribute 'mode-line nil :font "Blex Mono Nerd Font")
-(setq doom-modeline-height 30     ;; sets modeline height
+(setq doom-modeline-height 45     ;; sets modeline height
       doom-modeline-bar-width 10   ;; sets right bar width
       doom-modeline-persp-name t  ;; adds perspective name to modeline
       doom-modeline-buffer-state-icon t
@@ -454,7 +456,7 @@ List of keybindings (SPC h b b)")
        :desc "Increment register" "+" #'increment-register
        :desc "Point to register" "SPC" #'point-to-register))
 
-(setq shell-file-name "/bin/fish"
+(setq shell-file-name "/bin/bash"
       vterm-max-scrollback 5000)
 (setq eshell-rc-script "~/.config/doom/eshell/profile"
       eshell-aliases-file "~/.config/doom/eshell/aliases"

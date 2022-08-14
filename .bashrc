@@ -3,39 +3,6 @@
 #	 ╩ ╩╚═╚═╝  /│\  ╚═╝╚═╝╝╚╝╚  ╩╚═╝  /│\  ╚═╝╩ ╩╚═╝╩ ╩
 #!/bin/sh
 
-export TERM="xterm-kitty"                      # getting proper colors
-export TERMCMD="xterm-kitty"
-export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
-export ALTERNATE_EDITOR="nvim"                        # setting for emacsclient
-
-export ALTERNATE_EDITOR=''
-alias e='emacsclient --tty'
-#export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
-#export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
-export EDITOR="nvim"
-export VISUAL="nvim"
-export BROWSER="firefox"
-
-alias rc="nvim ~/.bashrc && source ~/.bashrc"
-
-#export SCREEN_SIZE="1366x768 ./scripts/xephyr"
-
-# use nvim for editor in visudo
-alias nvim-visudo="sudo EDITOR=nvim visudo"
-
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
-
-export GDK_DPI_SCALE=0
-export GDK_BACKEND=x11
-export GDK_SCALE=1.5
-
-complete -c man which
-
-
-if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -46,45 +13,40 @@ elif [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
 
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-    . /usr/share/bash-completion/bash_completion
-
-export LC_ALL="en_US.UTF-8"
 # Git completion
 if [ -f /usr/share/bash-completion/git-completion.bash ]; then
   . /usr/share/bash-completion/git-completion.bash
 fi
 
-HISTSIZE=5000
-HISTFILESIZE=10000
+complete -c man which
+
+if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+
+
+
+
+
+
+# history
+HISTSIZE=500
+HISTFILESIZE=1000
 #HISTFILE="$HOME/.bash_history"
 #export HISTSIZE HISTFILESIZE HISTFILE
-
 #echo HISTSIZE is $HISTSIZE
 #echo HISTFILESIZE is $HISTFILESIZE
 #echo HISTFILE is $HISTFILE
 
 
-alias zathura='devour zathura'
-alias sxiv='devour sxiv'
 
+# standardizing your editing commands
 set -o vi
-bind -m vi-command 'Control-l: clear-screen'
-bind -m vi-insert 'Control-l: clear-screen'
+
+
+# keybinds
 
 # If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
-fi
-#export PS1="$PS1""\[\e]0;$1 \a\]"
-
-# This is commented out if using starship prompt
-#PS1='[\u@\h \W]\$ '
-
-
-if [ -d "$HOME/Applications" ] ;
-  then PATH="$HOME/Applications:$PATH"
 fi
 
 for _entry in /usr/lib/ruby/gems/*; do
@@ -107,7 +69,6 @@ esac
 
 
 #ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
 
 # usage: ex <file>
 ex ()
@@ -166,16 +127,72 @@ fi
 cd ~
 
 
-eval `keychain --eval id_rsa`
+eval `keychain --eval id_rsa --quiet`
 #####################################################3
-export PYTHONPATH=/usr/bin/python3
+#export PYTHONPATH=/usr/bin/python3
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-[[ -f ~/fzf/fzf_bash ]] && . ~/fzf/fzf_bash
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+
 [ -f "/home/trg/.ghcup/env" ] && source "/home/trg/.ghcup/env" # ghcup-env
+
 export PATH="/home/trg/git-fuzzy/bin:$PATH"
 
-[ -f ~/.config/fzf/ranger-fzf-opts ] && source ~/.config/fzf/ranger-fzf-opts
+
+# FZF 
+export FZF_MARKS_CMD="$HOME/.config/fzf/bin/fzf"
+export FZF_MARKS_FILE="$HOME/.config/fzf/plugin/.fzf_marks"
+export FZF_FZM_OPTS="--reverse --height 75% --min-height 30 --cycle +m --ansi --bind=ctrl-o:accept,ctrl-t:toggle --select-1"
+export FZF_DMARK_OPTS="--reverse --height 75% --min-height 30 --cycle -m --ansi --bind=ctrl-o:accept,ctrl-t:toggle"
+
+export FZF_COMPLETION_OPTS='--border --info=inline'
+#export FZF_DEFAULT_OPTS=" \
+#    --border rounded \
+#    --reverse \
+#    --height 75% \
+#    --min-height 30 \
+#    --cycle -m \
+#    --ansi \
+#    --bind=ctrl-o:accept,ctrl-t:toggle"
+
+#    --color='bg:237,bg+:236,info:143,border:240,spinner:108' \
+#        --color='hl:65,fg:252,header:65,fg+:252' \
+#        --color='pointer:161,marker:168,prompt:110,hl+:108'
+
+# First load fzf stuff as usual.
+[ -f $HOME/.config/fzf/plugin/fzf-bash ] && source $HOME/.config/fzf/plugin/fzf-bash
+[ -f $HOME/.config/fzf/plugin/fzf-bash-completion ] && source $HOME/.config/fzf/plugin/fzf-bash-completion
+[ -f $HOME/.config/fzf/plugin/fzf-bash-history ] && source $HOME/.config/fzf/plugin/fzf-bash-history
+[ -f $HOME/.config/fzf/fzf-ranger-opts ] && source $HOME/.config/fzf/fzf-ranger-opts
+[ -f $HOME/.config/fzf/fzf-completion-opts ] && source $HOME/.config/fzf/fzf-completion-opts
+# Then configure and load this plugin.
+FZF_CTRL_R_EDIT_KEY=ctrl-e
+FZF_CTRL_R_EXEC_KEY=enter
+
+
+bind "set completion-ignore-case on"
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+bind -x '"\C-p": __fzf_history__'
+
+bind -x '"\t": fzf_bash_completion'
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/trg/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/trg/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/trg/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/trg/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+

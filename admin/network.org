@@ -1,5 +1,0 @@
-#+title: Network
-#+description: Home Internet notes
-
-Account Number for ATT Fiber Internet
-    251812019

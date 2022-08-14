@@ -567,8 +567,15 @@ class fzf_rga_documents_search(Command):
             self.fm.execute_file(File(fzf_file))
 
 ###############################################################################
+# ranger cd into directory without keeping instance open
 
 
+class quit_and_cd(Command):
+    def execute(self):
+        with open("/tmp/cd_ranger", "w") as f:
+            f.write(os.path.abspath(self.fm.thisdir.path))
+        # same as quitall_bang (:quitall!)
+        self.fm.exit()
 ###############################################################################
 
 

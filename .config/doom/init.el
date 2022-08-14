@@ -189,3 +189,10 @@
        :config
        literate
        (default +bindings +smartparens))
+
+;;(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+
+(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+
+;;(if (< (length command-line-args) 2)
+;;  (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*"))))
