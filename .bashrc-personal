@@ -126,10 +126,10 @@ alias doomdoctor="~/.emacs.d/bin/doom doctor"
 alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 alias doompurge="~/.emacs.d/bin/doom purge"
 
-alias show='exa --color=always --icons --group-directories-first'
-alias ls='exa -al --color=always --icons --group-directories-first' # my preferred listing
+alias show='exa --sort name --all --blocks --color=always --icons --group-directories-first'
+alias lst='exa -al --color=never --no-icons --no-permissions --no-filesize --no-user --no-time --group-directories-first' 
 alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --icons --group-directories-first'  # long format
+alias ll='exa -l --color=always --icons --time modified --group-directories-first'  # long format
 alias lt='exa -aT --color=always --icons --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
@@ -144,7 +144,7 @@ findit ()
     find / 2> /dev/null | grep "$1"
 }
 
-getoctal()
+octal()
 {
     stat -c '%a' "$1"
 }

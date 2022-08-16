@@ -59,8 +59,8 @@ alt + p
     firefox --private-window
 
 # custom dmenu scripts
-alt + {l,w,g,f}
-    {bash -e "/usr/local/bin/quick-links", $HOME/.scripts/firefox-fix.sh, geany, fzf}
+alt + {l,w,g,f,m}
+    {bash -e "/usr/local/bin/quick-links", $HOME/.scripts/firefox-fix.sh, geany, fzf, leafpad}
 
 alt + s
     $HOME/.scripts/fzf-search-scripts.sh

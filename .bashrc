@@ -2,21 +2,80 @@
 #	 ║ ╠╦╝║ ╦  ═╬═  ║  ║ ║║║║╠╣ ║║ ╦  ═╬═  ╠╩╗╠═╣╚═╗╠═╣
 #	 ╩ ╩╚═╚═╝  /│\  ╚═╝╚═╝╝╚╝╚  ╩╚═╝  /│\  ╚═╝╩ ╩╚═╝╩ ╩
 #!/bin/sh
+#   ╔╦╗╦═╗╔═╗  \│/  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗  \│/  ═╗ ╦╔═╗╦═╗╔═╗╔═╗╦╦  ╔═╗
+#    ║ ╠╦╝║ ╦═══╬══ ║  ║ ║║║║╠╣ ║║ ╦═══╬═══╔╩╦╝╠═╝╠╦╝║ ║╠╣ ║║  ║╣
+#    ╩ ╩╚═╚═╝  /│\  ╚═╝╚═╝╝╚╝╚  ╩╚═╝  /│\  ╩ ╚═╩  ╩╚═╚═╝╚  ╩╩═╝╚═╝
+
+#export SUDO_ASKPASS="$HOME/.local/bin/dm-pass"
+#export TERMINFO="$XDG_DATA_HOME"/terminfo
+#export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
+
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+export DOOMDIR="${XDG_CONFIG_HOME:-$HOME/.config}/doom"
+export DOTBARE_DIR="$HOME/.cfg"
+export DOTBARE_TREE="$HOME"
+export FZF_DEFAULT_COMMAND="fd . $HOME"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+#export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+export KITTY_CONFIG_DIRECTORY="${XDG_CONFIG_HOME:-$HOME/.config}/kitty.d"
+export KITTY_CACHE_DIRECTORY="${XDG_CACHE_HOME:-$HOME/.cache/kitty}"
+export LESSHISTFILE="-"
+#export MOZ_LEGACY_HOME="${XDG_CONFIG_HOME:-$HOME/.config/}mozilla"
+#export MOZ_PROFILE_HOME="${XDG_CONFIG_HOME:-$HOME/.config/}mozilla"
+export npm_config_prefix="$HOME/.local"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config/}/npm/npmrc"
+export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
+export PATH=”$HOME/.emacs.d/bin:$PATH”
+#export PATH=\"$(pwd)/git-fuzzy/bin:\$PATH\
+#export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+#export PYENV_ROOT=$XDG_DATA_HOME/pyenv
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/starship/starship.toml"
+export STARSHIP_CACHE="${XDG_CACHE_HOME:-$HOME/.cache/starship}"
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+export XMONAD_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/xmonad"
+export XMONAD_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache/}xmonad"
+export XMONAD_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config/}xmonad"
+#export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+
+export BROWSER="firefox"
+export EDITOR="nvim"
+export PAGER="bat"
+export READER="xpdf"
+export TERMINAL="urxvt"
+export VIDEO="mpv"
+#export VISUAL="emacsclient -c -a emacs"
+export VISUAL="nvim"
+
+
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export ALTERNATE_EDITOR="nvim"
+export GDK_DPI_SCALE=0
+export GDK_BACKEND=x11
+export GDK_SCALE=1.3
+export HISTCONTROL=ignoredups:erasedups
+export LC_ALL="en_US.UTF-8"
+#export PLASMA_USE_QT_SCALING=1
+#export QT_AUTO_SCREEN_SCALE_FACTOR=1
+#export QT_QPA_PLATFORMTHEME=qt5ct
+export SCREEN_SIZE="1366x768 ./scripts/xephyr"
+export TERMINFO=/usr/share/terminfo
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper_lazy.sh
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-# Enable bash programmable completion features in interactive shells
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
-elif [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
-fi
-
-# Git completion
-if [ -f /usr/share/bash-completion/git-completion.bash ]; then
-  . /usr/share/bash-completion/git-completion.bash
-fi
 
 complete -c man which
 
@@ -28,8 +87,8 @@ if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
 
 # history
-HISTSIZE=500
-HISTFILESIZE=1000
+HISTSIZE=5000
+HISTFILESIZE=5000
 #HISTFILE="$HOME/.bash_history"
 #export HISTSIZE HISTFILESIZE HISTFILE
 #echo HISTSIZE is $HISTSIZE
@@ -117,17 +176,15 @@ up () {
   fi
 }
 
-### BASH INSULTER ###
-if [ -f /etc/bash.command-not-found ]; then
-    . /etc/bash.command-not-found
-fi
+
 
 #[ -x /bin/fish ] && SHELL=/bin/fish exec fish
 
 cd ~
 
 
-eval `keychain --eval id_rsa --quiet`
+#eval `keychain --eval id_rsa --quiet`
+
 #####################################################3
 #export PYTHONPATH=/usr/bin/python3
 export PYENV_ROOT="$HOME/.pyenv"
@@ -138,9 +195,9 @@ eval "$(pyenv init -)"
 
 [ -f "/home/trg/.ghcup/env" ] && source "/home/trg/.ghcup/env" # ghcup-env
 
-export PATH="/home/trg/git-fuzzy/bin:$PATH"
 
-
+#export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+# export GTK2_RC_FILES="$HOME/.gtk-2.0"
 # FZF 
 export FZF_MARKS_CMD="$HOME/.config/fzf/bin/fzf"
 export FZF_MARKS_FILE="$HOME/.config/fzf/plugin/.fzf_marks"

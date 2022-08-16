@@ -4,5 +4,5 @@
 
 #xrandr --output DP-1 --mode 2560x1440 --rate 140 --pos 1366x0 && sleep .5 && xrandr --output eDP-1 --off && sleep .5 && feh --bg-scale /usr/share/backgrounds/trg-wallpapers/black-bg.jpg /usr/share/backgrounds/trg-wallpapers/black-bg.jpg
 
-xrandr --output DP1-1 --mode 1920x1080 --primary --right-of eDP1 --output eDP1 --auto
+xrandr --output DP1-2 --mode 1920x1080 --primary --right-of eDP1 --output eDP1 --auto
 

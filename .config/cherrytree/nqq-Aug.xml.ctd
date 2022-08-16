@@ -12070,7 +12070,7 @@ xset -fp /usr/share/fonts/sucky_fonts/     # Remove the specified font path from
 
 	$ awk -F= '/icon-theme/ {print $2}' ~/.gtkrc-2.0</rich_text>
       </node>
-      <node name="ip" unique_id="117" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657651902" ts_lastsave="1660004432">
+      <node name="ip" unique_id="117" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657651902" ts_lastsave="1660515587">
         <rich_text scale="h1">ip ~</rich_text>
         <rich_text>
 
@@ -12136,6 +12136,33 @@ If the indicator icon does not appear, then your system tray most  likely lacks 
         <rich_text link="webs https://aur.archlinux.org/packages/snixembed-git/">snixembed-git</rich_text>
         <rich_text scale="sup">AUR</rich_text>
         <rich_text>. 
+</rich_text>
+      </node>
+      <node name="intel" unique_id="198" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1660515587" ts_lastsave="1660516508">
+        <rich_text scale="h1">intel ~</rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text scale="h2">cpu info </rich_text>
+        <rich_text>
+
+Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
+
+</rich_text>
+        <rich_text scale="h2">bus id</rich_text>
+        <rich_text>
+lspci | grep -e VGA -e 3D
+00:02.0 VGA compatible controller: Intel Corporation Skylake GT2 [HD Graphics 520] (rev 07)
+
+</rich_text>
+        <rich_text scale="h2">display and dimensions</rich_text>
+        <rich_text>
+xdpyinfo | grep -B2 resolution
+screen #0:
+  dimensions:    3286x1080 pixels (868x285 millimeters)
+  resolution:    96x96 dots per inch
+  
+  
 </rich_text>
       </node>
       <node name="keybinds" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652737883" ts_lastsave="1659505000">
@@ -12621,12 +12648,14 @@ s6dqq3fr.default-release
 
 	</rich_text>
       </node>
-      <node name="theme" unique_id="177" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1660109424" ts_lastsave="1660109428">
+      <node name="theme" unique_id="177" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1660109424" ts_lastsave="1660502148">
         <rich_text scale="h1">theme~</rich_text>
         <rich_text>
 
 awk -F= '/icon-theme/ {print $2}' ~/.gtkrc-2.0
-awk -F= '/theme/ {print $2}' ~/.gtkrc-2.0</rich_text>
+awk -F= '/theme/ {print $2}' ~/.gtkrc-2.0
+
+</rich_text>
       </node>
       <node name="touchpad" unique_id="63" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655160822" ts_lastsave="1655507971">
         <rich_text scale="h1">touchpad ~</rich_text>
@@ -12644,12 +12673,7 @@ awk -F= '/theme/ {print $2}' ~/.gtkrc-2.0</rich_text>
 pamixer --get-volume-human
 pamixer -u to unmute</rich_text>
       </node>
-      <node name="window id" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656402353" ts_lastsave="1656402356">
-        <rich_text>window id
-
-$ xprop | grep WM_CLASS</rich_text>
-      </node>
-      <node name="window size" unique_id="70" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655199167" ts_lastsave="1660197860">
+      <node name="window" unique_id="70" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655199167" ts_lastsave="1660506239">
         <rich_text scale="h1">window size ~</rich_text>
         <rich_text>
 
@@ -12789,8 +12813,16 @@ WM_CLASS(STRING) = "firefox", "firefox"
 WM_ICON_NAME(STRING) = "Save Image"
 _NET_WM_ICON_NAME(UTF8_STRING) = "Save Image"
 WM_NAME(STRING) = "Save Image"
-_NET_WM_NAME(UTF8_STRING) = "Save Image"</rich_text>
-        <node name="commands" unique_id="183" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1660197860" ts_lastsave="1660197988">
+_NET_WM_NAME(UTF8_STRING) = "Save Image"
+
+
+window id and naming
+
+$ xprop | grep WM_CLASS
+
+</rich_text>
+        <rich_text family="monospace">wmctrl -r ':ACTIVE:' -N "your_unique_window_name"</rich_text>
+        <node name="commands" unique_id="183" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1660197860" ts_lastsave="1660506298">
           <rich_text scale="h1">window size commands ~</rich_text>
           <rich_text>
 
@@ -12804,6 +12836,29 @@ _NET_WM_NAME(UTF8_STRING) = "Save Image"</rich_text>
 
 </rich_text>
           <rich_text family="monospace">xwininfo</rich_text>
+          <rich_text>
+
+naming 
+</rich_text>
+          <rich_text family="monospace">wmctrl -r ':ACTIVE:' -N "your_unique_window_name"</rich_text>
+          <rich_text>
+
+xdotool getactivewindow windowsize WIDTH HEIGHT windowmove X Y
+	
+	sleep 2 &amp;&amp; xdotool getactivewindow windowsize 1200 700windowmove 1400 400
+	
+	
+	searching for WM_CLASS or any info
+		</rich_text>
+          <rich_text link="webs https://specifications.freedesktop.org/wm-spec/1.3/ar01s03.html">https://specifications.freedesktop.org/wm-spec/1.3/ar01s03.html</rich_text>
+          <rich_text>
+	
+	</rich_text>
+          <rich_text family="monospace">xprop|grep WM_CLASS</rich_text>
+          <rich_text>
+	
+	awesome command to find WM info
+		xprop - and click window</rich_text>
         </node>
         <node name="gtk filchooser xprop" unique_id="173" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1660061149" ts_lastsave="1660105716">
           <rich_text>gtkfilechooser

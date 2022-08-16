@@ -7,12 +7,10 @@
 #  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝
 #                                                      
 
-#Keyboard
-	
-#Display
-#xrandr --output DP-1 --primary --pos 1366x0 --mode 2560x1440 --rate 140 --output eDP-1 --pos 0x672 --mode 1366x768 --rate 60 
-#Loop
-#
+# Make sure this is before the 'exec' command or it won't be sourced.
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+
 # Start the D-Bus session daemon
 eval `dbus-launch`
 export DBUS_SESSION_BUS_ADDRESS
@@ -20,9 +18,7 @@ export DBUS_SESSION_BUS_ADDRESS
 #
 VIMRUNTIME=/usr/bin
 
-# Make sure this is before the 'exec' command or it won't be sourced.
-[ -f /etc/xprofile ] && . /etc/xprofile
-[ -f ~/.xprofile ] && . ~/.xprofile
+
 
 # Here dusk is kept as default
 #session=${1:-dusk}
