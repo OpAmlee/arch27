@@ -57,7 +57,7 @@ export VISUAL="nvim"
 
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
+export PKG_CONFIG_PATH="/usr/lib/pkgconfig"
 export ALTERNATE_EDITOR="nvim"
 export GDK_DPI_SCALE=0
 export GDK_BACKEND=x11

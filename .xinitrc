@@ -8,8 +8,6 @@
 #                                                      
 
 # Make sure this is before the 'exec' command or it won't be sourced.
-[ -f /etc/xprofile ] && . /etc/xprofile
-[ -f ~/.xprofile ] && . ~/.xprofile
 
 # Start the D-Bus session daemon
 eval `dbus-launch`
@@ -30,6 +28,8 @@ VIMRUNTIME=/usr/bin
     # No known session, try to run it as command
     #                 ) exec $1;;
 #esac
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
 
 
 systemctl --user import-environment DISPLAY

@@ -128,6 +128,7 @@ alias doompurge="~/.emacs.d/bin/doom purge"
 
 alias show='exa --sort name --all --blocks --color=always --icons --group-directories-first'
 alias lst='exa -al --color=never --no-icons --no-permissions --no-filesize --no-user --no-time --group-directories-first' 
+alias lsa='exa --color always --sort name --group-directories-first --no-permissions --no-user --no-time --no-filesize --all' 
 alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --icons --time modified --group-directories-first'  # long format
 alias lt='exa -aT --color=always --icons --group-directories-first' # tree listing
@@ -318,7 +319,7 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 #---------
 #export PS1="\e[0;35m[\u\e[m @ \e[0;36m[\h \W]\\e[m$  "
 #--------
-#export PS1="\\e[32m\]\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]\[\e[m\\$ "
+export PS1="\\e[32m\]\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]\[\e[m\\$ "
 #--------
 #export PS1="\@ \w \$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\n\u@\W \\$\[$(tput sgr0)\]"
 
@@ -447,4 +448,4 @@ alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 
 alias xdgninja="$HOME/xdg-ninja/xdg-ninja.sh"
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
